@@ -18,16 +18,19 @@ PODS:
   - AFNetworking/UIKit (2.2.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - ECSlidingViewController (2.0.1)
   - Mantle (1.4.1):
     - Mantle/extobjc
   - Mantle/extobjc (1.4.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - ECSlidingViewController (~> 2.0.1)
   - Mantle (~> 1.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 0121f4b69be3fa58d1ab317866e036e12ac9651d
+  ECSlidingViewController: d7bb96ee5bbe261ed80ee16a513f94b9fd3c9767
   Mantle: 0714cdb2b8559d9e6c2410d6a8529e3307bff189
 
 COCOAPODS: 0.29.0
