@@ -1,4 +1,6 @@
-YaleMobile
+Work in Progress
 ==========
 
-Version 3 of YaleMobile, the iOS app for Yale University students
+This is the current (3.0) version of YaleMobile. It is work in progress!
+
+If you are interested, check out the old version at ik/YaleMobile-Old.
