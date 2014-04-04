@@ -13,11 +13,11 @@ YaleMobile is licensed under GPLv2 license. The components of this application a
 
 ## The Credits
 
-YaleMobile 3 is currently under construction by [Hengchu Zhang](github.com/hengchu) (CC '15, development) and [Danqing Liu](github.com/ik) (CC '13, advisory & design). It is supported by [Yale Student Technology Collaborative](github.com/yalestc), which also supports several other open source software.
+YaleMobile 3 is currently under construction by [Hengchu Zhang](https://github.com/hengchu) (CC '15, development) and [Danqing Liu](https://github.com/ik) (CC '13, advisory & design). It is supported by [Yale Student Technology Collaborative](https://github.com/yalestc), which also supports several other open source software.
 
-YaleMobile 3 is powered by [AFNetworking 2](github.com/AFNetworking/AFNetworking), [ECSlidingViewController 2](github.com/ECSlidingViewController/ECSlidingViewController), and [Mantle](github.com/MantleFramework/Mantle).
+YaleMobile 3 is powered by [AFNetworking 2](https://github.com/AFNetworking/AFNetworking), [ECSlidingViewController 2](https://github.com/ECSlidingViewController/ECSlidingViewController), and [Mantle](https://github.com/MantleFramework/Mantle).
 
-YaleMobile started as a personal project of Danqing in 2012 and has undergone two major versions. The second version of the application, designed for iOS 6.x, is also open source and can be found [here](github.com/ik/yalemobile-old). Many Yalies contributed to the project along the way, and you can see the full list in its Credit page.
+YaleMobile started as a personal project of Danqing in 2012 and has undergone two major versions. The second version of the application, designed for iOS 6.x, is also open source and can be found [here](https://github.com/ik/yalemobile-old). Many Yalies contributed to the project along the way, and you can see the full list in its Credit page.
 
 YaleMobile 1 & 2 was powered by ASIHTTPRequest, AFNetworking (v1), ECSlidingViewController (v1), Hpple and MBProgressHUD libraries.
 
