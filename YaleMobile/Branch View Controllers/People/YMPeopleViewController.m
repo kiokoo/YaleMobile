@@ -13,7 +13,6 @@
 #import "YMPeopleDetailViewController.h"
 #import "YMGlobalHelper.h"
 
-#import "AFHTTPClient.h"
 #import "AFHTTPRequestOperation.h"
 #import "MBProgressHUD.h"
 

@@ -14,7 +14,6 @@
 #import "YMBluebookSubjectCell.h"
 #import "TFHpple.h"
 #import "TFHppleElement.h"
-#import "AFHTTPClient.h"
 #import "AFHTTPRequestOperation.h"
 #import "MBProgressHUD.h"
 

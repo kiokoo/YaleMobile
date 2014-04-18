@@ -4,7 +4,6 @@
 //
 
 #import "YMMainViewController.h"
-#import "ECSlidingViewController.h"
 #import "YMMenuViewController.h"
 #import "YMGlobalHelper.h"
 #import "YMServerCommunicator.h"

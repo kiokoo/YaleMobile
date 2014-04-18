@@ -10,7 +10,6 @@
 
 #import <CoreData/CoreData.h>
 #import "YMMapViewController.h"
-#import "ECSlidingViewController.h"
 #import "YMMenuViewController.h"
 #import "YMMapViewAnnotation.h"
 #import "YMGlobalHelper.h"

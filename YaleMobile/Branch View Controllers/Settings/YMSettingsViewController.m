@@ -7,7 +7,6 @@
 //
 
 #import "YMSettingsViewController.h"
-#import "ECSlidingViewController.h"
 #import "YMGlobalHelper.h"
 #import "YMSettingsDetailViewController.h"
 #import "YMServerCommunicator.h"

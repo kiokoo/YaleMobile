@@ -9,7 +9,6 @@
 #import "YMDiningViewController.h"
 #import "YMDiningDetailViewController.h"
 #import "YMGlobalHelper.h"
-#import "ECSlidingViewController.h"
 #import "YMDiningCell.h"
 #import "YMServerCommunicator.h"
 #import "UIColor+YaleMobile.h"

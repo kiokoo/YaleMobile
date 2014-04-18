@@ -8,8 +8,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "YMGlobalHelper.h"
-#import "ECSlidingViewController.h"
 #import "YMMenuViewController.h"
+#import <ECSlidingConstants.h>
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -70,7 +70,11 @@
 + (void)setupMenuButtonForController:(UIViewController *)viewController
 {
     viewController.slidingViewController.anchorRightRevealAmount = 280.0f;
-    [viewController.slidingViewController anchorTopViewTo:ECRight];
+  /* Deprecated code, check out the code below for new interface with
+   * ECSlidingVC.
+    [viewController.slidingViewController anchorTopViewTo:ECSlidingViewControllerTopViewPositionAnchoredRight];
+   */
+  [viewController.slidingViewController anchorTopViewToRightAnimated:NO];
 }
 
 + (void)addMenuButtonToController:(UIViewController *)viewController

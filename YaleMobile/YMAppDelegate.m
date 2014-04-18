@@ -7,7 +7,6 @@
 //
 
 #import "YMAppDelegate.h"
-#import <ECSlidingViewController.h>
 #import "YMDatabaseHelper.h"
 #import "YMGlobalHelper.h"
 

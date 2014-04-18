@@ -7,16 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <AFNetworking.h>
 typedef void (^array_block_t)(NSArray *array);
 typedef void (^triple_array_block_t)(NSArray *array1, NSArray *array2, NSArray *array3);
 typedef void (^dict_block_t)(NSDictionary *dict);
 
-@class AFHTTPClient;
 
 @interface YMServerCommunicator : NSObject
 
-+ (AFHTTPClient *)getHTTPClient;
++ (AFHTTPRequestOperationManager *)getOperationManager;
 + (void)cancelAllHTTPRequests;
 + (BOOL)isCanceled;
 + (void)resetCanceled;

@@ -7,7 +7,6 @@
 //
 
 #import "YMMenuViewController.h"
-#import "ECSlidingViewController.h"
 #import "YMMenuCell.h"
 
 @interface YMMenuViewController ()
@@ -18,51 +17,51 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithStyle:style];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
-    self.items = @[@"Home", @"Bluebook", @"Dining", @"Campus Map", @"Shuttle", @"People Directory", @"Laundry", @"Facility Hours", @"Calendar", @"Department Phonebook", @"Jump Station", @"Settings"];
+  [super viewDidLoad];
+  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
+  self.items = @[@"Home", @"Bluebook", @"Dining", @"Campus Map", @"Shuttle", @"People Directory", @"Laundry", @"Facility Hours", @"Calendar", @"Department Phonebook", @"Jump Station", @"Settings"];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.items.count;
+  return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    YMMenuCell *cell = (YMMenuCell *)[tableView dequeueReusableCellWithIdentifier:@"Menu Cell"];
-    cell.name.text = [self.items objectAtIndex:indexPath.row];
-    cell.icon.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu%d.png", indexPath.row]];
-    
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
-    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
-    
-    cell.name.shadowColor = [UIColor blackColor];
-    cell.name.shadowOffset = CGSizeMake(0, 1);
-    
-    return cell;
+  YMMenuCell *cell = (YMMenuCell *)[tableView dequeueReusableCellWithIdentifier:@"Menu Cell"];
+  cell.name.text = [self.items objectAtIndex:indexPath.row];
+  cell.icon.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu%d.png", indexPath.row]];
+  
+  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
+  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
+  
+  cell.name.shadowColor = [UIColor blackColor];
+  cell.name.shadowOffset = CGSizeMake(0, 1);
+  
+  return cell;
 }
 
 
@@ -70,16 +69,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *identifier = [[self.items objectAtIndex:indexPath.row] stringByAppendingString:@" Root"];
-    
-    UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
-    
-    [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
-        CGRect frame = self.slidingViewController.topViewController.view.frame;
-        self.slidingViewController.topViewController = newTopViewController;
-        self.slidingViewController.topViewController.view.frame = frame;
-        [self.slidingViewController resetTopView];
-    }];
+  NSString *identifier = [[self.items objectAtIndex:indexPath.row] stringByAppendingString:@" Root"];
+  
+  UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+  /*
+   [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
+   CGRect frame = self.slidingViewController.topViewController.view.frame;
+   self.slidingViewController.topViewController = newTopViewController;
+   self.slidingViewController.topViewController.view.frame = frame;
+   [self.slidingViewController resetTopView];
+   }];
+   */
+  [self.slidingViewController anchorTopViewToRightAnimated:NO onComplete:^{
+    CGRect frame = self.slidingViewController.topViewController.view.frame;
+    self.slidingViewController.topViewController = newTopViewController;
+    self.slidingViewController.topViewController.view.frame = frame;
+    [self.slidingViewController resetTopViewAnimated:NO];
+  }];
 }
 
 @end
