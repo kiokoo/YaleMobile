@@ -39,6 +39,8 @@
 + (NSString *)getIconNameForWeather:(NSInteger)code;
 + (NSString *)getBgNameForWeather:(NSInteger)code;
 
++ (CGSize)boundText:(NSString *)text withFont:(UIFont *)font andConstraintSize:(CGSize)size;
+
 // + (void)addEtchToSubtitleCell:(UITableViewCell *)cell;
 // + (void)addEtchToSimpleCell:(UITableViewCell *)cell;
 

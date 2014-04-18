@@ -115,10 +115,15 @@
   if (object == self.slidingViewController
       && [keyPath isEqualToString:@"currentTopViewPosition"]) {
     NSNumber *valueChangeKind = [change objectForKey:NSKeyValueChangeKindKey];
-    if ([valueChangeKind isEqualToNumber:
-         [NSNumber numberWithInteger:NSKeyValueChangeSetting]]) {
-      ECSlidingViewControllerTopViewPosition topViewPosition = [change objectForKey:NSKeyValueChangeNewKey];
+    if ([valueChangeKind unsignedIntegerValue] == NSKeyValueChangeSetting) {
+      ECSlidingViewControllerTopViewPosition topViewPosition = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
       if (topViewPosition == ECSlidingViewControllerTopViewPositionCentered) [self topDidReset:self.slidingViewController];
+    } else { // expecting an array
+      NSArray *arrayOfTopViewPositions = [change objectForKey:NSKeyValueChangeNewKey];
+      NSSet *setOfTopPositions = [[NSSet alloc] initWithArray:arrayOfTopViewPositions];
+      if ([setOfTopPositions containsObject:[NSNumber numberWithInteger:ECSlidingViewControllerTopViewPositionCentered]]) {
+        [self topDidReset:self.slidingViewController];
+      }
     }
   }
 }

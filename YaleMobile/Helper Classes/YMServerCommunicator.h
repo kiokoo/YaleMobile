@@ -16,6 +16,7 @@ typedef void (^dict_block_t)(NSDictionary *dict);
 @interface YMServerCommunicator : NSObject
 
 + (AFHTTPRequestOperationManager *)getOperationManager;
++ (AFHTTPRequestSerializer *)getRequestSerializer;
 + (void)cancelAllHTTPRequests;
 + (BOOL)isCanceled;
 + (void)resetCanceled;

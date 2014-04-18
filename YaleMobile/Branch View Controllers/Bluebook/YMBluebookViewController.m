@@ -118,12 +118,13 @@
   filters = [filters stringByAppendingFormat:@"&ProgramSubject=%@&InstructorName=%@&ExactWordPhrase=%@&CourseNumber=%@", [subject stringByReplacingOccurrencesOfString:@"&" withString:@"%26"], self.instructorName, self.exactPhrase, self.courseNumber];
   self.instructorName = @""; self.courseNumber = @""; self.exactPhrase = @"";
   
-  __block AFHTTPClient *client = [YMServerCommunicator getOperationManager];
-  NSMutableURLRequest *request = [client requestWithMethod:@"GET" path:[@"http://students.yale.edu/oci/resultWindow.jsp" stringByAppendingString:filters] parameters:nil];
+  __block AFHTTPRequestOperationManager *client = [YMServerCommunicator getOperationManager];
+  __block AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[@"http://students.yale.edu/oci/resultWindow.jsp" stringByAppendingString:filters] parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    NSMutableURLRequest *request2 = [client requestWithMethod:@"GET" path:[@"http://students.yale.edu/oci/resultList.jsp" stringByAppendingString:filters] parameters:nil];
+    NSMutableURLRequest *request2 = [serializer requestWithMethod:@"GET" URLString:[@"http://students.yale.edu/oci/resultList.jsp" stringByAppendingString:filters] parameters:nil error:nil];
     AFHTTPRequestOperation *operation2 = [[AFHTTPRequestOperation alloc] initWithRequest:request2];
     
     [operation2 setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {

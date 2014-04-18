@@ -431,8 +431,8 @@
 		9BE995541900AA010065EBEF /* bg_snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993891900AA000065EBEF /* bg_snow.png */; };
 		9BE995551900AA010065EBEF /* bg_snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9938A1900AA000065EBEF /* bg_snow@2x.png */; };
 		9BE995561900AA010065EBEF /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE9938D1900AA000065EBEF /* CoreDataTableViewController.m */; };
-		9BE995571900AA010065EBEF /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993901900AA000065EBEF /* TFHpple.m */; };
-		9BE995581900AA010065EBEF /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993921900AA000065EBEF /* TFHppleElement.m */; };
+		9BE995571900AA010065EBEF /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993901900AA000065EBEF /* TFHpple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9BE995581900AA010065EBEF /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993921900AA000065EBEF /* TFHppleElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9BE995591900AA010065EBEF /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993941900AA000065EBEF /* XPathQuery.m */; };
 		9BE9955A1900AA010065EBEF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993961900AA000065EBEF /* MBProgressHUD.m */; };
 		9BE9955B1900AA010065EBEF /* MKPolyline+EncodedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993981900AA000065EBEF /* MKPolyline+EncodedString.m */; };
