@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Yale College</key>
+	<string></string>
+	<key>School of Art</key>
+	<string></string>
+	<key>School of Architecture</key>
+	<string></string>
+	<key>School of Management</key>
+	<string></string>
+	<key>School of Music</key>
+	<string></string>
+	<key>Grad School of Arts &amp; Sciences</key>
+	<string></string>
+	<key>Divinity School</key>
+	<string></string>
+	<key>School of Nursing</key>
+	<string></string>
+	<key>School of Drama</key>
+	<string></string>
+	<key>School of Public Health</key>
+	<string></string>
+	<key>School of Forestry</key>
+	<string></string>
+	<key>Law School</key>
+	<string></string>
+</dict>
+</plist>

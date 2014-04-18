@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Spring 2013</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>January 14, Monday</string>
+			<key>Event</key>
+			<string>Spring classes begin, 8:30 a.m. Online registration begins, 9 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>January 15, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>January 21, Monday</string>
+			<key>Event</key>
+			<string>Martin Luther King Day. No classes</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>January 22, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>January 25, Friday</string>
+			<key>Event</key>
+			<string>Online registration ends, midnight. Last day for rebate, downtown course permission, add/drop course without charge, approval of reading course</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>January 28, Monday</string>
+			<key>Event</key>
+			<string>Last day for approval of credit/no credit</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>February 4, Monday</string>
+			<key>Event</key>
+			<string>Last day to add a course</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>February 8, Friday</string>
+			<key>Event</key>
+			<string>Reading period begins, 6 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>February 11, Monday</string>
+			<key>Event</key>
+			<string>Last day for faculty to accept late work for fall semester</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>February 14, Thursday</string>
+			<key>Event</key>
+			<string>Reading period ends, 8:30 a.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>February 19, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>February 26, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>February 28, Thursday</string>
+			<key>Event</key>
+			<string>Last day to drop a course</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>n</key>
+		<dict>
+			<key>Date</key>
+			<string>March 5, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>o</key>
+		<dict>
+			<key>Date</key>
+			<string>March 8, Friday</string>
+			<key>Event</key>
+			<string>Spring recess begins, 6 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>p</key>
+		<dict>
+			<key>Date</key>
+			<string>March 25, Monday</string>
+			<key>Event</key>
+			<string>Spring recess ends, 8:30 a.m. Classes resume</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>q</key>
+		<dict>
+			<key>Date</key>
+			<string>March 26, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>r</key>
+		<dict>
+			<key>Date</key>
+			<string>March 29, Friday</string>
+			<key>Event</key>
+			<string>Good Friday. No classes</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>s</key>
+		<dict>
+			<key>Date</key>
+			<string>April 1, Monday</string>
+			<key>Event</key>
+			<string>Year end consultations begin</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>April 2, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>u</key>
+		<dict>
+			<key>Date</key>
+			<string>April 15, Monday</string>
+			<key>Event</key>
+			<string>Year end consultations end</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>v</key>
+		<dict>
+			<key>Date</key>
+			<string>April 16, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>w</key>
+		<dict>
+			<key>Date</key>
+			<string>April 24, Wednesday</string>
+			<key>Event</key>
+			<string>Regular classes end, 6 p.m.</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>x</key>
+		<dict>
+			<key>Date</key>
+			<string>April 25, Thursday</string>
+			<key>Event</key>
+			<string>Martin Luther King Day classes rescheduled</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>y</key>
+		<dict>
+			<key>Date</key>
+			<string>April 26, Friday</string>
+			<key>Event</key>
+			<string>Good Friday classes rescheduled. Reading period begins, 6 p.m.</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>z</key>
+		<dict>
+			<key>Date</key>
+			<string>May 2, Thursday</string>
+			<key>Event</key>
+			<string>Reading period ends, 8 a.m. Final exams begin</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>za</key>
+		<dict>
+			<key>Date</key>
+			<string>May 7, Tuesday</string>
+			<key>Event</key>
+			<string>Exams end, 6 p.m. Faculty meeting, 2 p.m.</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>zb</key>
+		<dict>
+			<key>Date</key>
+			<string>May 9, Thursday</string>
+			<key>Event</key>
+			<string>Senior grades due for spring semester</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>zc</key>
+		<dict>
+			<key>Date</key>
+			<string>May 14, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 2 p.m. Governing Board meeting</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>zd</key>
+		<dict>
+			<key>Date</key>
+			<string>May 18, Saturday</string>
+			<key>Event</key>
+			<string>BDS Commencement Evensong, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>ze</key>
+		<dict>
+			<key>Date</key>
+			<string>May 19, Sunday</string>
+			<key>Event</key>
+			<string>YDS Commencement Service, 4 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>zf</key>
+		<dict>
+			<key>Date</key>
+			<string>May 20, Monday</string>
+			<key>Event</key>
+			<string>University and YDS Commencement</string>
+			<key>Type</key>
+			<string>8</string>
+		</dict>
+		<key>zg</key>
+		<dict>
+			<key>Date</key>
+			<string>May 21, Tuesday</string>
+			<key>Event</key>
+			<string>All other grades due for spring semester</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>zh</key>
+		<dict>
+			<key>Date</key>
+			<string>June 28, Friday</string>
+			<key>Event</key>
+			<string>Last day for faculty to accept late work for spring semester</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

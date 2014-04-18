@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Fall 2013</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>August 27, Tuesday</string>
+			<key>Event</key>
+			<string>Orientation for all new students. Registration for all students</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>August 28, Wednesday</string>
+			<key>Event</key>
+			<string>Fall term classes begin, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>August 30, Friday</string>
+			<key>Event</key>
+			<string>Monday classes meet instead of Friday classes</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>September 2, Monday</string>
+			<key>Event</key>
+			<string>No classes. Labor Day</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>September 16, Monday</string>
+			<key>Event</key>
+			<string>Last day to add a course with permission of registrar</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>October 18, Friday</string>
+			<key>Event</key>
+			<string>Last day to drop a course with permission of registrar</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>October 22, Tuesday</string>
+			<key>Event</key>
+			<string>October recess begins, 5:30 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>October 28, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:25 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>November 21, Thursday</string>
+			<key>Event</key>
+			<string>Annual All-School Open House</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>November 22, Friday</string>
+			<key>Event</key>
+			<string>November recess begins, 5:20 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>December 2, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:25 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>December 6, Friday</string>
+			<key>Event</key>
+			<string>Last day to withdraw from a course with permission of instructor and registrar. Fall term classes end, 5:20 p.m.</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>December 12, Thursday</string>
+			<key>Event</key>
+			<string>Critiques and exams begin, 9 a.m.</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>n</key>
+		<dict>
+			<key>Date</key>
+			<string>December 17, Tuesday</string>
+			<key>Event</key>
+			<string>Critiques and exams end, 5:20 p.m. Winter recess begins</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Spring 2014</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>January 1, Wednesday</string>
+			<key>Event</key>
+			<string>Closing date for submission of online applications for admission in September 2014, 12 midnight</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>January 13, Monday</string>
+			<key>Event</key>
+			<string>Registration for all students. Academic classes begin, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>January 14, Tuesday</string>
+			<key>Event</key>
+			<string>Spring term School of Art classes begin, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>January 17, Friday</string>
+			<key>Event</key>
+			<string>Monday classes meet instead of Friday classes</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>January 20, Monday</string>
+			<key>Event</key>
+			<string>No classes. Martin Luther King Day</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>January 27, Monday</string>
+			<key>Event</key>
+			<string>Last day to add a course with permission of registrar</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>March 7, Friday</string>
+			<key>Event</key>
+			<string>Last day to drop a course with permission of registrar. Midterm grades due, 12 noon</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>March 7, Friday</string>
+			<key>Event</key>
+			<string>Spring recess begins, 5:20 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>March 24, Monday</string>
+			<key>Event</key>
+			<string>Spring recess ends. Classes resume, 8:25 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>April 25, Friday</string>
+			<key>Event</key>
+			<string>Last day to withdraw from a course with permission of instructor and registrar. Spring term classes end, 5:20 p.m.</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>May 1, Thursday</string>
+			<key>Event</key>
+			<string>Critiques and examinations begin, 9 a.m.</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>May 6, Tuesday</string>
+			<key>Event</key>
+			<string>Critiques and examinations end, 5:20 p.m. Summer recess begins</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>May 19, Monday</string>
+			<key>Event</key>
+			<string>University Commencement</string>
+			<key>Type</key>
+			<string>8</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

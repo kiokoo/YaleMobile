@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>About</key>
+	<string>The Yale Shuttle service runs year-round with the exception of the following University Holidays: New Years Eve, New Years Day, Memorial Day, Independence Day, Thanksgiving and the following Friday, Christmas Eve and Christmas Day.</string>
+	<key>Blue Route</key>
+	<string>Day Time
+Runs Monday - Friday beginning at Prospect &amp; Sachem Streets. Buses leave every fifteen minutes beginning at 7:00 a.m. with the final departure at 6:00 p.m.
+
+Night Time
+Buses leave the lot at 333 Cedar Street and Whitney/Humphrey at 6:00 p.m. and run at 15 minute intervals until 1:00 a.m. (last bus leaves 333 Cedar at 12:45 a.m.). Starting at 6 p.m., door-to-door service is available north of Sachem Street. Please note that there are now TWO shuttle stop locations in front of Union Station. If the stop directly in front of the station is congested, shuttle drivers pick up in front of the parking garage. Please look for Shuttles in both locations.</string>
+	<key>Weekend Blue</key>
+	<string>Weekend Blue Line buses leave Prospect Canner every half hour. Bus 1 leaves at 8:15 a.m. and Bus 2 leaves at 8:45 a.m. The last departure for Bus 1 5:15 p.m. and the last departure for Bus 2 is 5:45 p.m. Please note that there are now TWO shuttle stop locations in front of Union Station. If the stop directly in front of the station is congested, shuttle drivers pick up in front of the parking garage. Please look for Shuttles in both locations.</string>
+	<key>Orange Route</key>
+	<string>Day Time
+Runs Monday - Friday beginning at Whitney &amp; Canner Streets. Bus frequency is every twelve to fifteen minutes from 7:00 a.m. to 11:00 a.m. The last bus in the morning leaves Whitney/Canner at 10:45 AM. Afternoon service is provided from 4:00 p.m. until 6:00 p.m., with the first departure 333 Cedar Street at 4:00pm and from College and Wall at 4:10 p.m. Nightime service Begins at 6:00 p.m. from 333 Cedar Street.
+
+Afternoon
+The afternoon Orange Line runs fixed route service Monday-Friday between 4 p.m. and 6 p.m., with the first departure from 333 Cedar at 4:00 p.m. and College/Wall at 4:10 p.m. Door-to-door service begins at 6 p.m. and runs until 11 p.m.
+
+Night Time
+The nighttime Orange Line includes a stop at the School of Nursing, stopping every 15 minutes at the pedestrian gate on Church Street South and on Cedar Street at the corner of Amistad Street. The last bus leaves 333 Cedar Street at 10:45 p.m.
+Door-to-Door service starts east of Whitney Avenue at Canner Street.</string>
+	<key>Early Red Route</key>
+	<string>The Early Red Line runs Monday - Friday beginning at Union Station from 5:40 a.m. to 7:00 a.m. Please note that there are now TWO shuttle stop locations in front of Union Station. If the stop directly in front of the station is congested, shuttle drivers pick up in front of the parking garage. Please look for Shuttles in both locations.</string>
+	<key>Red Route &amp; 25 Science Park</key>
+	<string>Red line runs Monday - Friday beginning at Union Station. Buses leave every fifteen minutes beginning at 7:05 a.m. with the final departure from Science Park at 6:50 p.m. Please note that there are now TWO shuttle stop locations in front of Union Station. If the stop directly in front of the station is congested, shuttle drivers pick up in front of the parking garage. Please look for Shuttles in both locations.</string>
+	<key>VA Shuttle</key>
+	<string>The Veterans Hospital shuttle serves Quigley Field - a satellite parking lot in West Haven, the VA Hospital, Yale New Haven Hospital, and the Yale Medical School campus. This shuttle provides a free service to all users of these facilities.
+
+The shuttle runs from 6:00 a.m. until 7:00 p.m. daily--with the last bus leaving the VA Hospital and 333 Cedar Street at 6:30 p.m. Shuttles leave the 333 Cedar Street Sterling Hall of Medicine entrance every twenty minutes, according to the schedule.
+
+Note: Shuttle will stop automatically at Quigley Field inbound/outbound routes to VA and Medical School.</string>
+	<key>YNHH Shuttle</key>
+	<string>The Yale New Haven Hospital shuttle runs between several stops around the medical center facilities and Union Station beginning at 6:12 a.m. and at various times during the day until 7:35 p.m.
+
+Please note that the YNHH Commuter Shuttles are available for hospital employees only.</string>
+</dict>
+</plist>

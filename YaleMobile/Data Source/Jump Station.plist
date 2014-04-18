@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Student Information Service</key>
+	<string>http://yale.edu/sis</string>
+	<key>Classes*v2</key>
+	<string>http://classesv2.yale.edu</string>
+	<key>Setup EliApps on iPhone</key>
+	<string>http://its.yale.edu/how-to/using-eliapps-mobile-devices</string>
+	<key>Library Homepage</key>
+	<string>http://web.library.yale.edu/</string>
+	<key>Orbis Catalog</key>
+	<string>http://orbis.library.yale.edu/vwebv/searchBasic?dbCode=LOCAL</string>
+	<key>Academic Departments</key>
+	<string>http://yale.edu/departments/index.html</string>
+	<key>School Homepages</key>
+	<string>http://yale.edu/schools/index.html</string>
+	<key>Yale Health</key>
+	<string>http://yalehealth.yale.edu/</string>
+	<key>Undergrad Career Service</key>
+	<string>http://ucs.yalecollege.yale.edu/</string>
+	<key>Registrar</key>
+	<string>http://www.yale.edu/sfas/registrar/index.html</string>
+	<key>Yale News</key>
+	<string>http://news.yale.edu/</string>
+	<key>Yale College Class of 2017</key>
+	<string>http://yalecollege.yale.edu/content/class-2017</string>
+	<key>Yale Daily News</key>
+	<string>http://yaledailynews.com/</string>
+	<key>Yale College Programs of Study</key>
+	<string>http://catalog.yale.edu/ycps/</string>
+</dict>
+</plist>

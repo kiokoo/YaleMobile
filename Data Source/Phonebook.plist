@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>A</key>
+	<dict>
+		<key>Associated Student Agencies</key>
+		<string>432-0803</string>
+		<key>Accelerator Laboratory</key>
+		<string>432-3090</string>
+		<key>Admissions, Undergraduate</key>
+		<string>432-9300</string>
+		<key>Admissions, Architecture</key>
+		<string>432-2296</string>
+		<key>Admissions, Art</key>
+		<string>432-2600</string>
+		<key>Admissions, Divinity</key>
+		<string>432-5360</string>
+		<key>Admissions, Drama</key>
+		<string>432-1507</string>
+		<key>Admissions, Engineering &amp; Applied Science</key>
+		<string>432-4250</string>
+		<key>Admissions, Forestry &amp; Environmental Studies</key>
+		<string>432-5106</string>
+		<key>Admissions, Graduate School of Arts &amp; Sciences</key>
+		<string>432-2771</string>
+		<key>Admissions, Law School</key>
+		<string>432-4995</string>
+		<key>Admissions, Management</key>
+		<string>432-5932</string>
+		<key>Admissions, Medicine</key>
+		<string>785-2696</string>
+		<key>Admissions, Music</key>
+		<string>432-4155</string>
+		<key>Admissions, Nursing</key>
+		<string>737-1793</string>
+		<key>Admissions, Physician Assoc</key>
+		<string>785-2860</string>
+		<key>Admissions, Public Health</key>
+		<string>785-2844</string>
+		<key>African American Studies</key>
+		<string>432-1170</string>
+		<key>African Collection</key>
+		<string>432-1883</string>
+		<key>Afro-American Cultural Center</key>
+		<string>432-4131</string>
+		<key>Association of Yale Alumni</key>
+		<string>432-2586</string>
+		<key>Alumni Magazine</key>
+		<string>432-0645</string>
+		<key>Alumni Information</key>
+		<string>432-1100</string>
+		<key>American Studies</key>
+		<string>432-1186</string>
+		<key>Animal Resources Center</key>
+		<string>785-2526</string>
+		<key>Anesthesiology</key>
+		<string>785-2802</string>
+		<key>Anthropology</key>
+		<string>432-3700</string>
+		<key>Anthropology Library</key>
+		<string>432-3439</string>
+		<key>Applied Physics</key>
+		<string>432-2210</string>
+		<key>Archaeological Studies, Council on</key>
+		<string>432-3701</string>
+		<key>Architecture, School of</key>
+		<string>432-2288</string>
+		<key>Art Gallery</key>
+		<string>432-0600</string>
+		<key>Art School</key>
+		<string>432-2600</string>
+		<key>Astronomy</key>
+		<string>432-3000</string>
+		<key>Astronomy &amp; Astrophysics, Center of</key>
+		<string>432-3392</string>
+		<key>Asian American Cultural Center</key>
+		<string>432-2931</string>
+		<key>Arts Library</key>
+		<string>432-2645</string>
+		<key>Athletics, Physical Education &amp; Recreation</key>
+		<string>432-4747</string>
+		<key>Astronomy Library</key>
+		<string>432-3033</string>
+		<key>Auditing</key>
+		<string>432-5524</string>
+	</dict>
+	<key>B</key>
+	<dict>
+		<key>Bass Library</key>
+		<string>432-1870</string>
+		<key>Bands</key>
+		<string>432-4111</string>
+		<key>Battell Chapel</key>
+		<string>432-1130</string>
+		<key>Beinecke Rare Book &amp; Manuscript Library</key>
+		<string>432-2977</string>
+		<key>Branford Master&apos;s Office</key>
+		<string>432-0524</string>
+		<key>Banner Publications</key>
+		<string>436-8012</string>
+		<key>Branford Dean&apos;s Office</key>
+		<string>432-0520</string>
+		<key>Berkeley Master&apos;s Office</key>
+		<string>432-0500</string>
+		<key>Berkeley Dean&apos;s Office</key>
+		<string>432-0502</string>
+		<key>Berkeley Divinity School &amp; Center</key>
+		<string>432-9285</string>
+		<key>Biological &amp; Biomedical Sciences Graduate Program</key>
+		<string>785-3735</string>
+		<key>Biomedical Engineering</key>
+		<string>432-4262</string>
+		<key>Biospheric Studies, Yale Institute for (YIBS)</key>
+		<string>432-9856</string>
+		<key>Black Church at Yale</key>
+		<string>432-7747</string>
+		<key>Bodel, Phyllis, Child Care Center and Kindergarten at the Yale School of Medicine</key>
+		<string>785-3829</string>
+		<key>Bright Horizons at West Campus</key>
+		<string>785-3564</string>
+		<key>British Art, Yale Center for</key>
+		<string>432-2800</string>
+		<key>Business Operations</key>
+		<string>432-8849</string>
+	</dict>
+	<key>C</key>
+	<dict>
+		<key>Calhoun Master&apos;s Office</key>
+		<string>432-0740</string>
+		<key>Calhoun Dean&apos;s Office</key>
+		<string>432-0744</string>
+		<key>Camerata</key>
+		<string>432-5184</string>
+		<key>Campus Mail Services (Central)</key>
+		<string>436-5324</string>
+		<key>Campus Mail Services (Medical)</key>
+		<string>785-4087</string>
+		<key>Cancer Center</key>
+		<string>785-4095</string>
+		<key>Career Services, Undergraduate</key>
+		<string>432-0800</string>
+		<key>Cell Biology</key>
+		<string>785-4311</string>
+		<key>Cellular &amp; Molecular Physiology</key>
+		<string>785-2989</string>
+		<key>Center for Clinical Investigation (YCCI)</key>
+		<string>785-3482</string>
+		<key>Center for Comparative Research (CCR)</key>
+		<string>436-4350</string>
+		<key>Center for Cultural Sociology (CCS)</key>
+		<string>432-9855</string>
+		<key>Center for Faith &amp; CUlture</key>
+		<string>432-8629</string>
+		<key>Center for Interdisciplinary Research on AIDS (CIRA)</key>
+		<string>764-4333</string>
+		<key>Center for International &amp; Professional Experience</key>
+		<string>432-0800</string>
+		<key>Center for Language Study</key>
+		<string>432-8196</string>
+		<key>Center for Medical Informatics</key>
+		<string>737-5738</string>
+		<key>Center for Perinatal, Pediatric &amp; Environmental Epidemiology</key>
+		<string>764-9375</string>
+		<key>Center for Public Health Preparedness</key>
+		<string>764-9713</string>
+		<key>Center for Research on Inequalities &amp; the Life Course (CIQLE)</key>
+		<string>432-9587</string>
+		<key>Center for Solar &amp; Space Research</key>
+		<string>432-3000</string>
+		<key>Chaplaincy</key>
+		<string>432-1128</string>
+		<key>Chemical &amp; Environmental Engineering</key>
+		<string>432-2222</string>
+		<key>Chemical Instrumentation Center</key>
+		<string>432-3930</string>
+		<key>Chemistry</key>
+		<string>432-3916</string>
+		<key>Chemistry Library</key>
+		<string>432-3960</string>
+		<key>Chemistry Research Building</key>
+		<string>432-3916</string>
+		<key>Child Care Resource &amp; Referral</key>
+		<string>432-8069</string>
+		<key>Child Study Center</key>
+		<string>785-2540</string>
+		<key>Classics</key>
+		<string>432-0977</string>
+		<key>Classics Library</key>
+		<string>432-0854</string>
+		<key>Classroom Scheduling &amp; Special Events</key>
+		<string>432-2335</string>
+		<key>Collaborative Center for Statistics in Science</key>
+		<string>785-5185</string>
+		<key>College Seminar Program</key>
+		<string>432-2920</string>
+		<key>Commencement Information</key>
+		<string>432-2317</string>
+		<key>Comparative Literature</key>
+		<string>432-4750</string>
+		<key>Computer Science</key>
+		<string>432-1246</string>
+		<key>Conference &amp; Event Services &amp; Summer Housing</key>
+		<string>432-0465</string>
+		<key>Controller&apos;s Office</key>
+		<string>432-5524</string>
+		<key>Cooperative Research, Office of</key>
+		<string>436-8096</string>
+		<key>Cooperative Research, Medical School Office</key>
+		<string>785-6209</string>
+		<key>Corporation, Yale</key>
+		<string>432-7280</string>
+		<key>Cowles Foundation for Research in Economics</key>
+		<string>432-3702</string>
+	</dict>
+	<key>D</key>
+	<dict>
+		<key>Davenport Dean&apos;s Office</key>
+		<string>432-0555</string>
+		<key>Daily Bulletin</key>
+		<string>432-1316</string>
+		<key>Davenport Master&apos;s Office</key>
+		<string>432-0550</string>
+		<key>Dermatology</key>
+		<string>785-4092</string>
+		<key>Development &amp; Alumni Affairs, Medical</key>
+		<string>436-8558</string>
+		<key>Development Office</key>
+		<string>432-5436</string>
+		<key>Diabetes Endocrinology Research Center</key>
+		<string>785-5442</string>
+		<key>Diagnostic Radiology</key>
+		<string>785-2385</string>
+		<key>Digital Media Center for the Arts</key>
+		<string>432-8188</string>
+		<key>Dining Services, Medical School</key>
+		<string>785-4685</string>
+		<key>Directory Assistance</key>
+		<string>432-4771</string>
+		<key>Disabilities, Resource Office on</key>
+		<string>432-2324</string>
+		<key>Dining Halls</key>
+		<string>432-0400</string>
+		<key>Directed Studies</key>
+		<string>432-1313</string>
+		<key>Divinity School</key>
+		<string>432-5303</string>
+		<key>Drama, School of</key>
+		<string>432-1500</string>
+		<key>Divinity School Library</key>
+		<string>432-5290</string>
+		<key>Dwight Hall</key>
+		<string>432-2420</string>
+	</dict>
+	<key>E</key>
+	<dict>
+		<key>Ezra Stiles Master&apos;s Office</key>
+		<string>432-0560</string>
+		<key>Emergency Repairs</key>
+		<string>432-6888</string>
+		<key>Economics</key>
+		<string>432-3576</string>
+		<key>East Asian Language &amp; Literature</key>
+		<string>432-2860</string>
+		<key>Ecology &amp; Evolutionary Biology</key>
+		<string>432-6138</string>
+		<key>Economic Growth Center</key>
+		<string>432-3610</string>
+		<key>East Asia Library</key>
+		<string>432-1790</string>
+		<key>Electrical Engineering</key>
+		<string>432-4300</string>
+		<key>Eli Whitney Students Program</key>
+		<string>432-2430</string>
+		<key>Elizabethan Club</key>
+		<string>432-0172</string>
+		<key>Emergency Management Services</key>
+		<string>436-8597</string>
+		<key>Engineering &amp; Applied Science Library</key>
+		<string>432-2928</string>
+		<key>Engineering &amp; Applied Science, School of</key>
+		<string>432-4200</string>
+		<key>English Language Institute</key>
+		<string>432-2430</string>
+		<key>Enterprise Risk Management</key>
+		<string>432-9006</string>
+		<key>Environmental Studies, Program of</key>
+		<string>432-9868</string>
+		<key>Environmental Health &amp; Safety</key>
+		<string>785-3550</string>
+		<key>Episcopal Church at Yale</key>
+		<string>432-5401</string>
+		<key>Ethics, Politics &amp; Economics</key>
+		<string>436-3699</string>
+		<key>Equal Opportunity Programs, Office for</key>
+		<string>432-0849</string>
+	</dict>
+	<key>F</key>
+	<dict>
+		<key>Facilities, Central Campus</key>
+		<string>432-6888</string>
+		<key>Facilities, Medical Campus</key>
+		<string>785-4620</string>
+		<key>Film Studies</key>
+		<string>436-4668</string>
+		<key>Film Study Center</key>
+		<string>432-0168</string>
+		<key>Financial Aid</key>
+		<string>432-2700</string>
+		<key>Finance &amp; Business Operations</key>
+		<string>432-1096</string>
+		<key>Forestry &amp; Environmental Studies, School of, Dean&apos;s Office</key>
+		<string>432-5109</string>
+		<key>French</key>
+		<string>432-4900</string>
+		<key>French Studies</key>
+		<string>432-4910</string>
+	</dict>
+	<key>G</key>
+	<dict>
+		<key>Genetics</key>
+		<string>785-2649</string>
+		<key>General Accounting Services</key>
+		<string>432-5402</string>
+		<key>General Counsel</key>
+		<string>432-4949</string>
+		<key>Geology Library</key>
+		<string>432-3157</string>
+		<key>Germanic Languages &amp; Literatures</key>
+		<string>432-0781</string>
+		<key>Gibbs Machine Shop</key>
+		<string>432-6300</string>
+		<key>Geology &amp; Geophysics</key>
+		<string>432-3114</string>
+		<key>Government Documents &amp; Information Center</key>
+		<string>432-3211</string>
+		<key>Golf Course</key>
+		<string>392-2380</string>
+		<key>Graduate School of Arts &amp; Sciences</key>
+		<string>432-2770</string>
+		<key>Gymnasium, Payne Whitney</key>
+		<string>432-1444</string>
+		<key>Graphics Services, School of Medicine</key>
+		<string>737-5274</string>
+		<key>Greenberg Conference Center</key>
+		<string>436-4555</string>
+	</dict>
+	<key>H</key>
+	<dict>
+		<key>Health Services</key>
+		<string>432-0123</string>
+		<key>History of Art</key>
+		<string>432-2667</string>
+		<key>History</key>
+		<string>432-1366</string>
+		<key>History of Science &amp; Medicine</key>
+		<string>432-1365</string>
+		<key>Horizon International</key>
+		<string>432-6266</string>
+		<key>Hughes, Howard, Medical Institute</key>
+		<string>737-4400</string>
+		<key>Human Resources</key>
+		<string>432-5552</string>
+		<key>Human Research Protection Program</key>
+		<string>785-4688</string>
+		<key>Humanities in Medicine</key>
+		<string>785-6102</string>
+		<key>Humanities Program</key>
+		<string>432-0670</string>
+		<key>Haskins Laboratories</key>
+		<string>865-6163</string>
+		<key>Historical Sound Recordings Collection</key>
+		<string>432-1795</string>
+	</dict>
+	<key>I</key>
+	<dict>
+		<key>ID Center, Central Campus</key>
+		<string>432-0165</string>
+		<key>ID Center, Medical Campus</key>
+		<string>785-4286</string>
+		<key>Immunobiology</key>
+		<string>785-5211</string>
+		<key>Information</key>
+		<string>432-4771</string>
+		<key>Infirmary</key>
+		<string>432-0001</string>
+		<key>Information Technology Services</key>
+		<string>432-6500</string>
+		<key>Institute of Sacred Music</key>
+		<string>432-5180</string>
+		<key>Ingalls Ice Skating Rink</key>
+		<string>432-0875</string>
+		<key>Institution for Social &amp; Policy Studies</key>
+		<string>432-3234</string>
+		<key>Institutional Research, Office of</key>
+		<string>432-1330</string>
+		<key>International &amp; Development Economics</key>
+		<string>432-3610</string>
+		<key>International Security Studies</key>
+		<string>432-6242</string>
+		<key>International Students &amp; Scholars, Office of (OISS)</key>
+		<string>432-2305</string>
+		<key>International Tax Office</key>
+		<string>432-5530</string>
+		<key>International Affairs, Office of</key>
+		<string>432-6240</string>
+		<key>Investments</key>
+		<string>432-0120</string>
+		<key>Italian Language &amp; Literature</key>
+		<string>432-0595</string>
+	</dict>
+	<key>J</key>
+	<dict>
+		<key>Jonathan Edward College Master&apos;s Office</key>
+		<string>432-0380</string>
+		<key>Jonathan Edward College Dean&apos;s Office</key>
+		<string>432-0377</string>
+		<key>Jackson Child Care Program, Inc</key>
+		<string>764-9416</string>
+		<key>Johnson Clinical Scholars Program</key>
+		<string>785-4148</string>
+		<key>Judaic Studies Program</key>
+		<string>432-0843</string>
+	</dict>
+	<key>K</key>
+	<dict>
+		<key>Keck Foundation Biotechnology Resource Laboratory</key>
+		<string>737-2206</string>
+		<key>Kline Chemistry Laboratory</key>
+		<string>432-3916</string>
+		<key>Kline Geology Laboratory</key>
+		<string>432-3114</string>
+		<key>Kline Science Library</key>
+		<string>432-3439</string>
+		<key>Koerner Center for Emeritus Faculty</key>
+		<string>432-8227</string>
+	</dict>
+	<key>L</key>
+	<dict>
+		<key>Lost &amp; Found</key>
+		<string>432-4405</string>
+		<key>Law Library</key>
+		<string>432-1600</string>
+		<key>Law School</key>
+		<string>432-4992</string>
+		<key>Lesbian, Gay, Bisexual &amp; Transgender Studies</key>
+		<string>432-7737</string>
+		<key>Laboratory Medicine</key>
+		<string>688-2446</string>
+		<key>Lamar, Howard R., Center for the Study of Frontiers &amp; Borders</key>
+		<string>432-2328</string>
+		<key>Latino Cultural Center (La Casa)</key>
+		<string>432-0856</string>
+		<key>Linguistics</key>
+		<string>432-2450</string>
+		<key>Literature</key>
+		<string>432-4750</string>
+	</dict>
+	<key>M</key>
+	<dict>
+		<key>MacMillan Center for International &amp; Area Studies</key>
+		<string>432-3410</string>
+		<key>Management, School of</key>
+		<string>432-5932</string>
+		<key>Manuscripts &amp; Archives</key>
+		<string>432-1735</string>
+		<key>Map Collection</key>
+		<string>432-1867</string>
+		<key>Marketing &amp; Trademark Licensing, Office of</key>
+		<string>432-2313</string>
+		<key>Marsh Botanical Garden</key>
+		<string>432-6320</string>
+		<key>Masters, Council of</key>
+		<string>432-1145</string>
+		<key>Mathematics</key>
+		<string>432-4174</string>
+		<key>Mathematics Library</key>
+		<string>432-7489</string>
+		<key>Mechanical Engineering</key>
+		<string>432-4223</string>
+		<key>Media Services</key>
+		<string>432-2650</string>
+		<key>Medieval Studies</key>
+		<string>432-0672</string>
+		<key>Microbial Pathogenesis</key>
+		<string>737-2404</string>
+		<key>Microelectronic Materials &amp; Structures, Center for</key>
+		<string>432-2213</string>
+		<key>Minibus</key>
+		<string>432-6330</string>
+		<key>Molecular Biophysics &amp; Biochemistry</key>
+		<string>432-2077</string>
+		<key>Molecular, Cellular &amp; Developmental Biology</key>
+		<string>432-3460</string>
+		<key>Molecular Medicine, Boyer Center for</key>
+		<string>737-2266</string>
+		<key>Morse College Master&apos;s Office</key>
+		<string>432-0393</string>
+		<key>Morse College Dean&apos;s Office</key>
+		<string>432-0397</string>
+		<key>Mudd Library</key>
+		<string>432-3203</string>
+		<key>Music, Department of</key>
+		<string>432-2985</string>
+		<key>Music Library</key>
+		<string>432-0492</string>
+		<key>Music School</key>
+		<string>432-1965</string>
+	</dict>
+	<key>N</key>
+	<dict>
+		<key>Native American Cultural Center</key>
+		<string>432-2931</string>
+		<key>Near Eastern Languages &amp; Civilizations</key>
+		<string>432-2944</string>
+		<key>Neurobiology</key>
+		<string>785-4323</string>
+		<key>Neurology</key>
+		<string>785-4085</string>
+		<key>Neurosurgery</key>
+		<string>785-2805</string>
+		<key>New Haven &amp; State Affairs &amp; Campus Development, Office of</key>
+		<string>432-8613</string>
+		<key>Nursing School</key>
+		<string>785-2389</string>
+	</dict>
+	<key>O</key>
+	<dict>
+		<key>Obstetrics, Gynecology &amp; Reproductive Sciences</key>
+		<string>785-4002</string>
+		<key>Off Campus Housing</key>
+		<string>432-9756</string>
+		<key>Ophthalmology &amp; Visual Science</key>
+		<string>785-2020</string>
+		<key>Orthopaedics &amp; Rehabilitation</key>
+		<string>785-2579</string>
+		<key>Oral History American Music Archive</key>
+		<string>432-1988</string>
+	</dict>
+	<key>P</key>
+	<dict>
+		<key>Parking &amp; Transit Services, Central Campus</key>
+		<string>432-9790</string>
+		<key>Parking &amp; Transit Services, Medical Campus</key>
+		<string>785-6456</string>
+		<key>Pathology</key>
+		<string>785-3624</string>
+		<key>Payroll &amp; Compensation Accounting</key>
+		<string>432-5552</string>
+		<key>Peabody Museum of Natural History</key>
+		<string>432-5050</string>
+		<key>Pediatrics</key>
+		<string>785-4638</string>
+		<key>Pharmacology</key>
+		<string>785-4373</string>
+		<key>Physics</key>
+		<string>432-3600</string>
+		<key>Pharmacy (University Health Services Center)</key>
+		<string>432-0033</string>
+		<key>Physician Associate Program</key>
+		<string>785-2860</string>
+		<key>Philosophy</key>
+		<string>432-1665</string>
+		<key>Pierson College Master&apos;s Office</key>
+		<string>432-1031</string>
+		<key>Pierson College Dean&apos;s Office</key>
+		<string>432-1006</string>
+		<key>Police Department</key>
+		<string>432-4400</string>
+		<key>Position Emission Tomography (PET) Center</key>
+		<string>737-9738</string>
+		<key>Post Office (Yale Station)</key>
+		<string>773-3454</string>
+		<key>Postdoctoral Affairs</key>
+		<string>432-9075</string>
+		<key>President, Office of the</key>
+		<string>432-2550</string>
+		<key>Press</key>
+		<string>432-0960</string>
+		<key>Printer, Office of the University</key>
+		<string>432-9217</string>
+		<key>Printing &amp; Publishing Services (YPPS)</key>
+		<string>432-6560</string>
+		<key>Procurement</key>
+		<string>432-9955</string>
+		<key>Provost, FAS Business Operations</key>
+		<string>432-4455</string>
+		<key>Provost, Office of the</key>
+		<string>432-4444</string>
+		<key>Psychiatry</key>
+		<string>785-2117</string>
+		<key>Psychology</key>
+		<string>432-4500</string>
+		<key>Public Affairs &amp; Communications, Office of</key>
+		<string>432-1333</string>
+		<key>Purchasing</key>
+		<string>432-9955</string>
+	</dict>
+	<key>R</key>
+	<dict>
+		<key>Registrar, University</key>
+		<string>432-2330</string>
+		<key>Registrar, Architecture</key>
+		<string>432-2296</string>
+		<key>Registrar, Art</key>
+		<string>432-2600</string>
+		<key>Registrar, Divinity</key>
+		<string>432-5311</string>
+		<key>Registrar, Drama</key>
+		<string>432-1507</string>
+		<key>Registrar, Forestry &amp; Environmental Studies</key>
+		<string>432-5136</string>
+		<key>Registrar, Graduate School of Arts &amp; Sciences</key>
+		<string>432-2330</string>
+		<key>Registrar, Law School</key>
+		<string>432-1678</string>
+		<key>Registrar, Management</key>
+		<string>432-6011</string>
+		<key>Registrar, Medicine</key>
+		<string>785-5561</string>
+		<key>Registrar, Music</key>
+		<string>432-1962</string>
+		<key>Registrar, Nursing</key>
+		<string>737-2257</string>
+		<key>Registrar, Yale College</key>
+		<string>432-2330</string>
+		<key>Registrar, Public Health</key>
+		<string>785-3862</string>
+		<key>Religious Studies</key>
+		<string>432-0828</string>
+		<key>Renaissance Studies</key>
+		<string>432-0672</string>
+		<key>Research Administration, Office of</key>
+		<string>785-2518</string>
+	</dict>
+	<key>S</key>
+	<dict>
+		<key>Sterling Memorial Library</key>
+		<string>432-1789</string>
+		<key>Student Medicine</key>
+		<string>432-0312</string>
+		<key>Student Financial Services</key>
+		<string>432-2700</string>
+		<key>Saybrook College Master&apos;s Office</key>
+		<string>432-0540</string>
+		<key>Saybrook College Dean&apos;s Office</key>
+		<string>432-0541</string>
+		<key>Secretary, Office of the</key>
+		<string>432-2321</string>
+		<key>Security</key>
+		<string>785-5555</string>
+		<key>Silliman College Master&apos;s Office</key>
+		<string>432-0700</string>
+		<key>Silliman College Dean&apos;s Office</key>
+		<string>432-0701</string>
+		<key>Slavic Languages &amp; Literatures</key>
+		<string>432-1300</string>
+		<key>Slifka Center for Jewish Life</key>
+		<string>432-1134</string>
+		<key>Social &amp; Policy Studies, Institution for</key>
+		<string>432-3234</string>
+		<key>Social Science Libraries &amp; Information Services</key>
+		<string>432-3300</string>
+		<key>Sociology</key>
+		<string>432-3313</string>
+		<key>Spanish &amp; Portuguese</key>
+		<string>432-1151</string>
+		<key>Statistics</key>
+		<string>432-0666</string>
+		<key>Stem Cell Center</key>
+		<string>785-6239</string>
+		<key>Sterling Chemistry Laboratory</key>
+		<string>432-3916</string>
+		<key>Student Employment</key>
+		<string>432-0167</string>
+		<key>Student Garage</key>
+		<string>432-9700</string>
+		<key>Summer Session</key>
+		<string>432-2430</string>
+		<key>Summer School of Music</key>
+		<string>432-1966</string>
+		<key>Surgery</key>
+		<string>785-2697</string>
+		<key>Shuttle (Day)</key>
+		<string>432-9790</string>
+		<key>Shuttle (Night)</key>
+		<string>432-6330</string>
+		<key>Sustainability, Office of</key>
+		<string>436-3571</string>
+		<key>Symphony Orchestra (YSO)</key>
+		<string>432-4140</string>
+	</dict>
+	<key>T</key>
+	<dict>
+		<key>Technology Troubleshooting Office</key>
+		<string>432-5242</string>
+		<key>Tax Department</key>
+		<string>432-5530</string>
+		<key>Teacher Preparation &amp; Placement</key>
+		<string>432-4631</string>
+		<key>Therapeutic Radiology</key>
+		<string>785-2941</string>
+		<key>Treasury Services</key>
+		<string>432-4100</string>
+		<key>Trumbull College Master&apos;s Office</key>
+		<string>432-0720</string>
+		<key>Trumbull College Dean&apos;s Office</key>
+		<string>432-0722</string>
+		<key>Tours, Campus</key>
+		<string>432-2300</string>
+		<key>Tutoring, Languages</key>
+		<string>432-8196</string>
+		<key>Tutoring, Math &amp; Sciences</key>
+		<string>432-1037</string>
+		<key>Tutoring, Writing, Humanities &amp; Social Sciences</key>
+		<string>432-7237</string>
+		<key>Testing, Standardized</key>
+		<string>432-2743</string>
+		<key>Theater Studies</key>
+		<string>432-1310</string>
+		<key>Theater, University</key>
+		<string>432-1500</string>
+		<key>Timothy Dwight College Master&apos;s Office</key>
+		<string>432-0770</string>
+		<key>Timothy Dwight College Dean&apos;s Office</key>
+		<string>432-0754</string>
+	</dict>
+	<key>U</key>
+	<dict>
+		<key>Undergraduate Ensembles</key>
+		<string>432-4111</string>
+		<key>University Church</key>
+		<string>432-1130</string>
+		<key>University Council</key>
+		<string>432-2311</string>
+		<key>Urban Design Workshop</key>
+		<string>764-5696</string>
+		<key>Urban Ethnography Project</key>
+		<string>432-2508</string>
+	</dict>
+	<key>V</key>
+	<dict>
+		<key>Veterans Aging Cohort Study</key>
+		<string>932-5711</string>
+		<key>Veterinarian, Office of</key>
+		<string>737-1657</string>
+		<key>Visitor Center</key>
+		<string>432-2300</string>
+	</dict>
+	<key>W</key>
+	<dict>
+		<key>Whitney Humanities Center</key>
+		<string>432-0670</string>
+		<key>Women&apos;s Center</key>
+		<string>432-0388</string>
+		<key>World Fellows Program</key>
+		<string>432-1910</string>
+		<key>Women&apos;s, Gender &amp; Sexuality Studies</key>
+		<string>432-0845</string>
+	</dict>
+	<key>Y</key>
+	<dict>
+		<key>Yale-China Association</key>
+		<string>432-0880</string>
+		<key>Yale Dining</key>
+		<string>432-0400</string>
+		<key>Yale Health (Emergency)</key>
+		<string>432-0123</string>
+		<key>Yale Daily News</key>
+		<string>432-2424</string>
+		<key>Yale in London</key>
+		<string>432-2824</string>
+		<key>Yale Medical Group</key>
+		<string>785-2140</string>
+		<key>Yale New Haven Hospital</key>
+		<string>688-4242</string>
+		<key>Yale Shared Services</key>
+		<string>432-5365</string>
+		<key>Yale Sustainable Food Project</key>
+		<string>432-2084</string>
+		<key>YSM Machine Shop</key>
+		<string>785-4677</string>
+		<key>Yale College Dean&apos;s Office</key>
+		<string>432-2900</string>
+		<key>Yale College Registrar&apos;s Office</key>
+		<string>432-2330</string>
+	</dict>
+</dict>
+</plist>

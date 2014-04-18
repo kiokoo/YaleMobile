@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Fall 2013</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>August 21, Wednesday</string>
+			<key>Event</key>
+			<string>Residences open to upperclassmen, 9 a.m.</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>August 23, Friday</string>
+			<key>Event</key>
+			<string>Residences open to freshmen, 9 a.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>August 27, Tuesday</string>
+			<key>Event</key>
+			<string>Upperclass registration</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>August 28, Wednesday</string>
+			<key>Event</key>
+			<string>Fall term classes begin, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>August 30, Friday</string>
+			<key>Event</key>
+			<string>Friday classes do not meet. Monday classes meet instead</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>September 2, Monday</string>
+			<key>Event</key>
+			<string>Labor Day. Classes do not meet</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>October 22, Tuesday</string>
+			<key>Event</key>
+			<string>October recess begins, 11 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>October 28, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>November 23, Saturday</string>
+			<key>Event</key>
+			<string>November recess begins, 9 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>December 2, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>December 6, Friday</string>
+			<key>Event</key>
+			<string>Classes end, 5:30 p.m. Reading period begins</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>December 12, Thursday</string>
+			<key>Event</key>
+			<string>Final examinations begin, 9 a.m.</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>December 17, Tuesday</string>
+			<key>Event</key>
+			<string>Examinations end, 5:30 p.m. Winter recess begins</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>n</key>
+		<dict>
+			<key>Date</key>
+			<string>December 18, Wednesday</string>
+			<key>Event</key>
+			<string>Undergraduate residences close, 12 noon</string>
+			<key>Type</key>
+			<string>6</string>
+		</dict>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Spring 2014</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>January 8, Wednesday</string>
+			<key>Event</key>
+			<string>Undergraduate residences open</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>January 13, Monday</string>
+			<key>Event</key>
+			<string>Spring term classes begin, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>January 17, Friday</string>
+			<key>Event</key>
+			<string>Friday classes do not meet. Monday classes meet instead</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>January 20, Monday</string>
+			<key>Event</key>
+			<string>Martin Luther King Day. Classes do not meet</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>March 7, Friday</string>
+			<key>Event</key>
+			<string>Spring recess begins, 5:30 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>March 24, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>April 25, Friday</string>
+			<key>Event</key>
+			<string>Classes end, 5:30 p.m. Reading period begins</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>May 1, Thursday</string>
+			<key>Event</key>
+			<string>Final examinations begin, 9 a.m.</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>May 6, Tuesday</string>
+			<key>Event</key>
+			<string>Examinations end, 5:30 p.m.</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>May 7, Wednesday</string>
+			<key>Event</key>
+			<string>Residences close, 12 noon, for freshmen, sophomores, and juniors</string>
+			<key>Type</key>
+			<string>6</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>May 19, Monday</string>
+			<key>Event</key>
+			<string>University Commencement</string>
+			<key>Type</key>
+			<string>8</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>May 20, Tuesday</string>
+			<key>Event</key>
+			<string>Residences close, 12 noon, for seniors</string>
+			<key>Type</key>
+			<string>6</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>August 27, Wednesday</string>
+			<key>Event</key>
+			<string>Fall term 2013 classes begin</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

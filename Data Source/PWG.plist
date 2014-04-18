@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Academic Term</key>
+	<string>Monday - Thursday: 6 a.m. - 10 p.m.
+Friday: 6 a.m. - 8 p.m.
+Weekends: 9:30 a.m. - 4:30 p.m.</string>
+	<key>Summer Term</key>
+	<string>Monday - Thursday: 6 a.m. - 9 p.m.
+Friday: 6 a.m. - 8 p.m.
+Weekends: 10 a.m. - 2 p.m.</string>
+</dict>
+</plist>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Fall 2013</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>September 2, Monday</string>
+			<key>Event</key>
+			<string>Labor Day. Orientation for new J.D. students begins, 4 p.m.</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>September 3, Tuesday</string>
+			<key>Event</key>
+			<string>Orientation for graduate students begins. Registration for all new students. First-term small groups meet</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>September 4-6, Wednesday - Friday</string>
+			<key>Event</key>
+			<string>Orientation continues</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>September 9, Monday</string>
+			<key>Event</key>
+			<string>Registration for returning students. Classes begin, 8:10 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>September 10, Tuesday</string>
+			<key>Event</key>
+			<string>Add/Drop period begins, 8:30 a.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>September 17, Tuesday</string>
+			<key>Event</key>
+			<string>Add/Drop period closes, 4:30 p.m.</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>October 10, Thursday</string>
+			<key>Event</key>
+			<string>Fall recess begins, 6 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>October 15, Tuesday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:10 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>November 22, Friday</string>
+			<key>Event</key>
+			<string>Thanksgiving recess begins, 6 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>December 2, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:10 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>December 17, Tuesday</string>
+			<key>Event</key>
+			<string>Only Friday classes will meet. Classes end; winter recess begins, 6 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>January 6, Monday</string>
+			<key>Event</key>
+			<string>Recess ends. Exams begin, 9 a.m.</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>January 16, Thursday</string>
+			<key>Event</key>
+			<string>Exams end. Fall term ends, 5 p.m.</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Spring 2014</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>January 21, Tuesday</string>
+			<key>Event</key>
+			<string>Spring term begins, 8:10 a.m. Registration for all students</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>January 22, Wednesday</string>
+			<key>Event</key>
+			<string>Add/Drop period begins, 8:30 a.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>January 29, Wednesday</string>
+			<key>Event</key>
+			<string>Add/Drop period closes, 4:30 p.m.</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>March 14, Friday</string>
+			<key>Event</key>
+			<string>Spring recess begins, 6 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>March 24, Monday</string>
+			<key>Event</key>
+			<string>Spring recess ends. Classes resume, 8:10 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>April 28, Monday</string>
+			<key>Event</key>
+			<string>Classes end</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>May 5, Monday</string>
+			<key>Event</key>
+			<string>Examination period begins, 9 a.m.</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>May 12, Monday</string>
+			<key>Event</key>
+			<string>Scheduled examinations end, 5 p.m.</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>May 15, Thursday</string>
+			<key>Event</key>
+			<string>Self-scheduled examinations end, 5 p.m.</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>May 16, Friday</string>
+			<key>Event</key>
+			<string>Rescheduled examinations end. Spring term ends, 5 p.m.</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>May 19, Monday</string>
+			<key>Event</key>
+			<string>University Commencement</string>
+			<key>Type</key>
+			<string>8</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>May 28, Wednesday</string>
+			<key>Event</key>
+			<string>Degrees voted by faculty</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
