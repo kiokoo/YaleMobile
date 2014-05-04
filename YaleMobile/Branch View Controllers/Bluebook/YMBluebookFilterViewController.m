@@ -67,23 +67,23 @@
 {
     if (indexPath.section == 0 || (indexPath.section == 2 && indexPath.row == 0)) {
         YMSubtitleCell *cell = (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Subtitle"];
-        cell.primary.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
-        cell.secondary.text = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"Bluebook %@", cell.primary.text]];
-        cell.primary.shadowColor = [UIColor blackColor];
-        cell.primary.shadowOffset = CGSizeMake(0, 1);
-        cell.secondary.shadowColor = [UIColor blackColor];
-        cell.secondary.shadowOffset = CGSizeMake(0, 1);
+        cell.primary1.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
+        cell.secondary1.text = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"Bluebook %@", cell.primary1.text]];
+        cell.primary1.shadowColor = [UIColor blackColor];
+        cell.primary1.shadowOffset = CGSizeMake(0, 1);
+        cell.secondary1.shadowColor = [UIColor blackColor];
+        cell.secondary1.shadowOffset = CGSizeMake(0, 1);
         cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
         cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
         return cell;
     } else {
         YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Simple"];
-        cell.name.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
-        cell.name.shadowColor = [UIColor blackColor];
-        cell.name.shadowOffset = CGSizeMake(0, 1);
+        cell.name1.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
+        cell.name1.shadowColor = [UIColor blackColor];
+        cell.name1.shadowOffset = CGSizeMake(0, 1);
         cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
         cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"rightmenubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 20)]];
-        cell.accessoryView = ([[NSUserDefaults standardUserDefaults] boolForKey:[NSString stringWithFormat:@"Bluebook %@", cell.name.text]]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
+        cell.accessoryView = ([[NSUserDefaults standardUserDefaults] boolForKey:[NSString stringWithFormat:@"Bluebook %@", cell.name1.text]]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
         return cell;
     }
 
@@ -140,10 +140,10 @@
         
         if (cell.accessoryView == nil) {
             cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
-            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:[NSString stringWithFormat:@"Bluebook %@", ((YMSimpleCell *)cell).name.text]];
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:[NSString stringWithFormat:@"Bluebook %@", ((YMSimpleCell *)cell).name1.text]];
         } else {
             cell.accessoryView = nil;
-            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:[NSString stringWithFormat:@"Bluebook %@", ((YMSimpleCell *)cell).name.text]];
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:[NSString stringWithFormat:@"Bluebook %@", ((YMSimpleCell *)cell).name1.text]];
         }
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }

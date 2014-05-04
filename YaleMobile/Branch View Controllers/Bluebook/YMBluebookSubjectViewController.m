@@ -155,25 +155,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   YMBluebookSubjectCell *cell = (YMBluebookSubjectCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Subject Cell"];
-  cell.name.shadowColor = [UIColor whiteColor];       cell.name.shadowOffset = CGSizeMake(0, 1);
-  cell.code.shadowColor = [UIColor whiteColor];       cell.code.shadowOffset = CGSizeMake(0, 1);
-  cell.happens.shadowColor = [UIColor whiteColor];    cell.happens.shadowOffset = CGSizeMake(0, 1);
-  cell.instructor.shadowColor = [UIColor whiteColor]; cell.instructor.shadowOffset = CGSizeMake(0, 1);
+  cell.name1.shadowColor = [UIColor whiteColor];       cell.name1.shadowOffset = CGSizeMake(0, 1);
+  cell.code1.shadowColor = [UIColor whiteColor];       cell.code1.shadowOffset = CGSizeMake(0, 1);
+  cell.happens1.shadowColor = [UIColor whiteColor];    cell.happens1.shadowOffset = CGSizeMake(0, 1);
+  cell.instructor1.shadowColor = [UIColor whiteColor]; cell.instructor1.shadowOffset = CGSizeMake(0, 1);
   cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
   cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
   
   Course *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
-  cell.name.text = course.name;
-  cell.happens.text = course.happens;
-  cell.instructor.text = course.instructor;
-  cell.code.text = course.code;
+  cell.name1.text = course.name;
+  cell.happens1.text = course.happens;
+  cell.instructor1.text = course.instructor;
+  cell.code1.text = course.code;
   /* deprecated code
   CGSize textSize = [course.name sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:16] constrainedToSize:CGSizeMake(280, 5000.0f)];
    */
   CGSize textSize = [YMGlobalHelper boundText:course.name withFont:[UIFont fontWithName:@"HelveticaNeue" size:16] andConstraintSize:CGSizeMake(280, 5000.0f)];
-  CGRect newFrame = cell.name.frame;
+  CGRect newFrame = cell.name1.frame;
   newFrame.size.height = textSize.height;
-  cell.name.frame = newFrame;
+  cell.name1.frame = newFrame;
   
   return cell;
 }

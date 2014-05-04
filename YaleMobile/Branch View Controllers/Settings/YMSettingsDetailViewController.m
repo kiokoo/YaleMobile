@@ -73,7 +73,7 @@
 {
   if (indexPath.row == 0) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Header"];
-    cell.name.text = (self.isAbout) ? [self.aboutHeader objectAtIndex:indexPath.section] : [self.creditHeader objectAtIndex:indexPath.section];
+    cell.name1.text = (self.isAbout) ? [self.aboutHeader objectAtIndex:indexPath.section] : [self.creditHeader objectAtIndex:indexPath.section];
     return cell;
   } else {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Detail Cell"];
@@ -86,10 +86,10 @@
     CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15] constrainedToSize:CGSizeMake(268, 5000)];
      */
     CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15] andConstraintSize:CGSizeMake(268, 5000)];
-    CGRect frame = cell.name.frame;
+    CGRect frame = cell.name1.frame;
     frame.size.height = textSize.height;
-    cell.name.frame = frame;
-    cell.name.text = text;
+    cell.name1.frame = frame;
+    cell.name1.text = text;
     
     return cell;
   }

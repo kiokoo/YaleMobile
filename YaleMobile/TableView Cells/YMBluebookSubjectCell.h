@@ -10,9 +10,9 @@
 
 @interface YMBluebookSubjectCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *code;
-@property (nonatomic, strong) IBOutlet UILabel *happens;
-@property (nonatomic, strong) IBOutlet UILabel *instructor;
-@property (nonatomic, strong) IBOutlet UILabel *name;
+@property (nonatomic, strong) IBOutlet UILabel *code1;
+@property (nonatomic, strong) IBOutlet UILabel *happens1;
+@property (nonatomic, strong) IBOutlet UILabel *instructor1;
+@property (nonatomic, strong) IBOutlet UILabel *name1;
 
 @end

@@ -85,7 +85,7 @@
   
   if (indexPath.row == 0) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Academic Calendar Header"];
-    cell.name.text = [detailDict objectForKey:@"Term"];
+    cell.name1.text = [detailDict objectForKey:@"Term"];
     return cell;
   } else {
     YMPathishCell *cell;

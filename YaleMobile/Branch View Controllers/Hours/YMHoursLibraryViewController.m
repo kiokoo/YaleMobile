@@ -192,37 +192,37 @@
   if (indexPath.row == 0) {
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"dtablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
-    cell.secondary.text = @"Today's Hours";
-    cell.primary.text = self.hour;
+    cell.secondary1.text = @"Today's Hours";
+    cell.primary1.text = self.hour;
     /* deprecated code
      CGSize textSize = [self.hour sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15] constrainedToSize:CGSizeMake(268, 5000)];
      */
     CGSize textSize = [YMGlobalHelper boundText:self.hour withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15] andConstraintSize:CGSizeMake(268, 5000)];
-    CGRect frame = cell.primary.frame;
+    CGRect frame = cell.primary1.frame;
     frame.size.height = textSize.height;
   } else if (indexPath.row == 3) {
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"dtablebg_bottom.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
-    cell.secondary.text = @"Contact Email";
-    cell.primary.text = [self.data objectForKey:@"email"];
+    cell.secondary1.text = @"Contact Email";
+    cell.primary1.text = [self.data objectForKey:@"email"];
     cell.userInteractionEnabled = YES;
   } else {
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"dtablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     if (indexPath.row == 2) {
-      cell.secondary.text = @"Contact Number";
-      cell.primary.text = [self.data objectForKey:@"phone"];
+      cell.secondary1.text = @"Contact Number";
+      cell.primary1.text = [self.data objectForKey:@"phone"];
       cell.userInteractionEnabled = YES;
     } else {
-      cell.secondary.text = @"Access Information";
+      cell.secondary1.text = @"Access Information";
       NSString *text = [self.data objectForKey:@"access"];
       /* deprecated
       CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15] constrainedToSize:CGSizeMake(268, 5000)];
        */
       CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15] andConstraintSize:CGSizeMake(268, 5000)];
-      CGRect frame = cell.primary.frame;
+      CGRect frame = cell.primary1.frame;
       frame.size.height = textSize.height;
-      cell.primary.text = text;
+      cell.primary1.text = text;
     }
   }
   
@@ -298,11 +298,11 @@
 {
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   YMSubtitleCell *cell = (YMSubtitleCell *)[tableView cellForRowAtIndexPath:indexPath];
-  if ([cell.secondary.text isEqualToString:@"Contact Email"]) {
+  if ([cell.secondary1.text isEqualToString:@"Contact Email"]) {
     if ([MFMailComposeViewController canSendMail]) {
       MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
       mailer.mailComposeDelegate = self;
-      NSArray *toRecipients = [NSArray arrayWithObjects:cell.primary.text, nil];
+      NSArray *toRecipients = [NSArray arrayWithObjects:cell.primary1.text, nil];
       [mailer setToRecipients:toRecipients];
       [[mailer navigationBar] setTintColor:[UIColor colorWithRed:63/255.0 green:155/255.0 blue:194/255.0 alpha:0.1]];
       [self presentViewController:mailer animated:YES completion:nil];
@@ -312,8 +312,8 @@
       [alert show];
     }
   }
-  if ([cell.secondary.text isEqualToString:@"Contact Number"]) {
-    NSString *phoneNo = cell.primary.text;
+  if ([cell.secondary1.text isEqualToString:@"Contact Number"]) {
+    NSString *phoneNo = cell.primary1.text;
     self.phoneURL = [@"tel://" stringByAppendingString:phoneNo];
     [self createActionSheetWithNumber:phoneNo];
   }

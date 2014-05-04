@@ -54,10 +54,10 @@
   self.keys = [[self.courses allKeys] sortedArrayUsingSelector:@selector(compare:)];
   self.instructorName = @""; self.courseNumber = @""; self.exactPhrase = @"";
   
-  CGRect rect = self.searchBar.frame;
+  CGRect rect = self.searchBar1.frame;
   UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1, rect.size.width, 1)];
   lineView.backgroundColor = [UIColor lightGrayColor];
-  [self.searchBar addSubview:lineView];
+  [self.searchBar1 addSubview:lineView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -242,10 +242,10 @@
   YMSimpleCell *cell = (YMSimpleCell *)[self.tableView dequeueReusableCellWithIdentifier:@"Bluebook First Cell"];
   NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:[self.courses objectForKey:[self.keys objectAtIndex:indexPath.section]]];
   NSArray *keys = [[dict allKeys] sortedArrayUsingSelector:@selector(compare:)];
-  cell.name.text = [((NSDictionary *)[dict objectForKey:[keys objectAtIndex:indexPath.row]]) objectForKey:@"Name"];
+  cell.name1.text = [((NSDictionary *)[dict objectForKey:[keys objectAtIndex:indexPath.row]]) objectForKey:@"Name"];
   
-  cell.name.shadowColor = [UIColor whiteColor];
-  cell.name.shadowOffset = CGSizeMake(0, 1);
+  cell.name1.shadowColor = [UIColor whiteColor];
+  cell.name1.shadowOffset = CGSizeMake(0, 1);
   cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
   cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
   return cell;

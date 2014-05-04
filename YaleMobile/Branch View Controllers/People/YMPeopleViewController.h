@@ -10,9 +10,9 @@
 
 @interface YMPeopleViewController : UIViewController <UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) IBOutlet UIImageView *defaultBackground;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar1;
+@property (nonatomic, strong) IBOutlet UITableView *tableView1;
+@property (nonatomic, strong) IBOutlet UIImageView *defaultBackground1;
 @property (nonatomic, strong) UIView *searchOverlay;
 
 @property (nonatomic, strong) NSArray *people;

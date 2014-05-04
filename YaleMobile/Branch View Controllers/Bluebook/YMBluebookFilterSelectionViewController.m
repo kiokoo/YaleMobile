@@ -58,12 +58,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Selection Simple"];
-    cell.name.text = [self.options objectAtIndex:indexPath.row];
-    cell.name.shadowColor = [UIColor blackColor];
-    cell.name.shadowOffset = CGSizeMake(0, 1);
+    cell.name1.text = [self.options objectAtIndex:indexPath.row];
+    cell.name1.shadowColor = [UIColor blackColor];
+    cell.name1.shadowOffset = CGSizeMake(0, 1);
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"rightmenubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 20)]];
-    cell.accessoryView = ([self.selected isEqualToString:cell.name.text]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
+    cell.accessoryView = ([self.selected isEqualToString:cell.name1.text]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
     
     return cell;
 }
@@ -100,7 +100,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YMSimpleCell *cell = (YMSimpleCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-    self.selected = cell.name.text;
+    self.selected = cell.name1.text;
     [[NSUserDefaults standardUserDefaults] setObject:self.selected forKey:[NSString stringWithFormat:@"Bluebook %@", [self.options objectAtIndex:self.options.count - 1]]];
     [self.tableView reloadData];
     

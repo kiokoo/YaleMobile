@@ -189,22 +189,22 @@
   if (indexPath.row == 0) {
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"dtablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
-    cell.secondary.text = @"Regular Hours";
-    cell.primary.text = self.hour;
+    cell.secondary1.text = @"Regular Hours";
+    cell.primary1.text = self.hour;
     /* deprecated
     CGSize textSize = [self.hour sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15] constrainedToSize:CGSizeMake(268, 5000)];
      */
     CGSize textSize = [YMGlobalHelper boundText:self.hour withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15] andConstraintSize:CGSizeMake(268, 5000)];
-    CGRect frame = cell.primary.frame;
+    CGRect frame = cell.primary1.frame;
     frame.size.height = textSize.height;
   } else if (indexPath.row == 1 + self.menu.count) {
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"dtablebg_bottom.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
-    cell.secondary.text = @"Special Events";
-    cell.primary.text = self.special;
+    cell.secondary1.text = @"Special Events";
+    cell.primary1.text = self.special;
   } else {
-    cell.secondary.text = [NSString stringWithFormat:@"Today's Menu - %@", [[[self.menu objectAtIndex:indexPath.row - 1] allKeys] objectAtIndex:0]];
-    cell.primary.text = [[[self.menu objectAtIndex:indexPath.row - 1] allValues] objectAtIndex:0];
+    cell.secondary1.text = [NSString stringWithFormat:@"Today's Menu - %@", [[[self.menu objectAtIndex:indexPath.row - 1] allKeys] objectAtIndex:0]];
+    cell.primary1.text = [[[self.menu objectAtIndex:indexPath.row - 1] allValues] objectAtIndex:0];
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"dtablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
   }

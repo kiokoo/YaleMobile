@@ -132,41 +132,41 @@
             cell = (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Subtitle Cell 1"];
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
-            cell.secondary.text = ([[NSUserDefaults standardUserDefaults] objectForKey:@"Name"]) ? [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"] : @"Not set";
+            cell.secondary1.text = ([[NSUserDefaults standardUserDefaults] objectForKey:@"Name"]) ? [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"] : @"Not set";
         } else if (indexPath.row == self.settings.count - 1) {
             cell = (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Subtitle Cell 2"];
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
-            cell.secondary.text = [[NSUserDefaults standardUserDefaults] boolForKey:@"Celsius"] ? @"Celsius" : @"Fahrenheit";
+            cell.secondary1.text = [[NSUserDefaults standardUserDefaults] boolForKey:@"Celsius"] ? @"Celsius" : @"Fahrenheit";
         } else {
             cell = (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Subtitle Cell 2"];
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
         }
-        cell.primary.text = [self.settings objectAtIndex:indexPath.row];
+        cell.primary1.text = [self.settings objectAtIndex:indexPath.row];
         cell.backgroundView.alpha = 0.6;
         return cell;
     } else {
         YMSimpleCell *cell;
         if (indexPath.row == 0) {
             cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Header"];
-            cell.name.text = @"Information";
+            cell.name1.text = @"Information";
         } else if (indexPath.row == 1) {
             cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Simple Cell 1"];
-            cell.name.text = [self.abouts objectAtIndex:indexPath.row - 1];
+            cell.name1.text = [self.abouts objectAtIndex:indexPath.row - 1];
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
         } else if (indexPath.row == self.abouts.count) {
             cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Setting Simple Cell 2"];
-            cell.name.text = [self.abouts objectAtIndex:indexPath.row - 1];
+            cell.name1.text = [self.abouts objectAtIndex:indexPath.row - 1];
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
         } else if (indexPath.row == self.abouts.count + 1) {
             cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Footer"];
-            cell.name.text = @"Copyright © Danqing 2013. 718529.";
+            cell.name1.text = @"Copyright © Danqing 2013. 718529.";
         } else {
             cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Setting Simple Cell 2"];
-            cell.name.text = [self.abouts objectAtIndex:indexPath.row - 1];
+            cell.name1.text = [self.abouts objectAtIndex:indexPath.row - 1];
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
         }

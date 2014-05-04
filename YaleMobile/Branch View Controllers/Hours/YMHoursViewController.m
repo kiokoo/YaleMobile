@@ -101,23 +101,23 @@
   else cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Hours Cell 2"];
   
   if (indexPath.row == 0) {
-    cell.name.text = @"Select a Category";
+    cell.name1.text = @"Select a Category";
     cell.backgroundView = nil;
     cell.backgroundColor = [UIColor clearColor];
   } else if (indexPath.row == self.types.count + 1) {
     NSString *text = @"Library hours are synced with Yale Library website but may not reflect special conditions. Dining and gym hours only refer to regular schedule. Please double check during holidays and special events.";
-    cell.name.text = text;
+    cell.name1.text = text;
     /* deprecated
      CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14] constrainedToSize:CGSizeMake(280, 5000)];
      */
     CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14] andConstraintSize:CGSizeMake(280, 5000)];
-    CGRect frame = cell.name.frame;
+    CGRect frame = cell.name1.frame;
     frame.size.height = textSize.height;
     cell.userInteractionEnabled = NO;
-    cell.name.frame = frame;
+    cell.name1.frame = frame;
   } else {
-    cell.name.text = [self.types objectAtIndex:indexPath.row - 1];
-    cell.name.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
+    cell.name1.text = [self.types objectAtIndex:indexPath.row - 1];
+    cell.name1.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
     if (indexPath.row == 1) {
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];

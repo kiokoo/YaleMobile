@@ -118,16 +118,16 @@
 - (void)fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
   Office *office = [fetchedResultsController objectAtIndexPath:indexPath];
-  ((YMSubtitleCell *)cell).primary.text = office.name;
-  ((YMSubtitleCell *)cell).secondary.text = [@"(203)-" stringByAppendingString:office.phone];
+  ((YMSubtitleCell *)cell).primary1.text = office.name;
+  ((YMSubtitleCell *)cell).secondary1.text = [@"(203)-" stringByAppendingString:office.phone];
   
   /* deprecated
    CGSize textSize = [office.name sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:16] constrainedToSize:CGSizeMake(272, 1000)];
    */
   CGSize textSize = [YMGlobalHelper boundText:office.name withFont:[UIFont fontWithName:@"HelveticaNeue" size:16] andConstraintSize:CGSizeMake(272, 1000)];
-  CGRect frame = ((YMSubtitleCell *)cell).primary.frame;
+  CGRect frame = ((YMSubtitleCell *)cell).primary1.frame;
   frame.size.height = textSize.height;
-  ((YMSubtitleCell *)cell).primary.frame = frame;
+  ((YMSubtitleCell *)cell).primary1.frame = frame;
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
@@ -247,10 +247,10 @@
   
   [self fetchedResultsController:[self fetchedResultsControllerForTableView:tableView] configureCell:cell atIndexPath:indexPath];
   
-  cell.primary.shadowColor = [UIColor whiteColor];
-  cell.primary.shadowOffset = CGSizeMake(0, 1);
-  cell.secondary.shadowColor = [UIColor whiteColor];
-  cell.secondary.shadowOffset = CGSizeMake(0, 1);
+  cell.primary1.shadowColor = [UIColor whiteColor];
+  cell.primary1.shadowOffset = CGSizeMake(0, 1);
+  cell.secondary1.shadowColor = [UIColor whiteColor];
+  cell.secondary1.shadowOffset = CGSizeMake(0, 1);
   cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
   cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
   
@@ -330,8 +330,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   YMSubtitleCell *cell = (YMSubtitleCell *)[tableView cellForRowAtIndexPath:indexPath];
-  self.phoneNumber = cell.secondary.text;
-  [self createActionSheetWithNumber:cell.secondary.text];
+  self.phoneNumber = cell.secondary1.text;
+  [self createActionSheetWithNumber:cell.secondary1.text];
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

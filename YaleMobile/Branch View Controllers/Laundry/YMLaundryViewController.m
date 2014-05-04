@@ -117,7 +117,7 @@
 {
     if (indexPath.row == 0) {
         YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Header"];
-        cell.name.text = @"Select a location";
+        cell.name1.text = @"Select a location";
         return cell;
     } else {
         YMLaundryCell *cell;

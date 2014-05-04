@@ -32,7 +32,7 @@
     [YMGlobalHelper addMenuButtonToController:self];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
-    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView1.backgroundColor = [UIColor clearColor];
     [self restoreViewToDefault];
 }
 
@@ -42,7 +42,7 @@
     [YMGlobalHelper setupSlidingViewControllerForController:self];
     
     if (self.selectedIndexPath) {
-        [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
+        [self.tableView1 deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
         self.selectedIndexPath = nil;
     }
 }
@@ -87,7 +87,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self hideKeyboard];
-    self.defaultBackground.hidden = YES;        
+    self.defaultBackground1.hidden = YES;        
     NSString *searchString = ([searchBar.text.lowercaseString isEqualToString:@"person danqing loves"]) ? [@"Tong Zuo" stringByReplacingOccurrencesOfString:@" " withString:@"+"] : [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://directory.yale.edu/phonebook/index.htm?searchString=%@", searchString]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -112,7 +112,7 @@
             [alert show];
         } else {
             self.people = [YMServerCommunicator getPeopleList:responseString];
-            [self.tableView reloadData];
+            [self.tableView1 reloadData];
             [self animateTableUp];
         }
         
@@ -139,8 +139,8 @@
     [UIView commitAnimations];
     [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(removeOverlay:) userInfo:nil repeats:NO];
     
-    [self.searchBar resignFirstResponder];
-    [self.searchBar setShowsCancelButton:NO animated:YES];
+    [self.searchBar1 resignFirstResponder];
+    [self.searchBar1 setShowsCancelButton:NO animated:YES];
 }
 
 - (void)removeOverlay:(NSTimer *)timer
@@ -150,20 +150,20 @@
 
 - (void)animateTableUp
 {
-    CGRect frame = self.tableView.frame;
+    CGRect frame = self.tableView1.frame;
     frame.origin.y += 700;
-    self.tableView.frame = frame;
-    self.tableView.hidden = NO;
+    self.tableView1.frame = frame;
+    self.tableView1.hidden = NO;
     frame.origin.y -= 700;
     [UIView animateWithDuration:0.5 animations:^{
-        self.tableView.frame = frame;
+        self.tableView1.frame = frame;
     }];
 }
 
 - (void)restoreViewToDefault
 {
-    self.tableView.hidden = YES;
-    self.defaultBackground.hidden = NO;
+    self.tableView1.hidden = YES;
+    self.defaultBackground1.hidden = NO;
 }
 
 #pragma mark - Table view data source
@@ -182,7 +182,7 @@
 {
     if (indexPath.row == 0) {
         YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"People Header"];
-        cell.name.text = [NSString stringWithFormat:@"Found %d results", self.people.count];
+        cell.name1.text = [NSString stringWithFormat:@"Found %d results", self.people.count];
         return cell;
     } else {
         YMSubtitleCell *cell = (indexPath.row == 1) ? (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"People Top Cell"] : (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"People Cell"];
@@ -196,10 +196,10 @@
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
         }
-        cell.primary.text = [((NSDictionary *)[self.people objectAtIndex:indexPath.row-1]) objectForKey:@"name"];
+        cell.primary1.text = [((NSDictionary *)[self.people objectAtIndex:indexPath.row-1]) objectForKey:@"name"];
         NSString *detail = [((NSDictionary *)[self.people objectAtIndex:indexPath.row-1]) objectForKey:@"info"];
         if (detail.length == 0) detail = @"Click to view details";
-        cell.secondary.text = detail;
+        cell.secondary1.text = detail;
         
         cell.backgroundView.alpha = 0.6;
 

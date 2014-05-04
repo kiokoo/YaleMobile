@@ -292,26 +292,26 @@
   NSString *index = [keys objectAtIndex:indexPath.row];
   
   NSString *text = [self.data objectForKey:index];
-  cell.primary.text = text;
+  cell.primary1.text = text;
   /*
   CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:15] constrainedToSize:CGSizeMake(280.0f, 5000.0f)];
    */
   CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue" size:15] andConstraintSize:CGSizeMake(280.0f, 5000.0f)];
-  CGRect frame = cell.primary.frame;
+  CGRect frame = cell.primary1.frame;
   frame.size.height = textSize.height;
-  cell.primary.frame = frame;
+  cell.primary1.frame = frame;
   
   NSRange range;
   range.location = 0;
   range.length = 1;
   index = [index stringByReplacingCharactersInRange:range withString:@""];
   
-  cell.secondary.text = index;
+  cell.secondary1.text = index;
   
-  cell.primary.shadowColor = [UIColor whiteColor];
-  cell.primary.shadowOffset = CGSizeMake(0, 1);
-  cell.secondary.shadowColor = [UIColor whiteColor];
-  cell.secondary.shadowOffset = CGSizeMake(0, 1);
+  cell.primary1.shadowColor = [UIColor whiteColor];
+  cell.primary1.shadowOffset = CGSizeMake(0, 1);
+  cell.secondary1.shadowColor = [UIColor whiteColor];
+  cell.secondary1.shadowOffset = CGSizeMake(0, 1);
   
   return cell;
 }

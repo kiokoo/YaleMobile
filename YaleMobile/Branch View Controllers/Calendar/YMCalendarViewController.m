@@ -75,7 +75,7 @@
         YMAcademicCalendarDetailViewController *acdvc = segue.destinationViewController;
         NSIndexPath *selected = [self.tableView indexPathForSelectedRow];
         YMSimpleCell *cell = (YMSimpleCell *)[self.tableView cellForRowAtIndexPath:selected];
-        acdvc.title = cell.name.text;
+        acdvc.title = cell.name1.text;
     }
 }
 
@@ -100,12 +100,12 @@
     else cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Calendar Cell 2"];
     
     if (indexPath.row == 0) {
-        cell.name.text = @"Academic Calendars";
+        cell.name1.text = @"Academic Calendars";
         cell.backgroundView = nil;
         cell.backgroundColor = [UIColor clearColor];
     } else {
-        cell.name.text = [self.schools objectAtIndex:indexPath.row - 1];
-        cell.name.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
+        cell.name1.text = [self.schools objectAtIndex:indexPath.row - 1];
+        cell.name1.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
         if (indexPath.row == 1) {
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];

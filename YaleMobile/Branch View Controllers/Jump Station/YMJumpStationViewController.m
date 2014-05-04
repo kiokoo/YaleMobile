@@ -89,12 +89,12 @@
     else cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Jump Cell 2"];
     
     if (indexPath.row == 0) {
-        cell.name.text = @"Open in Browser";
+        cell.name1.text = @"Open in Browser";
         cell.backgroundView = nil;
         cell.backgroundColor = [UIColor clearColor];
     } else {
-        cell.name.text = [self.keys objectAtIndex:indexPath.row - 1];
-        cell.name.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
+        cell.name1.text = [self.keys objectAtIndex:indexPath.row - 1];
+        cell.name1.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
         if (indexPath.row == 1) {
             cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];

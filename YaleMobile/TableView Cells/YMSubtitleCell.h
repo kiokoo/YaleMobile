@@ -10,7 +10,7 @@
 
 @interface YMSubtitleCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *primary;
-@property (nonatomic, strong) IBOutlet UILabel *secondary;
+@property (nonatomic, strong) IBOutlet UILabel *primary1;
+@property (nonatomic, strong) IBOutlet UILabel *secondary1;
 
 @end

@@ -109,7 +109,7 @@
 {
     if (indexPath.row == 0) {
         YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Detail Header"];
-        cell.name.text = (indexPath.section == 0) ? [NSString stringWithFormat:@"Washers: %@ of %@ available", [self.washers objectAtIndex:0], [self.washers objectAtIndex:1]] : [NSString stringWithFormat:@"Dryers: %@ of %@ available", [self.dryers objectAtIndex:0], [self.dryers objectAtIndex:1]];
+        cell.name1.text = (indexPath.section == 0) ? [NSString stringWithFormat:@"Washers: %@ of %@ available", [self.washers objectAtIndex:0], [self.washers objectAtIndex:1]] : [NSString stringWithFormat:@"Dryers: %@ of %@ available", [self.dryers objectAtIndex:0], [self.dryers objectAtIndex:1]];
         return cell;
     }
     

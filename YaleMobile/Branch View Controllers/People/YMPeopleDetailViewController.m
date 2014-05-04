@@ -171,8 +171,8 @@
 {
   YMSubtitleCell *cell = (indexPath.row == 0) ? (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"People Detail Top Cell"] : (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"People Detail Cell"];
   NSString *title = [[[self.data allKeys] sortedArrayUsingSelector:@selector(compare:)] objectAtIndex:indexPath.row];
-  cell.secondary.text = title;
-  cell.primary.text = [self.data objectForKey:title];
+  cell.secondary1.text = title;
+  cell.primary1.text = [self.data objectForKey:title];
   
   CGSize textSize = [[self.data objectForKey:title] sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15.0f] constrainedToSize:CGSizeMake(200.0f, 1000.0f)];
   /* deprecated
@@ -180,13 +180,13 @@
    */
   CGSize textSize2 = [YMGlobalHelper boundText:title withFont:[UIFont fontWithName:@"HelveticaNeue" size:12] andConstraintSize:CGSizeMake(60.0f, 5000.0f)];
   
-  CGRect primaryFrame = cell.primary.frame;
+  CGRect primaryFrame = cell.primary1.frame;
   primaryFrame.size.height = textSize.height;
-  cell.primary.frame = primaryFrame;
+  cell.primary1.frame = primaryFrame;
   
-  CGRect secondaryFrame = cell.secondary.frame;
+  CGRect secondaryFrame = cell.secondary1.frame;
   secondaryFrame.size.height = textSize2.height;
-  cell.secondary.frame = secondaryFrame;
+  cell.secondary1.frame = secondaryFrame;
   
   if (self.data.count == 1) {
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)]];
@@ -231,11 +231,11 @@
 {
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   YMSubtitleCell *cell = (YMSubtitleCell *)[tableView cellForRowAtIndexPath:indexPath];
-  if ([cell.secondary.text isEqualToString:@"Email"]) {
+  if ([cell.secondary1.text isEqualToString:@"Email"]) {
     if ([MFMailComposeViewController canSendMail]) {
       MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
       mailer.mailComposeDelegate = self;
-      NSArray *toRecipients = [NSArray arrayWithObjects:cell.primary.text, nil];
+      NSArray *toRecipients = [NSArray arrayWithObjects:cell.primary1.text, nil];
       [mailer setToRecipients:toRecipients];
       [[mailer navigationBar] setTintColor:[UIColor colorWithRed:63/255.0 green:155/255.0 blue:194/255.0 alpha:0.1]];
       [self presentViewController:mailer animated:YES completion:nil];
@@ -245,8 +245,8 @@
       [alert show];
     }
   }
-  if ([cell.secondary.text isEqualToString:@"Phone"]) {
-    NSString *phoneNo = cell.primary.text;
+  if ([cell.secondary1.text isEqualToString:@"Phone"]) {
+    NSString *phoneNo = cell.primary1.text;
     if (phoneNo.length < 11) phoneNo = [@"203-" stringByAppendingString:phoneNo];
     self.phoneURL = [@"tel://" stringByAppendingString:phoneNo];
     [self createActionSheetWithNumber:phoneNo];
