@@ -38,22 +38,22 @@
     [cancel addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
-    self.background.image = [[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-    self.background.alpha = 0.6;
+    self.background1.image = [[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    self.background1.alpha = 0.6;
     
-    self.textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+    self.textField1.autocapitalizationType = UITextAutocapitalizationTypeWords;
     NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
-    if (name) self.textField.text = name;
+    if (name) self.textField1.text = name;
 }
 
 - (void)confirm:(id)sender
 {
-    if ([self.textField.text isEqualToString:@"718529"]) {
+    if ([self.textField1.text isEqualToString:@"718529"]) {
         [[NSUserDefaults standardUserDefaults] setObject:@"Tong" forKey:@"Name"];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Tong"];
-    } else if (self.textField.text.length) {
-        [[NSUserDefaults standardUserDefaults] setObject:self.textField.text forKey:@"Name"];
-        if (![self.textField.text isEqualToString:@"Tong"] && ![self.textField.text isEqualToString:@"Scarlett"])
+    } else if (self.textField1.text.length) {
+        [[NSUserDefaults standardUserDefaults] setObject:self.textField1.text forKey:@"Name"];
+        if (![self.textField1.text isEqualToString:@"Tong"] && ![self.textField1.text isEqualToString:@"Scarlett"])
             [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Tong"];
     } else
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Name"];

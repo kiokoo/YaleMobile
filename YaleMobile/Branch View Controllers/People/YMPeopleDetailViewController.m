@@ -22,7 +22,7 @@
   [super viewDidLoad];
   
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
-  self.tableView.backgroundColor = [UIColor clearColor];
+  self.tableView1.backgroundColor = [UIColor clearColor];
   
   [YMGlobalHelper addBackButtonToController:self];
   [self prettifyData];
@@ -110,8 +110,8 @@
   [containerView addSubview:header];
   [containerView addSubview:subheader];
   //[containerView addSubview:divider];
-  self.tableView.tableHeaderView = containerView;
-  [self.tableView reloadData];
+  self.tableView1.tableHeaderView = containerView;
+  [self.tableView1 reloadData];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
@@ -229,7 +229,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+  [self.tableView1 deselectRowAtIndexPath:indexPath animated:YES];
   YMSubtitleCell *cell = (YMSubtitleCell *)[tableView cellForRowAtIndexPath:indexPath];
   if ([cell.secondary1.text isEqualToString:@"Email"]) {
     if ([MFMailComposeViewController canSendMail]) {

@@ -13,7 +13,6 @@
 		24A8FF6718E946FC006E81C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FF6518E946FC006E81C3 /* InfoPlist.strings */; };
 		24A8FF6918E946FC006E81C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FF6818E946FC006E81C3 /* main.m */; };
 		24A8FF6D18E946FC006E81C3 /* YMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FF6C18E946FC006E81C3 /* YMAppDelegate.m */; };
-		24A8FF7018E946FC006E81C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FF6E18E946FC006E81C3 /* Main.storyboard */; };
 		24A8FF7318E946FC006E81C3 /* YMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FF7218E946FC006E81C3 /* YMViewController.m */; };
 		24A8FF7518E946FC006E81C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FF7418E946FC006E81C3 /* Images.xcassets */; };
 		24A8FF7C18E946FC006E81C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FF7B18E946FC006E81C3 /* XCTest.framework */; };
@@ -455,14 +454,6 @@
 		9BE9956B1900AA010065EBEF /* YMSimpleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993B91900AA010065EBEF /* YMSimpleCell.m */; };
 		9BE9956C1900AA010065EBEF /* YMSubtitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993BB1900AA010065EBEF /* YMSubtitleCell.m */; };
 		9BE9956D1900AA010065EBEF /* YMTwoSubtitlesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993BD1900AA010065EBEF /* YMTwoSubtitlesCell.m */; };
-		9BE995761900AAF30065EBEF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9956E1900AAF30065EBEF /* Default-568h@2x.png */; };
-		9BE995771900AAF30065EBEF /* Default-568h2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9956F1900AAF30065EBEF /* Default-568h2@2x.png */; };
-		9BE995781900AAF30065EBEF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE995701900AAF30065EBEF /* Default.png */; };
-		9BE995791900AAF30065EBEF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE995711900AAF30065EBEF /* Default@2x.png */; };
-		9BE9957A1900AAF30065EBEF /* Default2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE995721900AAF30065EBEF /* Default2.png */; };
-		9BE9957B1900AAF30065EBEF /* Default2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE995731900AAF30065EBEF /* Default2@2x.png */; };
-		9BE9957C1900AAF30065EBEF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE995741900AAF30065EBEF /* icon.png */; };
-		9BE9957D1900AAF30065EBEF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE995751900AAF30065EBEF /* icon@2x.png */; };
 		9BE995871900AD7C0065EBEF /* YMMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE9957F1900AD7C0065EBEF /* YMMainView.m */; };
 		9BE995881900AD7C0065EBEF /* YMMainView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE995801900AD7C0065EBEF /* YMMainView5.xib */; };
 		9BE995891900AD7C0065EBEF /* YMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE995821900AD7C0065EBEF /* YMMainViewController.m */; };
@@ -492,7 +483,6 @@
 		24A8FF6A18E946FC006E81C3 /* YaleMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YaleMobile-Prefix.pch"; sourceTree = "<group>"; };
 		24A8FF6B18E946FC006E81C3 /* YMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAppDelegate.h; sourceTree = "<group>"; };
 		24A8FF6C18E946FC006E81C3 /* YMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAppDelegate.m; sourceTree = "<group>"; };
-		24A8FF6F18E946FC006E81C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24A8FF7118E946FC006E81C3 /* YMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMViewController.h; sourceTree = "<group>"; };
 		24A8FF7218E946FC006E81C3 /* YMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMViewController.m; sourceTree = "<group>"; };
 		24A8FF7418E946FC006E81C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1007,14 +997,6 @@
 		9BE993BB1900AA010065EBEF /* YMSubtitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSubtitleCell.m; sourceTree = "<group>"; };
 		9BE993BC1900AA010065EBEF /* YMTwoSubtitlesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMTwoSubtitlesCell.h; sourceTree = "<group>"; };
 		9BE993BD1900AA010065EBEF /* YMTwoSubtitlesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTwoSubtitlesCell.m; sourceTree = "<group>"; };
-		9BE9956E1900AAF30065EBEF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9BE9956F1900AAF30065EBEF /* Default-568h2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h2@2x.png"; sourceTree = "<group>"; };
-		9BE995701900AAF30065EBEF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		9BE995711900AAF30065EBEF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		9BE995721900AAF30065EBEF /* Default2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default2.png; sourceTree = "<group>"; };
-		9BE995731900AAF30065EBEF /* Default2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default2@2x.png"; sourceTree = "<group>"; };
-		9BE995741900AAF30065EBEF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		9BE995751900AAF30065EBEF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		9BE9957E1900AD7C0065EBEF /* YMMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMMainView.h; sourceTree = "<group>"; };
 		9BE9957F1900AD7C0065EBEF /* YMMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMMainView.m; sourceTree = "<group>"; };
 		9BE995801900AD7C0065EBEF /* YMMainView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMMainView5.xib; sourceTree = "<group>"; };
@@ -1058,14 +1040,6 @@
 		24A8FF5018E946FC006E81C3 = {
 			isa = PBXGroup;
 			children = (
-				9BE9956E1900AAF30065EBEF /* Default-568h@2x.png */,
-				9BE9956F1900AAF30065EBEF /* Default-568h2@2x.png */,
-				9BE995701900AAF30065EBEF /* Default.png */,
-				9BE995711900AAF30065EBEF /* Default@2x.png */,
-				9BE995721900AAF30065EBEF /* Default2.png */,
-				9BE995731900AAF30065EBEF /* Default2@2x.png */,
-				9BE995741900AAF30065EBEF /* icon.png */,
-				9BE995751900AAF30065EBEF /* icon@2x.png */,
 				24A8FF6218E946FC006E81C3 /* YaleMobile */,
 				24A8FF8118E946FC006E81C3 /* YaleMobileTests */,
 				24A8FF5B18E946FC006E81C3 /* Frameworks */,
@@ -1117,7 +1091,6 @@
 				9BE993A91900AA010065EBEF /* TableView Cells */,
 				24A8FF6B18E946FC006E81C3 /* YMAppDelegate.h */,
 				24A8FF6C18E946FC006E81C3 /* YMAppDelegate.m */,
-				24A8FF6E18E946FC006E81C3 /* Main.storyboard */,
 				24A8FF7118E946FC006E81C3 /* YMViewController.h */,
 				24A8FF7218E946FC006E81C3 /* YMViewController.m */,
 				24A8FF7418E946FC006E81C3 /* Images.xcassets */,
@@ -2002,10 +1975,8 @@
 				9BE9953C1900AA010065EBEF /* weather_scloud.png in Resources */,
 				9BE994B11900AA010065EBEF /* dots4@2x.png in Resources */,
 				9BE9940C1900AA010065EBEF /* round0.png in Resources */,
-				9BE9957A1900AAF30065EBEF /* Default2.png in Resources */,
 				9BE994E21900AA010065EBEF /* 406.png in Resources */,
 				9BE994611900AA010065EBEF /* icon_l4@2x.png in Resources */,
-				9BE995761900AAF30065EBEF /* Default-568h@2x.png in Resources */,
 				9BE994721900AA010065EBEF /* bk_overlay.png in Resources */,
 				9BE9942C1900AA010065EBEF /* dtablebg_top.png in Resources */,
 				9BE995171900AA010065EBEF /* nav@2x.png in Resources */,
@@ -2078,7 +2049,6 @@
 				9BE993DC1900AA010065EBEF /* YMStopInfoSubview.xib in Resources */,
 				9BE9951E1900AA010065EBEF /* searchpeople.png in Resources */,
 				9BE994911900AA010065EBEF /* mc@2x.png in Resources */,
-				9BE995771900AAF30065EBEF /* Default-568h2@2x.png in Resources */,
 				9BE994F91900AA010065EBEF /* menu1@2x.png in Resources */,
 				9BE995311900AA010065EBEF /* weather_clearnight@2x.png in Resources */,
 				9BE995071900AA010065EBEF /* menu8@2x.png in Resources */,
@@ -2113,10 +2083,8 @@
 				9BE994FB1900AA010065EBEF /* menu2@2x.png in Resources */,
 				9BE9953A1900AA010065EBEF /* weather_na.png in Resources */,
 				9BE9949B1900AA010065EBEF /* sm_overlay@2x.png in Resources */,
-				9BE9957B1900AAF30065EBEF /* Default2@2x.png in Resources */,
 				9BE994A11900AA010065EBEF /* tc@2x.png in Resources */,
 				9BE9953F1900AA010065EBEF /* weather_sfog@2x.png in Resources */,
-				9BE995791900AAF30065EBEF /* Default@2x.png in Resources */,
 				9BE994741900AA010065EBEF /* br.png in Resources */,
 				9BE994961900AA010065EBEF /* pc_overlay.png in Resources */,
 				9BE9943B1900AA010065EBEF /* plaintabletop@2x.png in Resources */,
@@ -2146,7 +2114,6 @@
 				9BE9949D1900AA010065EBEF /* sy@2x.png in Resources */,
 				9BE994BC1900AA010065EBEF /* icon_washer.png in Resources */,
 				9BE994D11900AA010065EBEF /* 392_overlay@2x.png in Resources */,
-				9BE9957C1900AAF30065EBEF /* icon.png in Resources */,
 				9BE995241900AA010065EBEF /* refresh_alone.png in Resources */,
 				9BE994781900AA010065EBEF /* cc.png in Resources */,
 				9BE994AB1900AA010065EBEF /* dots1@2x.png in Resources */,
@@ -2192,7 +2159,6 @@
 				9BE993F71900AA010065EBEF /* School of Art.plist in Resources */,
 				9BE995131900AA010065EBEF /* locate@2x.png in Resources */,
 				9BE9953B1900AA010065EBEF /* weather_na@2x.png in Resources */,
-				9BE9957D1900AAF30065EBEF /* icon@2x.png in Resources */,
 				9BE994ED1900AA010065EBEF /* 412_overlay@2x.png in Resources */,
 				9BE994D31900AA010065EBEF /* 395@2x.png in Resources */,
 				9BE994001900AA010065EBEF /* Dining.plist in Resources */,
@@ -2309,7 +2275,6 @@
 				9BE994F51900AA010065EBEF /* menu10.png in Resources */,
 				9BE994251900AA010065EBEF /* bg@2x.png in Resources */,
 				9BE994891900AA010065EBEF /* gs@2x.png in Resources */,
-				24A8FF7018E946FC006E81C3 /* Main.storyboard in Resources */,
 				9BE995291900AA010065EBEF /* weather_bcloud@2x.png in Resources */,
 				9BE9954E1900AA010065EBEF /* bg_cloud.png in Resources */,
 				9BE994751900AA010065EBEF /* br@2x.png in Resources */,
@@ -2317,7 +2282,6 @@
 				9BE994DC1900AA010065EBEF /* 402_overlay.png in Resources */,
 				9BE994351900AA010065EBEF /* menuheader@2x.png in Resources */,
 				9BE995371900AA010065EBEF /* weather_fognight@2x.png in Resources */,
-				9BE995781900AAF30065EBEF /* Default.png in Resources */,
 				9BE994991900AA010065EBEF /* sm@2x.png in Resources */,
 				9BE994E61900AA010065EBEF /* 407.png in Resources */,
 				9BE994AA1900AA010065EBEF /* dots1.png in Resources */,
@@ -2512,14 +2476,6 @@
 				24A8FF6618E946FC006E81C3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		24A8FF6E18E946FC006E81C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24A8FF6F18E946FC006E81C3 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		24A8FF8418E946FC006E81C3 /* InfoPlist.strings */ = {

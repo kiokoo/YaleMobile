@@ -10,7 +10,7 @@
 
 @interface YMMenuCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UIImageView *icon;
-@property (nonatomic, strong) IBOutlet UILabel *name;
+@property (nonatomic, strong) IBOutlet UIImageView *icon1;
+@property (nonatomic, strong) IBOutlet UILabel *name1;
 
 @end

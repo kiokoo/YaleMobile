@@ -9,6 +9,7 @@
 #import "YMAppDelegate.h"
 #import "YMDatabaseHelper.h"
 #import "YMGlobalHelper.h"
+#import <UIViewController+ECSlidingViewController.h>
 
 @implementation YMAppDelegate
 

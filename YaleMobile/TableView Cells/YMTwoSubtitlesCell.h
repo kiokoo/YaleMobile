@@ -10,8 +10,8 @@
 
 @interface YMTwoSubtitlesCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *name;
-@property (nonatomic, strong) IBOutlet UILabel *sub1;
-@property (nonatomic, strong) IBOutlet UILabel *sub2;
+@property (nonatomic, strong) IBOutlet UILabel *name1;
+@property (nonatomic, strong) IBOutlet UILabel *sub1_1;
+@property (nonatomic, strong) IBOutlet UILabel *sub2_1;
 
 @end

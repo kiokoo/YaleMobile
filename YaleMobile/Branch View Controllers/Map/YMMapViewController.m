@@ -53,7 +53,7 @@
     self.locate = locate;
     self.locating = 0;
     self.zoomForAnnotation = NO;
-    self.searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.searchBar1.autocorrectionType = UITextAutocorrectionTypeNo;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -73,10 +73,10 @@
     zoomLocation.longitude = -72.9281;
     MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02);
     MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, span);
-    [self.mapView setRegion:region animated:YES];
+    [self.mapView1 setRegion:region animated:YES];
         
-    self.tableView.hidden = YES;
-    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView1.hidden = YES;
+    self.tableView1.backgroundColor = [UIColor clearColor];
     
     if (!(self.database = [YMDatabaseHelper getManagedDocument])) {
         [YMDatabaseHelper openDatabase:@"database" usingBlock:^(UIManagedDocument *document) {
@@ -108,27 +108,27 @@
     
     if (self.locating) {
         self.locating = 0;
-        self.mapView.showsUserLocation = NO;
+        self.mapView1.showsUserLocation = NO;
         [self.locate setSelected:NO];
     } else {
         self.locating = 1;
-        self.mapView.showsUserLocation = YES;
+        self.mapView1.showsUserLocation = YES;
         [self.locate setSelected:YES];
     }
 }
 
 - (void)updateMapView {    
-    if (self.mapView.annotations)
-        [self.mapView removeAnnotations:self.mapView.annotations];
+    if (self.mapView1.annotations)
+        [self.mapView1 removeAnnotations:self.mapView1.annotations];
     
     if (self.locating != 0)
-        self.mapView.showsUserLocation = YES;
+        self.mapView1.showsUserLocation = YES;
     
     if (self.annotation) {
         MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.annotation.coordinate, 0.3*METERS_PER_MILE, 0.3*METERS_PER_MILE);
-        MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
+        MKCoordinateRegion adjustedRegion = [self.mapView1 regionThatFits:viewRegion];
         self.zoomForAnnotation = YES;
-        [self.mapView setRegion:adjustedRegion animated:YES];
+        [self.mapView1 setRegion:adjustedRegion animated:YES];
     }
 }
 
@@ -137,8 +137,8 @@
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
     if (self.annotation && self.zoomForAnnotation) {
-        [self.mapView addAnnotation:self.annotation];
-        [self.mapView selectAnnotation:self.annotation animated:YES];
+        [self.mapView1 addAnnotation:self.annotation];
+        [self.mapView1 selectAnnotation:self.annotation animated:YES];
     }
     self.zoomForAnnotation = NO;
 }
@@ -146,7 +146,7 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     if (self.locating == 1 && userLocation.location.coordinate.latitude != 0) {
-        [self.mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
+        [self.mapView1 setCenterCoordinate:userLocation.location.coordinate animated:YES];
         self.locating = 2;
     }
 }
@@ -161,7 +161,7 @@
     span.longitudeDelta = .020;
     region.span = span;
     
-    [self.mapView setRegion:region animated:YES];
+    [self.mapView1 setRegion:region animated:YES];
 }
 
 # pragma mark - search bar methods
@@ -171,11 +171,11 @@
     [searchBar setShowsCancelButton:YES animated:YES];
     if (searchBar.text.length) {
         self.searchResults = [self searchForString:searchBar.text];
-        [self.tableView reloadData];
-        self.tableView.alpha = 0;
-        self.tableView.hidden = NO;
+        [self.tableView1 reloadData];
+        self.tableView1.alpha = 0;
+        self.tableView1.hidden = NO;
         [UIView animateWithDuration:0.2 delay:0.1 options:nil animations:^{
-            self.tableView.alpha = 1;
+            self.tableView1.alpha = 1;
         } completion:nil];
     } else
         [self showOverlay];
@@ -185,7 +185,7 @@
 {
     searchBar.text = @"";
     [self hideKeyboard];
-    self.tableView.hidden = YES;
+    self.tableView1.hidden = YES;
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -201,21 +201,21 @@
     } else {
         [self hideOverlay];
         self.searchResults = [self searchForString:searchText];
-        [self.tableView reloadData];
-        self.tableView.hidden = NO;
+        [self.tableView1 reloadData];
+        self.tableView1.hidden = NO;
     }
 }
 
 - (void)hideTableView
 {
-    self.tableView.hidden = YES;
+    self.tableView1.hidden = YES;
 }
 
 - (void)hideKeyboard
 {
     [self hideOverlay];
-    [self.searchBar resignFirstResponder];
-    [self.searchBar setShowsCancelButton:NO animated:YES];
+    [self.searchBar1 resignFirstResponder];
+    [self.searchBar1 setShowsCancelButton:NO animated:YES];
 }
 
 - (void)showOverlay
@@ -283,7 +283,7 @@
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     
-    MKPinAnnotationView *pinView = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
+    MKPinAnnotationView *pinView = (MKPinAnnotationView *)[self.mapView1 dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
     if (!pinView) {
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
         pinView.canShowCallout = YES;
@@ -313,21 +313,21 @@
     Place *place;
     if (indexPath.section == 0) {
         place = [((NSArray *)[self.searchResults objectAtIndex:0]) objectAtIndex:indexPath.row];
-        cell.name.textColor = [UIColor YMBluebookOrange];
+        cell.name1.textColor = [UIColor YMBluebookOrange];
     } else {
         place = [((NSArray *)[self.searchResults objectAtIndex:1]) objectAtIndex:indexPath.row];
-        cell.name.textColor = [UIColor YMTeal];
+        cell.name1.textColor = [UIColor YMTeal];
     }
     
-    cell.name.text = place.name;
-    cell.sub1.text = [NSString stringWithFormat:@"Address: %@", place.address];
+    cell.name1.text = place.name;
+    cell.sub1_1.text = [NSString stringWithFormat:@"Address: %@", place.address];
     
     NSString *abbrs;
     for (Abbreviation *abbr in place.abbrs) {
         if (abbrs.length == 0) abbrs = abbr.name;
         else abbrs = [abbrs stringByAppendingFormat:@", %@", abbr.name];
     }
-    cell.sub2.text = [NSString stringWithFormat:@"Known as: %@", abbrs];
+    cell.sub2_1.text = [NSString stringWithFormat:@"Known as: %@", abbrs];
     
     if (((NSArray *)[self.searchResults objectAtIndex:0]).count + ((NSArray *)[self.searchResults objectAtIndex:1]).count == 1) {
         cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)]];

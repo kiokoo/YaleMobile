@@ -14,9 +14,9 @@
 
 @interface YMMapViewController : UIViewController <CLLocationManagerDelegate, UISearchBarDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) IBOutlet MKMapView *mapView;
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet MKMapView *mapView1;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar1;
+@property (nonatomic, strong) IBOutlet UITableView *tableView1;
 
 @property (nonatomic, strong) CLLocationManager *manager;
 @property (nonatomic, strong) UIView *searchOverlay;

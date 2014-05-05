@@ -10,8 +10,8 @@
 
 @interface YMSettingsModalViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UITextField *textField;
-@property (nonatomic, strong) IBOutlet UIImageView *background;
+@property (nonatomic, strong) IBOutlet UITextField *textField1;
+@property (nonatomic, strong) IBOutlet UIImageView *background1;
 @property (nonatomic, strong) IBOutlet UINavigationBar *navBar;
 
 @end

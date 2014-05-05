@@ -52,14 +52,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   YMMenuCell *cell = (YMMenuCell *)[tableView dequeueReusableCellWithIdentifier:@"Menu Cell"];
-  cell.name.text = [self.items objectAtIndex:indexPath.row];
-  cell.icon.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu%d.png", indexPath.row]];
+  cell.name1.text = [self.items objectAtIndex:indexPath.row];
+  cell.icon1.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu%d.png", indexPath.row]];
   
   cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
   cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
   
-  cell.name.shadowColor = [UIColor blackColor];
-  cell.name.shadowOffset = CGSizeMake(0, 1);
+  cell.name1.shadowColor = [UIColor blackColor];
+  cell.name1.shadowOffset = CGSizeMake(0, 1);
   
   return cell;
 }
@@ -72,6 +72,7 @@
   NSString *identifier = [[self.items objectAtIndex:indexPath.row] stringByAppendingString:@" Root"];
   
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+  NSLog(@"New VC: %@", newTopViewController);
   /*
    [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
    CGRect frame = self.slidingViewController.topViewController.view.frame;
@@ -80,12 +81,16 @@
    [self.slidingViewController resetTopView];
    }];
    */
-  [self.slidingViewController anchorTopViewToRightAnimated:NO onComplete:^{
+  /*
+  [self.slidingViewController anchorTopViewToRightAnimated:YES onComplete:^{
     CGRect frame = self.slidingViewController.topViewController.view.frame;
     self.slidingViewController.topViewController = newTopViewController;
     self.slidingViewController.topViewController.view.frame = frame;
-    [self.slidingViewController resetTopViewAnimated:NO];
+    [self.slidingViewController resetTopViewAnimated:YES];
   }];
+   */
+  self.slidingViewController.topViewController = newTopViewController;
+  [self.slidingViewController resetTopViewAnimated:YES];
 }
 
 @end
