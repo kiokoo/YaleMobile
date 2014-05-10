@@ -54,8 +54,8 @@
   [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:settings]];
   [settings addTarget:self action:@selector(settings:) forControlEvents:UIControlEventTouchUpInside];
   self.zoomLevel = 0;
-  [self.locate addTarget:self action:@selector(locate:) forControlEvents:UIControlEventTouchUpInside];
-  [self.refresh addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventTouchUpInside];
+  [self.locate1 addTarget:self action:@selector(locate:) forControlEvents:UIControlEventTouchUpInside];
+  [self.refresh1 addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventTouchUpInside];
   
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Shuttle Refresh"];
   /* Deprecated code, now using KVO to detect topView reset.
@@ -87,7 +87,7 @@
   zoomLocation.longitude = -72.9281;
   MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02);
   MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, span);
-  [self.mapView setRegion:region animated:YES];
+  [self.mapView1 setRegion:region animated:YES];
   
   if ((self.db = [YMDatabaseHelper getManagedDocument])) {
     [self loadData];
@@ -103,7 +103,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
   NSLog(@"Disappeared");
-  [self.refresh setSelected:NO];
+  [self.refresh1 setSelected:NO];
   [self removeCalloutViewWithAnimation];
 }
 
@@ -132,7 +132,7 @@
 {
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Shuttle Refresh"]) {
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Shuttle Refresh"];
-    [self.refresh setSelected:NO];
+    [self.refresh1 setSelected:NO];
     
     [self removeCalloutViewWithAnimation];
     
@@ -147,8 +147,8 @@
   [Stop removeStopsBeforeTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
   [Segment removeSegmentsBeforeTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
   [Vehicle removeVehiclesBeforeTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
-  [self.mapView removeAnnotations:self.mapView.annotations];
-  [self.mapView removeOverlays:self.mapView.overlays];
+  [self.mapView1 removeAnnotations:self.mapView1.annotations];
+  [self.mapView1 removeOverlays:self.mapView1.overlays];
   [YMServerCommunicator getRouteInfoForController:self usingBlock:^(NSArray *data) {
     for (NSDictionary *dict in data)
       [Route routeWithData:dict forTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
@@ -179,7 +179,7 @@
             [self addSegments];
             [self addStops];
             [self addVehicles];
-            [self.refresh setSelected:YES];
+            [self.refresh1 setSelected:YES];
             [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(refreshVehicles) userInfo:nil repeats:NO];
           }];
         }];
@@ -207,7 +207,7 @@
       MKPolyline *line = [MKPolyline polylineWithEncodedString:s.string];
       line.title = r.color;
       line.subtitle = [NSString stringWithFormat:@"%d:%d", [routes indexOfObject:r], routes.count];
-      [self.mapView addOverlay:line];
+      [self.mapView1 addOverlay:line];
     }
   }
 }
@@ -223,7 +223,7 @@
   for (Stop *s in matches) {
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(s.latitude.doubleValue, s.longitude.doubleValue);
     YMStopAnnotation *annotation = [[YMStopAnnotation alloc] initWithLocation:coordinate routes:[s.routes allObjects] stop:s title:s.name andSubtitle:s.code.stringValue];
-    [self.mapView addAnnotation:annotation];
+    [self.mapView1 addAnnotation:annotation];
   }
 }
 
@@ -238,11 +238,11 @@
   for (Vehicle *v in matches) {
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(v.latitude.doubleValue, v.longitude.doubleValue);
     BOOL found = NO;
-    for (id a in self.mapView.annotations) {
+    for (id a in self.mapView1.annotations) {
       if ([a isKindOfClass:[YMVehicleAnnotation class]]) {
         if (((YMVehicleAnnotation *)a).vehicle.vehicleid.integerValue == v.vehicleid.integerValue) {
           found = YES;
-          YMVehicleAnnotationView *vav = (YMVehicleAnnotationView *)[self.mapView viewForAnnotation:a];
+          YMVehicleAnnotationView *vav = (YMVehicleAnnotationView *)[self.mapView1 viewForAnnotation:a];
           [UIView animateWithDuration:2 animations:^{
             [a updateCoordinate:coordinate andVehicle:v];
           }completion:^(BOOL finished) {
@@ -254,7 +254,7 @@
     }
     if (!found) {
       YMVehicleAnnotation *annotation = [[YMVehicleAnnotation alloc] initWithLocation:coordinate vehicle:v title:nil andSubtitle:nil];
-      [self.mapView addAnnotation:annotation];
+      [self.mapView1 addAnnotation:annotation];
     }
   }
 }
@@ -269,12 +269,12 @@
   
   if (self.locating) {
     self.locating = 0;
-    self.mapView.showsUserLocation = NO;
-    [self.locate setSelected:NO];
+    self.mapView1.showsUserLocation = NO;
+    [self.locate1 setSelected:NO];
   } else {
     self.locating = 1;
-    self.mapView.showsUserLocation = YES;
-    [self.locate setSelected:YES];
+    self.mapView1.showsUserLocation = YES;
+    [self.locate1 setSelected:YES];
   }
 }
 
@@ -345,7 +345,7 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
   if (self.locating == 1 && userLocation.location.coordinate.latitude != 0) {
-    [self.mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
+    [self.mapView1 setCenterCoordinate:userLocation.location.coordinate animated:YES];
     self.locating = 2;
   }
 }
@@ -353,7 +353,7 @@
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
   UITapGestureRecognizer *rec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissCallout:)];
-  [self.mapView addGestureRecognizer:rec];
+  [self.mapView1 addGestureRecognizer:rec];
   
   if ([view isKindOfClass:[YMStopAnnotationView class]] || [view isKindOfClass:[YMTransferStopAnnotationView class]]) {
     [YMServerCommunicator getArrivalEstimateForStop:((YMStopAnnotation *)view.annotation).s.stopid.stringValue forController:self andRoutes:self.routesList usingBlock:^(NSArray *array) {
@@ -493,7 +493,7 @@
 
 - (void)dismissCallout:(UITapGestureRecognizer *)rec
 {
-  [self.mapView removeGestureRecognizer:rec];
+  [self.mapView1 removeGestureRecognizer:rec];
   [self removeCalloutViewWithAnimation];
 }
 
@@ -510,16 +510,16 @@
 
 - (void)refresh:(id)sender
 {
-  if (self.refresh.selected) [self.refresh setSelected:NO];
+  if (self.refresh1.selected) [self.refresh1 setSelected:NO];
   else {
-    [self.refresh setSelected:YES];
+    [self.refresh1 setSelected:YES];
     [self refreshVehicles];
   }
 }
 
 - (void)refreshVehicles
 {
-  if (self.refresh.selected) {
+  if (self.refresh1.selected) {
     NSLog(@"Refreshing Vehicles");
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Resumed"]) {
       [self loadData];
@@ -535,7 +535,7 @@
           [self addVehicles];
         } else {
           NSLog(@"Deselected");
-          [self.refresh setSelected:NO];
+          [self.refresh1 setSelected:NO];
         }
       }];
     }

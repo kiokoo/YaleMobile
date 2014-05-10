@@ -72,7 +72,7 @@
     
     Route *route = [self.routes objectAtIndex:indexPath.row];
     
-    cell.name.text = route.name;
+    cell.name1.text = route.name;
 
     [cell.contentView addSubview:[[YMRoundView alloc] initWithColor:[YMGlobalHelper colorFromHexString:route.color] andFrame:CGRectMake(60, 15, 13, 13)]];
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];

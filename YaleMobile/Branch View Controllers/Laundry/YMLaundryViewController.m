@@ -123,30 +123,30 @@
         YMLaundryCell *cell;
         cell = (indexPath.row == 1) ? (YMLaundryCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Cell Top"] : (YMLaundryCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Cell Middle"];
         
-        cell.location.text = [self.locations objectAtIndex:indexPath.row - 1];
+        cell.location1.text = [self.locations objectAtIndex:indexPath.row - 1];
         
         if (self.data) {
             NSString *washerCount = [[self.data objectAtIndex:indexPath.row - 1] objectAtIndex:0];
             NSString *dryerCount = [[self.data objectAtIndex:indexPath.row - 1] objectAtIndex:1];
-            cell.washer.text = [NSString stringWithFormat:@"Washers: %@", washerCount];
-            cell.dryer.text = [NSString stringWithFormat:@"Dryers: %@", dryerCount];
+            cell.washer1.text = [NSString stringWithFormat:@"Washers: %@", washerCount];
+            cell.dryer1.text = [NSString stringWithFormat:@"Dryers: %@", dryerCount];
             cell.userInteractionEnabled = YES;
             
-            cell.washer.textColor = [UIColor lightGrayColor];
-            cell.dryer.textColor = [UIColor lightGrayColor];
+            cell.washer1.textColor = [UIColor lightGrayColor];
+            cell.dryer1.textColor = [UIColor lightGrayColor];
             
             if ([washerCount isEqualToString:@"0"]) {
-                cell.washer.textColor = [UIColor YMBluebookOrange];
-                cell.washer.highlightedTextColor = [UIColor YMOrange];
+                cell.washer1.textColor = [UIColor YMBluebookOrange];
+                cell.washer1.highlightedTextColor = [UIColor YMOrange];
             }
 
             if ([dryerCount isEqualToString:@"0"]) {
-                cell.dryer.textColor = [UIColor YMBluebookOrange];
-                cell.dryer.highlightedTextColor = [UIColor YMOrange];
+                cell.dryer1.textColor = [UIColor YMBluebookOrange];
+                cell.dryer1.highlightedTextColor = [UIColor YMOrange];
             }
         } else {
-            cell.washer.text = @"Pls refresh";
-            cell.dryer.text = @"Pull to refresh";
+            cell.washer1.text = @"Pls refresh";
+            cell.dryer1.text = @"Pull to refresh";
             cell.userInteractionEnabled = NO;
         }
         

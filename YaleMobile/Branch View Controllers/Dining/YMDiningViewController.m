@@ -134,8 +134,8 @@
 {
     YMDiningCell *cell = (YMDiningCell *)[tableView dequeueReusableCellWithIdentifier:@"Dining Cell"];
     NSDictionary *info = [[NSDictionary alloc] initWithDictionary:[self.locations objectForKey:[self.sortedKeys objectAtIndex:indexPath.row]]];
-    cell.name.text = [info objectForKey:@"Name"];
-    cell.location.text = [info objectForKey:@"Location"];
+    cell.name1.text = [info objectForKey:@"Name"];
+    cell.location1.text = [info objectForKey:@"Location"];
     
     NSArray *array;
     
@@ -146,44 +146,44 @@
         }
     }
     
-    cell.name.shadowColor = [UIColor whiteColor];
-    cell.name.shadowOffset = CGSizeMake(0, 1);
-    cell.location.shadowColor = [UIColor whiteColor];
-    cell.location.shadowOffset = CGSizeMake(0, 1);
-    cell.special.shadowColor = [UIColor whiteColor];
-    cell.special.shadowOffset = CGSizeMake(0, 1);
-    cell.crowdLabel.shadowColor = [UIColor whiteColor];
-    cell.crowdLabel.shadowOffset = CGSizeMake(0, 1);
+    cell.name1.shadowColor = [UIColor whiteColor];
+    cell.name1.shadowOffset = CGSizeMake(0, 1);
+    cell.location1.shadowColor = [UIColor whiteColor];
+    cell.location1.shadowOffset = CGSizeMake(0, 1);
+    cell.special1.shadowColor = [UIColor whiteColor];
+    cell.special1.shadowOffset = CGSizeMake(0, 1);
+    cell.crowdLabel1.shadowColor = [UIColor whiteColor];
+    cell.crowdLabel1.shadowOffset = CGSizeMake(0, 1);
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
 
     if (self.special.count) {
-        cell.special.text = [self.special objectAtIndex:indexPath.row * 3 + 1];
+        cell.special1.text = [self.special objectAtIndex:indexPath.row * 3 + 1];
         if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] == 0) {
-            cell.special.textColor = [UIColor YMDiningBlue];
-            cell.special.highlightedTextColor = [UIColor YMDiningBlue];
+            cell.special1.textColor = [UIColor YMDiningBlue];
+            cell.special1.highlightedTextColor = [UIColor YMDiningBlue];
         } else if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] == 1) {
-            cell.special.textColor = [UIColor YMDiningRed];
-            cell.special.highlightedTextColor = [UIColor YMDiningRed];
+            cell.special1.textColor = [UIColor YMDiningRed];
+            cell.special1.highlightedTextColor = [UIColor YMDiningRed];
         } else {
-            cell.special.textColor = [UIColor YMDiningGreen];
-            cell.special.highlightedTextColor = [UIColor YMDiningGreen];
+            cell.special1.textColor = [UIColor YMDiningGreen];
+            cell.special1.highlightedTextColor = [UIColor YMDiningGreen];
         }
     } else {
-        cell.special.text = @"Status Unavailable";
-        cell.special.textColor = [UIColor darkGrayColor];
-        cell.special.highlightedTextColor = [UIColor darkGrayColor];
+        cell.special1.text = @"Status Unavailable";
+        cell.special1.textColor = [UIColor darkGrayColor];
+        cell.special1.highlightedTextColor = [UIColor darkGrayColor];
     }
     
-    cell.crowdLabel.text = [self crowdedness:[[array objectAtIndex:4] integerValue]];
-    cell.crowdedness.image = [UIImage imageNamed:[NSString stringWithFormat:@"dots%d.png", ([[array objectAtIndex:4] integerValue] + 1) / 2]];
+    cell.crowdLabel1.text = [self crowdedness:[[array objectAtIndex:4] integerValue]];
+    cell.crowdedness1.image = [UIImage imageNamed:[NSString stringWithFormat:@"dots%d.png", ([[array objectAtIndex:4] integerValue] + 1) / 2]];
     if ([[array objectAtIndex:6] integerValue]) {
-        cell.crowdLabel.text = @"Closed";
-        cell.crowdedness.image = [UIImage imageNamed:@"dots0.png"];
+        cell.crowdLabel1.text = @"Closed";
+        cell.crowdedness1.image = [UIImage imageNamed:@"dots0.png"];
     }
     
     if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] != 0)
-        cell.crowdLabel.text = @"Special";
+        cell.crowdLabel1.text = @"Special";
         
     return cell;
 }
