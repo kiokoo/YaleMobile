@@ -1957,10 +1957,225 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Zld-vT-z3U"/>
+                    <connections>
+                        <segue destination="Mzu-lI-D0b" kind="push" identifier="Laundry Segue" id="cCh-uO-dDU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6f6-3Q-SFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1586" y="6057"/>
+        </scene>
+        <!--Laundry Detail View Controller-->
+        <scene sceneID="czO-mr-0fq">
+            <objects>
+                <tableViewController id="Mzu-lI-D0b" customClass="YMLaundryDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="elC-jX-tNJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Cell" rowHeight="58" id="4Ox-V9-py5" customClass="YMLaundryDetailCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Ox-V9-py5" id="pON-0y-NEu">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert.png" translatesAutoresizingMaskIntoConstraints="NO" id="XzE-24-dFg">
+                                            <rect key="frame" x="64" y="17" width="15" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hky-pD-Hlc" userLabel="Label - #01">
+                                            <rect key="frame" x="24" y="9" width="53" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="31" id="JGt-CD-K0w"/>
+                                                <constraint firstAttribute="width" constant="53" id="dFf-2V-H8s"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                            <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Running" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96P-l9-yr5" userLabel="Label - Running">
+                                            <rect key="frame" x="105" y="9" width="189" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="6aN-xi-7et"/>
+                                                <constraint firstAttribute="width" constant="189" id="Iit-ld-qSa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-nM-YvZ" userLabel="Label - 20">
+                                            <rect key="frame" x="166" y="10" width="47" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="OZ5-Bw-6Jj"/>
+                                                <constraint firstAttribute="width" constant="47" id="P0G-WF-98k"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="textColor" red="0.99139030610000001" green="0.37874898420000003" blue="0.30230428869999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.99139030610000001" green="0.37874898420000003" blue="0.30230428869999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minutes left" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="88" translatesAutoresizingMaskIntoConstraints="NO" id="13w-6a-xCy" userLabel="Label - minutes left">
+                                            <rect key="frame" x="206" y="4" width="88" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="MAQ-OS-LQ0"/>
+                                                <constraint firstAttribute="width" constant="88" id="p0p-tG-8qj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XzE-24-dFg" firstAttribute="centerY" secondItem="hky-pD-Hlc" secondAttribute="centerY" id="34i-a6-8qF"/>
+                                        <constraint firstItem="hky-pD-Hlc" firstAttribute="leading" secondItem="pON-0y-NEu" secondAttribute="leading" constant="24" id="4e4-IF-Bkn"/>
+                                        <constraint firstItem="XzE-24-dFg" firstAttribute="leading" secondItem="pON-0y-NEu" secondAttribute="leading" constant="64" id="6cZ-9Q-Zad"/>
+                                        <constraint firstItem="EFa-nM-YvZ" firstAttribute="centerY" secondItem="XzE-24-dFg" secondAttribute="centerY" id="Ij1-kj-HkZ"/>
+                                        <constraint firstItem="96P-l9-yr5" firstAttribute="centerY" secondItem="13w-6a-xCy" secondAttribute="centerY" id="Kkg-3H-8rO"/>
+                                        <constraint firstItem="96P-l9-yr5" firstAttribute="trailing" secondItem="13w-6a-xCy" secondAttribute="trailing" id="Q2W-ct-YEQ"/>
+                                        <constraint firstItem="96P-l9-yr5" firstAttribute="leading" secondItem="pON-0y-NEu" secondAttribute="leading" constant="105" id="VlN-Vj-JKH"/>
+                                        <constraint firstItem="hky-pD-Hlc" firstAttribute="top" secondItem="pON-0y-NEu" secondAttribute="top" constant="9" id="gwk-A7-YOv"/>
+                                        <constraint firstItem="96P-l9-yr5" firstAttribute="top" secondItem="hky-pD-Hlc" secondAttribute="top" id="kTc-s8-gL0"/>
+                                        <constraint firstAttribute="trailing" secondItem="EFa-nM-YvZ" secondAttribute="trailing" constant="107" id="zxS-Oq-1ya"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="alert1" destination="XzE-24-dFg" id="ukM-lu-dmz"/>
+                                    <outlet property="machineID1" destination="hky-pD-Hlc" id="uR4-XI-bmu"/>
+                                    <outlet property="min1" destination="13w-6a-xCy" id="ggY-Qa-IIO"/>
+                                    <outlet property="status1" destination="96P-l9-yr5" id="VZB-w0-N17"/>
+                                    <outlet property="time1" destination="EFa-nM-YvZ" id="wZx-0E-DYU"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Cell Top" rowHeight="58" id="WGG-xH-edF" customClass="YMLaundryDetailCell">
+                                <rect key="frame" x="0.0" y="144" width="320" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WGG-xH-edF" id="VYz-Y6-YXd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsO-rg-405" userLabel="Label - #01">
+                                            <rect key="frame" x="24" y="18" width="53" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="53" id="RAH-gc-lts"/>
+                                                <constraint firstAttribute="height" constant="31" id="bIA-PL-wmF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                            <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert.png" translatesAutoresizingMaskIntoConstraints="NO" id="5xd-er-pyc">
+                                            <rect key="frame" x="64" y="26" width="15" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5O-ZG-ckK" userLabel="Label - 20">
+                                            <rect key="frame" x="166" y="19" width="47" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="47" id="CSP-pP-hGa"/>
+                                                <constraint firstAttribute="height" constant="29" id="di5-Uf-Vls"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="textColor" red="0.99139030610000001" green="0.37874898420000003" blue="0.30230428869999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.99139030610000001" green="0.37874898420000003" blue="0.30230428869999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Running" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxN-Oo-Ehy" userLabel="Label - Running">
+                                            <rect key="frame" x="105" y="18" width="189" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="189" id="aQS-1K-joJ"/>
+                                                <constraint firstAttribute="height" constant="32" id="kxv-q8-qHy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minutes left" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="88" translatesAutoresizingMaskIntoConstraints="NO" id="Biy-xf-xUh" userLabel="Label - minutes left">
+                                            <rect key="frame" x="206" y="13" width="88" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="ZLT-Ep-EOe"/>
+                                                <constraint firstAttribute="width" constant="88" id="ZO8-hT-7eD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tsO-rg-405" firstAttribute="leading" secondItem="VYz-Y6-YXd" secondAttribute="leading" constant="24" id="3WH-P4-qoj"/>
+                                        <constraint firstItem="bxN-Oo-Ehy" firstAttribute="centerY" secondItem="Biy-xf-xUh" secondAttribute="centerY" id="7pd-Pk-Yfj"/>
+                                        <constraint firstAttribute="trailing" secondItem="h5O-ZG-ckK" secondAttribute="trailing" constant="107" id="8ZU-2u-tja"/>
+                                        <constraint firstItem="5xd-er-pyc" firstAttribute="leading" secondItem="VYz-Y6-YXd" secondAttribute="leading" constant="64" id="EIs-yL-K3a"/>
+                                        <constraint firstItem="h5O-ZG-ckK" firstAttribute="centerY" secondItem="5xd-er-pyc" secondAttribute="centerY" id="HV5-OY-Qeh"/>
+                                        <constraint firstItem="Biy-xf-xUh" firstAttribute="top" secondItem="VYz-Y6-YXd" secondAttribute="top" constant="13" id="JCL-FO-sn8"/>
+                                        <constraint firstItem="bxN-Oo-Ehy" firstAttribute="top" secondItem="tsO-rg-405" secondAttribute="top" id="ZHQ-mC-QoM"/>
+                                        <constraint firstItem="5xd-er-pyc" firstAttribute="centerY" secondItem="tsO-rg-405" secondAttribute="centerY" id="Zxq-7c-rzA"/>
+                                        <constraint firstItem="bxN-Oo-Ehy" firstAttribute="trailing" secondItem="Biy-xf-xUh" secondAttribute="trailing" id="aSk-JK-5gm"/>
+                                        <constraint firstItem="bxN-Oo-Ehy" firstAttribute="leading" secondItem="VYz-Y6-YXd" secondAttribute="leading" constant="105" id="qrx-6C-sFM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="alert1" destination="5xd-er-pyc" id="suV-K0-zc5"/>
+                                    <outlet property="machineID1" destination="tsO-rg-405" id="cho-Op-K42"/>
+                                    <outlet property="min1" destination="Biy-xf-xUh" id="mOA-uA-SgF"/>
+                                    <outlet property="status1" destination="bxN-Oo-Ehy" id="Esl-Sm-Re4"/>
+                                    <outlet property="time1" destination="h5O-ZG-ckK" id="OHL-fP-hrl"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Header" id="66L-Pu-J3s" customClass="YMSimpleCell">
+                                <rect key="frame" x="0.0" y="202" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="66L-Pu-J3s" id="YMT-tA-6Ny">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1k-aR-jPx">
+                                            <rect key="frame" x="24" y="14" width="247" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="DRq-36-DJn"/>
+                                                <constraint firstAttribute="width" constant="247" id="dQK-gk-zhH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N1k-aR-jPx" firstAttribute="top" secondItem="YMT-tA-6Ny" secondAttribute="top" constant="14" id="77M-PW-yWi"/>
+                                        <constraint firstItem="N1k-aR-jPx" firstAttribute="leading" secondItem="YMT-tA-6Ny" secondAttribute="leading" constant="24" id="pfL-9Q-vEI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name1" destination="N1k-aR-jPx" id="xA2-F8-W0T"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mzu-lI-D0b" id="r4H-gW-tGG"/>
+                            <outlet property="delegate" destination="Mzu-lI-D0b" id="ZZn-nv-OgP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="LR9-22-F3K"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9x-Fy-Sv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063" y="6057"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t5G-IT-Hh1">
@@ -1982,6 +2197,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alert.png" width="15" height="15"/>
         <image name="icon_dryer.png" width="16" height="16"/>
         <image name="icon_washer.png" width="16" height="16"/>
         <image name="locate_alone.png" width="32" height="32"/>

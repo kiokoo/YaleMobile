@@ -10,10 +10,10 @@
 
 @interface YMLaundryDetailCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UILabel *machineID;
-@property (nonatomic, strong) IBOutlet UILabel *status;
-@property (nonatomic, strong) IBOutlet UILabel *time;
-@property (nonatomic, strong) IBOutlet UILabel *min;
-@property (nonatomic, strong) IBOutlet UIImageView *alert;
+@property (nonatomic, strong) IBOutlet UILabel *machineID1;
+@property (nonatomic, strong) IBOutlet UILabel *status1;
+@property (nonatomic, strong) IBOutlet UILabel *time1;
+@property (nonatomic, strong) IBOutlet UILabel *min1;
+@property (nonatomic, strong) IBOutlet UIImageView *alert1;
 
 @end

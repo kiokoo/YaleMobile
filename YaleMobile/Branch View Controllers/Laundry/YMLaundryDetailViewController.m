@@ -119,40 +119,40 @@
     NSUInteger index = indexPath.section * [[self.washers objectAtIndex:1] integerValue] + indexPath.row - 1;
     
     NSString *machineID = [NSString stringWithFormat:@"%@", [[(NSDictionary *)[self.machineStatuses objectAtIndex:index] allKeys] objectAtIndex:0]];
-    cell.machineID.text = [NSString stringWithFormat:@"#%@", machineID];
+    cell.machineID1.text = [NSString stringWithFormat:@"#%@", machineID];
     NSString *status = [[(NSDictionary *)[self.machineStatuses objectAtIndex:index] allValues] objectAtIndex:0];
     
-    [cell.time setHidden:true]; [cell.min setHidden:true]; [cell.status setHidden:false]; [cell.alert setHidden:YES]; cell.userInteractionEnabled = NO;
+    [cell.time1 setHidden:true]; [cell.min1 setHidden:true]; [cell.status1 setHidden:false]; [cell.alert1 setHidden:YES]; cell.userInteractionEnabled = NO;
     
     if ([status rangeOfString:@"available"].location != NSNotFound) {
-        cell.status.text = @"Available";
-        cell.status.textColor = [UIColor YMGreen];
+        cell.status1.text = @"Available";
+        cell.status1.textColor = [UIColor YMGreen];
     } else if ([status rangeOfString:@"cycle has ended"].location != NSNotFound) {
-        cell.status.text = @"Cycle Ended";
-        cell.status.textColor = [UIColor YMLaundryOrange];
+        cell.status1.text = @"Cycle Ended";
+        cell.status1.textColor = [UIColor YMLaundryOrange];
     } else if ([status rangeOfString:@"extended cycle"].location != NSNotFound) {
-        cell.status.text = @"Extended Cycle";
-        cell.status.textColor = [UIColor colorWithRed:229/255.0 green:73/255.0 blue:45/255.0 alpha:1];
+        cell.status1.text = @"Extended Cycle";
+        cell.status1.textColor = [UIColor colorWithRed:229/255.0 green:73/255.0 blue:45/255.0 alpha:1];
     } else if ([status rangeOfString:@"est. time"].location != NSNotFound) {
-        cell.status.text = @"minutes left";
-        cell.status.textColor = [UIColor grayColor];
+        cell.status1.text = @"minutes left";
+        cell.status1.textColor = [UIColor grayColor];
         NSString *time = [status stringByReplacingOccurrencesOfString:@"est. time remaining" withString:@""];
         time = [time stringByReplacingOccurrencesOfString:@"min" withString:@""];
-        cell.time.text = time;
-        [cell.time setHidden:false];
-        [cell.min setHidden:false];
-        [cell.status setHidden:true];
+        cell.time1.text = time;
+        [cell.time1 setHidden:false];
+        [cell.min1 setHidden:false];
+        [cell.status1 setHidden:true];
         if (time.integerValue > 5) {
-            [cell.alert setHidden:NO];
+            [cell.alert1 setHidden:NO];
             cell.userInteractionEnabled = YES;
-            cell.alert.image = ([self correspondingNotification:machineID] != nil) ? [UIImage imageNamed:@"alert_active.png"] : [UIImage imageNamed:@"alert.png"];
+            cell.alert1.image = ([self correspondingNotification:machineID] != nil) ? [UIImage imageNamed:@"alert_active.png"] : [UIImage imageNamed:@"alert.png"];
         }
     } else if ([status rangeOfString:@"out of service"].location != NSNotFound) {
-        cell.status.text = @"Out of Service";
-        cell.status.textColor = [UIColor grayColor];
+        cell.status1.text = @"Out of Service";
+        cell.status1.textColor = [UIColor grayColor];
     } else {
-        cell.status.text = @"Status Unknown";
-        cell.status.textColor = [UIColor grayColor];
+        cell.status1.text = @"Status Unknown";
+        cell.status1.textColor = [UIColor grayColor];
     }
     
     if (indexPath.row == 1) {
