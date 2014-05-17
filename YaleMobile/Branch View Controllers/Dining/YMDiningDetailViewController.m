@@ -20,20 +20,20 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.tableView.backgroundColor = [UIColor clearColor];
+  self.tableView1.backgroundColor = [UIColor clearColor];
   [YMGlobalHelper addBackButtonToController:self];
   
   self.view.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.abbr]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
-  self.tableView.backgroundColor = [UIColor clearColor];
+  self.tableView1.backgroundColor = [UIColor clearColor];
   self.navigationController.navigationBar.translucent = YES;
   self.navigationController.navigationBar.alpha = 0.7;
   [self updateTableHeader];
-  self.tableView.showsVerticalScrollIndicator = NO;
+  self.tableView1.showsVerticalScrollIndicator = NO;
   
   float height = ([[UIScreen mainScreen] bounds].size.height == 568) ? 548 : 460;
   UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, height)];
   view.image = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_overlay.png", self.abbr]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-  [self.view insertSubview:view belowSubview:self.tableView];
+  [self.view insertSubview:view belowSubview:self.tableView1];
   self.overlay = view;
   view.alpha = 0;
   
@@ -70,7 +70,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
   if (self.selectedIndexPath) {
-    [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
+    [self.tableView1 deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
 }
@@ -157,8 +157,8 @@
   [containerView addSubview:headerLabel];
   [containerView addSubview:headerSublabel];
   
-  self.tableView.tableHeaderView = containerView;
-  [self.tableView reloadData];
+  self.tableView1.tableHeaderView = containerView;
+  [self.tableView1 reloadData];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

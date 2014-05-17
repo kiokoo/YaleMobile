@@ -102,19 +102,19 @@
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     }
     
-    cell.secondary.text = [detailDict objectForKey:@"Date"];
-    cell.primary.text = [detailDict objectForKey:@"Event"];
-    cell.dot.image = [UIImage imageNamed:[NSString stringWithFormat:@"round%@.png", [detailDict objectForKey:@"Type"]]];
+    cell.secondary1.text = [detailDict objectForKey:@"Date"];
+    cell.primary1.text = [detailDict objectForKey:@"Event"];
+    cell.dot1.image = [UIImage imageNamed:[NSString stringWithFormat:@"round%@.png", [detailDict objectForKey:@"Type"]]];
     
     // adjust cell primary label height
     /* deprecated code
     CGSize size = [cell.primary.text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:16.0] constrainedToSize:CGSizeMake(235.0, 5000.0)];
      */
     
-    CGSize size = [YMGlobalHelper boundText:cell.primary.text withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:16.0] andConstraintSize:CGSizeMake(235.0, 5000.0)];
-    CGRect frame = cell.primary.frame;
+    CGSize size = [YMGlobalHelper boundText:cell.primary1.text withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:16.0] andConstraintSize:CGSizeMake(235.0, 5000.0)];
+    CGRect frame = cell.primary1.frame;
     frame.size.height = size.height;
-    cell.primary.frame = frame;
+    cell.primary1.frame = frame;
     
     cell.backgroundView.alpha = 0.6;
     

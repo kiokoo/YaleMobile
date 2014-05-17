@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UITableView *tableView1;
 @property (nonatomic, strong) UIImageView *overlay;
 
 @end

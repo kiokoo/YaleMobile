@@ -10,9 +10,9 @@
 
 @interface YMPathishCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UIImageView *line;
-@property (nonatomic, strong) IBOutlet UIImageView *dot;
-@property (nonatomic, strong) IBOutlet UILabel *primary;
-@property (nonatomic, strong) IBOutlet UILabel *secondary;
+@property (nonatomic, strong) IBOutlet UIImageView *line1;
+@property (nonatomic, strong) IBOutlet UIImageView *dot1;
+@property (nonatomic, strong) IBOutlet UILabel *primary1;
+@property (nonatomic, strong) IBOutlet UILabel *secondary1;
 
 @end
