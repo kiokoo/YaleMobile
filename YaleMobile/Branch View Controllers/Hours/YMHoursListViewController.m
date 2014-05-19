@@ -32,6 +32,7 @@
     self.keys = [[self.data allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
     [YMGlobalHelper addBackButtonToController:self];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
+  self.tableView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -66,11 +67,18 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     YMHoursLibraryViewController *hlvc = (YMHoursLibraryViewController *)segue.destinationViewController;
+  if ([hlvc isKindOfClass:[YMHoursLibraryViewController class]]) {
     hlvc.name = [self.keys objectAtIndex:self.selectedIndexPath.row - 1];
     hlvc.data = [self.data objectForKey:[self.keys objectAtIndex:self.selectedIndexPath.row - 1]];
+  }
 }
 
 #pragma mark - Table view data source
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

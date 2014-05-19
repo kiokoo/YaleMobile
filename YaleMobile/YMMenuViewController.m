@@ -89,8 +89,14 @@
     [self.slidingViewController resetTopViewAnimated:YES];
   }];
    */
-  self.slidingViewController.topViewController = newTopViewController;
-  [self.slidingViewController resetTopViewAnimated:YES];
+  UIViewController *oldTopViewController = self.slidingViewController.topViewController;
+  CGFloat dX = self.view.frame.size.width - self.slidingViewController.anchorRightRevealAmount;
+  [UIView animateWithDuration:0.1 animations:^{
+    oldTopViewController.view.layer.transform = CATransform3DTranslate(oldTopViewController.view.layer.transform, dX, 0, 0);
+  } completion:^(BOOL finished) {
+    self.slidingViewController.topViewController = newTopViewController;
+    [self.slidingViewController resetTopViewAnimated:YES];
+  }];
 }
 
 @end

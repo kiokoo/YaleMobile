@@ -169,6 +169,11 @@
 
 #pragma mark - Table view data source
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   return 1;

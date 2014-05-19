@@ -11,7 +11,7 @@
 
 @interface YMHoursLibraryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate, UIActionSheetDelegate>
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UITableView *tableView1;
 
 @property (nonatomic, strong) NSDictionary *data;
 @property (nonatomic, strong) NSString *name;

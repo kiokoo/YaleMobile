@@ -17,6 +17,8 @@
 #import "TFHpple.h"
 #import "TFHppleElement.h"
 #import "Course+OCI.h"
+#import "UIView+AutoLayout.h"
+#import "NSString+URLEncode.h"
 
 @interface YMBluebookViewController ()
 
@@ -74,6 +76,12 @@
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
+  [self removeDisplayOverlay];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [self removeDisplayOverlay];
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
@@ -120,7 +128,7 @@
   svc.title = ([subject isEqualToString:@"ALL"]) ? @"Search Results" : subject;
   
   NSString *filters = [YMGlobalHelper buildBluebookFilters];
-  filters = [filters stringByAppendingFormat:@"&ProgramSubject=%@&InstructorName=%@&ExactWordPhrase=%@&CourseNumber=%@", [subject stringByReplacingOccurrencesOfString:@"&" withString:@"%26"], self.instructorName, self.exactPhrase, self.courseNumber];
+  filters = [filters stringByAppendingFormat:@"&ProgramSubject=%@&InstructorName=%@&ExactWordPhrase=%@&CourseNumber=%@", [subject stringByReplacingOccurrencesOfString:@"&" withString:@"%26"], [self.instructorName urlencode], [self.exactPhrase urlencode], [self.courseNumber urlencode]];
   self.instructorName = @""; self.courseNumber = @""; self.exactPhrase = @"";
   
   __block AFHTTPRequestOperationManager *client = [YMServerCommunicator getOperationManager];
@@ -181,6 +189,22 @@
   [[client operationQueue] addOperation:operation];
 }
 
+
+- (void)removeDisplayOverlay
+{
+  DLog(@"disable overlay: %@", self.disableViewOverlay);
+  [self.disableViewOverlay removeFromSuperview];
+  self.disableViewOverlay = nil;
+}
+
+- (void)hideKeyboard
+{
+  self.searchDisplayController.active = NO;
+  [self removeDisplayOverlay];
+}
+
+#pragma mark - Search Bar & Display delegate methods
+
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
 {
   controller.searchBar.showsScopeBar = YES;
@@ -197,21 +221,17 @@
   return NO;
 }
 
-- (void)hideKeyboard
-{
-  self.searchDisplayController.active = NO;
-  [self.disableViewOverlay removeFromSuperview];
-}
-
 - (void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView
 {
   self.searchDisplayController.searchResultsTableView.hidden = YES;
-  self.disableViewOverlay = [[UIView alloc] initWithFrame:CGRectMake(0.0f,88.0f,320.0f,416.0f)];
-  self.disableViewOverlay.backgroundColor = [UIColor blackColor];
-  self.disableViewOverlay.alpha = 0.8;
-  UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
-  [self.disableViewOverlay addGestureRecognizer:gestureRecognizer];
-  [self.view addSubview:self.disableViewOverlay];
+  if (!self.disableViewOverlay) {
+    self.disableViewOverlay = [[UIView alloc] initWithFrame:CGRectMake(0.0f,88.0f,320.0f,416.0f)];
+    self.disableViewOverlay.backgroundColor = [UIColor blackColor];
+    self.disableViewOverlay.alpha = 0.8;
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.disableViewOverlay addGestureRecognizer:gestureRecognizer];
+    [self.view addSubview:self.disableViewOverlay];
+  }
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -226,7 +246,7 @@
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
 {
-  [self.disableViewOverlay removeFromSuperview];
+  [self removeDisplayOverlay];
 }
 
 #pragma mark - Table view data source

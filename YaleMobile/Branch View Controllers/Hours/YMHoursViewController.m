@@ -35,6 +35,7 @@
   [YMGlobalHelper addMenuButtonToController:self];
   self.types = @[@"Libraries", @"Dining - Retail Facilities", @"Payne Whitney Gym", @"Yale Transit"];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
+  self.tableView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -80,6 +81,11 @@
 }
 
 #pragma mark - Table view data source
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

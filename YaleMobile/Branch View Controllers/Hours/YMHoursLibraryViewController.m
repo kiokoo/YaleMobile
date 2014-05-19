@@ -22,23 +22,24 @@
   [super viewDidLoad];
   [YMGlobalHelper addBackButtonToController:self];
   self.view.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [self.data objectForKey:@"code"]]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
-  self.tableView.backgroundColor = [UIColor clearColor];
+  self.tableView1.backgroundColor = [UIColor clearColor];
   self.navigationController.navigationBar.translucent = YES;
   self.navigationController.navigationBar.alpha = 0.7;
-  self.tableView.showsVerticalScrollIndicator = NO;
+  self.tableView1.showsVerticalScrollIndicator = NO;
   [self updateTableHeader];
   float height = ([[UIScreen mainScreen] bounds].size.height == 568) ? 548 : 460;
   UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, height)];
   view.image = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_overlay.png", [self.data objectForKey:@"code"]]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-  [self.view insertSubview:view belowSubview:self.tableView];
+  [self.view insertSubview:view belowSubview:self.tableView1];
   self.overlay = view;
   view.alpha = 0;
   
   [YMServerCommunicator getLibraryHoursForLocation:[self.data objectForKey:@"code"] controller:self usingBlock:^(NSArray *hour) {
     self.hour = [self parseJSONArray:hour];
-    [self.tableView reloadData];
+    [self.tableView1 reloadData];
   }];
-  
+ 
+  self.tableView1.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -118,8 +119,8 @@
   [containerView addSubview:headerLabel];
   [containerView addSubview:headerSublabel];
   
-  self.tableView.tableHeaderView = containerView;
-  [self.tableView reloadData];
+  self.tableView1.tableHeaderView = containerView;
+  [self.tableView1 reloadData];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -170,6 +171,11 @@
 }
 
 #pragma mark - Table view data source
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -296,7 +302,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+  [self.tableView1 deselectRowAtIndexPath:indexPath animated:YES];
   YMSubtitleCell *cell = (YMSubtitleCell *)[tableView cellForRowAtIndexPath:indexPath];
   if ([cell.secondary1.text isEqualToString:@"Contact Email"]) {
     if ([MFMailComposeViewController canSendMail]) {
