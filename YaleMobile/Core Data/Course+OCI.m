@@ -29,7 +29,7 @@
 
 + (void)removeAllCoursesInManagedObjectContext:(NSManagedObjectContext *)context
 {
-    NSLog(@"Removing all courses.....");
+    DLog(@"Removing all courses.....");
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Course"];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
@@ -46,8 +46,8 @@
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
     NSError *error;
     NSArray *matches = [context executeFetchRequest:request error:&error];
-    NSLog(@"Removing with timestamp %f. Matches: %d", timestamp, matches.count);
-    for (Course *course in matches) [context deleteObject:course];
+    DLog(@"Removing with timestamp %f. Matches: %lu", timestamp, (unsigned long)matches.count);
+    for (Course *course in matches)[context deleteObject:course];
 }
 
 @end

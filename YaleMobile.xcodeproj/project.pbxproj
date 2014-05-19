@@ -23,6 +23,7 @@
 		6539564A58D8424C8A355B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E13C79FA26474412B5B6523A /* libPods.a */; };
 		9B3AF04F1915D31F003CACAF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3AF04E1915D31F003CACAF /* MainStoryboard.storyboard */; };
 		9B3AF0521915D8A7003CACAF /* YMBluebookSubjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3AF0511915D8A7003CACAF /* YMBluebookSubjectCell.m */; };
+		9B65832A1927068A008754A1 /* YMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B6583281927068A008754A1 /* YMDataModel.xcdatamodeld */; };
 		9BE993BE1900AA010065EBEF /* YMBluebookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE991A91900A9FF0065EBEF /* YMBluebookDetailViewController.m */; };
 		9BE993BF1900AA010065EBEF /* YMBluebookFilterSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE991AB1900A9FF0065EBEF /* YMBluebookFilterSelectionViewController.m */; };
 		9BE993C01900AA010065EBEF /* YMBluebookFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE991AD1900A9FF0065EBEF /* YMBluebookFilterViewController.m */; };
@@ -494,6 +495,7 @@
 		9B3AF04E1915D31F003CACAF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9B3AF0501915D8A7003CACAF /* YMBluebookSubjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBluebookSubjectCell.h; sourceTree = "<group>"; };
 		9B3AF0511915D8A7003CACAF /* YMBluebookSubjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBluebookSubjectCell.m; sourceTree = "<group>"; };
+		9B6583291927068A008754A1 /* YMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YMDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9BE991A81900A9FF0065EBEF /* YMBluebookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBluebookDetailViewController.h; sourceTree = "<group>"; };
 		9BE991A91900A9FF0065EBEF /* YMBluebookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBluebookDetailViewController.m; sourceTree = "<group>"; };
 		9BE991AA1900A9FF0065EBEF /* YMBluebookFilterSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBluebookFilterSelectionViewController.h; sourceTree = "<group>"; };
@@ -952,7 +954,7 @@
 		9BE993891900AA000065EBEF /* bg_snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_snow.png; sourceTree = "<group>"; };
 		9BE9938A1900AA000065EBEF /* bg_snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_snow@2x.png"; sourceTree = "<group>"; };
 		9BE9938C1900AA000065EBEF /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
-		9BE9938D1900AA000065EBEF /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		9BE9938D1900AA000065EBEF /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CoreDataTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9BE9938F1900AA000065EBEF /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		9BE993901900AA000065EBEF /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		9BE993911900AA000065EBEF /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -1295,6 +1297,7 @@
 		9BE991F71900A9FF0065EBEF /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				9B6583281927068A008754A1 /* YMDataModel.xcdatamodeld */,
 				9BE991F81900A9FF0065EBEF /* Abbreviation+Initialize.h */,
 				9BE991F91900A9FF0065EBEF /* Abbreviation+Initialize.m */,
 				9BE991FA1900A9FF0065EBEF /* Abbreviation.h */,
@@ -2434,6 +2437,7 @@
 				24A8FF6D18E946FC006E81C3 /* YMAppDelegate.m in Sources */,
 				9BE995871900AD7C0065EBEF /* YMMainView.m in Sources */,
 				9BE993C91900AA010065EBEF /* YMHoursListViewController.m in Sources */,
+				9B65832A1927068A008754A1 /* YMDataModel.xcdatamodeld in Sources */,
 				9BE993D01900AA010065EBEF /* YMPeopleDetailViewController.m in Sources */,
 				9BE9958B1900AD7C0065EBEF /* YMSplashViewController.m in Sources */,
 				24A8FF6918E946FC006E81C3 /* main.m in Sources */,
@@ -2674,6 +2678,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9B6583281927068A008754A1 /* YMDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9B6583291927068A008754A1 /* YMDataModel.xcdatamodel */,
+			);
+			currentVersion = 9B6583291927068A008754A1 /* YMDataModel.xcdatamodel */;
+			path = YMDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 24A8FF5118E946FC006E81C3 /* Project object */;
 }

@@ -500,7 +500,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	totalSize.width = MAX(totalSize.width, indicatorF.size.width);
 	totalSize.height += indicatorF.size.height;
 	
-	CGSize labelSize = [label.text sizeWithFont:label.font];
+  CGSize labelSize = [label.text sizeWithAttributes:@{NSFontAttributeName: label.font}];
 	labelSize.width = MIN(labelSize.width, maxWidth);
 	totalSize.width = MAX(totalSize.width, labelSize.width);
 	totalSize.height += labelSize.height;
@@ -510,8 +510,14 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 
 	CGFloat remainingHeight = bounds.size.height - totalSize.height - kPadding - 4 * margin; 
 	CGSize maxSize = CGSizeMake(maxWidth, remainingHeight);
+  /* deprecated code, kept for reference
 	CGSize detailsLabelSize = [detailsLabel.text sizeWithFont:detailsLabel.font 
 								constrainedToSize:maxSize lineBreakMode:detailsLabel.lineBreakMode];
+   */
+  CGSize detailsLabelSize = [detailsLabel.text boundingRectWithSize:maxSize
+                                                     options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
+                                                  attributes:@{NSFontAttributeName : detailsLabel.font}
+                                                     context:nil].size;
 	totalSize.width = MAX(totalSize.width, detailsLabelSize.width);
 	totalSize.height += detailsLabelSize.height;
 	if (detailsLabelSize.height > 0.f && (indicatorF.size.height > 0.f || labelSize.height > 0.f)) {

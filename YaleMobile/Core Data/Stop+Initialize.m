@@ -62,7 +62,7 @@
 
 + (void)removeAllStopsInManagedObjectContext:(NSManagedObjectContext *)context
 {
-    NSLog(@"Removing all stops.....");
+    DLog(@"Removing all stops.....");
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Stop"];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"stopid" ascending:YES];
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
@@ -79,7 +79,7 @@
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
     NSError *error;
     NSArray *matches = [context executeFetchRequest:request error:&error];
-    NSLog(@"Removing stops with timestamp %f. Matches: %d", timestamp, matches.count);
+    DLog(@"Removing stops with timestamp %f. Matches: %lu", timestamp, (unsigned long)matches.count);
     for (Stop *stop in matches) [context deleteObject:stop];
 }
 

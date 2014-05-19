@@ -59,7 +59,7 @@
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
     NSError *error;
     NSArray *matches = [context executeFetchRequest:request error:&error];
-    NSLog(@"Removing segments with timestamp %f. Matches: %d", timestamp, matches.count);
+    DLog(@"Removing segments with timestamp %f. Matches: %lu", timestamp, (unsigned long)matches.count);
     for (Segment *segment in matches) [context deleteObject:segment];
 }
 

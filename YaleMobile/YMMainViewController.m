@@ -24,7 +24,7 @@
     [YMGlobalHelper addMenuButtonToController:self];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title.png"]];
     
-    NSLog(@"Loading");
+    DLog(@"Loading");
     
     NSArray *views = ([[UIScreen mainScreen] bounds].size.height == 568) ? [[NSBundle mainBundle] loadNibNamed:@"YMMainView5" owner:self options:nil] : [[NSBundle mainBundle] loadNibNamed:@"YMMainView4" owner:self options:nil];
     for (id v in views) {
@@ -78,7 +78,7 @@
             [self.view addSubview:layer];
         }
         
-        NSLog(@"code is %@", [current objectForKey:@"code"]);
+        DLog(@"code is %@", [current objectForKey:@"code"]);
         
         if (array.count == 1) return;
         

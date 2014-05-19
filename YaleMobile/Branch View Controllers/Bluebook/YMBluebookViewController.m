@@ -58,6 +58,11 @@
   UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1, rect.size.width, 1)];
   lineView.backgroundColor = [UIColor lightGrayColor];
   [self.searchBar1 addSubview:lineView];
+  
+  if ([self.tableView respondsToSelector:@selector(setSectionIndexColor:)]) {
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated

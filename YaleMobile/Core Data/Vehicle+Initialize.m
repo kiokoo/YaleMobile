@@ -58,7 +58,7 @@
 
 + (void)removeAllVehiclesInManagedObjectContext:(NSManagedObjectContext *)context
 {
-    NSLog(@"Removing all vehicles.....");
+    DLog(@"Removing all vehicles.....");
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Vehicle"];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"vehicleid" ascending:YES];
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
@@ -75,7 +75,7 @@
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
     NSError *error;
     NSArray *matches = [context executeFetchRequest:request error:&error];
-    NSLog(@"Removing vehicles with timestamp %f. Matches: %d", timestamp, matches.count);
+    DLog(@"Removing vehicles with timestamp %f. Matches: %lu", timestamp, (unsigned long)matches.count);
     for (Vehicle *v in matches) [context deleteObject:v];
 }
 

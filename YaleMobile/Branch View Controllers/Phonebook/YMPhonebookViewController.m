@@ -103,7 +103,7 @@
      
      abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
      */
-    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    DLog(@"Unresolved error %@, %@", error, [error userInfo]);
     abort();
   }
   
@@ -275,7 +275,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
+  /* bad return, but kept for reference
   if (self.searchDisplayController.active) return nil;
+   */
+  if (self.searchDisplayController.active) return -1;
   
   if([title isEqualToString:UITableViewIndexSearch]){
     [self.tableView setContentOffset:CGPointZero animated:NO];
@@ -316,7 +319,7 @@
     else if (count == 1)
       headerLabel.text = @"Found 1 entry";
     else
-      headerLabel.text = [NSString stringWithFormat:@"Found %d entries", count];
+      headerLabel.text = [NSString stringWithFormat:@"Found %ld entries", (long)count];
   }
   else headerLabel.text = [[self.fetchedResultsController sectionIndexTitles] objectAtIndex:section];
 	

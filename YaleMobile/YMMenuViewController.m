@@ -53,7 +53,7 @@
 {
   YMMenuCell *cell = (YMMenuCell *)[tableView dequeueReusableCellWithIdentifier:@"Menu Cell"];
   cell.name1.text = [self.items objectAtIndex:indexPath.row];
-  cell.icon1.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu%d.png", indexPath.row]];
+  cell.icon1.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu%ld.png", (long)indexPath.row]];
   
   cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
   cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
@@ -72,7 +72,7 @@
   NSString *identifier = [[self.items objectAtIndex:indexPath.row] stringByAppendingString:@" Root"];
   
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
-  NSLog(@"New VC: %@", newTopViewController);
+  DLog(@"New VC: %@", newTopViewController);
   /*
    [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
    CGRect frame = self.slidingViewController.topViewController.view.frame;

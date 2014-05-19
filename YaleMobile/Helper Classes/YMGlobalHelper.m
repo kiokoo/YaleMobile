@@ -167,7 +167,7 @@
   NSDate *date = [YMGlobalHelper dateFromString:string];
   NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
   NSDateComponents *components = [calendar components:NSMinuteCalendarUnit fromDate:[NSDate date] toDate:date options:0];
-  return [NSString stringWithFormat:@"%i", components.minute];
+  return [NSString stringWithFormat:@"%li", (long)components.minute];
 }
 
 /*

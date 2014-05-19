@@ -81,7 +81,7 @@
 - (void)loadData
 {
   NSTimeInterval interval = [YMGlobalHelper getTimestamp];
-  NSLog(@"Remove with timestamp %f", interval);
+  DLog(@"Remove with timestamp %f", interval);
   [Course removeCoursesBeforeTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
   [self setupFetchedResultsController];
   [self fetchData:self.db withTimestamp:interval];
@@ -95,7 +95,7 @@
   NSArray *preParse2 = [doc searchWithXPathQuery:@"//td[@class]/a"];
   
   __block NSUInteger count = 0;
-  NSLog(@"Add with timestamp %f. Total %d", timestamp, preParse2.count);
+  DLog(@"Add with timestamp %f. Total %lu", timestamp, (unsigned long)preParse2.count);
   for (NSUInteger i = 0; i < preParse2.count; i++) {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setObject:((TFHppleElement *)[preParse objectAtIndex:i*7]).content forKey:@"subject"];
@@ -137,7 +137,7 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
       }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-      NSLog(@"Fail. %@", error);
+      DLog(@"Fail. %@", error);
     }];
     [operation start];
   }

@@ -75,7 +75,7 @@
 
     if (!matches || matches.count == 0) return nil;
     else {
-        NSLog(@"Matches %d", matches.count);
+        DLog(@"Matches %lu", (unsigned long)matches.count);
         NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:matches.count];
         for (Route *r in matches) [array addObject:r.routeid.stringValue];
         if (array.count == 0) return nil;
@@ -95,7 +95,7 @@
 
 + (void)removeAllRoutesInManagedObjectContext:(NSManagedObjectContext *)context
 {
-    NSLog(@"Removing all routes.....");
+    DLog(@"Removing all routes.....");
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Route"];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"routeid" ascending:YES];
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
@@ -112,7 +112,7 @@
     request.sortDescriptors = [NSArray arrayWithObject:descriptor];
     NSError *error;
     NSArray *matches = [context executeFetchRequest:request error:&error];
-    NSLog(@"Removing routes with timestamp %f. Matches: %d", timestamp, matches.count);
+    DLog(@"Removing routes with timestamp %f. Matches: %lu", timestamp, (unsigned long)matches.count);
     for (Route *route in matches) [context deleteObject:route];
 }
 

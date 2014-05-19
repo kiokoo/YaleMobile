@@ -102,7 +102,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-  NSLog(@"Disappeared");
+  DLog(@"Disappeared");
   [self.refresh1 setSelected:NO];
   [self removeCalloutViewWithAnimation];
 }
@@ -206,7 +206,7 @@
     for (Route *r in routes) {
       MKPolyline *line = [MKPolyline polylineWithEncodedString:s.string];
       line.title = r.color;
-      line.subtitle = [NSString stringWithFormat:@"%d:%d", [routes indexOfObject:r], routes.count];
+      line.subtitle = [NSString stringWithFormat:@"%lu:%lu", (unsigned long)[routes indexOfObject:r], (unsigned long)routes.count];
       [self.mapView1 addOverlay:line];
     }
   }
@@ -288,7 +288,7 @@
     NSArray *routes = [overlay.subtitle componentsSeparatedByString:@":"];
     NSInteger routesCount = [[routes objectAtIndex:1] integerValue];
     if (routesCount > 1) {
-      lineView.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:30], [NSNumber numberWithInt:30 * ([[routes objectAtIndex:1] integerValue] - 1)], nil];
+      lineView.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:30], [NSNumber numberWithLong:30 * ([[routes objectAtIndex:1] integerValue] - 1)], nil];
       lineView.lineDashPhase = [[routes objectAtIndex:0] floatValue] * 30;
     }
     return lineView;
@@ -371,7 +371,7 @@
       for (Route *r in ((YMStopAnnotation *)view.annotation).routes) {
         [etaArray addObject:r];
         [etaArray addObject:[md objectForKey:r.routeid.stringValue]];
-        NSLog(@"ETA Array contains %@", [md objectForKey:r.routeid.stringValue]);
+        DLog(@"ETA Array contains %@", [md objectForKey:r.routeid.stringValue]);
       }
       self.etaData = etaArray;
       [self refreshCalloutEta];
@@ -414,7 +414,7 @@
     stopView.frame = frame;
     frame.origin.y += 100;
     
-    [UIView animateWithDuration:0.3 delay:delay options:nil animations:^{
+    [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
       stopView.frame = frame;
     } completion:^(BOOL finished) {
       self.callout = stopView;
@@ -462,7 +462,7 @@
     vehicleView.frame = frame;
     frame.origin.y += 100;
     
-    [UIView animateWithDuration:0.3 delay:delay options:nil animations:^{
+    [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
       vehicleView.frame = frame;
     } completion:^(BOOL finished) {
       self.callout = vehicleView;
@@ -520,7 +520,7 @@
 - (void)refreshVehicles
 {
   if (self.refresh1.selected) {
-    NSLog(@"Refreshing Vehicles");
+    DLog(@"Refreshing Vehicles");
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Resumed"]) {
       [self loadData];
       [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Resumed"];
@@ -534,7 +534,7 @@
           [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(refreshVehicles) userInfo:nil repeats:NO];
           [self addVehicles];
         } else {
-          NSLog(@"Deselected");
+          DLog(@"Deselected");
           [self.refresh1 setSelected:NO];
         }
       }];

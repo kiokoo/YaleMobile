@@ -124,7 +124,7 @@ static BOOL cancel = NO;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
     completionBlock([dict objectForKey:@"data"]);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    NSLog(@"Segment Failed");
+    DLog(@"Segment Failed");
     [MBProgressHUD hideHUDForView:controller.view animated:YES];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
@@ -187,7 +187,7 @@ static BOOL cancel = NO;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
     completionBlock([[dict objectForKey:@"data"] objectForKey:@"128"]);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    NSLog(@"Shuttle Failed");
+    DLog(@"Shuttle Failed");
     if (controller) [MBProgressHUD hideHUDForView:controller.view animated:YES];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
@@ -307,7 +307,7 @@ static BOOL cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"http://www.yaledining.org/fasttrack/menus.cfm?location=%d&version=2", locationID] parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"http://www.yaledining.org/fasttrack/menus.cfm?location=%lu&version=2", (unsigned long)locationID] parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [MBProgressHUD hideHUDForView:controller.view animated:YES];
@@ -475,8 +475,8 @@ static BOOL cancel = NO;
       arrayIndex++;
     }
     
-    [washers addObject:[NSString stringWithFormat:@"%d", washersDown]];
-    [dryers addObject:[NSString stringWithFormat:@"%d", dryersDown]];
+    [washers addObject:[NSString stringWithFormat:@"%lu", (unsigned long)washersDown]];
+    [dryers addObject:[NSString stringWithFormat:@"%lu", (unsigned long)dryersDown]];
     
     // process machine status
     NSMutableArray *machineStatuses = [[NSMutableArray alloc] initWithCapacity:machines.count];

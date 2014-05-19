@@ -118,19 +118,19 @@
 {
   switch (result) {
     case MFMailComposeResultCancelled:
-      NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
+      DLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
       break;
     case MFMailComposeResultSaved:
-      NSLog(@"Mail saved: you saved the email message in the drafts folder.");
+      DLog(@"Mail saved: you saved the email message in the drafts folder.");
       break;
     case MFMailComposeResultSent:
-      NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
+      DLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
       break;
     case MFMailComposeResultFailed:
-      NSLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
+      DLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
       break;
     default:
-      NSLog(@"Mail not sent.");
+      DLog(@"Mail not sent.");
       break;
   }
   [self dismissViewControllerAnimated:YES completion:nil];
