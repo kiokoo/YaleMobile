@@ -1,27 +1,27 @@
 PODS:
-  - AFNetworking (2.2.1):
+  - AFNetworking (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.2.1):
+  - AFNetworking/NSURLConnection (2.2.4):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.2.1):
+  - AFNetworking/NSURLSession (2.2.4):
     - AFNetworking/NSURLConnection
-  - AFNetworking/Reachability (2.2.1)
-  - AFNetworking/Security (2.2.1)
-  - AFNetworking/Serialization (2.2.1)
-  - AFNetworking/UIKit (2.2.1):
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - ECSlidingViewController (2.0.1)
-  - Mantle (1.4.1):
+  - ECSlidingViewController (2.0.2)
+  - Mantle (1.5):
     - Mantle/extobjc
-  - Mantle/extobjc (1.4.1)
+  - Mantle/extobjc (1.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -29,8 +29,8 @@ DEPENDENCIES:
   - Mantle (~> 1.4)
 
 SPEC CHECKSUMS:
-  AFNetworking: 0121f4b69be3fa58d1ab317866e036e12ac9651d
-  ECSlidingViewController: d7bb96ee5bbe261ed80ee16a513f94b9fd3c9767
-  Mantle: 0714cdb2b8559d9e6c2410d6a8529e3307bff189
+  AFNetworking: 01aa7c3aa9a200b94943e54072a4373f14b3d219
+  ECSlidingViewController: bc3d3893c040ae4b10fcf8efb5db34711738b1c3
+  Mantle: 60c03eea4d15a1c8d53821a56c7492cd6d05f553
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1

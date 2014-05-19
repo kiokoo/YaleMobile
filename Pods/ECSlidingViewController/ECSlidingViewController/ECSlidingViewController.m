@@ -48,6 +48,7 @@
 @property (nonatomic, copy) void (^coordinatorInteractionEnded)(id<UIViewControllerTransitionCoordinatorContext>context);
 - (void)setup;
 
+- (void)moveTopViewToPosition:(ECSlidingViewControllerTopViewPosition)position animated:(BOOL)animated onComplete:(void(^)())complete;
 - (CGRect)topViewCalculatedFrameForPosition:(ECSlidingViewControllerTopViewPosition)position;
 - (CGRect)underLeftViewCalculatedFrameForTopViewPosition:(ECSlidingViewControllerTopViewPosition)position;
 - (CGRect)underRightViewCalculatedFrameForTopViewPosition:(ECSlidingViewControllerTopViewPosition)position;
@@ -200,9 +201,13 @@
 }
 
 - (UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier {
-    ECSlidingSegue *unwindSegue = [[ECSlidingSegue alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
-    [unwindSegue setValue:@YES forKey:@"isUnwinding"];
-    return unwindSegue;
+    if ([self.underLeftViewController isMemberOfClass:[toViewController class]] || [self.underRightViewController isMemberOfClass:[toViewController class]]) {
+        ECSlidingSegue *unwindSegue = [[ECSlidingSegue alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
+        [unwindSegue setValue:@YES forKey:@"isUnwinding"];
+        return unwindSegue;
+    } else {
+        return [super segueForUnwindingToViewController:toViewController fromViewController:fromViewController identifier:identifier];
+    }
 }
 
 - (UIViewController *)childViewControllerForStatusBarHidden {
@@ -316,6 +321,10 @@
     self.preserveRightPeekAmount = NO;
 }
 
+- (void)setDefaultTransitionDuration:(NSTimeInterval)defaultTransitionDuration {
+    self.defaultAnimationController.defaultTransitionDuration = defaultTransitionDuration;
+}
+
 - (CGFloat)anchorLeftPeekAmount {
     if (_anchorLeftPeekAmount == CGFLOAT_MAX && _anchorLeftRevealAmount != CGFLOAT_MAX) {
         return CGRectGetWidth(self.view.bounds) - _anchorLeftRevealAmount;
@@ -420,27 +429,26 @@
 }
 
 - (void)anchorTopViewToRightAnimated:(BOOL)animated onComplete:(void (^)())complete {
-    self.isAnimated = animated;
-    self.animationComplete = complete;
-    ECSlidingViewControllerOperation operation = [self operationFromPosition:self.currentTopViewPosition toPosition:ECSlidingViewControllerTopViewPositionAnchoredRight];
-    [self animateOperation:operation];
+    [self moveTopViewToPosition:ECSlidingViewControllerTopViewPositionAnchoredRight animated:animated onComplete:complete];
 }
 
 - (void)anchorTopViewToLeftAnimated:(BOOL)animated onComplete:(void (^)())complete {
-    self.isAnimated = animated;
-    self.animationComplete = complete;
-    ECSlidingViewControllerOperation operation = [self operationFromPosition:self.currentTopViewPosition toPosition:ECSlidingViewControllerTopViewPositionAnchoredLeft];
-    [self animateOperation:operation];
+    [self moveTopViewToPosition:ECSlidingViewControllerTopViewPositionAnchoredLeft animated:animated onComplete:complete];
 }
 
 - (void)resetTopViewAnimated:(BOOL)animated onComplete:(void(^)())complete {
-    self.isAnimated = animated;
-    self.animationComplete = complete;
-    ECSlidingViewControllerOperation operation = [self operationFromPosition:self.currentTopViewPosition toPosition:ECSlidingViewControllerTopViewPositionCentered];
-    [self animateOperation:operation];
+    [self moveTopViewToPosition:ECSlidingViewControllerTopViewPositionCentered animated:animated onComplete:complete];
 }
 
 #pragma mark - Private
+
+- (void)moveTopViewToPosition:(ECSlidingViewControllerTopViewPosition)position animated:(BOOL)animated onComplete:(void(^)())complete {
+    self.isAnimated = animated;
+    self.animationComplete = complete;
+    [self.view endEditing:YES];
+    ECSlidingViewControllerOperation operation = [self operationFromPosition:self.currentTopViewPosition toPosition:position];
+    [self animateOperation:operation];
+}
 
 - (CGRect)topViewCalculatedFrameForPosition:(ECSlidingViewControllerTopViewPosition)position {
     CGRect frameFromDelegate = [self frameFromDelegateForViewController:self.topViewController
@@ -736,10 +744,12 @@
 
 - (void)detectPanGestureRecognizer:(UIPanGestureRecognizer *)recognizer {
     if (recognizer.state == UIGestureRecognizerStateBegan) {
+        [self.view endEditing:YES];
         _isInteractive = YES;
     }
-    
-    [self.defaultInteractiveTransition updateTopViewHorizontalCenterWithRecognizer:recognizer];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.defaultInteractiveTransition updateTopViewHorizontalCenterWithRecognizer:recognizer];
+    });
     _isInteractive = NO;
 }
 
