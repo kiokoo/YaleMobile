@@ -29,8 +29,8 @@ DEPENDENCIES:
   - Mantle (~> 1.4)
 
 SPEC CHECKSUMS:
-  AFNetworking: 01aa7c3aa9a200b94943e54072a4373f14b3d219
-  ECSlidingViewController: bc3d3893c040ae4b10fcf8efb5db34711738b1c3
-  Mantle: 60c03eea4d15a1c8d53821a56c7492cd6d05f553
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  ECSlidingViewController: 6c11fadb10d720c2d48bc577962332bdd4264c9f
+  Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1
