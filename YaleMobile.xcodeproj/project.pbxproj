@@ -439,7 +439,6 @@
 		9BE995571900AA010065EBEF /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993901900AA000065EBEF /* TFHpple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9BE995581900AA010065EBEF /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993921900AA000065EBEF /* TFHppleElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9BE995591900AA010065EBEF /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993941900AA000065EBEF /* XPathQuery.m */; };
-		9BE9955A1900AA010065EBEF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993961900AA000065EBEF /* MBProgressHUD.m */; };
 		9BE9955B1900AA010065EBEF /* MKPolyline+EncodedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993981900AA000065EBEF /* MKPolyline+EncodedString.m */; };
 		9BE9955C1900AA010065EBEF /* UIColor+YaleMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE9939A1900AA000065EBEF /* UIColor+YaleMobile.m */; };
 		9BE9955D1900AA010065EBEF /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE9939C1900AA000065EBEF /* UIImage+Blur.m */; };
@@ -970,8 +969,6 @@
 		9BE993921900AA000065EBEF /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		9BE993931900AA000065EBEF /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		9BE993941900AA000065EBEF /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
-		9BE993951900AA000065EBEF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		9BE993961900AA000065EBEF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		9BE993971900AA000065EBEF /* MKPolyline+EncodedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKPolyline+EncodedString.h"; sourceTree = "<group>"; };
 		9BE993981900AA000065EBEF /* MKPolyline+EncodedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKPolyline+EncodedString.m"; sourceTree = "<group>"; };
 		9BE993991900AA000065EBEF /* UIColor+YaleMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YaleMobile.h"; sourceTree = "<group>"; };
@@ -1829,8 +1826,6 @@
 				9BE9938C1900AA000065EBEF /* CoreDataTableViewController.h */,
 				9BE9938D1900AA000065EBEF /* CoreDataTableViewController.m */,
 				9BE9938E1900AA000065EBEF /* Hpple */,
-				9BE993951900AA000065EBEF /* MBProgressHUD.h */,
-				9BE993961900AA000065EBEF /* MBProgressHUD.m */,
 				9BE993971900AA000065EBEF /* MKPolyline+EncodedString.h */,
 				9BE993981900AA000065EBEF /* MKPolyline+EncodedString.m */,
 				9BE993991900AA000065EBEF /* UIColor+YaleMobile.h */,
@@ -2398,7 +2393,6 @@
 				9BE995681900AA010065EBEF /* YMMenuCell.m in Sources */,
 				9BE995661900AA010065EBEF /* YMLaundryCell.m in Sources */,
 				9BE993F01900AA010065EBEF /* Vehicle+Initialize.m in Sources */,
-				9BE9955A1900AA010065EBEF /* MBProgressHUD.m in Sources */,
 				9BE993CC1900AA010065EBEF /* YMLaundryDetailViewController.m in Sources */,
 				9BE993D11900AA010065EBEF /* YMPeopleViewController.m in Sources */,
 				9BE993D41900AA010065EBEF /* YMSettingsDetailViewController.m in Sources */,

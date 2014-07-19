@@ -24,15 +24,18 @@ PODS:
   - Mantle (1.5):
     - Mantle/extobjc
   - Mantle/extobjc (1.5)
+  - MBProgressHUD (0.8)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - ECSlidingViewController (~> 2.0.1)
   - Mantle (~> 1.4)
+  - MBProgressHUD (~> 0.8)
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
   ECSlidingViewController: 6c11fadb10d720c2d48bc577962332bdd4264c9f
   Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
+  MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
 
 COCOAPODS: 0.33.1
