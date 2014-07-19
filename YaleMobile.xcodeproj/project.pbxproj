@@ -26,6 +26,7 @@
 		9B48E408192A3D1200E9AF28 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B48E407192A3D1200E9AF28 /* UIView+AutoLayout.m */; };
 		9B48E40B192A3FAF00E9AF28 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B48E40A192A3FAF00E9AF28 /* NSString+URLEncode.m */; };
 		9B65832A1927068A008754A1 /* YMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B6583281927068A008754A1 /* YMDataModel.xcdatamodeld */; };
+		9BA262581974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA262571974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.m */; };
 		9BE993BE1900AA010065EBEF /* YMBluebookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE991A91900A9FF0065EBEF /* YMBluebookDetailViewController.m */; };
 		9BE993BF1900AA010065EBEF /* YMBluebookFilterSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE991AB1900A9FF0065EBEF /* YMBluebookFilterSelectionViewController.m */; };
 		9BE993C01900AA010065EBEF /* YMBluebookFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE991AD1900A9FF0065EBEF /* YMBluebookFilterViewController.m */; };
@@ -502,6 +503,8 @@
 		9B48E409192A3FAF00E9AF28 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		9B48E40A192A3FAF00E9AF28 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		9B6583291927068A008754A1 /* YMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YMDataModel.xcdatamodel; sourceTree = "<group>"; };
+		9BA262561974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMBluebookSubjectViewController+YMBluebookSubjectViewData.h"; sourceTree = "<group>"; };
+		9BA262571974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YMBluebookSubjectViewController+YMBluebookSubjectViewData.m"; sourceTree = "<group>"; };
 		9BE991A81900A9FF0065EBEF /* YMBluebookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBluebookDetailViewController.h; sourceTree = "<group>"; };
 		9BE991A91900A9FF0065EBEF /* YMBluebookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBluebookDetailViewController.m; sourceTree = "<group>"; };
 		9BE991AA1900A9FF0065EBEF /* YMBluebookFilterSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBluebookFilterSelectionViewController.h; sourceTree = "<group>"; };
@@ -1165,6 +1168,8 @@
 				9BE991AD1900A9FF0065EBEF /* YMBluebookFilterViewController.m */,
 				9BE991AE1900A9FF0065EBEF /* YMBluebookSubjectViewController.h */,
 				9BE991AF1900A9FF0065EBEF /* YMBluebookSubjectViewController.m */,
+				9BA262561974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.h */,
+				9BA262571974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.m */,
 				9BE991B01900A9FF0065EBEF /* YMBluebookViewController.h */,
 				9BE991B11900A9FF0065EBEF /* YMBluebookViewController.m */,
 			);
@@ -2400,6 +2405,7 @@
 				9BE993E31900AA010065EBEF /* Abbreviation.m in Sources */,
 				9BE993D81900AA010065EBEF /* YMShuttleViewController.m in Sources */,
 				9BE9956C1900AA010065EBEF /* YMSubtitleCell.m in Sources */,
+				9BA262581974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.m in Sources */,
 				9BE993E81900AA010065EBEF /* Place+Initialize.m in Sources */,
 				9BE993DA1900AA010065EBEF /* YMStopAnnotationView.m in Sources */,
 				9BE993DE1900AA010065EBEF /* YMVehicleAnnotation.m in Sources */,

@@ -20,6 +20,10 @@
 #import "UIView+AutoLayout.h"
 #import "NSString+URLEncode.h"
 
+static NSString* filterFormatString = @"&ProgramSubject=%@&InstructorName=%@&ExactWordPhrase=%@&CourseNumber=%@";
+static NSString* resultWindowUrl    = @"http://students.yale.edu/oci/resultWindow.jsp";
+static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.jsp";
+
 @interface YMBluebookViewController ()
 
 - (void)updateTable;
@@ -116,10 +120,17 @@
   // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)showAlertViewWithTitle:(NSString *)title
+                    andMessage:(NSString *)message
 {
-  YMBluebookSubjectViewController *svc = (YMBluebookSubjectViewController *)segue.destinationViewController;
-  
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                  message:message
+                                                 delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+  [alert show];
+}
+
+- (void)prepareSubjectViewController:(YMBluebookSubjectViewController *)svc
+{
   NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
   NSDictionary *dict = [self.courses objectForKey:[self.keys objectAtIndex:indexPath.section]];
   NSArray *keys = [[dict allKeys] sortedArrayUsingSelector:@selector(compare:)];
@@ -128,16 +139,16 @@
   svc.title = ([subject isEqualToString:@"ALL"]) ? @"Search Results" : subject;
   
   NSString *filters = [YMGlobalHelper buildBluebookFilters];
-  filters = [filters stringByAppendingFormat:@"&ProgramSubject=%@&InstructorName=%@&ExactWordPhrase=%@&CourseNumber=%@", [subject stringByReplacingOccurrencesOfString:@"&" withString:@"%26"], [self.instructorName urlencode], [self.exactPhrase urlencode], [self.courseNumber urlencode]];
+  filters = [filters stringByAppendingFormat:filterFormatString, [subject stringByReplacingOccurrencesOfString:@"&" withString:@"%26"], [self.instructorName urlEncode], [self.exactPhrase urlEncode], [self.courseNumber urlEncode]];
   self.instructorName = @""; self.courseNumber = @""; self.exactPhrase = @"";
   
   __block AFHTTPRequestOperationManager *client = [YMServerCommunicator getOperationManager];
   __block AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[@"http://students.yale.edu/oci/resultWindow.jsp" stringByAppendingString:filters] parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[resultWindowUrl stringByAppendingString:filters] parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    NSMutableURLRequest *request2 = [serializer requestWithMethod:@"GET" URLString:[@"http://students.yale.edu/oci/resultList.jsp" stringByAppendingString:filters] parameters:nil error:nil];
+    NSMutableURLRequest *request2 = [serializer requestWithMethod:@"GET" URLString:[resultListUrl stringByAppendingString:filters] parameters:nil error:nil];
     AFHTTPRequestOperation *operation2 = [[AFHTTPRequestOperation alloc] initWithRequest:request2];
     
     [operation2 setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -155,15 +166,13 @@
       svc.tableView.scrollEnabled = YES;
       if (![YMServerCommunicator isCanceled]) {
         if ([operation.responseString rangeOfString:@"No courses match selection."].location != NSNotFound) {
-          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"YaleMobile Bluebook" message:@"No courses match your selection. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-          [alert show];
+          [self showAlertViewWithTitle:@"YaleMobile Bluebook"
+                            andMessage:@"No courses match your selection. Please try again."];
           return;
         }
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
-                                                        message:@"YaleMobile is unable to reach Course Selection server. Please check your Internet connection and try again."
-                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        [self showAlertViewWithTitle:@"Connection Error"
+                          andMessage:@"YaleMobile is unable to reach Course Selection server. Please check your Internet connection and try again."];
       }
     }];
     [YMServerCommunicator resetCanceled];
@@ -172,12 +181,21 @@
     [MBProgressHUD hideHUDForView:svc.view animated:YES];
     svc.tableView.scrollEnabled = YES;
     if (![YMServerCommunicator isCanceled]) {
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
-                                                      message:@"YaleMobile is unable to reach Course Selection server. Please check your Internet connection and try again."
-                                                     delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-      [alert show];
+      [self showAlertViewWithTitle:@"Connection Error"
+                        andMessage:@"YaleMobile is unable to reach Course Selection server. Please check your Internet connection and try again."];
     }
   }];
+  
+  [YMServerCommunicator resetCanceled];
+  [[client operationQueue] addOperation:operation];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+#warning TODO(hc) add segue identifier test here
+  YMBluebookSubjectViewController *svc = (YMBluebookSubjectViewController *)segue.destinationViewController;
+  
+  [self prepareSubjectViewController:svc];
   
   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:svc.view animated:YES];
   hud.mode = MBProgressHUDModeIndeterminate;
@@ -185,8 +203,7 @@
   hud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
   hud.dimBackground = YES;
   svc.tableView.scrollEnabled = NO;
-  [YMServerCommunicator resetCanceled];
-  [[client operationQueue] addOperation:operation];
+
 }
 
 
