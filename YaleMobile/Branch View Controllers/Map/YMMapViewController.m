@@ -47,10 +47,10 @@
   
   [YMGlobalHelper addMenuButtonToController:self];
   
-  UIButton *locate = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 27, 23)];
-  [locate setBackgroundImage:[UIImage imageNamed:@"locate.png"] forState:UIControlStateNormal];
-  [locate setBackgroundImage:[UIImage imageNamed:@"locate_highlight.png"] forState:UIControlStateHighlighted];
-  [locate setBackgroundImage:[UIImage imageNamed:@"locate_highlight.png"] forState:UIControlStateSelected];
+  UIButton *locate = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 26)];
+  [locate setBackgroundImage:[UIImage imageNamed:@"button_navbar_locate.png"] forState:UIControlStateNormal];
+  [locate setBackgroundImage:[UIImage imageNamed:@"button_navbar_locate_highlight.png"] forState:UIControlStateHighlighted];
+  [locate setBackgroundImage:[UIImage imageNamed:@"button_navbar_locate_highlight.png"] forState:UIControlStateSelected];
   [locate addTarget:self action:@selector(locate:) forControlEvents:UIControlEventTouchUpInside];
   [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:locate]];
   self.locate = locate;

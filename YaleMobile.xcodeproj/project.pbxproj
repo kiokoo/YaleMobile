@@ -365,10 +365,6 @@
 		9BE9950D1900AA010065EBEF /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9933F1900AA000065EBEF /* cancel@2x.png */; };
 		9BE9950E1900AA010065EBEF /* confirm.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993401900AA000065EBEF /* confirm.png */; };
 		9BE9950F1900AA010065EBEF /* confirm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993411900AA000065EBEF /* confirm@2x.png */; };
-		9BE995121900AA010065EBEF /* locate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993441900AA000065EBEF /* locate.png */; };
-		9BE995131900AA010065EBEF /* locate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993451900AA000065EBEF /* locate@2x.png */; };
-		9BE995141900AA010065EBEF /* locate_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993461900AA000065EBEF /* locate_highlight.png */; };
-		9BE995151900AA010065EBEF /* locate_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993471900AA000065EBEF /* locate_highlight@2x.png */; };
 		9BE9951C1900AA010065EBEF /* peopleoverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9934E1900AA000065EBEF /* peopleoverlay.png */; };
 		9BE9951D1900AA010065EBEF /* peopleoverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9934F1900AA000065EBEF /* peopleoverlay@2x.png */; };
 		9BE9951E1900AA010065EBEF /* searchpeople.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993501900AA000065EBEF /* searchpeople.png */; };
@@ -883,10 +879,6 @@
 		9BE9933F1900AA000065EBEF /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
 		9BE993401900AA000065EBEF /* confirm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confirm.png; sourceTree = "<group>"; };
 		9BE993411900AA000065EBEF /* confirm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "confirm@2x.png"; sourceTree = "<group>"; };
-		9BE993441900AA000065EBEF /* locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locate.png; sourceTree = "<group>"; };
-		9BE993451900AA000065EBEF /* locate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locate@2x.png"; sourceTree = "<group>"; };
-		9BE993461900AA000065EBEF /* locate_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locate_highlight.png; sourceTree = "<group>"; };
-		9BE993471900AA000065EBEF /* locate_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locate_highlight@2x.png"; sourceTree = "<group>"; };
 		9BE9934E1900AA000065EBEF /* peopleoverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peopleoverlay.png; sourceTree = "<group>"; };
 		9BE9934F1900AA000065EBEF /* peopleoverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "peopleoverlay@2x.png"; sourceTree = "<group>"; };
 		9BE993501900AA000065EBEF /* searchpeople.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchpeople.png; sourceTree = "<group>"; };
@@ -1709,10 +1701,6 @@
 				9BE9933F1900AA000065EBEF /* cancel@2x.png */,
 				9BE993401900AA000065EBEF /* confirm.png */,
 				9BE993411900AA000065EBEF /* confirm@2x.png */,
-				9BE993441900AA000065EBEF /* locate.png */,
-				9BE993451900AA000065EBEF /* locate@2x.png */,
-				9BE993461900AA000065EBEF /* locate_highlight.png */,
-				9BE993471900AA000065EBEF /* locate_highlight@2x.png */,
 			);
 			path = "Navbar Items";
 			sourceTree = "<group>";
@@ -2016,7 +2004,6 @@
 				9BE994501900AA010065EBEF /* tablebg_top.png in Resources */,
 				9BE994151900AA010065EBEF /* round4@2x.png in Resources */,
 				9BE993F81900AA010065EBEF /* School of Drama.plist in Resources */,
-				9BE995151900AA010065EBEF /* locate_highlight@2x.png in Resources */,
 				9BE994A81900AA010065EBEF /* dots0.png in Resources */,
 				9BE995411900AA010065EBEF /* weather_sleet@2x.png in Resources */,
 				9BE994511900AA010065EBEF /* tablebg_top@2x.png in Resources */,
@@ -2142,7 +2129,6 @@
 				9BE994571900AA010065EBEF /* bbdetailbanner@2x.png in Resources */,
 				9BE994421900AA010065EBEF /* tablebg_bottom.png in Resources */,
 				9BE993F71900AA010065EBEF /* School of Art.plist in Resources */,
-				9BE995131900AA010065EBEF /* locate@2x.png in Resources */,
 				9BE9953B1900AA010065EBEF /* weather_na@2x.png in Resources */,
 				9BE994ED1900AA010065EBEF /* 412_overlay@2x.png in Resources */,
 				9BE994D31900AA010065EBEF /* 395@2x.png in Resources */,
@@ -2202,10 +2188,8 @@
 				9BE994211900AA010065EBEF /* alert@2x.png in Resources */,
 				9BE9947E1900AA010065EBEF /* co_overlay.png in Resources */,
 				9BE9946C1900AA010065EBEF /* icon_xwr.png in Resources */,
-				9BE995121900AA010065EBEF /* locate.png in Resources */,
 				9BE995521900AA010065EBEF /* bg_rain.png in Resources */,
 				9BE9946A1900AA010065EBEF /* icon_wr.png in Resources */,
-				9BE995141900AA010065EBEF /* locate_highlight.png in Resources */,
 				9BE9946B1900AA010065EBEF /* icon_wr@2x.png in Resources */,
 				9BE995261900AA010065EBEF /* refresh_alone_highlight.png in Resources */,
 				9BE995221900AA010065EBEF /* locate_alone_highlight.png in Resources */,
