@@ -1395,7 +1395,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="3905"/>
         </scene>
-        <!--Shuttle View Controller-->
+        <!--Shuttle View Controller - Shuttles-->
         <scene sceneID="reE-Cy-ErX">
             <objects>
                 <viewController id="3qL-BG-fSt" customClass="YMShuttleViewController" sceneMemberID="viewController">
@@ -1451,7 +1451,7 @@
                             <constraint firstItem="scl-rL-5b6" firstAttribute="leading" secondItem="p4h-tM-OLh" secondAttribute="leading" constant="9" id="tNb-sx-oXd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hZb-pk-JnW"/>
+                    <navigationItem key="navigationItem" title="Shuttles" id="hZb-pk-JnW"/>
                     <connections>
                         <outlet property="locate1" destination="scl-rL-5b6" id="5on-7s-rnz"/>
                         <outlet property="mapView1" destination="5GX-f7-hzm" id="2hh-bH-HBV"/>
@@ -1466,7 +1466,7 @@
         <scene sceneID="UPO-gi-kgc">
             <objects>
                 <tableViewController storyboardIdentifier="Shuttle Selection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oAG-ge-pz2" customClass="YMShuttleSelectionViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nMG-7N-zey">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nMG-7N-zey">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1475,7 +1475,7 @@
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OIW-1e-1Nf" id="1Hn-Y9-s5q">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-bC-P3F">

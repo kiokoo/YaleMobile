@@ -20,6 +20,9 @@
 
 static AFHTTPRequestOperationManager *globalOperationManager = nil;
 static AFHTTPRequestSerializer *globalRequestSerializer = nil;
+
+static NSString *TransLocAPIKey = @"lvou9iX2XmmshEWDasbgOL6m0N7Jp18FtRBjsnVrASrNRRAIBN";
+
 static BOOL cancel = NO;
 
 @implementation YMServerCommunicator
@@ -83,7 +86,8 @@ static BOOL cancel = NO;
   cancel = NO;
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://api.transloc.com/1.2/routes.json?agencies=128" parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"https://transloc-api-1-2.p.mashape.com/routes.json?agencies=128" parameters:nil error:nil];
+  [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [MBProgressHUD hideHUDForView:controller.view animated:YES];
@@ -114,7 +118,8 @@ static BOOL cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"http://api.transloc.com/1.2/segments.json?agencies=128%@", routes]  parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"https://transloc-api-1-2.p.mashape.com/segments.json?agencies=128%@", routes]  parameters:nil error:nil];
+  [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [MBProgressHUD hideHUDForView:controller.view animated:YES];
@@ -146,7 +151,8 @@ static BOOL cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://api.transloc.com/1.2/stops.json?agencies=128" parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"https://transloc-api-1-2.p.mashape.com/stops.json?agencies=128" parameters:nil error:nil];
+  [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [MBProgressHUD hideHUDForView:controller.view animated:YES];
@@ -177,7 +183,8 @@ static BOOL cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"http://api.transloc.com/1.2/vehicles.json?agencies=128%@", routes] parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"https://transloc-api-1-2.p.mashape.com/vehicles.json?agencies=128%@", routes] parameters:nil error:nil];
+  [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     if (controller) [MBProgressHUD hideHUDForView:controller.view animated:YES];
@@ -212,7 +219,8 @@ static BOOL cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"http://api.transloc.com/1.2/arrival-estimates.json?agencies=128&stops=%@%@", stop, routes] parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"https://transloc-api-1-2.p.mashape.com/arrival-estimates.json?agencies=128&stops=%@%@", stop, routes] parameters:nil error:nil];
+  [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [MBProgressHUD hideHUDForView:controller.view animated:YES];

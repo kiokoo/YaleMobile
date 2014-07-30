@@ -408,6 +408,15 @@
       }];
     }
     
+    
+    // Fix the frame issue on iOS 7
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+      CGRect oldFrame = stopView.frame;
+      oldFrame.origin.y += self.navigationController.navigationBar.frame.size.height;
+      oldFrame.origin.y += [UIApplication sharedApplication].statusBarFrame.size.height;
+      stopView.frame = oldFrame;
+    }
+    
     [self.view addSubview:stopView];
     CGRect frame = stopView.frame;
     frame.origin.y -= 100;
@@ -454,6 +463,13 @@
       } completion:^(BOOL finished) {
         [self removeCalloutView];
       }];
+    }
+    
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+      CGRect oldFrame = vehicleView.frame;
+      oldFrame.origin.y += self.navigationController.navigationBar.frame.size.height;
+      oldFrame.origin.y += [UIApplication sharedApplication].statusBarFrame.size.height;
+      vehicleView.frame = oldFrame;
     }
     
     [self.view addSubview:vehicleView];
