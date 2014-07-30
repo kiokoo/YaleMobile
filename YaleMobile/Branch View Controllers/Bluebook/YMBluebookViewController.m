@@ -12,6 +12,7 @@
 #import "YMGlobalHelper.h"
 #import "YMSimpleCell.h"
 #import "YMServerCommunicator.h"
+#import "YMTheme.h"
 #import "AFHTTPRequestOperation.h"
 #import "MBProgressHUD.h"
 #import "TFHpple.h"
@@ -45,12 +46,13 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 {
   [super viewDidLoad];
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
-  
+  self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
+
   [self updateTable];
   [YMGlobalHelper addMenuButtonToController:self];
   
-  UIButton *settings = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28, 25)];
-  [settings setBackgroundImage:[UIImage imageNamed:@"settings.png"] forState:UIControlStateNormal];
+  UIButton *settings = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 23, 23)];
+  [settings setBackgroundImage:[UIImage imageNamed:@"button_navbar_settings.png"] forState:UIControlStateNormal];
   [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:settings]];
   [settings addTarget:self action:@selector(settings:) forControlEvents:UIControlEventTouchUpInside];
   

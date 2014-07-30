@@ -13,6 +13,7 @@
 #import "Course+OCI.h"
 #import "YMBluebookSubjectCell.h"
 #import "YMBluebookSubjectViewController+YMBluebookSubjectViewData.h"
+#import "YMTheme.h"
 
 @interface YMBluebookSubjectViewController ()
 
@@ -33,6 +34,7 @@
 {
   [super viewDidLoad];
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
+  self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -369,8 +369,6 @@
 		9BE995131900AA010065EBEF /* locate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993451900AA000065EBEF /* locate@2x.png */; };
 		9BE995141900AA010065EBEF /* locate_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993461900AA000065EBEF /* locate_highlight.png */; };
 		9BE995151900AA010065EBEF /* locate_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993471900AA000065EBEF /* locate_highlight@2x.png */; };
-		9BE995181900AA010065EBEF /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9934A1900AA000065EBEF /* settings.png */; };
-		9BE995191900AA010065EBEF /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9934B1900AA000065EBEF /* settings@2x.png */; };
 		9BE9951C1900AA010065EBEF /* peopleoverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9934E1900AA000065EBEF /* peopleoverlay.png */; };
 		9BE9951D1900AA010065EBEF /* peopleoverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE9934F1900AA000065EBEF /* peopleoverlay@2x.png */; };
 		9BE9951E1900AA010065EBEF /* searchpeople.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE993501900AA000065EBEF /* searchpeople.png */; };
@@ -889,8 +887,6 @@
 		9BE993451900AA000065EBEF /* locate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locate@2x.png"; sourceTree = "<group>"; };
 		9BE993461900AA000065EBEF /* locate_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locate_highlight.png; sourceTree = "<group>"; };
 		9BE993471900AA000065EBEF /* locate_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locate_highlight@2x.png"; sourceTree = "<group>"; };
-		9BE9934A1900AA000065EBEF /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		9BE9934B1900AA000065EBEF /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		9BE9934E1900AA000065EBEF /* peopleoverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peopleoverlay.png; sourceTree = "<group>"; };
 		9BE9934F1900AA000065EBEF /* peopleoverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "peopleoverlay@2x.png"; sourceTree = "<group>"; };
 		9BE993501900AA000065EBEF /* searchpeople.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchpeople.png; sourceTree = "<group>"; };
@@ -1717,8 +1713,6 @@
 				9BE993451900AA000065EBEF /* locate@2x.png */,
 				9BE993461900AA000065EBEF /* locate_highlight.png */,
 				9BE993471900AA000065EBEF /* locate_highlight@2x.png */,
-				9BE9934A1900AA000065EBEF /* settings.png */,
-				9BE9934B1900AA000065EBEF /* settings@2x.png */,
 			);
 			path = "Navbar Items";
 			sourceTree = "<group>";
@@ -2130,7 +2124,6 @@
 				9BE994C71900AA010065EBEF /* 384@2x.png in Resources */,
 				9BE9943D1900AA010065EBEF /* rightmenubg_highlight@2x.png in Resources */,
 				9BE994681900AA010065EBEF /* icon_so.png in Resources */,
-				9BE995191900AA010065EBEF /* settings@2x.png in Resources */,
 				9BE994101900AA010065EBEF /* round2.png in Resources */,
 				9BE994BB1900AA010065EBEF /* icon_knownas@2x.png in Resources */,
 				9BE993D21900AA010065EBEF /* Phonebook Cell.xib in Resources */,
@@ -2299,7 +2292,6 @@
 				9BE994DE1900AA010065EBEF /* 404.png in Resources */,
 				9BE994131900AA010065EBEF /* round3@2x.png in Resources */,
 				9BE994541900AA010065EBEF /* bbsection.png in Resources */,
-				9BE995181900AA010065EBEF /* settings.png in Resources */,
 				9BE995501900AA010065EBEF /* bg_fog.png in Resources */,
 				9BE993FA1900AA010065EBEF /* School of Management.plist in Resources */,
 				9BE9942B1900AA010065EBEF /* dtablebg_mid@2x.png in Resources */,

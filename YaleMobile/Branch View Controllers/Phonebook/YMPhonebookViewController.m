@@ -10,6 +10,7 @@
 #import "YMGlobalHelper.h"
 #import "YMSubtitleCell.h"
 #import "YMDatabaseHelper.h"
+#import "YMTheme.h"
 #import "Office+Initialize.h"
 #import "YMServerCommunicator.h"
 
@@ -32,6 +33,7 @@
 {
   [super viewDidLoad];
   [YMGlobalHelper addMenuButtonToController:self];
+  self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
 }
 
 - (void)viewWillAppear:(BOOL)animated

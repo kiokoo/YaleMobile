@@ -49,8 +49,8 @@
   [super viewDidLoad];
   [YMGlobalHelper addMenuButtonToController:self];
   
-  UIButton *settings = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28, 25)];
-  [settings setBackgroundImage:[UIImage imageNamed:@"settings.png"] forState:UIControlStateNormal];
+  UIButton *settings = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 23, 23)];
+  [settings setBackgroundImage:[UIImage imageNamed:@"button_navbar_settings.png"] forState:UIControlStateNormal];
   [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:settings]];
   [settings addTarget:self action:@selector(settings:) forControlEvents:UIControlEventTouchUpInside];
   self.zoomLevel = 0;
