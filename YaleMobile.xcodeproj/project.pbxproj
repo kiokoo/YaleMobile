@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24391F641988A40900A0F284 /* YMTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 24391F631988A40900A0F284 /* YMTheme.m */; };
 		24A8FF5D18E946FC006E81C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FF5C18E946FC006E81C3 /* Foundation.framework */; };
 		24A8FF5F18E946FC006E81C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FF5E18E946FC006E81C3 /* CoreGraphics.framework */; };
 		24A8FF6118E946FC006E81C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FF6018E946FC006E81C3 /* UIKit.framework */; };
 		24A8FF6718E946FC006E81C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FF6518E946FC006E81C3 /* InfoPlist.strings */; };
 		24A8FF6918E946FC006E81C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FF6818E946FC006E81C3 /* main.m */; };
 		24A8FF6D18E946FC006E81C3 /* YMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FF6C18E946FC006E81C3 /* YMAppDelegate.m */; };
-		24A8FF7318E946FC006E81C3 /* YMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FF7218E946FC006E81C3 /* YMViewController.m */; };
 		24A8FF7518E946FC006E81C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FF7418E946FC006E81C3 /* Images.xcassets */; };
 		24A8FF7C18E946FC006E81C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FF7B18E946FC006E81C3 /* XCTest.framework */; };
 		24A8FF7D18E946FC006E81C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A8FF5C18E946FC006E81C3 /* Foundation.framework */; };
@@ -476,6 +476,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24391F621988A40900A0F284 /* YMTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMTheme.h; sourceTree = "<group>"; };
+		24391F631988A40900A0F284 /* YMTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTheme.m; sourceTree = "<group>"; };
 		24A8FF5918E946FC006E81C3 /* YaleMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaleMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8FF5C18E946FC006E81C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24A8FF5E18E946FC006E81C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -486,8 +488,6 @@
 		24A8FF6A18E946FC006E81C3 /* YaleMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YaleMobile-Prefix.pch"; sourceTree = "<group>"; };
 		24A8FF6B18E946FC006E81C3 /* YMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAppDelegate.h; sourceTree = "<group>"; };
 		24A8FF6C18E946FC006E81C3 /* YMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAppDelegate.m; sourceTree = "<group>"; };
-		24A8FF7118E946FC006E81C3 /* YMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMViewController.h; sourceTree = "<group>"; };
-		24A8FF7218E946FC006E81C3 /* YMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMViewController.m; sourceTree = "<group>"; };
 		24A8FF7418E946FC006E81C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24A8FF7A18E946FC006E81C3 /* YaleMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaleMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8FF7B18E946FC006E81C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -1099,10 +1099,10 @@
 				9BE993A91900AA010065EBEF /* TableView Cells */,
 				24A8FF6B18E946FC006E81C3 /* YMAppDelegate.h */,
 				24A8FF6C18E946FC006E81C3 /* YMAppDelegate.m */,
-				24A8FF7118E946FC006E81C3 /* YMViewController.h */,
-				24A8FF7218E946FC006E81C3 /* YMViewController.m */,
 				24A8FF7418E946FC006E81C3 /* Images.xcassets */,
 				24A8FF6318E946FC006E81C3 /* Supporting Files */,
+				24391F621988A40900A0F284 /* YMTheme.h */,
+				24391F631988A40900A0F284 /* YMTheme.m */,
 			);
 			path = YaleMobile;
 			sourceTree = "<group>";
@@ -2420,7 +2420,6 @@
 				9BE993ED1900AA010065EBEF /* Segment.m in Sources */,
 				9BE993DF1900AA010065EBEF /* YMVehicleAnnotationView.m in Sources */,
 				9BE993D91900AA010065EBEF /* YMStopAnnotation.m in Sources */,
-				24A8FF7318E946FC006E81C3 /* YMViewController.m in Sources */,
 				9BE9955F1900AA010065EBEF /* YMCHelper.m in Sources */,
 				9BE995651900AA010065EBEF /* YMDiningCell.m in Sources */,
 				9BE9956D1900AA010065EBEF /* YMTwoSubtitlesCell.m in Sources */,
@@ -2455,6 +2454,7 @@
 				24A8FF6918E946FC006E81C3 /* main.m in Sources */,
 				9BE993C51900AA010065EBEF /* YMDiningDetailViewController.m in Sources */,
 				9BE993E01900AA010065EBEF /* YMVehicleInfoSubview.m in Sources */,
+				24391F641988A40900A0F284 /* YMTheme.m in Sources */,
 				9BE995571900AA010065EBEF /* TFHpple.m in Sources */,
 				9BE995591900AA010065EBEF /* XPathQuery.m in Sources */,
 				9BE993D71900AA010065EBEF /* YMShuttleSelectionViewController.m in Sources */,

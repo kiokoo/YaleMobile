@@ -79,8 +79,8 @@
 
 + (void)addMenuButtonToController:(UIViewController *)viewController
 {
-  UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(25, 0, 30, 22)];
-  [button setBackgroundImage:[UIImage imageNamed:@"icon_menu"] forState:UIControlStateNormal];
+  UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(5, 0, 20, 13)];
+  [button setBackgroundImage:[UIImage imageNamed:@"button_navbar_menu"] forState:UIControlStateNormal];
   [button addTarget:viewController action:@selector(menu:) forControlEvents:UIControlEventTouchUpInside];
   UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
   [viewController.navigationItem setLeftBarButtonItem:barButtonItem];

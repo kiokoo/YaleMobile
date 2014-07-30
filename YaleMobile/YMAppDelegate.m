@@ -9,6 +9,7 @@
 #import "YMAppDelegate.h"
 #import "YMDatabaseHelper.h"
 #import "YMGlobalHelper.h"
+#import "YMTheme.h"
 #import <UIViewController+ECSlidingViewController.h>
 
 @implementation YMAppDelegate
@@ -32,16 +33,21 @@
                                                         [NSValue valueWithUIOffset:UIOffsetMake(0, 1)], UITextAttributeTextShadowOffset, nil]];
    */
   
-  NSShadow *shadow = [[NSShadow alloc] init];
-  shadow.shadowColor = [UIColor colorWithRed:7.0/255.0 green:80.0/255.0 blue:140.0/255.0 alpha:0.8];
-  shadow.shadowOffset = CGSizeMake(0, 1);
-  [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                        [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
-                                                        [UIFont fontWithName:@"Helvetica" size:19.0], NSFontAttributeName,
-                                                        shadow, NSShadowAttributeName, nil]];
+//  NSShadow *shadow = [[NSShadow alloc] init];
+//  shadow.shadowColor = [UIColor colorWithRed:7.0/255.0 green:80.0/255.0 blue:140.0/255.0 alpha:0.8];
+//  shadow.shadowOffset = CGSizeMake(0, 1);
+//  [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+//                                                        [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+//                                                        [UIFont fontWithName:@"Helvetica" size:19.0], NSFontAttributeName,
+//                                                        shadow, NSShadowAttributeName, nil]];
+//
+//  
+//  [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"nav.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 0)] forBarMetrics:UIBarMetricsDefault];
 
-  
-  [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"nav.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 0)] forBarMetrics:UIBarMetricsDefault];
+  [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+  [[UINavigationBar appearance] setBarTintColor:[YMTheme blue]];
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
   return YES;
 }
 							
