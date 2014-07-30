@@ -32,7 +32,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [YMGlobalHelper addBackButtonToController:self];
     self.washers = nil;
     self.dryers = nil;
     

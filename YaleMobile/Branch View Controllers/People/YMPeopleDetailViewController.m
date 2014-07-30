@@ -24,7 +24,6 @@
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   self.tableView1.backgroundColor = [UIColor clearColor];
   
-  [YMGlobalHelper addBackButtonToController:self];
   [self prettifyData];
   [self updateTableHeader];
 }

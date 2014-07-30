@@ -26,7 +26,6 @@
 + (void)setupRightSlidingViewControllerForController:(UIViewController *)topController withRightController:(Class)class named:(NSString *)identifier;
 + (void)setupMenuButtonForController:(UIViewController *)viewController;
 + (void)addMenuButtonToController:(UIViewController *)viewController;
-+ (void)addBackButtonToController:(UIViewController *)viewController;
 + (NSString *)buildBluebookFilters;
 + (NSString *)getTerm;
 

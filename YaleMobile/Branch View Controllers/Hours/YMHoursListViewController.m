@@ -30,7 +30,6 @@
 {
     [super viewDidLoad];
     self.keys = [[self.data allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
-    [YMGlobalHelper addBackButtonToController:self];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   self.tableView.backgroundColor = [UIColor clearColor];
 }

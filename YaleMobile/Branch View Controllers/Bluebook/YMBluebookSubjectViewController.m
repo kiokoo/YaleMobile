@@ -32,7 +32,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [YMGlobalHelper addBackButtonToController:self];
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
 }
 

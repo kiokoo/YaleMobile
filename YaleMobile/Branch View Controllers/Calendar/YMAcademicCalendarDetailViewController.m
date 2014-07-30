@@ -32,8 +32,6 @@
   
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   
-  // customized back button (<-)
-  [YMGlobalHelper addBackButtonToController:self];
   
   // actual contents to be displayed, fetched from plist
   NSString *path = [[NSBundle mainBundle] pathForResource:self.title ofType:@"plist"];

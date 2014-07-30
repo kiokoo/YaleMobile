@@ -86,14 +86,14 @@
   [viewController.navigationItem setLeftBarButtonItem:barButtonItem];
 }
 
-+ (void)addBackButtonToController:(UIViewController *)viewController
-{
-  UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28, 19)];
-  [button setBackgroundImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
-  [button addTarget:viewController action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
-  UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-  [viewController.navigationItem setLeftBarButtonItem:barButtonItem];
-}
+//+ (void)addBackButtonToController:(UIViewController *)viewController
+//{
+//  UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28, 19)];
+//  [button setBackgroundImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
+//  [button addTarget:viewController action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+//  UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+//  [viewController.navigationItem setLeftBarButtonItem:barButtonItem];
+//}
 
 + (NSString *)buildBluebookFilters
 {

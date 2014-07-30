@@ -21,7 +21,6 @@
 {
   [super viewDidLoad];
   self.tableView1.backgroundColor = [UIColor clearColor];
-  [YMGlobalHelper addBackButtonToController:self];
   
   self.view.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.abbr]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   self.tableView1.backgroundColor = [UIColor clearColor];

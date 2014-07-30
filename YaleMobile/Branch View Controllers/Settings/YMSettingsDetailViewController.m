@@ -29,7 +29,6 @@
 {
   [super viewDidLoad];
   self.title = (self.isAbout) ? @"About" : @"Credits";
-  [YMGlobalHelper addBackButtonToController:self];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   
   self.aboutHeader = @[@"App Version", @"About Yale Mobile"];
