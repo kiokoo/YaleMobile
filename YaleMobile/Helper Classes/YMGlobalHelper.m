@@ -50,6 +50,7 @@
   
   // Slide view gesture recognizer setup
   [viewController.navigationController.view addGestureRecognizer:viewController.slidingViewController.panGesture];
+//  [viewController.view addGestureRecognizer:viewController.slidingViewController.panGesture];
   [viewController.slidingViewController.panGesture setDelegate:(id<UIGestureRecognizerDelegate>)viewController];
   [viewController.slidingViewController setAnchorRightRevealAmount:280.0f];
   
