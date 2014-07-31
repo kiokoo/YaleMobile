@@ -147,6 +147,9 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   __block AFHTTPRequestOperationManager *client = [YMServerCommunicator getOperationManager];
   __block AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
   NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[resultWindowUrl stringByAppendingString:filters] parameters:nil error:nil];
+  
+  DLog(@"%@", [resultWindowUrl stringByAppendingString:filters]);
+  
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -167,6 +170,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
       [MBProgressHUD hideHUDForView:svc.view animated:YES];
       svc.tableView.scrollEnabled = YES;
       if (![YMServerCommunicator isCanceled]) {
+        DLog(@"%@", operation.responseString);
         if ([operation.responseString rangeOfString:@"No courses match selection."].location != NSNotFound) {
           [self showAlertViewWithTitle:@"YaleMobile Bluebook"
                             andMessage:@"No courses match your selection. Please try again."];

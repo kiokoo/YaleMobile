@@ -29,6 +29,13 @@
   [super viewDidLoad];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   self.items = @[@"Home", @"Bluebook", @"Dining", @"Campus Map", @"Shuttle", @"People Directory", @"Laundry", @"Facility Hours", @"Calendar", @"Department Phonebook", @"Jump Station", @"Settings"];
+  
+  UIView *placeHolder = [UIView new];
+  CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+  placeHolder.frame = CGRectMake(0, 0, self.tableView.frame.size.width, statusHeight);
+  placeHolder.backgroundColor = [UIColor clearColor];
+  
+  self.tableView.tableHeaderView = placeHolder;
 }
 
 - (void)didReceiveMemoryWarning

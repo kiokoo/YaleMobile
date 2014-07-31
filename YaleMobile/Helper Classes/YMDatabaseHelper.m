@@ -17,6 +17,10 @@ static UIManagedDocument *globalDatabase = nil;
 
 + (void)openDatabase:(NSString *)database usingBlock:(completion_block_t)completionBlock
 {
+  if (!managedDocumentDictionary) {
+    managedDocumentDictionary = [NSMutableDictionary dictionary];
+  }
+  
   UIManagedDocument *document = [managedDocumentDictionary objectForKey:database];
   NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
   url = [url URLByAppendingPathComponent:database];
@@ -27,14 +31,14 @@ static UIManagedDocument *globalDatabase = nil;
   }
   
   if (![[NSFileManager defaultManager] fileExistsAtPath:url.path]) {
-    //        NSError *error = nil;
-    //        NSURL *desturl = [url URLByAppendingPathComponent:@"StoreContent"];
-    //        [[NSFileManager defaultManager] createDirectoryAtURL:desturl withIntermediateDirectories:YES attributes:nil error:&error];
-    //        NSURL *finalurl = [desturl URLByAppendingPathComponent:@"persistentStore"];
-    //        NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"persistentStore"];
-    //        [[NSFileManager defaultManager] copyItemAtPath:path toPath:finalurl.path error:&error];
-    
-    completionBlock(document);
+//    NSError *error = nil;
+//    NSURL *desturl = [url URLByAppendingPathComponent:@"StoreContent"];
+//    [[NSFileManager defaultManager] createDirectoryAtURL:desturl withIntermediateDirectories:YES attributes:nil error:&error];
+//    NSURL *finalurl = [desturl URLByAppendingPathComponent:@"persistentStore"];
+//    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"persistentStore"];
+//    [[NSFileManager defaultManager] copyItemAtPath:path toPath:finalurl.path error:&error];
+//    
+//    completionBlock(document);
     
     [document saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
       [self buildDatabase:document atURL:url];
@@ -42,6 +46,7 @@ static UIManagedDocument *globalDatabase = nil;
     }];
   } else if (document.documentState == UIDocumentStateClosed) {
     [document openWithCompletionHandler:^(BOOL success) {
+      [self buildDatabase:document atURL:url];
       completionBlock(document);
     }];
   } else if (document.documentState == UIDocumentStateNormal) {
