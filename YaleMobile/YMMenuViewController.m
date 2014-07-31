@@ -65,9 +65,6 @@
   cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
   cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
   
-  cell.name1.shadowColor = [UIColor blackColor];
-  cell.name1.shadowOffset = CGSizeMake(0, 1);
-  
   return cell;
 }
 

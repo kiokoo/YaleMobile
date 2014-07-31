@@ -34,6 +34,11 @@
   [super viewDidLoad];
   [YMGlobalHelper addMenuButtonToController:self];
   self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
+  
+  if ([self.tableView respondsToSelector:@selector(setSectionIndexColor:)]) {
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated

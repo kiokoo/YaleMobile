@@ -31,9 +31,4 @@
  */
 @interface ECSlidingAnimationController : NSObject <UIViewControllerAnimatedTransitioning>
 
-/**
- The default duration of the view transition.
- */
-@property (nonatomic, assign) NSTimeInterval defaultTransitionDuration;
-
 @end

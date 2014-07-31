@@ -12,6 +12,8 @@
 #import "YMTheme.h"
 #import <UIViewController+ECSlidingViewController.h>
 
+#import <FlexManager.h>
+
 @implementation YMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -47,6 +49,8 @@
   [[UINavigationBar appearance] setBarTintColor:[YMTheme blue]];
   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
+//  [[FLEXManager sharedManager] showExplorer];
+  
   return YES;
 }
 							

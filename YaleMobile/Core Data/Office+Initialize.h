@@ -11,6 +11,6 @@
 @interface Office (Initialize)
 
 + (void)initializeFromFile:(NSString *)file inManagedObjectContext:(NSManagedObjectContext *)context;
-- (NSString *)firstLetter;
+//- (NSString *)firstLetter;
 
 @end

@@ -35,6 +35,11 @@
   [super viewDidLoad];
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
   self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
+  
+  if ([self.tableView respondsToSelector:@selector(setSectionIndexColor:)]) {
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated
