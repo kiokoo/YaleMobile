@@ -1088,10 +1088,10 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fmb-at-HCV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Simple Cell 1" rowHeight="54" id="ZeN-d8-yTA" userLabel="Simple Cell - Settings Simple Cell 1" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Simple Cell 1" rowHeight="54" id="ZeN-d8-yTA" userLabel="Simple Cell - Settings Simple Cell 1" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZeN-d8-yTA" id="lTQ-yY-iIO">
@@ -1114,11 +1114,12 @@
                                         <constraint firstItem="RK7-vx-vzB" firstAttribute="top" secondItem="lTQ-yY-iIO" secondAttribute="top" constant="24" id="rkl-Om-eRG"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="RK7-vx-vzB" id="ftl-UF-XcV"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Setting Simple Cell 2" id="fBQ-YO-i8r" userLabel="Simple Cell - Settings SImple Cell 2" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Setting Simple Cell 2" id="fBQ-YO-i8r" userLabel="Simple Cell - Settings SImple Cell 2" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="140" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBQ-YO-i8r" id="QbO-QZ-SkI">
@@ -1141,11 +1142,12 @@
                                         <constraint firstItem="BDa-Ab-Dca" firstAttribute="top" secondItem="QbO-QZ-SkI" secondAttribute="top" constant="14" id="fH0-lF-4iy"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="BDa-Ab-Dca" id="S6m-T9-qsy"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Subtitle Cell 1" rowHeight="47" id="LYZ-ir-iNP" userLabel="Subtitle Cell - Settings Subtitle Cell 1" customClass="YMSubtitleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Subtitle Cell 1" rowHeight="47" id="LYZ-ir-iNP" userLabel="Subtitle Cell - Settings Subtitle Cell 1" customClass="YMSubtitleCell">
                                 <rect key="frame" x="0.0" y="184" width="320" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LYZ-ir-iNP" id="lxb-Bg-dzd">
@@ -1181,12 +1183,13 @@
                                         <constraint firstItem="Qe8-XO-Nak" firstAttribute="top" secondItem="lxb-Bg-dzd" secondAttribute="top" constant="22" id="y9G-ok-dlP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="primary1" destination="Qe8-XO-Nak" id="q90-1B-eiz"/>
                                     <outlet property="secondary1" destination="gtn-Co-fgX" id="Ks8-sG-mJ9"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Subtitle Cell 2" rowHeight="47" id="ypa-mn-FY8" userLabel="Subtitle Cell - Settings Subtitle Cell 2" customClass="YMSubtitleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Subtitle Cell 2" rowHeight="47" id="ypa-mn-FY8" userLabel="Subtitle Cell - Settings Subtitle Cell 2" customClass="YMSubtitleCell">
                                 <rect key="frame" x="0.0" y="231" width="320" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ypa-mn-FY8" id="prp-Tq-MtZ">
@@ -1222,12 +1225,13 @@
                                         <constraint firstAttribute="trailing" secondItem="fXJ-OB-lwX" secondAttribute="trailing" constant="20" id="e2y-W4-wdL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="primary1" destination="pBj-rC-i6C" id="q2q-7r-Drn"/>
                                     <outlet property="secondary1" destination="fXJ-OB-lwX" id="dde-yT-PJq"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Header" id="5Sb-WS-Stf" userLabel="Simple Cell - Settings Header" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Header" id="5Sb-WS-Stf" userLabel="Simple Cell - Settings Header" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="278" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Sb-WS-Stf" id="eBN-5o-aUi">
@@ -1251,11 +1255,12 @@
                                         <constraint firstItem="V9H-OX-K2B" firstAttribute="leading" secondItem="eBN-5o-aUi" secondAttribute="leading" constant="24" id="QEm-Qh-XuG"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="V9H-OX-K2B" id="xt2-5z-FsH"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Footer" rowHeight="33" id="qRW-NP-D5w" userLabel="Simple Cell - Settings Footer" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Footer" rowHeight="33" id="qRW-NP-D5w" userLabel="Simple Cell - Settings Footer" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="322" width="320" height="33"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qRW-NP-D5w" id="cld-Fw-rky">
@@ -1279,6 +1284,7 @@
                                         <constraint firstAttribute="trailing" secondItem="ewf-5o-iy0" secondAttribute="trailing" constant="20" id="TSq-N8-rWV"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="ewf-5o-iy0" id="hIZ-Gu-9uN"/>
                                 </connections>
@@ -2304,10 +2310,10 @@
             </objects>
             <point key="canvasLocation" x="1586" y="6759"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Bluebook Filter Selection View Controller-->
         <scene sceneID="ZSn-pg-jCl">
             <objects>
-                <tableViewController id="kxx-jI-8Ud" sceneMemberID="viewController">
+                <tableViewController id="kxx-jI-8Ud" customClass="YMBluebookFilterSelectionViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0dq-5M-nPl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
