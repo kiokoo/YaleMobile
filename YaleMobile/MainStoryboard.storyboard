@@ -1806,10 +1806,10 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KoM-TB-sOn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Cell Top" rowHeight="76" id="4MW-Gr-h35" customClass="YMLaundryCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Cell Top" rowHeight="76" id="4MW-Gr-h35" customClass="YMLaundryCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4MW-Gr-h35" id="ZGN-7r-aMx">
@@ -1871,6 +1871,7 @@
                                         <constraint firstItem="rU8-Pq-EMb" firstAttribute="top" secondItem="xUq-pX-Cm3" secondAttribute="top" id="w8t-e3-ZzQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dryer1" destination="teJ-oY-Rpd" id="ruD-LA-9GX"/>
                                     <outlet property="dryerIcon1" destination="rU8-Pq-EMb" id="paR-kK-d9l"/>
@@ -1879,7 +1880,7 @@
                                     <outlet property="washerIcon1" destination="xUq-pX-Cm3" id="Ly2-TB-Ei1"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Cell Middle" rowHeight="76" id="sQj-yv-RJv" customClass="YMLaundryCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Cell Middle" rowHeight="76" id="sQj-yv-RJv" customClass="YMLaundryCell">
                                 <rect key="frame" x="0.0" y="162" width="320" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sQj-yv-RJv" id="kq2-4g-S2N">
@@ -1940,6 +1941,7 @@
                                         <constraint firstItem="TWg-zA-lxp" firstAttribute="leading" secondItem="kq2-4g-S2N" secondAttribute="leading" constant="33" id="xZH-2j-uWz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dryer1" destination="Nf5-eE-3pa" id="4SS-nT-dM8"/>
                                     <outlet property="dryerIcon1" destination="8rq-bu-60G" id="y4v-mL-fta"/>
@@ -1948,7 +1950,7 @@
                                     <outlet property="washerIcon1" destination="TWg-zA-lxp" id="xhi-fk-EfD"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Header" id="0R7-Ob-sQB" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Header" id="0R7-Ob-sQB" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="238" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0R7-Ob-sQB" id="wmE-78-v7B">
@@ -1972,6 +1974,7 @@
                                         <constraint firstItem="NKT-il-eQZ" firstAttribute="top" secondItem="wmE-78-v7B" secondAttribute="top" constant="15" id="pF6-63-Fxg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="NKT-il-eQZ" id="RC5-oq-136"/>
                                 </connections>
@@ -1998,9 +2001,9 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="elC-jX-tNJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Cell" rowHeight="58" id="4Ox-V9-py5" customClass="YMLaundryDetailCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Cell" rowHeight="58" id="4Ox-V9-py5" customClass="YMLaundryDetailCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Ox-V9-py5" id="pON-0y-NEu">
@@ -2073,6 +2076,7 @@
                                         <constraint firstAttribute="trailing" secondItem="EFa-nM-YvZ" secondAttribute="trailing" constant="107" id="zxS-Oq-1ya"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="alert1" destination="XzE-24-dFg" id="ukM-lu-dmz"/>
                                     <outlet property="machineID1" destination="hky-pD-Hlc" id="uR4-XI-bmu"/>
@@ -2081,7 +2085,7 @@
                                     <outlet property="time1" destination="EFa-nM-YvZ" id="wZx-0E-DYU"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Cell Top" rowHeight="58" id="WGG-xH-edF" customClass="YMLaundryDetailCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Cell Top" rowHeight="58" id="WGG-xH-edF" customClass="YMLaundryDetailCell">
                                 <rect key="frame" x="0.0" y="144" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WGG-xH-edF" id="VYz-Y6-YXd">
@@ -2154,6 +2158,7 @@
                                         <constraint firstItem="bxN-Oo-Ehy" firstAttribute="leading" secondItem="VYz-Y6-YXd" secondAttribute="leading" constant="105" id="qrx-6C-sFM"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="alert1" destination="5xd-er-pyc" id="suV-K0-zc5"/>
                                     <outlet property="machineID1" destination="tsO-rg-405" id="cho-Op-K42"/>
@@ -2162,7 +2167,7 @@
                                     <outlet property="time1" destination="h5O-ZG-ckK" id="OHL-fP-hrl"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Header" id="66L-Pu-J3s" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Header" id="66L-Pu-J3s" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="202" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="66L-Pu-J3s" id="YMT-tA-6Ny">
@@ -2187,6 +2192,7 @@
                                         <constraint firstItem="N1k-aR-jPx" firstAttribute="leading" secondItem="YMT-tA-6Ny" secondAttribute="leading" constant="24" id="pfL-9Q-vEI"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="N1k-aR-jPx" id="xA2-F8-W0T"/>
                                 </connections>

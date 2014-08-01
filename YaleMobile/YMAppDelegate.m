@@ -49,7 +49,9 @@
   [[UINavigationBar appearance] setBarTintColor:[YMTheme blue]];
   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
+#ifdef DEBUG
   [[FLEXManager sharedManager] showExplorer];
+#endif
   
   return YES;
 }
