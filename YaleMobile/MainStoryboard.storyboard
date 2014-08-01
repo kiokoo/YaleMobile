@@ -195,7 +195,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Bluebook Detail Cell" rowHeight="66" id="tk1-Fl-Ki1" customClass="YMSubtitleCell">
+                            <tableViewCell opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Bluebook Detail Cell" rowHeight="66" id="tk1-Fl-Ki1" customClass="YMSubtitleCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tk1-Fl-Ki1" id="f0u-c8-6KR">
@@ -234,6 +234,7 @@
                                         <constraint firstItem="FUd-cQ-cyx" firstAttribute="leading" secondItem="f0u-c8-6KR" secondAttribute="leading" constant="20" id="ug2-MC-00D"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="primary1" destination="FUd-cQ-cyx" id="Sge-uD-x7e"/>
                                     <outlet property="secondary1" destination="phd-tf-Hdv" id="l6F-OA-N2h"/>
