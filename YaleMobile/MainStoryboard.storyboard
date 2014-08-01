@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Bluebook Subject Cell" rowHeight="80" id="VPJ-Th-OtK" customClass="YMBluebookSubjectCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Bluebook Subject Cell" rowHeight="80" id="VPJ-Th-OtK" customClass="YMBluebookSubjectCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VPJ-Th-OtK" id="gBv-hF-Uac">
@@ -164,6 +164,7 @@
                                         <constraint firstItem="Pc7-S2-oOf" firstAttribute="trailing" secondItem="htE-8W-GvF" secondAttribute="trailing" id="x1o-qj-A1C"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="code1" destination="WlG-8n-R5w" id="EdM-4a-6VJ"/>
                                     <outlet property="happens1" destination="aeg-c5-k9s" id="met-KO-TsL"/>
@@ -1544,7 +1545,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Dining Cell" rowHeight="68" id="R8f-zI-gGc" customClass="YMDiningCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Dining Cell" rowHeight="68" id="R8f-zI-gGc" customClass="YMDiningCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8f-zI-gGc" id="10e-Tm-Nao">
@@ -1616,6 +1617,7 @@
                                         <constraint firstItem="Uqx-um-tS5" firstAttribute="trailing" secondItem="bHs-yE-t6J" secondAttribute="trailing" id="sVa-xL-q74"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="crowdLabel1" destination="bHs-yE-t6J" id="RfR-g1-hiL"/>
@@ -1664,7 +1666,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Dining Detail Cell 1" rowHeight="80" id="A9v-Xw-4QG" customClass="YMSubtitleCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Dining Detail Cell 1" rowHeight="80" id="A9v-Xw-4QG" customClass="YMSubtitleCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A9v-Xw-4QG" id="aq9-xH-4Tj">
@@ -1701,13 +1703,14 @@
                                                 <constraint firstItem="Gnk-P5-pDB" firstAttribute="leading" secondItem="aq9-xH-4Tj" secondAttribute="leading" constant="24" id="uVR-xa-Ebg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="primary1" destination="bqd-LO-ADG" id="mzp-Vz-lgy"/>
                                             <outlet property="secondary1" destination="Gnk-P5-pDB" id="dVH-yZ-bDF"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Dining Detail Cell 2" rowHeight="68" id="h5P-TN-lMc" customClass="YMSubtitleCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Dining Detail Cell 2" rowHeight="68" id="h5P-TN-lMc" customClass="YMSubtitleCell">
                                         <rect key="frame" x="0.0" y="102" width="320" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h5P-TN-lMc" id="MD3-EO-ZpX">
@@ -1746,6 +1749,7 @@
                                                 <constraint firstItem="5Ba-6y-BWE" firstAttribute="leading" secondItem="zsv-Po-Rjp" secondAttribute="leading" id="eBu-yQ-faD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="primary1" destination="5Ba-6y-BWE" id="szw-VS-dPG"/>
                                             <outlet property="secondary1" destination="zsv-Po-Rjp" id="kiX-b7-lts"/>
@@ -2853,7 +2857,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Calendar Cell 1" rowHeight="54" id="wHU-yv-6Lg" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Calendar Cell 1" rowHeight="54" id="wHU-yv-6Lg" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wHU-yv-6Lg" id="Aag-3I-uuS">
@@ -2877,11 +2881,12 @@
                                         <constraint firstItem="O6Y-N2-9vT" firstAttribute="top" secondItem="Aag-3I-uuS" secondAttribute="top" constant="24" id="y3S-IM-y9a"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="O6Y-N2-9vT" id="UVj-B2-eMA"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Calendar Cell 2" id="EUw-9V-Wgc" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Calendar Cell 2" id="EUw-9V-Wgc" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="140" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EUw-9V-Wgc" id="Slx-Dw-bVD">
@@ -2905,11 +2910,12 @@
                                         <constraint firstItem="Mh7-jc-We9" firstAttribute="top" secondItem="Slx-Dw-bVD" secondAttribute="top" constant="14" id="HPA-j9-iw4"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="Mh7-jc-We9" id="5pb-xk-26K"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Calendar Cell 0" id="ACv-Wa-QYs" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Calendar Cell 0" id="ACv-Wa-QYs" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="184" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ACv-Wa-QYs" id="nBO-IW-LRJ">
@@ -2934,6 +2940,7 @@
                                         <constraint firstItem="GLd-Uk-6Cj" firstAttribute="leading" secondItem="nBO-IW-LRJ" secondAttribute="leading" constant="24" id="enl-Jn-LTt"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="GLd-Uk-6Cj" id="vRM-yL-3tk"/>
                                 </connections>
@@ -2962,7 +2969,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Header" rowHeight="54" id="RXC-mI-KMP" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Header" rowHeight="54" id="RXC-mI-KMP" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RXC-mI-KMP" id="4LP-BH-fO1">
@@ -2987,11 +2994,12 @@
                                         <constraint firstItem="aAX-ii-FgC" firstAttribute="leading" secondItem="4LP-BH-fO1" secondAttribute="leading" constant="24" id="rq1-JL-93D"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="name1" destination="aAX-ii-FgC" id="cmR-pP-lUF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Top" rowHeight="54" id="oX5-2G-egJ" customClass="YMPathishCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Top" rowHeight="54" id="oX5-2G-egJ" customClass="YMPathishCell">
                                 <rect key="frame" x="0.0" y="140" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oX5-2G-egJ" id="OAB-5a-6js">
@@ -3045,6 +3053,7 @@
                                         <constraint firstItem="SmJ-qk-poa" firstAttribute="centerX" secondItem="MQz-Q8-YQd" secondAttribute="centerX" id="xK7-hX-ES0"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dot1" destination="MQz-Q8-YQd" id="1gc-ip-2fq"/>
                                     <outlet property="line1" destination="SmJ-qk-poa" id="B0J-RM-rJJ"/>
@@ -3052,7 +3061,7 @@
                                     <outlet property="secondary1" destination="0NK-8y-KbD" id="hRi-x7-Wdn"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Middle" rowHeight="54" id="UAc-7Q-abv" customClass="YMPathishCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Middle" rowHeight="54" id="UAc-7Q-abv" customClass="YMPathishCell">
                                 <rect key="frame" x="0.0" y="194" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UAc-7Q-abv" id="8g6-cT-PTL">
@@ -3106,6 +3115,7 @@
                                         <constraint firstAttribute="bottom" secondItem="N5Z-JY-L2U" secondAttribute="bottom" id="hY4-d1-hO7"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dot1" destination="g2S-7E-YVX" id="OGn-OK-mfD"/>
                                     <outlet property="line1" destination="N5Z-JY-L2U" id="pVW-Ag-zf5"/>
@@ -3113,7 +3123,7 @@
                                     <outlet property="secondary1" destination="Qva-FE-nLK" id="pPf-Se-6kG"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Bottom" rowHeight="54" id="qgv-Bi-kpu" customClass="YMPathishCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Bottom" rowHeight="54" id="qgv-Bi-kpu" customClass="YMPathishCell">
                                 <rect key="frame" x="0.0" y="248" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgv-Bi-kpu" id="NIm-2d-bmJ">
@@ -3166,6 +3176,7 @@
                                         <constraint firstAttribute="trailing" secondItem="ir1-zK-Pan" secondAttribute="trailing" constant="20" id="yHa-pw-Fjr"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dot1" destination="yeT-Ic-kA3" id="mfV-4h-5bd"/>
                                     <outlet property="line1" destination="BLW-5m-tZs" id="14l-HE-cdR"/>
