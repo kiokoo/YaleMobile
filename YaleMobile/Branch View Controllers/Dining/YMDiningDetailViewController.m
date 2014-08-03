@@ -22,16 +22,26 @@
   [super viewDidLoad];
   self.tableView1.backgroundColor = [UIColor clearColor];
   
-  self.view.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.abbr]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
+  UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", self.abbr]]];
+  backgroundView.contentMode = UIViewContentModeScaleToFill;
+  [backgroundView setFrame:self.view.frame];
+  [self.view addSubview:backgroundView];
+  [self.view sendSubviewToBack:backgroundView];
+  
   self.tableView1.backgroundColor = [UIColor clearColor];
   self.navigationController.navigationBar.translucent = YES;
   self.navigationController.navigationBar.alpha = 0.7;
   [self updateTableHeader];
   self.tableView1.showsVerticalScrollIndicator = NO;
   
-  float height = ([[UIScreen mainScreen] bounds].size.height == 568) ? 548 : 460;
-  UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, height)];
-  view.image = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_overlay.png", self.abbr]] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+  UIView *footerPlaceholder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
+  footerPlaceholder.backgroundColor = [UIColor clearColor];
+  self.tableView1.tableFooterView = footerPlaceholder;
+  
+  float height = ([[UIScreen mainScreen] bounds].size.height == 568) ? 568 : 460;
+  UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, height)];
+  view.contentMode = UIViewContentModeScaleToFill;
+  view.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_overlay.png", self.abbr]];
   [self.view insertSubview:view belowSubview:self.tableView1];
   self.overlay = view;
   view.alpha = 0;

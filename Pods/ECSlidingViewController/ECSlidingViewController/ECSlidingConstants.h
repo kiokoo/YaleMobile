@@ -24,6 +24,8 @@
 #ifndef ECSlidingViewController_ECSlidingConstants_h
 #define ECSlidingViewController_ECSlidingConstants_h
 
+static NSString *const ECSlidingViewControllerTopDidResetNotification = @"ECSlidingViewControllerTopDidResetNotification";
+
 /**
  Identifies the view controller that is the sliding view controller's `topViewController`. Pass this as an argument to `viewControllerForKey:` on an object that conforms to `UIViewControllerContextTransitioning`.
  */

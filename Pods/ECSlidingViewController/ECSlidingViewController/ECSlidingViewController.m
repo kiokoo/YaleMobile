@@ -148,7 +148,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.topViewController endAppearanceTransition];
-    
+  
     if (self.currentTopViewPosition == ECSlidingViewControllerTopViewPositionAnchoredLeft) {
         [self.underRightViewController endAppearanceTransition];
     } else if (self.currentTopViewPosition == ECSlidingViewControllerTopViewPositionAnchoredRight) {
@@ -809,8 +809,10 @@
     if ([self transitionWasCancelled]) {
         if (self.currentOperation == ECSlidingViewControllerOperationAnchorLeft) {
             _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+            [[NSNotificationCenter defaultCenter] postNotificationName:ECSlidingViewControllerTopDidResetNotification object:self];
         } else if (self.currentOperation == ECSlidingViewControllerOperationAnchorRight) {
             _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+            [[NSNotificationCenter defaultCenter] postNotificationName:ECSlidingViewControllerTopDidResetNotification object:self];
         } else if (self.currentOperation == ECSlidingViewControllerOperationResetFromLeft) {
             _currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredLeft;
         } else if (self.currentOperation == ECSlidingViewControllerOperationResetFromRight) {
@@ -823,8 +825,10 @@
             _currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredRight;
         } else if (self.currentOperation == ECSlidingViewControllerOperationResetFromLeft) {
             _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+            [[NSNotificationCenter defaultCenter] postNotificationName:ECSlidingViewControllerTopDidResetNotification object:self];
         } else if (self.currentOperation == ECSlidingViewControllerOperationResetFromRight) {
             _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+            [[NSNotificationCenter defaultCenter] postNotificationName:ECSlidingViewControllerTopDidResetNotification object:self];
         }
     }
     

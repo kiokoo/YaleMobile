@@ -58,12 +58,11 @@
   [self.refresh1 addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventTouchUpInside];
   
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Shuttle Refresh"];
-  /* Deprecated code, now using KVO to detect topView reset.
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(topDidReset:) name:ECSlidingViewTopDidReset object:self.slidingViewController];
-   */
-  [self.slidingViewController addObserver:self forKeyPath:@"currentTopViewPosition"
-                                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                                  context:NULL];
+
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(topDidReset:)
+                                               name:ECSlidingViewControllerTopDidResetNotification
+                                             object:self.slidingViewController];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -108,27 +107,6 @@
   [self removeCalloutViewWithAnimation];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context
-{
-  if (object == self.slidingViewController
-      && [keyPath isEqualToString:@"currentTopViewPosition"]) {
-    NSNumber *valueChangeKind = [change objectForKey:NSKeyValueChangeKindKey];
-    if ([valueChangeKind unsignedIntegerValue] == NSKeyValueChangeSetting) {
-      ECSlidingViewControllerTopViewPosition topViewPosition = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
-      if (topViewPosition == ECSlidingViewControllerTopViewPositionCentered) [self topDidReset:self.slidingViewController];
-    } else { // expecting an array
-      NSArray *arrayOfTopViewPositions = [change objectForKey:NSKeyValueChangeNewKey];
-      NSSet *setOfTopPositions = [[NSSet alloc] initWithArray:arrayOfTopViewPositions];
-      if ([setOfTopPositions containsObject:[NSNumber numberWithInteger:ECSlidingViewControllerTopViewPositionCentered]]) {
-        [self topDidReset:self.slidingViewController];
-      }
-    }
-  }
-}
-
 - (void)topDidReset:(id)sender
 {
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Shuttle Refresh"]) {
@@ -139,6 +117,7 @@
     
     [self loadData];
     
+    // re-enable scrolling on the mapView
     self.mapView1.scrollEnabled = YES;
     if ([self.view.gestureRecognizers containsObject:self.slidingViewController.panGesture]) {
       [self.view removeGestureRecognizer:self.slidingViewController.panGesture];
@@ -702,8 +681,8 @@
   self.slidingViewController.anchorLeftRevealAmount = 280.0f;
   [self.slidingViewController anchorTopViewToLeftAnimated:NO onComplete:^{
     // This is to allow user to drag back the shuttle view
-//    self.mapView1.scrollEnabled = NO;
-//    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    self.mapView1.scrollEnabled = NO;
+    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
   }];
 }
 

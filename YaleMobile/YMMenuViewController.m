@@ -31,7 +31,7 @@
   [super viewDidLoad];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   self.items = @[@"Home", @"Bluebook", @"Dining", @"Campus Map", @"Shuttle", @"People Directory", @"Laundry", @"Facility Hours", @"Calendar", @"Phonebook", @"Settings"];
-  self.iconNames = @[@"home", @"bluebook", @"dining", @"map", @"shuttle", @"people", @"laundry", @"hours", @"calendar", @"phonebook", @"jump", @"settings"];
+  self.iconNames = @[@"home", @"bluebook", @"dining", @"map", @"shuttle", @"people", @"laundry", @"hours", @"calendar", @"phonebook", @"settings"];
   UIView *placeHolder = [UIView new];
   CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
   placeHolder.frame = CGRectMake(0, 0, self.tableView.frame.size.width, statusHeight);
@@ -102,7 +102,7 @@
    */
   UIViewController *oldTopViewController = self.slidingViewController.topViewController;
   CGFloat dX = self.view.frame.size.width - self.slidingViewController.anchorRightRevealAmount;
-  [UIView animateWithDuration:0.1 animations:^{
+  [UIView animateWithDuration:0.2 animations:^{
     oldTopViewController.view.layer.transform = CATransform3DTranslate(oldTopViewController.view.layer.transform, dX, 0, 0);
   } completion:^(BOOL finished) {
     self.slidingViewController.topViewController = newTopViewController;

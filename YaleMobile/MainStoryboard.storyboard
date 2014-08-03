@@ -278,12 +278,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YYg-1e-BqS">
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YYg-1e-BqS">
                                 <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="People Header" id="a9n-jB-tUN" userLabel="Simple Cell - People Header" customClass="YMSimpleCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="People Header" id="a9n-jB-tUN" userLabel="Simple Cell - People Header" customClass="YMSimpleCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a9n-jB-tUN" id="teq-Tg-lgp">
@@ -308,12 +308,13 @@
                                                 <constraint firstItem="Nms-Pe-XDr" firstAttribute="top" secondItem="teq-Tg-lgp" secondAttribute="top" constant="14" id="Kbw-tf-h1K"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="name1" destination="Nms-Pe-XDr" id="CZg-xo-N0N"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="People Top Cell" rowHeight="60" id="zPh-7q-AzZ" userLabel="Subtitle Cell - People Top Cell" customClass="YMSubtitleCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="People Top Cell" rowHeight="60" id="zPh-7q-AzZ" userLabel="Subtitle Cell - People Top Cell" customClass="YMSubtitleCell">
                                         <rect key="frame" x="0.0" y="66" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zPh-7q-AzZ" id="ERK-Z9-8aD">
@@ -349,13 +350,14 @@
                                                 <constraint firstItem="kEV-mW-V9O" firstAttribute="leading" secondItem="NGS-hU-iyX" secondAttribute="leading" id="p7r-Og-Al8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="primary1" destination="NGS-hU-iyX" id="iRM-f1-6WG"/>
                                             <outlet property="secondary1" destination="kEV-mW-V9O" id="GKH-Dn-ITY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="People Cell" rowHeight="50" id="SCK-Gl-O6e" userLabel="Subtitle Cell - People Cell" customClass="YMSubtitleCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="People Cell" rowHeight="50" id="SCK-Gl-O6e" userLabel="Subtitle Cell - People Cell" customClass="YMSubtitleCell">
                                         <rect key="frame" x="0.0" y="126" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SCK-Gl-O6e" id="wZ8-ZV-0Kh">
@@ -373,7 +375,7 @@
                                                     <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGY-Rp-k9W" userLabel="Label - secondary">
-                                                    <rect key="frame" x="23" y="27" width="259" height="21"/>
+                                                    <rect key="frame" x="23" y="17" width="259" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="259" id="7Bd-yH-2JK"/>
@@ -385,12 +387,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="cGY-Rp-k9W" secondAttribute="bottom" constant="2" id="8GF-By-qHk"/>
+                                                <constraint firstAttribute="bottom" secondItem="cGY-Rp-k9W" secondAttribute="bottom" constant="12" id="8GF-By-qHk"/>
                                                 <constraint firstItem="YHA-90-Nb6" firstAttribute="leading" secondItem="wZ8-ZV-0Kh" secondAttribute="leading" constant="23" id="IOI-1c-EzZ"/>
                                                 <constraint firstItem="YHA-90-Nb6" firstAttribute="leading" secondItem="cGY-Rp-k9W" secondAttribute="leading" id="M2P-kx-pOm"/>
                                                 <constraint firstItem="YHA-90-Nb6" firstAttribute="top" secondItem="wZ8-ZV-0Kh" secondAttribute="top" constant="7" id="dgL-JW-d8D"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="primary1" destination="YHA-90-Nb6" id="dvi-rO-3tx"/>
@@ -529,7 +532,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="People Detail Top Cell" rowHeight="54" id="H3N-1e-eRR" customClass="YMSubtitleCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="People Detail Top Cell" rowHeight="54" id="H3N-1e-eRR" customClass="YMSubtitleCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H3N-1e-eRR" id="pyD-5d-4eq">
@@ -568,20 +571,21 @@
                                                 <constraint firstItem="xtx-yD-OJF" firstAttribute="top" secondItem="pyD-5d-4eq" secondAttribute="top" constant="21" id="zYT-UD-sKY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="primary1" destination="xtx-yD-OJF" id="jTN-cb-Rwg"/>
                                             <outlet property="secondary1" destination="bRe-42-17x" id="W3D-1J-hjU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="People Detail Cell" id="VgT-p0-QIs" customClass="YMSubtitleCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="People Detail Cell" id="VgT-p0-QIs" customClass="YMSubtitleCell">
                                         <rect key="frame" x="0.0" y="140" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VgT-p0-QIs" id="GJ0-J6-a2o">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnG-EX-QbC" userLabel="Label - secondary">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="60" translatesAutoresizingMaskIntoConstraints="NO" id="HnG-EX-QbC" userLabel="Label - secondary">
                                                     <rect key="frame" x="32" y="12" width="60" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <constraints>
@@ -611,6 +615,7 @@
                                                 <constraint firstItem="0TH-yY-gqp" firstAttribute="top" secondItem="GJ0-J6-a2o" secondAttribute="top" constant="11" id="xdg-2e-Vaz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="primary1" destination="0TH-yY-gqp" id="o1F-tj-aUc"/>
