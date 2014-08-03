@@ -89,7 +89,7 @@
 {
   [self hideKeyboard];
   self.defaultBackground1.hidden = YES;
-  NSString *searchString = ([searchBar.text.lowercaseString isEqualToString:@"person danqing loves"]) ? [@"Tong Zuo" stringByReplacingOccurrencesOfString:@" " withString:@"+"] : [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+  NSString *searchString = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
   NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://directory.yale.edu/phonebook/index.htm?searchString=%@", searchString]];
   NSURLRequest *request = [NSURLRequest requestWithURL:url];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];

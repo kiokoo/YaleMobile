@@ -138,9 +138,7 @@
     else if (hour == 2) self.mainView.greeting.text = [NSString stringWithFormat:@"Good afternoon%@! Hope you are enjoying your day :)", self.name];
     else if (hour == 3) self.mainView.greeting.text = [NSString stringWithFormat:@"Good evening%@! Hope you've had a great day :)", self.name];
     else self.mainView.greeting.text = [NSString stringWithFormat:@"Good night%@! Have some good rest :)", self.name];
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Tong"]) self.mainView.greeting.text = [self.mainView.greeting.text stringByReplacingOccurrencesOfString:@":)" withString:@"<3"];
-    
+        
     [YMServerCommunicator getGlobalSpecialInfoForController:self usingBlock:^(NSArray *array) {
         NSInteger i = [[array objectAtIndex:0] integerValue];
         if ([[NSUserDefaults standardUserDefaults] integerForKey:@"psa"] < i || [[array objectAtIndex:1] integerValue] != 0) {

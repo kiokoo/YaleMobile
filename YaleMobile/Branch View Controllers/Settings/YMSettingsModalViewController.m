@@ -27,16 +27,16 @@
 {
     [super viewDidLoad];
     
-    UIButton *confirm = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 24, 13)];
-    [confirm setBackgroundImage:[UIImage imageNamed:@"confirm.png"] forState:UIControlStateNormal];
+    UIButton *confirm = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
+    [confirm setBackgroundImage:[UIImage imageNamed:@"button_navbar_ok.png"] forState:UIControlStateNormal];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:confirm]];
     [confirm addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 13)];
-    [cancel setBackgroundImage:[UIImage imageNamed:@"cancel.png"] forState:UIControlStateNormal];
+    UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
+    [cancel setBackgroundImage:[UIImage imageNamed:@"button_navbar_cancel.png"] forState:UIControlStateNormal];
     [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:cancel]];
     [cancel addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
-    
+#warning TODO(hengchu): this may need to be removed.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     self.background1.image = [[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     self.background1.alpha = 0.6;
@@ -48,13 +48,8 @@
 
 - (void)confirm:(id)sender
 {
-    if ([self.textField1.text isEqualToString:@"718529"]) {
-        [[NSUserDefaults standardUserDefaults] setObject:@"Tong" forKey:@"Name"];
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Tong"];
-    } else if (self.textField1.text.length) {
+    if (self.textField1.text.length) {
         [[NSUserDefaults standardUserDefaults] setObject:self.textField1.text forKey:@"Name"];
-        if (![self.textField1.text isEqualToString:@"Tong"] && ![self.textField1.text isEqualToString:@"Scarlett"])
-            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Tong"];
     } else
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Name"];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
