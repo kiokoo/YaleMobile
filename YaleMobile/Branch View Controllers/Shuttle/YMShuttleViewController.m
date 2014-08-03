@@ -62,7 +62,7 @@
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(topDidReset:) name:ECSlidingViewTopDidReset object:self.slidingViewController];
    */
   [self.slidingViewController addObserver:self forKeyPath:@"currentTopViewPosition"
-                                  options:NSKeyValueObservingOptionNew
+                                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                                   context:NULL];
 }
 
@@ -98,6 +98,7 @@
       [self loadData];
     }];
   }
+  
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -137,6 +138,11 @@
     [self removeCalloutViewWithAnimation];
     
     [self loadData];
+    
+    self.mapView1.scrollEnabled = YES;
+    if ([self.view.gestureRecognizers containsObject:self.slidingViewController.panGesture]) {
+      [self.view removeGestureRecognizer:self.slidingViewController.panGesture];
+    }
   }
 }
 
@@ -694,7 +700,11 @@
 - (void)settings:(id)sender
 {
   self.slidingViewController.anchorLeftRevealAmount = 280.0f;
-  [self.slidingViewController anchorTopViewToLeftAnimated:NO];
+  [self.slidingViewController anchorTopViewToLeftAnimated:NO onComplete:^{
+    // This is to allow user to drag back the shuttle view
+//    self.mapView1.scrollEnabled = NO;
+//    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+  }];
 }
 
 @end

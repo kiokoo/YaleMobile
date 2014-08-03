@@ -31,6 +31,7 @@
   [super viewDidLoad];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   self.filters = @[@[@"Term", @"Category"], @[@"Humanities", @"Social Sciences", @"Sciences"], @[@"Language", @"Writing", @"Quantitative Reasoning"]];
+  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
   
 }
 
@@ -58,6 +59,11 @@
   return 3;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   return ((NSArray *)[self.filters objectAtIndex:section]).count;
@@ -69,20 +75,11 @@
     YMSubtitleCell *cell = (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Subtitle"];
     cell.primary1.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
     cell.secondary1.text = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"Bluebook %@", cell.primary1.text]];
-    cell.primary1.shadowColor = [UIColor blackColor];
-    cell.primary1.shadowOffset = CGSizeMake(0, 1);
-    cell.secondary1.shadowColor = [UIColor blackColor];
-    cell.secondary1.shadowOffset = CGSizeMake(0, 1);
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
-    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
+    cell.secondary1.adjustsFontSizeToFitWidth = YES;
     return cell;
   } else {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Simple"];
     cell.name1.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
-    cell.name1.shadowColor = [UIColor blackColor];
-    cell.name1.shadowOffset = CGSizeMake(0, 1);
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
-    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"rightmenubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 20)]];
     cell.accessoryView = ([[NSUserDefaults standardUserDefaults] boolForKey:[NSString stringWithFormat:@"Bluebook %@", cell.name1.text]]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
     return cell;
   }
@@ -94,16 +91,12 @@
 	UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 25.0)];
 	
 	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-	headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menuheader.png"]];
   
   headerLabel.backgroundColor = [UIColor clearColor];
 	headerLabel.textColor = [UIColor lightGrayColor];
 	headerLabel.font = [UIFont boldSystemFontOfSize:13];
 	headerLabel.frame = CGRectMake(61.0, 0.0, 300.0, 22.0);
-  
-  headerLabel.shadowColor = [UIColor blackColor];
-  headerLabel.shadowOffset = CGSizeMake(0, 1);
-  
+
 	if (section == 1) {
     headerLabel.text = @"Area Filters";
   } else if (section == 2) {

@@ -11,6 +11,8 @@
 
 @interface YMMenuViewController ()
 
+@property (nonatomic, strong) NSArray *iconNames;
+
 @end
 
 @implementation YMMenuViewController
@@ -28,14 +30,15 @@
 {
   [super viewDidLoad];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
-  self.items = @[@"Home", @"Bluebook", @"Dining", @"Campus Map", @"Shuttle", @"People Directory", @"Laundry", @"Facility Hours", @"Calendar", @"Department Phonebook", @"Jump Station", @"Settings"];
-  
+  self.items = @[@"Home", @"Bluebook", @"Dining", @"Campus Map", @"Shuttle", @"People Directory", @"Laundry", @"Facility Hours", @"Calendar", @"Phonebook", @"Settings"];
+  self.iconNames = @[@"home", @"bluebook", @"dining", @"map", @"shuttle", @"people", @"laundry", @"hours", @"calendar", @"phonebook", @"jump", @"settings"];
   UIView *placeHolder = [UIView new];
   CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
   placeHolder.frame = CGRectMake(0, 0, self.tableView.frame.size.width, statusHeight);
   placeHolder.backgroundColor = [UIColor clearColor];
   
   self.tableView.tableHeaderView = placeHolder;
+  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +48,11 @@
 }
 
 #pragma mark - Table view data source
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -60,10 +68,9 @@
 {
   YMMenuCell *cell = (YMMenuCell *)[tableView dequeueReusableCellWithIdentifier:@"Menu Cell"];
   cell.name1.text = [self.items objectAtIndex:indexPath.row];
-  cell.icon1.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu%ld.png", (long)indexPath.row]];
-  
-  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
-  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
+  NSString *imageName = [NSString stringWithFormat:@"icon_sidebar_%@", [(NSString *)self.iconNames[indexPath.row] lowercaseString]];
+  UIImage *icon = [UIImage imageNamed:imageName];
+  cell.icon1.image = icon ? icon : [UIImage imageNamed:[NSString stringWithFormat:@"menu%ld.png", (long)indexPath.row]];
   
   return cell;
 }

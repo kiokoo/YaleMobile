@@ -37,6 +37,8 @@
   CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
   placeHolder.frame = CGRectMake(0, 0, self.tableView.frame.size.width, statusHeight);
   self.tableView.tableHeaderView = placeHolder;
+  
+  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -61,6 +63,11 @@
 
 #pragma mark - Table view data source
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   return 1;
@@ -80,8 +87,6 @@
   cell.name1.text = route.name;
   
   [cell.contentView addSubview:[[YMRoundView alloc] initWithColor:[YMGlobalHelper colorFromHexString:route.color] andFrame:CGRectMake(60, 15, 13, 13)]];
-  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
-  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"rightmenubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 20)]];
   cell.accessoryView = ([route.inactive boolValue]) ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
   
   return cell;
@@ -107,9 +112,6 @@
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
   cell.accessoryView = ([route.inactive boolValue]) ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
-  
-  [self.slidingViewController resetTopViewAnimated:YES];
-  
   
 }
 

@@ -30,6 +30,8 @@
   [super viewDidLoad];
   
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
+  
+  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -45,6 +47,11 @@
 
 #pragma mark - Table view data source
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   return 1;
@@ -58,11 +65,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Selection Simple"];
-  cell.name1.text = [self.options objectAtIndex:indexPath.row];
-  cell.name1.shadowColor = [UIColor blackColor];
-  cell.name1.shadowOffset = CGSizeMake(0, 1);
-  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 5, 0)]];
-  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"rightmenubg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 20)]];
+  cell.name1.text = [[self.options objectAtIndex:indexPath.row] uppercaseString];
+
   cell.accessoryView = ([self.selected isEqualToString:cell.name1.text]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
   
   return cell;
@@ -73,15 +77,11 @@
 	UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 25.0)];
 	
 	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-	headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menuheader.png"]];
   
   headerLabel.backgroundColor = [UIColor clearColor];
 	headerLabel.textColor = [UIColor lightGrayColor];
 	headerLabel.font = [UIFont boldSystemFontOfSize:13];
 	headerLabel.frame = CGRectMake(61.0, 0.0, 300.0, 22.0);
-  
-  headerLabel.shadowColor = [UIColor blackColor];
-  headerLabel.shadowOffset = CGSizeMake(0, 1);
   
 	headerLabel.text = [self.options objectAtIndex:self.options.count - 1];
 	
