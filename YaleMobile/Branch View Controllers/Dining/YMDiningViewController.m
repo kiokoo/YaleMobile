@@ -13,6 +13,8 @@
 #import "YMServerCommunicator.h"
 #import "UIColor+YaleMobile.h"
 
+#import "YMTheme.h"
+
 @interface YMDiningViewController ()
 
 @end
@@ -184,7 +186,12 @@
     
     if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] != 0)
         cell.crowdLabel1.text = @"Special";
-        
+  
+  cell.name1.textColor       = [YMTheme grey];
+  cell.location1.textColor   = [YMTheme lightGrey];
+  cell.special1.textColor    = [YMTheme greenishBlue];
+  cell.crowdLabel1.textColor = [YMTheme lightGrey];
+  
     return cell;
 }
 

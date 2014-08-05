@@ -13,6 +13,8 @@
 #import "YMRoundView.h"
 #import "Route.h"
 
+#import "YMTheme.h"
+
 @interface YMShuttleSelectionViewController ()
 
 @end
@@ -88,6 +90,8 @@
   
   [cell.contentView addSubview:[[YMRoundView alloc] initWithColor:[YMGlobalHelper colorFromHexString:route.color] andFrame:CGRectMake(60, 15, 13, 13)]];
   cell.accessoryView = ([route.inactive boolValue]) ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
+  
+  cell.name1.textColor = [YMTheme white];
   
   return cell;
 }

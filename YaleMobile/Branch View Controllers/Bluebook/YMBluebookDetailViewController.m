@@ -14,6 +14,7 @@
 #import "TFHpple.h"
 #import "TFHppleElement.h"
 #import "UIImage+Emboss.h"
+#import "YMTheme.h"
 
 @interface YMBluebookDetailViewController ()
 
@@ -307,10 +308,8 @@
   
   cell.secondary1.text = index;
   
-  cell.primary1.shadowColor = [UIColor whiteColor];
-  cell.primary1.shadowOffset = CGSizeMake(0, 1);
-  cell.secondary1.shadowColor = [UIColor whiteColor];
-  cell.secondary1.shadowOffset = CGSizeMake(0, 1);
+  cell.secondary1.textColor = [YMTheme lightGrey];
+  cell.primary1.textColor   = [YMTheme grey];
   
   return cell;
 }

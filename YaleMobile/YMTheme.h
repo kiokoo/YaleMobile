@@ -12,4 +12,23 @@
 
 + (UIColor *)blue;
 
++ (UIColor *)grey;
+
++ (UIColor *)lightGrey;
+
+/** Used in dining view */
++ (UIColor *)greenishBlue;
+
+/** Used in laundry detail view, and bluebook subject view */
++ (UIColor *)reddishOrange;
+
+/** Used in bluebook filter view */
++ (UIColor *)brightYellow;
+
+/** Used in bluebook subject view */
++ (UIColor *)lightBlue;
+
+/** Used in bluebook filter view and hours library view and dining detail view */
++ (UIColor *)white;
+
 @end

@@ -10,6 +10,8 @@
 #import "YMSimpleCell.h"
 #import "YMGlobalHelper.h"
 
+#import "YMTheme.h"
+
 @interface YMHoursDetailViewController ()
 
 @end
@@ -100,6 +102,8 @@
     cell.name1.frame = frame;
     cell.name1.text = text;
   }
+  
+  cell.name1.textColor = [YMTheme grey];
   
   return cell;
 }

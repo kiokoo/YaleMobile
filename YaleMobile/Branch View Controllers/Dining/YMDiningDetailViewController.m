@@ -11,6 +11,8 @@
 #import "YMGlobalHelper.h"
 #import "YMSubtitleCell.h"
 
+#import "YMTheme.h"
+
 @interface YMDiningDetailViewController ()
 
 @end
@@ -225,6 +227,8 @@
   
   cell.backgroundView.alpha = 0.4;
   cell.userInteractionEnabled = NO;
+  cell.primary1.textColor   = [YMTheme white];
+  cell.secondary1.textColor = [YMTheme white];
   
   return cell;
 }

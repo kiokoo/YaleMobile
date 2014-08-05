@@ -11,6 +11,8 @@
 #import "YMSettingsDetailViewController.h"
 #import "YMServerCommunicator.h"
 
+#import "YMTheme.h"
+
 @interface YMSettingsViewController ()
 
 @end
@@ -145,8 +147,17 @@
     }
     cell.primary1.text = [self.settings objectAtIndex:indexPath.row];
     cell.backgroundView.alpha = 0.6;
+    
+    cell.primary1.textColor   = [YMTheme grey];
+    cell.secondary1.textColor = [YMTheme lightGrey];
+    
     return cell;
   } else {
+    
+    /**
+     * Note that header, simple 1/2 and footer all have text color [YMTheme grey].
+     */
+    
     YMSimpleCell *cell;
     if (indexPath.row == 0) {
       cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Header"];
@@ -170,6 +181,8 @@
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     }
+    
+    cell.name1.textColor = [YMTheme grey];
     cell.backgroundView.alpha = 0.6;
     return cell;
   }

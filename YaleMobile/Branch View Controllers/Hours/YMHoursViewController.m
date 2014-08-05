@@ -14,6 +14,8 @@
 #import "UIColor+YaleMobile.h"
 #import "YMServerCommunicator.h"
 
+#import "YMTheme.h"
+
 @interface YMHoursViewController ()
 
 @end
@@ -136,6 +138,7 @@
     }
   }
   
+  cell.name1.textColor = [YMTheme grey];
   cell.backgroundView.alpha = 0.6;
   
   return cell;

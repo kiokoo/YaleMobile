@@ -11,6 +11,8 @@
 #import "YMServerCommunicator.h"
 #import "YMSubtitleCell.h"
 
+#import "YMTheme.h"
+
 @interface YMHoursLibraryViewController ()
 
 @end
@@ -230,6 +232,9 @@
       cell.primary1.text = text;
     }
   }
+  
+  cell.primary1.textColor   = [YMTheme white];
+  cell.secondary1.textColor = [YMTheme white];
   
   cell.backgroundView.alpha = 0.4;
   

@@ -10,6 +10,8 @@
 #import "YMGlobalHelper.h"
 #import "YMSimpleCell.h"
 
+#import "YMTheme.h"
+
 @interface YMSettingsDetailViewController ()
 
 @end
@@ -73,6 +75,7 @@
   if (indexPath.row == 0) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Header"];
     cell.name1.text = (self.isAbout) ? [self.aboutHeader objectAtIndex:indexPath.section] : [self.creditHeader objectAtIndex:indexPath.section];
+    cell.name1.textColor = [YMTheme grey];
     return cell;
   } else {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Detail Cell"];
@@ -89,6 +92,7 @@
     frame.size.height = textSize.height;
     cell.name1.frame = frame;
     cell.name1.text = text;
+    cell.name1.textColor = [YMTheme grey];
     
     return cell;
   }

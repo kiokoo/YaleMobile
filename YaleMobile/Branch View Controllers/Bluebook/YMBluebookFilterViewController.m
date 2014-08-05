@@ -11,6 +11,8 @@
 #import "YMSimpleCell.h"
 #import "YMSubtitleCell.h"
 
+#import "YMTheme.h"
+
 @interface YMBluebookFilterViewController ()
 
 @end
@@ -75,10 +77,17 @@
     YMSubtitleCell *cell = (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Subtitle"];
     cell.primary1.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
     cell.secondary1.text = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"Bluebook %@", cell.primary1.text]];
+    
+    cell.primary1.textColor = [YMTheme white];
+    cell.secondary1.textColor = [YMTheme brightYellow];
+    
     cell.secondary1.adjustsFontSizeToFitWidth = YES;
     return cell;
   } else {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Simple"];
+    
+    cell.name1.textColor = [YMTheme white];
+    
     cell.name1.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
     cell.accessoryView = ([[NSUserDefaults standardUserDefaults] boolForKey:[NSString stringWithFormat:@"Bluebook %@", cell.name1.text]]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
     return cell;

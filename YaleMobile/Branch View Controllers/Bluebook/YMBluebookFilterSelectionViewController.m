@@ -10,6 +10,8 @@
 #import "YMSimpleCell.h"
 #import <QuartzCore/QuartzCore.h>
 
+#import "YMTheme.h"
+
 @interface YMBluebookFilterSelectionViewController ()
 
 @end
@@ -67,6 +69,8 @@
   YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Selection Simple"];
   cell.name1.text = [[self.options objectAtIndex:indexPath.row] uppercaseString];
 
+  cell.name1.textColor = [YMTheme white];
+  
   cell.accessoryView = ([self.selected isEqualToString:cell.name1.text]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
   
   return cell;

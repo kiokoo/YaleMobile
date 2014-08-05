@@ -8,6 +8,7 @@
 
 #import "YMMenuViewController.h"
 #import "YMMenuCell.h"
+#import "YMTheme.h"
 
 @interface YMMenuViewController ()
 
@@ -67,6 +68,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   YMMenuCell *cell = (YMMenuCell *)[tableView dequeueReusableCellWithIdentifier:@"Menu Cell"];
+  cell.name1.textColor = [YMTheme white];
   cell.name1.text = [self.items objectAtIndex:indexPath.row];
   NSString *imageName = [NSString stringWithFormat:@"icon_sidebar_%@", [(NSString *)self.iconNames[indexPath.row] lowercaseString]];
   UIImage *icon = [UIImage imageNamed:imageName];

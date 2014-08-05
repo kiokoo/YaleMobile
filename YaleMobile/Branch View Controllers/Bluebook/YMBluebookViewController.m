@@ -290,6 +290,9 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   YMSimpleCell *cell = (YMSimpleCell *)[self.tableView dequeueReusableCellWithIdentifier:@"Bluebook First Cell"];
   NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:[self.courses objectForKey:[self.keys objectAtIndex:indexPath.section]]];
   NSArray *keys = [[dict allKeys] sortedArrayUsingSelector:@selector(compare:)];
+  
+  cell.name1.textColor = [YMTheme grey];
+  
   cell.name1.text = [((NSDictionary *)[dict objectForKey:[keys objectAtIndex:indexPath.row]]) objectForKey:@"Name"];
   
   cell.name1.shadowColor = [UIColor whiteColor];

@@ -103,10 +103,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   YMBluebookSubjectCell *cell = (YMBluebookSubjectCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Subject Cell"];
-  cell.name1.shadowColor = [UIColor whiteColor];       cell.name1.shadowOffset = CGSizeMake(0, 1);
-  cell.code1.shadowColor = [UIColor whiteColor];       cell.code1.shadowOffset = CGSizeMake(0, 1);
-  cell.happens1.shadowColor = [UIColor whiteColor];    cell.happens1.shadowOffset = CGSizeMake(0, 1);
-  cell.instructor1.shadowColor = [UIColor whiteColor]; cell.instructor1.shadowOffset = CGSizeMake(0, 1);
+
+  cell.code1.textColor       = [YMTheme lightBlue];
+  cell.happens1.textColor    = [YMTheme reddishOrange];
+  cell.instructor1.textColor = [YMTheme lightGrey];
+  cell.name1.textColor       = [YMTheme grey];
+  
   cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
   cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
   

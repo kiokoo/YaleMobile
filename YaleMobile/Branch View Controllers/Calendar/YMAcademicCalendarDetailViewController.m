@@ -10,6 +10,7 @@
 #import "YMSimpleCell.h"
 #import "YMPathishCell.h"
 #import "YMGlobalHelper.h"
+#import "YMTheme.h"
 
 @interface YMAcademicCalendarDetailViewController ()
 
@@ -84,6 +85,7 @@
   if (indexPath.row == 0) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Academic Calendar Header"];
     cell.name1.text = [detailDict objectForKey:@"Term"];
+    cell.name1.textColor = [YMTheme grey];
     return cell;
   } else {
     YMPathishCell *cell;
@@ -99,6 +101,9 @@
       cell = (YMPathishCell *)[tableView dequeueReusableCellWithIdentifier:@"Academic Calendar Middle"];
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     }
+    
+    cell.primary1.textColor   = [YMTheme grey];
+    cell.secondary1.textColor = [YMTheme lightGrey];
     
     cell.secondary1.text = [detailDict objectForKey:@"Date"];
     cell.primary1.text = [detailDict objectForKey:@"Event"];

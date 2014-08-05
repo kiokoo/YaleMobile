@@ -454,7 +454,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6R-5y-LUd" userLabel="Label - primary">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="272" translatesAutoresizingMaskIntoConstraints="NO" id="j6R-5y-LUd" userLabel="Label - primary">
                                             <rect key="frame" x="17" y="9" width="272" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -843,6 +843,7 @@
                     <connections>
                         <outlet property="background1" destination="Jzb-b3-H6p" id="KxE-2V-n7H"/>
                         <outlet property="textField1" destination="FQO-RT-2RA" id="aZX-sj-CxC"/>
+                        <outlet property="welcomLabel" destination="GL4-QG-MKF" id="Zof-SH-Upc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZl-Z9-O7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1126,7 +1127,7 @@
                                     <outlet property="name1" destination="RK7-vx-vzB" id="ftl-UF-XcV"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Setting Simple Cell 2" id="fBQ-YO-i8r" userLabel="Simple Cell - Settings SImple Cell 2" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Setting Simple Cell 2" id="fBQ-YO-i8r" userLabel="Simple Cell - Settings Simple Cell 2" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="140" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBQ-YO-i8r" id="QbO-QZ-SkI">
@@ -2980,7 +2981,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Header" rowHeight="54" id="RXC-mI-KMP" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Header" rowHeight="54" id="RXC-mI-KMP" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RXC-mI-KMP" id="4LP-BH-fO1">
@@ -3010,7 +3011,7 @@
                                     <outlet property="name1" destination="aAX-ii-FgC" id="cmR-pP-lUF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Top" rowHeight="54" id="oX5-2G-egJ" customClass="YMPathishCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Top" rowHeight="54" id="oX5-2G-egJ" customClass="YMPathishCell">
                                 <rect key="frame" x="0.0" y="140" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oX5-2G-egJ" id="OAB-5a-6js">
@@ -3072,7 +3073,7 @@
                                     <outlet property="secondary1" destination="0NK-8y-KbD" id="hRi-x7-Wdn"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Middle" rowHeight="54" id="UAc-7Q-abv" customClass="YMPathishCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Middle" rowHeight="54" id="UAc-7Q-abv" customClass="YMPathishCell">
                                 <rect key="frame" x="0.0" y="194" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UAc-7Q-abv" id="8g6-cT-PTL">
@@ -3134,7 +3135,7 @@
                                     <outlet property="secondary1" destination="Qva-FE-nLK" id="pPf-Se-6kG"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Bottom" rowHeight="54" id="qgv-Bi-kpu" customClass="YMPathishCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Academic Calendar Bottom" rowHeight="54" id="qgv-Bi-kpu" customClass="YMPathishCell">
                                 <rect key="frame" x="0.0" y="248" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgv-Bi-kpu" id="NIm-2d-bmJ">
