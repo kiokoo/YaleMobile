@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-CSNotificationView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ECSlidingViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>029605498BAF4B168147B618</key>
+		<key>21967A84F30C4DB6BE981860</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41EBB66F4FB147F2A4A7C5C1</key>
+		<key>294F2FFA050C4514B6D03E65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A738C82850A4C3497527D16</key>
+		<key>505551E19090494F9211216C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>879F432F03EC418D828AAFE4</key>
+		<key>589B728062DA4E829E2FD8B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D343DB6EA1D4CAE9D23C7C2</key>
+		<key>937A56F5259643D584321EF9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E238B8F06D90440B8D421278</key>
+		<key>C1AC28C54092440DA4E2474A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0EC28B69189484283B86EA9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

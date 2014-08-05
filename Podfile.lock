@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CSNotificationView (0.4.2)
   - ECSlidingViewController (2.0.1)
   - FLEX (1.1.0)
   - Mantle (1.5):
@@ -29,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - CSNotificationView (~> 0.4.2)
   - ECSlidingViewController (= 2.0.1)
   - FLEX (~> 1.1.0)
   - Mantle (~> 1.4)
@@ -36,6 +38,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
+  CSNotificationView: eefeaed92a8bf0786fbb81047abab35283b05dae
   ECSlidingViewController: e93ab7e075fc9a99a874fa050ce3b2a64026eb85
   FLEX: fa5e81b7b25ba64afe4fad14deb27d4b95efd75e
   Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
