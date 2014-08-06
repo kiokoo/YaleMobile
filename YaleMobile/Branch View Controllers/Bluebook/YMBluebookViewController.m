@@ -14,12 +14,12 @@
 #import "YMServerCommunicator.h"
 #import "YMTheme.h"
 #import "AFHTTPRequestOperation.h"
-#import "MBProgressHUD.h"
 #import "TFHpple.h"
 #import "TFHppleElement.h"
 #import "Course+OCI.h"
 #import "UIView+AutoLayout.h"
 #import "NSString+URLEncode.h"
+#import "YMAppDelegate.h"
 
 static NSString* filterFormatString = @"&ProgramSubject=%@&InstructorName=%@&ExactWordPhrase=%@&CourseNumber=%@";
 static NSString* resultWindowUrl    = @"http://students.yale.edu/oci/resultWindow.jsp";
@@ -167,7 +167,10 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
       svc.raw = responseString;
       [svc useDocument];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-      [MBProgressHUD hideHUDForView:svc.view animated:YES];
+      [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO
+                                                                                              animated:YES
+                                                                                            completion:nil];
+      
       svc.tableView.scrollEnabled = YES;
       if (![YMServerCommunicator isCanceled]) {
         DLog(@"%@", operation.responseString);
@@ -184,7 +187,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
     [YMServerCommunicator resetCanceled];
     [[client operationQueue] addOperation:operation2];
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [MBProgressHUD hideHUDForView:svc.view animated:YES];
+    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO animated:YES completion:nil];
     svc.tableView.scrollEnabled = YES;
     if (![YMServerCommunicator isCanceled]) {
       [self showAlertViewWithTitle:@"Connection Error"
@@ -203,11 +206,15 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   [self prepareSubjectViewController:svc];
   
-  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:svc.view animated:YES];
-  hud.mode = MBProgressHUDModeIndeterminate;
-  hud.labelText = @"Loading...";
-  hud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
-  hud.dimBackground = YES;
+  CSNotificationView *notificationView =
+  (((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
+  [CSNotificationView notificationViewWithParentViewController:self.navigationController
+                                                     tintColor:[YMTheme notificationTintColor]
+                                                         image:nil
+                                                       message:@"Loading..."]);
+  [notificationView setVisible:YES animated:YES completion:nil];
+  [notificationView setShowingActivity:YES];
+
   svc.tableView.scrollEnabled = NO;
 
 }

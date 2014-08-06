@@ -12,7 +12,7 @@
 #import "YMSimpleCell.h"
 #import "YMLaundryDetailCell.h"
 #import "UIColor+YaleMobile.h"
-#import "MBProgressHUD.h"
+#import "YMAppDelegate.h"
 
 #import "YMTheme.h"
 
@@ -81,7 +81,12 @@
 
 - (void)alertViewCallback
 {
-  [MBProgressHUD hideHUDForView:self.view animated:YES];
+  CSNotificationView *notificationView =
+    [(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView];
+  [notificationView dismissWithStyle:CSNotificationViewStyleSuccess
+                             message:@"Done!"
+                            duration:0.1
+                            animated:YES];
   [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.selectedIndexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
@@ -208,10 +213,16 @@
   if (not != nil) {
     [[UIApplication sharedApplication] cancelLocalNotification:not];
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    hud.labelText = [NSString stringWithFormat:@"Alert cancelled for machine %@", machineID];
-    hud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
+    NSString *alertText = [NSString stringWithFormat:@"Alert cancelled for machine %@", machineID];
+    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
+      [CSNotificationView notificationViewWithParentViewController:self.navigationController
+                                                         tintColor:[YMTheme notificationTintColor]
+                                                             image:nil
+                                                           message:alertText];
+    CSNotificationView *notificationView =
+      ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
+    [notificationView setVisible:YES animated:YES completion:nil];
+    
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
     return;
   }
@@ -230,10 +241,16 @@
   notification.alertAction = nil;
   [[UIApplication sharedApplication] scheduleLocalNotification:notification];
   
-  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-  hud.mode = MBProgressHUDModeText;
-  hud.labelText = [NSString stringWithFormat:@"Alert set for machine %@", machineID];
-  hud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
+  NSString *alertText = [NSString stringWithFormat:@"Alert set for machine %@", machineID];
+  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
+    [CSNotificationView notificationViewWithParentViewController:self.navigationController
+                                                       tintColor:[YMTheme notificationTintColor]
+                                                           image:nil
+                                                         message:alertText];
+  [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:YES
+                                                                                          animated:YES
+                                                                                        completion:nil];
+  
   [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
 }
 

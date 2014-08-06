@@ -34,4 +34,24 @@
 /** Used in bluebook filter view and hours library view and dining detail view */
 + (UIColor *)white { return [UIColor whiteColor]; }
 
++ (UIColor *)notificationErrorTintColor
+{
+  return [[UIColor redColor] colorWithAlphaComponent:0.5];
+}
+
++ (UIColor *)notificationSuccessTintColor
+{
+  return [[UIColor greenColor] colorWithAlphaComponent:0.5];
+}
+
++ (UIColor *)notificationWarningTintColor
+{
+  return [[self reddishOrange] colorWithAlphaComponent:0.5];
+}
+
++ (UIColor *)notificationTintColor
+{
+  return [[self blue] colorWithAlphaComponent:0.5];
+}
+
 @end

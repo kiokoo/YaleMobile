@@ -13,7 +13,7 @@
 #import "AFHTTPRequestOperation.h"
 #import "YMGlobalHelper.h"
 #import "Course+OCI.h"
-#import "MBProgressHUD.h"
+#import "YMAppDelegate.h"
 
 static NSString *OCICourseURL = @"http://students.yale.edu/oci/resultDetail.jsp?course=%@&term=%@";
 
@@ -68,7 +68,8 @@ static NSString *OCICourseURL = @"http://students.yale.edu/oci/resultDetail.jsp?
         count++;
       } else {
         self.tableView.scrollEnabled = YES;
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        CSNotificationView *notificationView = [(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView];
+        [notificationView setVisible:NO animated:YES completion:nil];
       }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
       DLog(@"Fail. %@", error);

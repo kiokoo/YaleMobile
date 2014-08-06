@@ -14,8 +14,8 @@
 #import "YMGlobalHelper.h"
 
 #import "AFHTTPRequestOperation.h"
-#import "MBProgressHUD.h"
 
+#import "YMAppDelegate.h"
 #import "YMTheme.h"
 
 @interface YMPeopleViewController ()
@@ -97,7 +97,9 @@
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO
+                                                                                            animated:YES
+                                                                                          completion:nil];
     NSString *responseString = operation.responseString;
     
     if ([responseString rangeOfString:@"Your search results:"].location != NSNotFound) {
@@ -126,11 +128,16 @@
     [alert show];
   }];
   
-  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-  hud.mode = MBProgressHUDModeIndeterminate;
-  hud.labelText = @"Searching...";
-  hud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
-  hud.dimBackground = YES;
+  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
+    [CSNotificationView notificationViewWithParentViewController:self.navigationController
+                                                       tintColor:[YMTheme notificationTintColor]
+                                                           image:nil
+                                                         message:@"Searching..."];
+  CSNotificationView *notificationView =
+    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
+  [notificationView setShowingActivity:YES];
+  [notificationView setVisible:YES animated:YES completion:nil];
+  
   [operation start];
 }
 
@@ -234,7 +241,9 @@
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
+                                                                                            animated:YES
+                                                                                          completion:nil];
     NSString *responseString = operation.responseString;
     self.individualData = [YMServerCommunicator getInformationForPerson:responseString];
     [self performSegueWithIdentifier:@"People Detail Segue" sender:self];
@@ -244,12 +253,17 @@
                                                    delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
   }];
+    
+  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
+    [CSNotificationView notificationViewWithParentViewController:self.navigationController
+                                                       tintColor:[YMTheme notificationTintColor]
+                                                           image:nil
+                                                         message:@"Loading..."];
+  CSNotificationView *notificationView =
+    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
+  [notificationView setVisible:YES animated:YES completion:nil];
+  [notificationView setShowingActivity:YES];
   
-  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-  hud.mode = MBProgressHUDModeIndeterminate;
-  hud.labelText = @"Loading...";
-  hud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
-  hud.dimBackground = YES;
   [operation start];
 }
 

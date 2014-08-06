@@ -31,4 +31,12 @@
 /** Used in bluebook filter view and hours library view and dining detail view */
 + (UIColor *)white;
 
++ (UIColor *)notificationWarningTintColor;
+
++ (UIColor *)notificationErrorTintColor;
+
++ (UIColor *)notificationSuccessTintColor;
+
++ (UIColor *)notificationTintColor;
+
 @end

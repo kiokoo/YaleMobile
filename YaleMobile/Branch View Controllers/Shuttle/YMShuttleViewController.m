@@ -27,7 +27,9 @@
 #import "YMVehicleAnnotationView.h"
 #import "Vehicle+Initialize.h"
 #import "YMVehicleInfoSubview.h"
-#import "MBProgressHUD.h"
+
+#import "YMTheme.h"
+#import "YMAppDelegate.h"
 
 @interface YMShuttleViewController ()
 
@@ -144,10 +146,17 @@
     NSString *r = [Route getActiveRoutesInManagedObjectContext:self.db.managedObjectContext];
     self.routesList = r;
     if (!r) {
-      MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-      hud.mode = MBProgressHUDModeText;
-      hud.labelText = [NSString stringWithFormat:@"No active route selected"];
-      hud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:15];
+      ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
+      [CSNotificationView notificationViewWithParentViewController:self.navigationController
+                                                         tintColor:[YMTheme notificationWarningTintColor]
+                                                             image:nil
+                                                           message:@"No active route selected"];
+      
+      CSNotificationView *notificationView =
+        ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
+      
+      [notificationView setVisible:YES animated:YES completion:nil];
+      
       [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
       return;
     } else {
@@ -175,7 +184,7 @@
 
 - (void)alertViewCallback
 {
-  [MBProgressHUD hideHUDForView:self.view animated:YES];
+  [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
 }
 
 - (void)addSegments
