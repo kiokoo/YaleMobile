@@ -33,7 +33,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
   self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
   
   if ([self.tableView respondsToSelector:@selector(setSectionIndexColor:)]) {
@@ -108,9 +107,6 @@
   cell.happens1.textColor    = [YMTheme reddishOrange];
   cell.instructor1.textColor = [YMTheme lightGrey];
   cell.name1.textColor       = [YMTheme grey];
-  
-  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
-  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
   
   Course *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
   cell.name1.text = course.name;

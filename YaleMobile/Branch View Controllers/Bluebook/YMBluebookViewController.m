@@ -45,7 +45,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
   self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
 
   [self updateTable];
@@ -304,8 +303,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   cell.name1.shadowColor = [UIColor whiteColor];
   cell.name1.shadowOffset = CGSizeMake(0, 1);
-  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
-  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
   return cell;
 }
 
@@ -319,7 +316,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 	UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 26.0)];
 	
 	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-	headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bbsection.png"]];
   
   headerLabel.backgroundColor = [UIColor clearColor];
 	headerLabel.textColor = [UIColor grayColor];
