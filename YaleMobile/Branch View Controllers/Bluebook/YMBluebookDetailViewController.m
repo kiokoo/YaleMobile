@@ -152,6 +152,7 @@
          */
         // MAY NOT NEED ABOVE ----------------
         
+#warning TODO(HC) Probably should come up with a higher order function to do this...
         while (!([tempString hasPrefix:@"A"] || [tempString hasPrefix:@"B"] || [tempString hasPrefix:@"C"] || [tempString hasPrefix:@"D"] || [tempString hasPrefix:@"E"] || [tempString hasPrefix:@"F"] || [tempString hasPrefix:@"G"] || [tempString hasPrefix:@"H"] || [tempString hasPrefix:@"I"] || [tempString hasPrefix:@"J"] || [tempString hasPrefix:@"K"] || [tempString hasPrefix:@"L"] || [tempString hasPrefix:@"M"] || [tempString hasPrefix:@"N"] || [tempString hasPrefix:@"O"] || [tempString hasPrefix:@"P"] || [tempString hasPrefix:@"Q"] || [tempString hasPrefix:@"R"] || [tempString hasPrefix:@"S"] || [tempString hasPrefix:@"T"] || [tempString hasPrefix:@"U"] || [tempString hasPrefix:@"V"] || [tempString hasPrefix:@"W"] || [tempString hasPrefix:@"X"] || [tempString hasPrefix:@"Y"] || [tempString hasPrefix:@"Z"])) {
           range.length = 1;
           tempString = [tempString stringByReplacingCharactersInRange:range withString:@""];
@@ -167,32 +168,42 @@
 - (void)updateTableHeader
 {
   UILabel *titleView = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 280, 28)];
-  NSString *string = self.course.code;
-  UIFont *font = [UIFont systemFontOfSize:15];
-  CGSize textSize = [YMGlobalHelper boundText:string withFont:font andConstraintSize:CGSizeMake(280, 5000)];
-  CGRect newFrame = titleView.frame;
-  newFrame.size.height = textSize.height;
-  titleView.frame = newFrame;
-  titleView.text = string;
-  titleView.font = font;
-  titleView.numberOfLines = 0;
-  titleView.textColor = [UIColor YMBluebookBlue];
+  NSString *string   = self.course.code;
+  UIFont *font       = [UIFont systemFontOfSize:15];
+  CGSize textSize    = [YMGlobalHelper boundText:string
+                                        withFont:font
+                               andConstraintSize:CGSizeMake(280, 5000)];
   
-  UILabel *subtitleView = [[UILabel alloc] initWithFrame:CGRectMake(20, 20 + titleView.frame.size.height, 280, 30)];
+  CGRect newFrame         = titleView.frame;
+  newFrame.size.height    = textSize.height;
+  titleView.frame         = newFrame;
+  titleView.text          = string;
+  titleView.font          = font;
+  titleView.numberOfLines = 0;
+  titleView.textColor     = [UIColor YMBluebookBlue];
+  
+  UILabel *subtitleView      = [[UILabel alloc] initWithFrame:CGRectMake(20, 20 + titleView.frame.size.height, 280, 30)];
   subtitleView.numberOfLines = 0;
-  NSString *subtitleString = self.course.name;
-  UIFont *subtitleFont = [UIFont systemFontOfSize:18];
-  CGSize subTextSize = [YMGlobalHelper boundText:subtitleString withFont:subtitleFont andConstraintSize:CGSizeMake(280, 5000)];
-  CGRect newSubFrame = subtitleView.frame;
+  NSString *subtitleString   = self.course.name;
+  UIFont *subtitleFont       = [UIFont systemFontOfSize:18];
+  CGSize subTextSize         = [YMGlobalHelper
+                        boundText:subtitleString
+                        withFont:subtitleFont
+                        andConstraintSize:CGSizeMake(280, 5000)];
+  
+  CGRect newSubFrame      = subtitleView.frame;
   newSubFrame.size.height = subTextSize.height;
-  subtitleView.frame = newSubFrame;
-  subtitleView.text = subtitleString;
-  subtitleView.font = subtitleFont;
-  subtitleView.textColor = [UIColor colorWithRed:111/255.0 green:132/255.0 blue:132/255.0 alpha:0.8];
+  subtitleView.frame      = newSubFrame;
+  subtitleView.text       = subtitleString;
+  subtitleView.font       = subtitleFont;
+  subtitleView.textColor  = [UIColor colorWithRed:111/255.0 green:132/255.0
+                                             blue:132/255.0 alpha:0.8];
   
   UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, titleView.frame.size.height + subtitleView.frame.size.height + 75)];
   
   UIView* attributeView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 30 + titleView.frame.size.height + subtitleView.frame.size.height, 320.0, 45.0)];
+  
+#warning TODO(HC) Replace this with a backgroundView method.
   attributeView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bbdetailbanner.png"]];
   
   NSString *areas = [self.data objectForKey:@"eAreas"];
@@ -289,9 +300,7 @@
   
   NSString *text = [self.data objectForKey:index];
   cell.primary1.text = text;
-  /*
-  CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:15] constrainedToSize:CGSizeMake(280.0f, 5000.0f)];
-   */
+
   CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue" size:15] andConstraintSize:CGSizeMake(280.0f, 5000.0f)];
   CGRect frame = cell.primary1.frame;
   frame.size.height = textSize.height;
@@ -314,24 +323,9 @@
   
   NSArray *keys = [[self.data allKeys] sortedArrayUsingSelector:@selector(compare:)];
   NSString *text = [self.data objectForKey:[keys objectAtIndex:indexPath.row]];
-  /*
-  CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:15] constrainedToSize:CGSizeMake(280.0f, 5000.0f)];
-   */
+
   CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue" size:15] andConstraintSize:CGSizeMake(280.0f, 5000.0f)];
   return textSize.height + 35;
-}
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  // Navigation logic may go here. Create and push another view controller.
-  /*
-   <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-   // ...
-   // Pass the selected object to the new view controller.
-   [self.navigationController pushViewController:detailViewController animated:YES];
-   */
 }
 
 @end
