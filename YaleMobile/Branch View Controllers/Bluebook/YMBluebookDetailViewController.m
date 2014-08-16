@@ -34,7 +34,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
+//  self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -166,37 +166,33 @@
 
 - (void)updateTableHeader
 {
-  UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 15, 280, 28)];
+  UILabel *titleView = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 280, 28)];
   NSString *string = self.course.code;
   UIFont *font = [UIFont systemFontOfSize:15];
-  /* deprecated code
-   CGSize textSize = [string sizeWithFont:font constrainedToSize:CGSizeMake(280, 5000)];
-   */
   CGSize textSize = [YMGlobalHelper boundText:string withFont:font andConstraintSize:CGSizeMake(280, 5000)];
-  CGRect newFrame = imageView.frame;
+  CGRect newFrame = titleView.frame;
   newFrame.size.height = textSize.height;
-  imageView.frame = newFrame;
-  UIImage *interior = [UIImage imageWithInteriorShadowAndString:string font:font textColor:[UIColor YMBluebookBlue] size:imageView.bounds.size];
-  UIImage *image = [UIImage imageWithUpwardShadowAndImage:interior];
-  imageView.image = image;
+  titleView.frame = newFrame;
+  titleView.text = string;
+  titleView.font = font;
+  titleView.numberOfLines = 0;
+  titleView.textColor = [UIColor YMBluebookBlue];
   
-  UIImageView *subtitleView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20 + imageView.frame.size.height, 280, 30)];
+  UILabel *subtitleView = [[UILabel alloc] initWithFrame:CGRectMake(20, 20 + titleView.frame.size.height, 280, 30)];
+  subtitleView.numberOfLines = 0;
   NSString *subtitleString = self.course.name;
   UIFont *subtitleFont = [UIFont systemFontOfSize:18];
-  /* deprecated code
-  CGSize subTextSize = [subtitleString sizeWithFont:subtitleFont constrainedToSize:CGSizeMake(280, 5000)];
-   */
   CGSize subTextSize = [YMGlobalHelper boundText:subtitleString withFont:subtitleFont andConstraintSize:CGSizeMake(280, 5000)];
   CGRect newSubFrame = subtitleView.frame;
   newSubFrame.size.height = subTextSize.height;
   subtitleView.frame = newSubFrame;
-  UIImage *subIntererior = [UIImage imageWithInteriorShadowAndString:subtitleString font:subtitleFont textColor:[UIColor colorWithRed:111/255.0 green:132/255.0 blue:132/255.0 alpha:0.8] size:subtitleView.bounds.size];
-  UIImage *subtitleImage = [UIImage imageWithUpwardShadowAndImage:subIntererior];
-  subtitleView.image = subtitleImage;
+  subtitleView.text = subtitleString;
+  subtitleView.font = subtitleFont;
+  subtitleView.textColor = [UIColor colorWithRed:111/255.0 green:132/255.0 blue:132/255.0 alpha:0.8];
   
-  UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, imageView.frame.size.height + subtitleView.frame.size.height + 75)];
+  UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, titleView.frame.size.height + subtitleView.frame.size.height + 75)];
   
-  UIView* attributeView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 30 + imageView.frame.size.height + subtitleView.frame.size.height, 320.0, 45.0)];
+  UIView* attributeView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 30 + titleView.frame.size.height + subtitleView.frame.size.height, 320.0, 45.0)];
   attributeView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bbdetailbanner.png"]];
   
   NSString *areas = [self.data objectForKey:@"eAreas"];
@@ -264,7 +260,7 @@
   [self.data removeObjectForKey:@"eAreas"];
   [self.data removeObjectForKey:@"fSkills"];
   
-  [containerView addSubview:imageView];
+  [containerView addSubview:titleView];
   [containerView addSubview:subtitleView];
   [containerView addSubview:attributeView];
   self.tableView.tableHeaderView = containerView;
