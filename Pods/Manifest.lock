@@ -23,15 +23,17 @@ PODS:
   - CSNotificationView (0.4.2)
   - ECSlidingViewController (2.0.1)
   - FLEX (1.1.0)
+  - FXBlurView (1.6.2)
   - Mantle (1.5):
     - Mantle/extobjc
   - Mantle/extobjc (1.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - CSNotificationView (~> 0.4.2)
+  - CSNotificationView (= 0.4.2)
   - ECSlidingViewController (= 2.0.1)
   - FLEX (~> 1.1.0)
+  - FXBlurView (~> 1.6.2)
   - Mantle (~> 1.4)
 
 SPEC CHECKSUMS:
@@ -39,6 +41,7 @@ SPEC CHECKSUMS:
   CSNotificationView: eefeaed92a8bf0786fbb81047abab35283b05dae
   ECSlidingViewController: e93ab7e075fc9a99a874fa050ce3b2a64026eb85
   FLEX: fa5e81b7b25ba64afe4fad14deb27d4b95efd75e
+  FXBlurView: 47496afc9160097fa34af35fc4b310bd85d65dca
   Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
 
 COCOAPODS: 0.33.1
