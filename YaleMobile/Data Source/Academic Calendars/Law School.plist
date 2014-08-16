@@ -7,66 +7,66 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Fall 2013</string>
+			<string>Fall 2014</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>September 2, Monday</string>
+			<string>August 25, Monday</string>
 			<key>Event</key>
-			<string>Labor Day. Orientation for new J.D. students begins, 4 p.m.</string>
+			<string>Orientation for new graduate students begins.</string>
 			<key>Type</key>
 			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>September 3, Tuesday</string>
+			<string>August 27-29, Wednesday - Friday</string>
 			<key>Event</key>
-			<string>Orientation for graduate students begins. Registration for all new students. First-term small groups meet</string>
+			<string>Orientation and registration for all new J.D. students.</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>September 4-6, Wednesday - Friday</string>
+			<string>September 1, Monday</string>
 			<key>Event</key>
-			<string>Orientation continues</string>
+			<string>Labor Day. No classes meet.</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>September 9, Monday</string>
+			<string>September 2, Tuesday</string>
 			<key>Event</key>
-			<string>Registration for returning students. Classes begin, 8:10 a.m.</string>
+			<string>Registration for all returning students.</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>September 10, Tuesday</string>
+			<string>September 3, Wednesday</string>
 			<key>Event</key>
-			<string>Add/Drop period begins, 8:30 a.m.</string>
+			<string>Fall term begins, 8:10 a.m. Classes begin, 8:10 a.m.</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>September 17, Tuesday</string>
+			<string>September 10, Wednesday</string>
 			<key>Event</key>
-			<string>Add/Drop period closes, 4:30 p.m.</string>
+			<string>Add/drop period closes, 4:30 p.m.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>October 10, Thursday</string>
+			<string>October 9, Thursday</string>
 			<key>Event</key>
 			<string>Fall recess begins, 6 p.m.</string>
 			<key>Type</key>
@@ -75,7 +75,7 @@
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>October 15, Tuesday</string>
+			<string>October 14, Tuesday</string>
 			<key>Event</key>
 			<string>Classes resume, 8:10 a.m.</string>
 			<key>Type</key>
@@ -84,7 +84,7 @@
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>November 22, Friday</string>
+			<string>November 21, Friday</string>
 			<key>Event</key>
 			<string>Thanksgiving recess begins, 6 p.m.</string>
 			<key>Type</key>
@@ -93,7 +93,7 @@
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>December 2, Monday</string>
+			<string>December 1, Monday</string>
 			<key>Event</key>
 			<string>Classes resume, 8:10 a.m.</string>
 			<key>Type</key>
@@ -102,29 +102,47 @@
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>December 17, Tuesday</string>
+			<string>December 10, Wednesday</string>
 			<key>Event</key>
-			<string>Only Friday classes will meet. Classes end; winter recess begins, 6 p.m.</string>
+			<string>Only Friday classes will meet.</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>January 6, Monday</string>
+			<string>December 11, Friday</string>
 			<key>Event</key>
-			<string>Recess ends. Exams begin, 9 a.m.</string>
+			<string>Only Monday classes will meet. Thirteen-week session ends.</string>
 			<key>Type</key>
 			<string>4</string>
 		</dict>
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>January 16, Thursday</string>
+			<string>December 18, Thursday</string>
 			<key>Event</key>
-			<string>Exams end. Fall term ends, 5 p.m.</string>
+			<string>Classes end; winter recess begins, 6 p.m.</string>
 			<key>Type</key>
 			<string>5</string>
+		</dict>
+		<key>n</key>
+		<dict>
+			<key>Date</key>
+			<string>January 6, Tuesday</string>
+			<key>Event</key>
+			<string>Recess ends; examination period begins, 8:30 a.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>o</key>
+		<dict>
+			<key>Date</key>
+			<string>January 15, Thursday</string>
+			<key>Event</key>
+			<string>Examination period ends; fall term ends, 5:00 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
 		</dict>
 	</dict>
 	<key>2</key>
@@ -132,115 +150,133 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Spring 2014</string>
+			<string>Spring 2015</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>January 21, Tuesday</string>
+			<string>January 19, Monday</string>
 			<key>Event</key>
-			<string>Spring term begins, 8:10 a.m. Registration for all students</string>
+			<string>Martin Luther King Holiday; no classes.</string>
 			<key>Type</key>
 			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>January 22, Wednesday</string>
+			<string>January 20, Tuesday</string>
 			<key>Event</key>
-			<string>Add/Drop period begins, 8:30 a.m.</string>
+			<string>Spring term begins, 8:10 a.m.; registration for all students.</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>January 29, Wednesday</string>
+			<string>January 21, Wednesday</string>
 			<key>Event</key>
-			<string>Add/Drop period closes, 4:30 p.m.</string>
+			<string>Add/drop period begins, 8:30 a.m.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>March 14, Friday</string>
+			<string>January 28, Wednesday</string>
 			<key>Event</key>
-			<string>Spring recess begins, 6 p.m.</string>
+			<string>Add/drop period closes, 4:30 p.m.</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>March 24, Monday</string>
+			<string>March 13, Friday</string>
 			<key>Event</key>
-			<string>Spring recess ends. Classes resume, 8:10 a.m.</string>
+			<string>Spring recess begins, 6 p.m.</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>April 28, Monday</string>
+			<string>March 23, Monday</string>
 			<key>Event</key>
-			<string>Classes end</string>
+			<string>Spring recess ends; classes resume, 8:10 a.m.</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>May 5, Monday</string>
+			<string>April 27, Monday</string>
 			<key>Event</key>
-			<string>Examination period begins, 9 a.m.</string>
+			<string>Classes end.</string>
 			<key>Type</key>
 			<string>4</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>May 12, Monday</string>
+			<string>April 28, Tuesday</string>
 			<key>Event</key>
-			<string>Scheduled examinations end, 5 p.m.</string>
+			<string>Reading period begins.</string>
 			<key>Type</key>
 			<string>5</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>May 15, Thursday</string>
+			<string>May 4, Monday</string>
 			<key>Event</key>
-			<string>Self-scheduled examinations end, 5 p.m.</string>
+			<string>Examination period begins, 9 a.m.</string>
 			<key>Type</key>
 			<string>5</string>
 		</dict>
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>May 16, Friday</string>
+			<string>May 11, Monday</string>
 			<key>Event</key>
-			<string>Rescheduled examinations end. Spring term ends, 5 p.m.</string>
+			<string>Scheduled examinations end, 5 p.m.</string>
 			<key>Type</key>
 			<string>5</string>
 		</dict>
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>May 19, Monday</string>
+			<string>May 14, Thursday</string>
 			<key>Event</key>
-			<string>University Commencement</string>
+			<string>Self-scheduled examinations end, 5 p.m.</string>
 			<key>Type</key>
 			<string>8</string>
 		</dict>
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>May 28, Wednesday</string>
+			<string>May 15, Friday</string>
 			<key>Event</key>
-			<string>Degrees voted by faculty</string>
+			<string>Rescheduled examinations end; spring term ends, 5 p.m.</string>
 			<key>Type</key>
 			<string>0</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>May 18, Monday</string>
+			<key>Event</key>
+			<string>University Commencement</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>n</key>
+		<dict>
+			<key>Date</key>
+			<string>May 27, Wednesday</string>
+			<key>Event</key>
+			<string>Degrees voted by faculty.</string>
+			<key>Type</key>
+			<string>9</string>
 		</dict>
 	</dict>
 </dict>

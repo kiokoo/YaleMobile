@@ -7,12 +7,129 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Spring 2013</string>
+			<string>Fall 2014</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>January 14, Monday</string>
+			<string>August 25-26, Monday - Tuesday</string>
+			<key>Event</key>
+			<string>Orientation for incoming students</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>August 27, Wednesday</string>
+			<key>Event</key>
+			<string>Fall term classes begin</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>August 29, Friday</string>
+			<key>Event</key>
+			<string>Monday classes meet on Friday</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>September 1, Monday</string>
+			<key>Event</key>
+			<string>LABOR DAY – Classes do not meet</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>September 3, Wednesday</string>
+			<key>Event</key>
+			<string>Course registration deadline (Late fee $50)</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>October 22-24, Wednesday - Friday</string>
+			<key>Event</key>
+			<string>Regularclasses do not meet 
+Professional Skills Workshop (mandatory for 1st yr. MPH)</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>November 21, Friday</string>
+			<key>Event</key>
+			<string>November recess begins, 6:00 pm</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>December 1, Monday</string>
+			<key>Event</key>
+			<string>Classes resume</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>December 5, Friday</string>
+			<key>Event</key>
+			<string>Last day of classes</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>December 6-11</string>
+			<key>Event</key>
+			<string>Reading Period</string>
+			<key>Type</key>
+			<string>8</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>December 12</string>
+			<key>Event</key>
+			<string>Final exams begin</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>December 18</string>
+			<key>Event</key>
+			<string>Final exams end</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Sprint 2015</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>January 12, Monday</string>
 			<key>Event</key>
 			<string>Spring term classes begin</string>
 			<key>Type</key>
@@ -21,86 +138,95 @@
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>January 21, Monday</string>
+			<string>January 16, Friday</string>
 			<key>Event</key>
-			<string>Martin Luther King Day. Classes do not meet</string>
+			<string>Monday classes meet on Friday</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>9</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>January 29, Tuesday</string>
+			<string>January 19, Monday</string>
 			<key>Event</key>
-			<string>Course registration deadline. Late fee $50</string>
+			<string>MARTIN LUTHER KING DAY –Classes do not meet</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>March 8, Friday</string>
+			<string>January 19, Monday</string>
 			<key>Event</key>
-			<string>Last day to withdraw from a spring term course without the course appearing on the transcript</string>
+			<string>Course registration deadline (Late fee $50)</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>March 8, Friday</string>
+			<string>March 6, Friday</string>
 			<key>Event</key>
-			<string>Spring recess begins, 6 p.m.</string>
+			<string>Spring recess begins, 6:00 pm</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>0</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>March 25, Monday</string>
+			<string>March 23, Monday</string>
 			<key>Event</key>
-			<string>Classes resume, 8:30 a.m.</string>
+			<string>Classes resume</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>9</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>April 26, Friday</string>
+			<string>April 24, Friday</string>
 			<key>Event</key>
-			<string>Last day to withdraw from a spring term course</string>
+			<string>Last day of classes</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>April 26, Friday</string>
+			<string>April 25-Apr 30</string>
 			<key>Event</key>
-			<string>Classes end, 6 p.m. Reading period begins. (some classes may meet during reading week)</string>
+			<string>Reading Period</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>9</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>May 2-8, Thursday - Wednesday</string>
+			<string>May 1</string>
 			<key>Event</key>
-			<string>Final examination period</string>
+			<string>Final exams begin</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>9</string>
 		</dict>
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>May 20, Monday</string>
+			<string>May 7</string>
+			<key>Event</key>
+			<string>Final exams end</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>May 18, Monday</string>
 			<key>Event</key>
 			<string>University Commencement</string>
 			<key>Type</key>
-			<string>8</string>
+			<string>9</string>
 		</dict>
 	</dict>
-	<key>2</key>
+	<key>3</key>
 	<dict>
 		<key>0</key>
 		<dict>
@@ -110,16 +236,16 @@
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>August 24, Friday</string>
+			<string>August 26, Tuesday</string>
 			<key>Event</key>
-			<string>Final grades due for AP M.P.H. summer session</string>
+			<string>Final grades due for summer session</string>
 			<key>Type</key>
-			<string>0</string>
+			<string>9</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>January 7, Monday</string>
+			<string>January 5, Monday</string>
 			<key>Event</key>
 			<string>Final grades due for all students</string>
 			<key>Type</key>
@@ -128,16 +254,16 @@
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>May 1, Wednesday</string>
+			<string>May 1, Thursday</string>
 			<key>Event</key>
-			<string>Final thesis grades due to registrar</string>
+			<string>Final thesis grades due</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>May 13, Monday</string>
+			<string>May 11, Monday</string>
 			<key>Event</key>
 			<string>Final grades due for all graduating students</string>
 			<key>Type</key>
@@ -146,11 +272,11 @@
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>June 3, Monday</string>
+			<string>June 1, Monday</string>
 			<key>Event</key>
 			<string>Final grades due for returning students</string>
 			<key>Type</key>
-			<string>0</string>
+			<string>9</string>
 		</dict>
 	</dict>
 </dict>

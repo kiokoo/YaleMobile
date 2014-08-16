@@ -7,12 +7,12 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Fall 2013</string>
+			<string>Fall 2014</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>August 21, Wednesday</string>
+			<string>August 20, Wednesday</string>
 			<key>Event</key>
 			<string>Residences open to upperclassmen, 9 a.m.</string>
 			<key>Type</key>
@@ -21,7 +21,7 @@
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>August 23, Friday</string>
+			<string>August 22, Friday</string>
 			<key>Event</key>
 			<string>Residences open to freshmen, 9 a.m.</string>
 			<key>Type</key>
@@ -30,7 +30,7 @@
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>August 27, Tuesday</string>
+			<string>August 26, Tuesday</string>
 			<key>Event</key>
 			<string>Upperclass registration</string>
 			<key>Type</key>
@@ -39,7 +39,7 @@
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>August 28, Wednesday</string>
+			<string>August 27, Wednesday</string>
 			<key>Event</key>
 			<string>Fall term classes begin, 8:20 a.m.</string>
 			<key>Type</key>
@@ -48,7 +48,7 @@
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>August 30, Friday</string>
+			<string>August 29, Friday</string>
 			<key>Event</key>
 			<string>Friday classes do not meet. Monday classes meet instead</string>
 			<key>Type</key>
@@ -57,7 +57,7 @@
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>September 2, Monday</string>
+			<string>September 1, Monday</string>
 			<key>Event</key>
 			<string>Labor Day. Classes do not meet</string>
 			<key>Type</key>
@@ -66,7 +66,7 @@
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>October 22, Tuesday</string>
+			<string>October 21, Tuesday</string>
 			<key>Event</key>
 			<string>October recess begins, 11 p.m.</string>
 			<key>Type</key>
@@ -75,7 +75,7 @@
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>October 28, Monday</string>
+			<string>October 27, Monday</string>
 			<key>Event</key>
 			<string>Classes resume, 8:20 a.m.</string>
 			<key>Type</key>
@@ -84,16 +84,16 @@
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>November 23, Saturday</string>
+			<string>November 21, Friday</string>
 			<key>Event</key>
-			<string>November recess begins, 9 p.m.</string>
+			<string>November recess begins, 5:30 p.m.</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>December 2, Monday</string>
+			<string>December 1, Monday</string>
 			<key>Event</key>
 			<string>Classes resume, 8:20 a.m.</string>
 			<key>Type</key>
@@ -102,7 +102,7 @@
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>December 6, Friday</string>
+			<string>December 5, Friday</string>
 			<key>Event</key>
 			<string>Classes end, 5:30 p.m. Reading period begins</string>
 			<key>Type</key>
@@ -111,7 +111,7 @@
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>December 12, Thursday</string>
+			<string>December 12, Friday</string>
 			<key>Event</key>
 			<string>Final examinations begin, 9 a.m.</string>
 			<key>Type</key>
@@ -120,7 +120,7 @@
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>December 17, Tuesday</string>
+			<string>December 17, Wednesday</string>
 			<key>Event</key>
 			<string>Examinations end, 5:30 p.m. Winter recess begins</string>
 			<key>Type</key>
@@ -129,7 +129,7 @@
 		<key>n</key>
 		<dict>
 			<key>Date</key>
-			<string>December 18, Wednesday</string>
+			<string>December 18, Thursday</string>
 			<key>Event</key>
 			<string>Undergraduate residences close, 12 noon</string>
 			<key>Type</key>
@@ -141,12 +141,12 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Spring 2014</string>
+			<string>Spring 2015</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>January 8, Wednesday</string>
+			<string>January 7, Wednesday</string>
 			<key>Event</key>
 			<string>Undergraduate residences open</string>
 			<key>Type</key>
@@ -155,7 +155,7 @@
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>January 13, Monday</string>
+			<string>January 12, Monday</string>
 			<key>Event</key>
 			<string>Spring term classes begin, 8:20 a.m.</string>
 			<key>Type</key>
@@ -164,7 +164,7 @@
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>January 17, Friday</string>
+			<string>January 16, Friday</string>
 			<key>Event</key>
 			<string>Friday classes do not meet. Monday classes meet instead</string>
 			<key>Type</key>
@@ -173,7 +173,7 @@
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>January 20, Monday</string>
+			<string>January 19, Monday</string>
 			<key>Event</key>
 			<string>Martin Luther King Day. Classes do not meet</string>
 			<key>Type</key>
@@ -182,7 +182,7 @@
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>March 7, Friday</string>
+			<string>March 6, Friday</string>
 			<key>Event</key>
 			<string>Spring recess begins, 5:30 p.m.</string>
 			<key>Type</key>
@@ -191,7 +191,7 @@
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>March 24, Monday</string>
+			<string>March 23, Monday</string>
 			<key>Event</key>
 			<string>Classes resume, 8:20 a.m.</string>
 			<key>Type</key>
@@ -200,7 +200,7 @@
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>April 25, Friday</string>
+			<string>April 24, Friday</string>
 			<key>Event</key>
 			<string>Classes end, 5:30 p.m. Reading period begins</string>
 			<key>Type</key>
@@ -209,7 +209,7 @@
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>May 1, Thursday</string>
+			<string>May 1, Friday</string>
 			<key>Event</key>
 			<string>Final examinations begin, 9 a.m.</string>
 			<key>Type</key>
@@ -218,7 +218,7 @@
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>May 6, Tuesday</string>
+			<string>May 6, Wednesday</string>
 			<key>Event</key>
 			<string>Examinations end, 5:30 p.m.</string>
 			<key>Type</key>
@@ -227,7 +227,7 @@
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>May 7, Wednesday</string>
+			<string>May 7, Thursday</string>
 			<key>Event</key>
 			<string>Residences close, 12 noon, for freshmen, sophomores, and juniors</string>
 			<key>Type</key>
@@ -236,7 +236,7 @@
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>May 19, Monday</string>
+			<string>May 18, Monday</string>
 			<key>Event</key>
 			<string>University Commencement</string>
 			<key>Type</key>
@@ -245,7 +245,7 @@
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>May 20, Tuesday</string>
+			<string>May 19, Tuesday</string>
 			<key>Event</key>
 			<string>Residences close, 12 noon, for seniors</string>
 			<key>Type</key>
@@ -254,9 +254,9 @@
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>August 27, Wednesday</string>
+			<string>September 2, Wednesday</string>
 			<key>Event</key>
-			<string>Fall term 2013 classes begin</string>
+			<string>Fall term 2015 classes begin</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>

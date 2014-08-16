@@ -7,39 +7,39 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Fall 2013</string>
+			<string>Fall 2014</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>August 19-25, Monday - Sunday</string>
+			<string>August 18-22, Monday - Friday</string>
 			<key>Event</key>
-			<string>Orientation week for all students</string>
+			<string>Orientation week for all new students</string>
 			<key>Type</key>
 			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>August 19, Monday</string>
+			<string>August 18, Monday</string>
 			<key>Event</key>
-			<string>PhD program new student orientation check-in begins at HGS, 9 a.m.</string>
+			<string>PhD program new student orientation check-in begins at HGS, 9:00am</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>August 23, Friday</string>
+			<string>August 22, Friday</string>
 			<key>Event</key>
-			<string>Fall term begins for NMPL &amp; DNP programs, 8 a.m. Fall online course registration begins, 9 a.m.</string>
+			<string>Fall online course registration begins, 9:00am</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>August 27, Tuesday</string>
+			<string>August 26, Tuesday</string>
 			<key>Event</key>
 			<string>Orientation for ALL first specialty year students in the master&apos;s program (returning and new)</string>
 			<key>Type</key>
@@ -48,137 +48,146 @@
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>August 28, Wednesday</string>
+			<string>August 27, Wednesday</string>
 			<key>Event</key>
-			<string>Fall term begins for Clinical Master&apos;s, Post-Master&apos;s and PhD programs, 8 a.m.</string>
+			<string>Fall term begins for clinical master’s, post master’s and PhD programs, 8:00am</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>August 30, Friday</string>
+			<string>August 29, Friday</string>
 			<key>Event</key>
-			<string>Friday classes do not meet. Monday classes meet instead. Deadline for graduating PhD students to defend their dissertation for December graduation</string>
+			<string>Friday classes do not meet. Monday classes meet instead (all programs)</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>September 2, Monday</string>
+			<string>August 29, Friday</string>
 			<key>Event</key>
-			<string>No classes. Labor Day</string>
+			<string>Deadline for graduating PhD students to defend their dissertation for December graduation</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>September 11, Wednesday</string>
+			<string>September 1, Monday</string>
 			<key>Event</key>
-			<string>Course registration deadline, 5 p.m.</string>
+			<string>No classes, Labor Day</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>October 1, Tuesday</string>
+			<string>September 10, Wednesday</string>
 			<key>Event</key>
-			<string>Deadline for PhD dissertations to be considered by the Degree Committees for award of degree in December. Final day to file petitions for PhD degrees to be awarded in December</string>
+			<string>Course registration deadline, 5:00pm</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>October 22, Tuesday</string>
+			<string>September 30, Tuesday</string>
 			<key>Event</key>
-			<string>Fall recess begins, 11 p.m.</string>
+			<string>Deadline for PhD dissertations to be considered by the Degree Committees for award of degree in December. Final day to file petitions for PhD degrees to be awarded in December</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>October 28, Monday</string>
+			<string>October 22, Wednesday</string>
 			<key>Event</key>
-			<string>Fall recess ends, 8 a.m.</string>
+			<string>Fall recess begins, 8:00am (all programs)</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>November 23, Saturday</string>
+			<string>October 27, Monday</string>
 			<key>Event</key>
-			<string>Thanksgiving break begins, 9 p.m.</string>
+			<string>Fall recess ends, 8:00am (all programs)</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>December 2, Monday</string>
+			<string>November 22, Saturday</string>
 			<key>Event</key>
-			<string>Thanksgiving break ends, 8 a.m.</string>
+			<string>Thanksgiving recess begins, 8:00am (all programs)</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>n</key>
 		<dict>
 			<key>Date</key>
-			<string>December 11, Wednesday</string>
+			<string>December 1, Monday</string>
 			<key>Event</key>
-			<string>PhD program classes end, 5:30 p.m.</string>
+			<string>Thanksgiving recess ends, 8:00am (all programs)</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>o</key>
 		<dict>
 			<key>Date</key>
-			<string>December 12, Thursday</string>
+			<string>December 10, Wednesday</string>
 			<key>Event</key>
-			<string>PhD program exams begin, 9 a.m.</string>
+			<string>PhD program classes end, 5:30pm</string>
 			<key>Type</key>
 			<string>4</string>
 		</dict>
 		<key>p</key>
 		<dict>
 			<key>Date</key>
-			<string>December 13, Friday</string>
+			<string>December 11, Thursday</string>
 			<key>Event</key>
-			<string>Master&apos;s, Post-Master&apos;s &amp; DNP program classes end, 5 p.m.</string>
+			<string>PhD program examinations begin, 9:00am</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>q</key>
 		<dict>
 			<key>Date</key>
-			<string>December 16-18, Monday - Wednesday</string>
+			<string>December 12, Friday</string>
 			<key>Event</key>
-			<string>Master&apos;s, Post-Master&apos;s &amp; DNP program final exams</string>
+			<string>Master’s, post master’s &amp; DNP program classes end, 5:00pm</string>
 			<key>Type</key>
 			<string>4</string>
 		</dict>
 		<key>r</key>
 		<dict>
 			<key>Date</key>
-			<string>December 17, Tuesday</string>
+			<string>December 15-19, Monday - Friday</string>
 			<key>Event</key>
-			<string>PhD exams end, 5:30 p.m. Winter recess begins</string>
+			<string>Master’s, post master’s &amp; DNP program final exams</string>
 			<key>Type</key>
 			<string>5</string>
 		</dict>
 		<key>s</key>
 		<dict>
 			<key>Date</key>
-			<string>December 18, Wednesday</string>
+			<string>December 16, Tuesday</string>
 			<key>Event</key>
-			<string>Master&apos;s, Post-Master&apos;s &amp; DNP program winter recess begins, 5 p.m.</string>
+			<string>PhD program examinations end, 5:30 pm; Winter recess begins</string>
 			<key>Type</key>
 			<string>5</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>December 20, Saturday</string>
+			<key>Event</key>
+			<string>Master’s, post master’s &amp; DNP program winter recess begins</string>
+			<key>Type</key>
+			<string>9</string>
 		</dict>
 	</dict>
 	<key>2</key>
@@ -186,21 +195,21 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Spring 2014</string>
+			<string>Spring 2015</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>January 4, Saturday</string>
+			<string>January 5, Monday</string>
 			<key>Event</key>
-			<string>Spring term begins for NMPL &amp; DNP programs, 8 a.m.</string>
+			<string>Spring term begins for NMPL &amp; DNP programs, 8:00am</string>
 			<key>Type</key>
 			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>January 4-8, Saturday - Wednesday</string>
+			<string>January 6-10: Tuesday - Saturday</string>
 			<key>Event</key>
 			<string>DNP winter intensive session</string>
 			<key>Type</key>
@@ -209,155 +218,173 @@
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>January 10, Friday</string>
+			<string>January 9, Friday</string>
 			<key>Event</key>
-			<string>Spring online course registration begins, 9 a.m.</string>
+			<string>Spring online course registration begins, 9:00am</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>January 13, Monday</string>
+			<string>January 12, Monday</string>
 			<key>Event</key>
-			<string>Spring term begins for Clinical Master’s, Post-Master’s and PhD programs, 8 a.m.</string>
+			<string>Spring term begins for clinical master’s, post master’s and PhD Programs, 8:00am</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>January 17, Friday</string>
+			<string>January 16, Friday</string>
 			<key>Event</key>
-			<string>Friday classes do not meet. Monday classes meet instead</string>
+			<string>Friday classes do not meet. Monday classes meet instead (all programs)</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>January 20, Monday</string>
+			<string>January 19, Monday</string>
 			<key>Event</key>
-			<string>No classes. Martin Luther King Day</string>
+			<string>No classes, Martin Luther King Day</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>January 28, Tuesday</string>
+			<string>January 27, Tuesday</string>
 			<key>Event</key>
-			<string>Course registration deadline, 5 p.m.</string>
+			<string>Course registration deadline, 5:00pm</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>February 14, Friday</string>
+			<string>February 13, Friday</string>
 			<key>Event</key>
-			<string>Deadline for graduating PhD students to defend their dissertation for May graduation</string>
+			<string>Deadline for graduating PhD students to defend their dissertation for May graduation.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>March 7, Friday</string>
+			<string>March 7, Saturday</string>
 			<key>Event</key>
-			<string>Spring recess begins, 5:30 p.m.</string>
+			<string>Spring recess begins (all programs)</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>March 14, Friday</string>
+			<string>March 13, Friday</string>
 			<key>Event</key>
-			<string>Deadline for PhD dissertations to be considered by the Degree Committees for award of degree in May. Final day to file petitions for PhD degrees to be awarded in May</string>
+			<string>Deadline for PhD dissertations to be considered by the Degree Committees for award of degree in May. Final day to file petitions for PhD degrees to be awarded in May.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>March 24, Monday</string>
+			<string>March 23, Monday</string>
 			<key>Event</key>
-			<string>Spring recess ends, 8 a.m.</string>
+			<string>Spring recess ends, 8:00am (all programs)</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>April 30, Wednesday</string>
+			<string>April 24, Friday</string>
 			<key>Event</key>
-			<string>PhD program classes end, 5:30 p.m.</string>
+			<string>DNP Capstone Presentations</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>May 1, Thursday</string>
+			<string>April 29, Wednesday</string>
 			<key>Event</key>
-			<string>PhD program exams begin, 9 a.m.</string>
+			<string>PhD program classes end, 5:30pm</string>
 			<key>Type</key>
 			<string>4</string>
 		</dict>
 		<key>n</key>
 		<dict>
 			<key>Date</key>
-			<string>May 2, Friday</string>
+			<string>April 30, Thursday</string>
 			<key>Event</key>
-			<string>Master&apos;s, Post-Master&apos;s &amp; DNP program classes end, 8 p.m.</string>
+			<string>PhD program examinations begin, 9:00am</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>o</key>
 		<dict>
 			<key>Date</key>
-			<string>May 5, Monday</string>
+			<string>May 1, Friday</string>
 			<key>Event</key>
-			<string>Master&apos;s, Post-Master&apos;s &amp; DNP program final exams begin, 8 a.m.</string>
+			<string>Master’s, post master’s &amp; DNP program classes end, 8:00pm</string>
 			<key>Type</key>
 			<string>4</string>
 		</dict>
 		<key>p</key>
 		<dict>
 			<key>Date</key>
-			<string>May 6, Tuesday</string>
+			<string>May 4, Monday</string>
 			<key>Event</key>
-			<string>PhD program exams end, 5:30 p.m.</string>
+			<string>Master’s, post master’s &amp; DNP program final exams begin, 8:00am</string>
 			<key>Type</key>
 			<string>5</string>
 		</dict>
 		<key>q</key>
 		<dict>
 			<key>Date</key>
-			<string>May 7, Wednesday</string>
+			<string>May 5, Tuesday</string>
 			<key>Event</key>
-			<string>Spring term ends. Deadline for Master&apos;s portfolio to be submitted to academic advisors by graduating Clinical Master&apos;s students</string>
+			<string>PhD program examinations end, 5:30pm</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>r</key>
 		<dict>
 			<key>Date</key>
-			<string>May 14, Wednesday</string>
+			<string>May 6, Wednesday</string>
 			<key>Event</key>
-			<string>Approval of Clinical Master&apos;s portfolio submitted by academic advisors</string>
+			<string>Deadline for master’s portfolio to be submitted to academic advisors by graduating clinical master’s students</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>s</key>
 		<dict>
 			<key>Date</key>
-			<string>May 19, Monday</string>
+			<string>May 8, Friday</string>
+			<key>Event</key>
+			<string>Spring terms ends, 8:00 pm (all programs)</string>
+			<key>Type</key>
+			<string>8</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>May 13, Wednesday</string>
+			<key>Event</key>
+			<string>Approval of clinical master’s portfolio submitted by academic advisors</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>u</key>
+		<dict>
+			<key>Date</key>
+			<string>May 18, Monday</string>
 			<key>Event</key>
 			<string>University Commencement</string>
 			<key>Type</key>
-			<string>8</string>
+			<string>9</string>
 		</dict>
 	</dict>
 	<key>3</key>
@@ -365,30 +392,30 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Summer 2014</string>
+			<string>Summer 2015</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>May 12, Monday</string>
+			<string>May 11, Monday</string>
 			<key>Event</key>
-			<string>Summer term begins, 8 a.m.</string>
+			<string>Summer term begins, 8:00am</string>
 			<key>Type</key>
 			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>May 26, Monday</string>
+			<string>May 25, Monday</string>
 			<key>Event</key>
-			<string>No classes. Memorial Day</string>
+			<string>No classes, Memorial Day</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>June 4-6, Wednesday - Friday</string>
+			<string>June 2-5, Tuesday - Friday </string>
 			<key>Event</key>
 			<string>DNP summer intensive session</string>
 			<key>Type</key>
@@ -397,20 +424,11 @@
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>July 4, Wednesday</string>
+			<string>July 31, Friday</string>
 			<key>Event</key>
-			<string>No classes. Independence Day</string>
+			<string>Summer term ends, 5:00pm</string>
 			<key>Type</key>
 			<string>1</string>
-		</dict>
-		<key>e</key>
-		<dict>
-			<key>Date</key>
-			<string>July 31, Thursday</string>
-			<key>Event</key>
-			<string>Summer term ends, 5 p.m.</string>
-			<key>Type</key>
-			<string>0</string>
 		</dict>
 	</dict>
 </dict>
