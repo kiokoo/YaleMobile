@@ -27,6 +27,7 @@ PODS:
   - Mantle (1.5):
     - Mantle/extobjc
   - Mantle/extobjc (1.5)
+  - PureLayout (1.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - FLEX (~> 1.1.0)
   - FXBlurView (~> 1.6.2)
   - Mantle (~> 1.4)
+  - PureLayout
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
@@ -43,5 +45,6 @@ SPEC CHECKSUMS:
   FLEX: fa5e81b7b25ba64afe4fad14deb27d4b95efd75e
   FXBlurView: 47496afc9160097fa34af35fc4b310bd85d65dca
   Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
+  PureLayout: 972964b21dbcbc5cc36785aed16aba03176f057d
 
 COCOAPODS: 0.33.1

@@ -14,6 +14,7 @@
 #import "YMBluebookSubjectCell.h"
 #import "YMBluebookSubjectViewController+YMBluebookSubjectViewData.h"
 #import "YMTheme.h"
+#import <PureLayout/PureLayout.h>
 
 @interface YMBluebookSubjectViewController ()
 
@@ -39,6 +40,12 @@
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
   }
+  
+  self.tableView.separatorColor = [YMTheme lightGrey];
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+  
+  // Gets rid of extra separator for ya :)
+  self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -21,6 +21,8 @@
 #import "NSString+URLEncode.h"
 #import "YMAppDelegate.h"
 
+#import <PureLayout/PureLayout.h>
+
 static NSString* filterFormatString = @"&ProgramSubject=%@&InstructorName=%@&ExactWordPhrase=%@&CourseNumber=%@";
 static NSString* resultWindowUrl    = @"http://students.yale.edu/oci/resultWindow.jsp";
 static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.jsp";
@@ -70,6 +72,9 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
   }
+  
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+  self.tableView.separatorColor = [YMTheme lightGrey];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -301,8 +306,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   cell.name1.text = [((NSDictionary *)[dict objectForKey:[keys objectAtIndex:indexPath.row]]) objectForKey:@"Name"];
   
-  cell.name1.shadowColor = [UIColor whiteColor];
-  cell.name1.shadowOffset = CGSizeMake(0, 1);
   return cell;
 }
 
