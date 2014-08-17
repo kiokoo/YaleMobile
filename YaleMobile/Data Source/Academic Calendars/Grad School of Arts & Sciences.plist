@@ -1,436 +1,436 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
-    <key>1</key>
-    <dict>
-      <key>0</key>
-      <dict>
-        <key>Term</key>
-        <string>Fall 2014</string>
-      </dict>
-      <key>1</key>
-      <dict>
-        <key>Date</key>
-        <string>August 18, Monday</string>
-        <key>Event</key>
-        <string>New student orientation week begins</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>10</key>
-      <dict>
-        <key>Date</key>
-        <string>September 15, Monday</string>
-        <key>Event</key>
-        <string>Due date to notify department of intention to submit dissertation for award of the Ph.D. in December</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>11</key>
-      <dict>
-        <key>Date</key>
-        <string>September 19, Friday</string>
-        <key>Event</key>
-        <string>One-half of the fall-term full-tuition charge will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a medical leave of absence effective on or before this date. The CRF is not prorated</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>12</key>
-      <dict>
-        <key>Date</key>
-        <string>October 1, Wednesday</string>
-        <key>Event</key>
-        <string>Due date for dissertations to be considered by the Degree Committees for award of the Ph.D. in December Final date for the faculty to submit grades to replace grades of Temporary Incomplete (TI) awarded during the previous academic year Final day to file petitions for degrees to be awarded in December</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>13</key>
-      <dict>
-        <key>Date</key>
-        <string>October 17, Friday</string>
-        <key>Event</key>
-        <string>Midterm One-quarter of the fall-term full-tuition charge will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a medical leave of absence effective on or before this date. The CRF is not prorated Teaching appointments will not appear on the transcripts of students who withdraw from the assignment on or before this date</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>14</key>
-      <dict>
-        <key>Date</key>
-        <string>October 21, Tuesday</string>
-        <key>Event</key>
-        <string>October recess begins, 5:20 p.m.</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>15</key>
-      <dict>
-        <key>Date</key>
-        <string>October 27, Monday</string>
-        <key>Event</key>
-        <string>Classes resume, 8:20 a.m. Final day to change enrollment in a fall-term course from Credit to Audit or from Audit to Credit Final day to withdraw from a fall-term course</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>16</key>
-      <dict>
-        <key>Date</key>
-        <string>October 31, Friday</string>
-        <key>Event</key>
-        <string>Readers’ Reports are due for dissertations to be considered by the Degree Committees for award of the Ph.D. in December</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>17</key>
-      <dict>
-        <key>Date</key>
-        <string>November 6, Thursday</string>
-        <key>Event</key>
-        <string>Departmental recommendations are due for candidates for December degrees Final day to withdraw a degree petition for degrees to be awarded in December</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>18</key>
-      <dict>
-        <key>Date</key>
-        <string>November 13, Thursday</string>
-        <key>Event</key>
-        <string>Oral Proficiency Assessment for international students in all GSAS degree programs</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>19</key>
-      <dict>
-        <key>Date</key>
-        <string>November 21, Friday</string>
-        <key>Event</key>
-        <string>November recess begins, 5:20 p.m.</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>2</key>
-      <dict>
-        <key>Date</key>
-        <string>August 21, Thursday</string>
-        <key>Event</key>
-        <string>Matriculation ceremony</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>20</key>
-      <dict>
-        <key>Date</key>
-        <string>December 1, Monday</string>
-        <key>Event</key>
-        <string>Classes resume, 8:20 a.m. Final day to submit petitions for extended registration and Dissertation Completion status for the spring term</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>21</key>
-      <dict>
-        <key>Date</key>
-        <string>December 11, Thursday</string>
-        <key>Event</key>
-        <string>Classes end, 5:20 p.m.</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>22</key>
-      <dict>
-        <key>Date</key>
-        <string>December 12, Friday</string>
-        <key>Event</key>
-        <string>Final examinations begin</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>23</key>
-      <dict>
-        <key>Date</key>
-        <string>December 17, Wednesday</string>
-        <key>Event</key>
-        <string>Examinations end. Winter recess begins</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>3</key>
-      <dict>
-        <key>Date</key>
-        <string>August 22, Friday</string>
-        <key>Event</key>
-        <string>Fall-term Online Course Selection (OCS) begins Oral Performance Assessment for international students in Ph.D. programs</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>4</key>
-      <dict>
-        <key>Date</key>
-        <string>August 25, Monday</string>
-        <key>Event</key>
-        <string>Teaching @ Yale Day: orientation for all new Teaching Fellows</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>5</key>
-      <dict>
-        <key>Date</key>
-        <string>August 27, Wednesday</string>
-        <key>Event</key>
-        <string>Fall-term classes begin, 8:20 a.m.</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>6</key>
-      <dict>
-        <key>Date</key>
-        <string>August 29, Friday</string>
-        <key>Event</key>
-        <string>Friday classes do not meet. Monday classes meet instead</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>7</key>
-      <dict>
-        <key>Date</key>
-        <string>September 1, Monday</string>
-        <key>Event</key>
-        <string>Labor Day. Classes do not meet</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>8</key>
-      <dict>
-        <key>Date</key>
-        <string>September 5, Friday</string>
-        <key>Event</key>
-        <string>Final day to apply for a fall-term personal leave of absence The entire fall-term tuition charge or continuous registration fee (CRF) will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a leave of absence effective on or before this date</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>9</key>
-      <dict>
-        <key>Date</key>
-        <string>September 10, Wednesday</string>
-        <key>Event</key>
-        <string>Fall-term Online Course Selection (OCS) ends Final day for registration. A fee of $50 is assessed for course schedules accepted after this date</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-    </dict>
-    <key>2</key>
-    <dict>
-      <key>0</key>
-      <dict>
-        <key>Term</key>
-        <string>Spring 2015</string>
-      </dict>
-      <key>24</key>
-      <dict>
-        <key>Date</key>
-        <string>January 2, Friday</string>
-        <key>Event</key>
-        <string>Final grades for fall-term courses due</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>25</key>
-      <dict>
-        <key>Date</key>
-        <string>January 8, Thursday</string>
-        <key>Event</key>
-        <string>Spring-term Online Course Selection (OCS) begins</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>26</key>
-      <dict>
-        <key>Date</key>
-        <string>January 12, Monday</string>
-        <key>Event</key>
-        <string>Spring-term classes begin, 8:20 a.m. Teaching @ Yale Day: orientation for all new Teaching Fellows</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>27</key>
-      <dict>
-        <key>Date</key>
-        <string>January 16, Friday</string>
-        <key>Event</key>
-        <string>Friday classes do not meet. Monday classes meet instead</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>28</key>
-      <dict>
-        <key>Date</key>
-        <string>January 19, Monday</string>
-        <key>Event</key>
-        <string>Martin Luther King, Jr. Day. Classes do not meet</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>29</key>
-      <dict>
-        <key>Date</key>
-        <string>January 21, Wednesday</string>
-        <key>Event</key>
-        <string>Final day to apply for a spring-term personal leave of absence The entire spring-term tuition charge or CRF will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a leave of absence effective on or before this date</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>30</key>
-      <dict>
-        <key>Date</key>
-        <string>January 23, Friday</string>
-        <key>Event</key>
-        <string>Spring-term Online Course Selection (OCS) ends Final day for registration. A fee of $50 is assessed for course schedules accepted after this date</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>31</key>
-      <dict>
-        <key>Date</key>
-        <string>February 5, Thursday</string>
-        <key>Event</key>
-        <string>One-half of the spring-term full-tuition charge will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a medical leave of absence effective on or before this date. The CRF is not prorated</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>32</key>
-      <dict>
-        <key>Date</key>
-        <string>March 2, Monday</string>
-        <key>Event</key>
-        <string>Due date to notify department of intention to submit dissertation for award of the Ph.D. in May</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>33</key>
-      <dict>
-        <key>Date</key>
-        <string>March 6, Friday</string>
-        <key>Event</key>
-        <string>Midterm Spring recess begins, 5:20 p.m. One-quarter of the spring-term full-tuition charge will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a medical leave of absence effective on or before this date. The CRF is not prorated Teaching appointments will not appear on the transcripts of students who withdraw from the assignment on or before this date</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>34</key>
-      <dict>
-        <key>Date</key>
-        <string>March 16, Monday</string>
-        <key>Event</key>
-        <string>Due date for dissertations to be considered by the Degree Committees for award of the Ph.D. in May Final day to file petitions for degrees to be awarded in May</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>35</key>
-      <dict>
-        <key>Date</key>
-        <string>March 23, Monday</string>
-        <key>Event</key>
-        <string>Classes resume, 8:20 a.m.</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>36</key>
-      <dict>
-        <key>Date</key>
-        <string>April 3, Friday</string>
-        <key>Event</key>
-        <string>Final day to change enrollment in a spring-term course from Credit to Audit or from Audit to Credit Final day to withdraw from a spring-term course</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>37</key>
-      <dict>
-        <key>Date</key>
-        <string>April 13, Monday</string>
-        <key>Event</key>
-        <string>Readers’ Reports are due for dissertations to be considered by the Degree Committees for award of the Ph.D. in May Oral Proficiency Assessment for international students in all GSAS degree programs</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>38</key>
-      <dict>
-        <key>Date</key>
-        <string>April 20, Monday</string>
-        <key>Event</key>
-        <string>Final day to withdraw a degree petition for degrees to be awarded in May</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>39</key>
-      <dict>
-        <key>Date</key>
-        <string>April 23, Thursday</string>
-        <key>Event</key>
-        <string>Departmental recommendations are due for candidates for May degrees</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>40</key>
-      <dict>
-        <key>Date</key>
-        <string>April 30, Thursday</string>
-        <key>Event</key>
-        <string>Classes end, 5:20 p.m.</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>41</key>
-      <dict>
-        <key>Date</key>
-        <string>May 1, Friday</string>
-        <key>Event</key>
-        <string>Final examinations begin Final day to submit Dissertation Progress Reports Final day to submit petitions for extended registration and Dissertation Completion status for the subsequent academic year</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>42</key>
-      <dict>
-        <key>Date</key>
-        <string>May 6, Wednesday</string>
-        <key>Event</key>
-        <string>Final examinations end</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>43</key>
-      <dict>
-        <key>Date</key>
-        <string>May 8, Friday</string>
-        <key>Event</key>
-        <string>Final grades for spring-term courses are due for candidates for terminal M.A. and M.S. degrees to be awarded at Commencement</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>44</key>
-      <dict>
-        <key>Date</key>
-        <string>May 17, Sunday</string>
-        <key>Event</key>
-        <string>Graduate School Convocation</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>45</key>
-      <dict>
-        <key>Date</key>
-        <string>May 18, Monday</string>
-        <key>Event</key>
-        <string>University Commencement</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-      <key>46</key>
-      <dict>
-        <key>Date</key>
-        <string>June 1, Monday</string>
-        <key>Event</key>
-        <string>Final grades for spring-term courses and full-year courses are due</string>
-        <key>Type</key>
-        <string>9</string>
-      </dict>
-    </dict>
-  </dict>
+<dict>
+	<key>1</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Fall 2014</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>August 18, Monday</string>
+			<key>Event</key>
+			<string>New student orientation week begins</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>September 15, Monday</string>
+			<key>Event</key>
+			<string>Due date to notify department of intention to submit dissertation for award of the Ph.D. in December</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>September 19, Friday</string>
+			<key>Event</key>
+			<string>One-half of the fall-term full-tuition charge will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a medical leave of absence effective on or before this date. The CRF is not prorated</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>October 1, Wednesday</string>
+			<key>Event</key>
+			<string>Due date for dissertations to be considered by the Degree Committees for award of the Ph.D. in December Final date for the faculty to submit grades to replace grades of Temporary Incomplete (TI) awarded during the previous academic year Final day to file petitions for degrees to be awarded in December</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>October 17, Friday</string>
+			<key>Event</key>
+			<string>Midterm One-quarter of the fall-term full-tuition charge will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a medical leave of absence effective on or before this date. The CRF is not prorated Teaching appointments will not appear on the transcripts of students who withdraw from the assignment on or before this date</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>n</key>
+		<dict>
+			<key>Date</key>
+			<string>October 21, Tuesday</string>
+			<key>Event</key>
+			<string>October recess begins, 5:20 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>o</key>
+		<dict>
+			<key>Date</key>
+			<string>October 27, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:20 a.m. Final day to change enrollment in a fall-term course from Credit to Audit or from Audit to Credit Final day to withdraw from a fall-term course</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>p</key>
+		<dict>
+			<key>Date</key>
+			<string>October 31, Friday</string>
+			<key>Event</key>
+			<string>Readers’ Reports are due for dissertations to be considered by the Degree Committees for award of the Ph.D. in December</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>q</key>
+		<dict>
+			<key>Date</key>
+			<string>November 6, Thursday</string>
+			<key>Event</key>
+			<string>Departmental recommendations are due for candidates for December degrees Final day to withdraw a degree petition for degrees to be awarded in December</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+		<key>r</key>
+		<dict>
+			<key>Date</key>
+			<string>November 13, Thursday</string>
+			<key>Event</key>
+			<string>Oral Proficiency Assessment for international students in all GSAS degree programs</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>s</key>
+		<dict>
+			<key>Date</key>
+			<string>November 21, Friday</string>
+			<key>Event</key>
+			<string>November recess begins, 5:20 p.m.</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>August 21, Thursday</string>
+			<key>Event</key>
+			<string>Matriculation ceremony</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>December 1, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:20 a.m. Final day to submit petitions for extended registration and Dissertation Completion status for the spring term</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>u</key>
+		<dict>
+			<key>Date</key>
+			<string>December 11, Thursday</string>
+			<key>Event</key>
+			<string>Classes end, 5:20 p.m.</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>v</key>
+		<dict>
+			<key>Date</key>
+			<string>December 12, Friday</string>
+			<key>Event</key>
+			<string>Final examinations begin</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>w</key>
+		<dict>
+			<key>Date</key>
+			<string>December 17, Wednesday</string>
+			<key>Event</key>
+			<string>Examinations end. Winter recess begins</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>August 22, Friday</string>
+			<key>Event</key>
+			<string>Fall-term Online Course Selection (OCS) begins Oral Performance Assessment for international students in Ph.D. programs</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>August 25, Monday</string>
+			<key>Event</key>
+			<string>Teaching @ Yale Day: orientation for all new Teaching Fellows</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>August 27, Wednesday</string>
+			<key>Event</key>
+			<string>Fall-term classes begin, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>August 29, Friday</string>
+			<key>Event</key>
+			<string>Friday classes do not meet. Monday classes meet instead</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>September 1, Monday</string>
+			<key>Event</key>
+			<string>Labor Day. Classes do not meet</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>September 5, Friday</string>
+			<key>Event</key>
+			<string>Final day to apply for a fall-term personal leave of absence The entire fall-term tuition charge or continuous registration fee (CRF) will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a leave of absence effective on or before this date</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>September 10, Wednesday</string>
+			<key>Event</key>
+			<string>Fall-term Online Course Selection (OCS) ends Final day for registration. A fee of $50 is assessed for course schedules accepted after this date</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Spring 2015</string>
+		</dict>
+		<key>24</key>
+		<dict>
+			<key>Date</key>
+			<string>January 2, Friday</string>
+			<key>Event</key>
+			<string>Final grades for fall-term courses due</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+		<key>25</key>
+		<dict>
+			<key>Date</key>
+			<string>January 8, Thursday</string>
+			<key>Event</key>
+			<string>Spring-term Online Course Selection (OCS) begins</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>26</key>
+		<dict>
+			<key>Date</key>
+			<string>January 12, Monday</string>
+			<key>Event</key>
+			<string>Spring-term classes begin, 8:20 a.m. Teaching @ Yale Day: orientation for all new Teaching Fellows</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>27</key>
+		<dict>
+			<key>Date</key>
+			<string>January 16, Friday</string>
+			<key>Event</key>
+			<string>Friday classes do not meet. Monday classes meet instead</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>28</key>
+		<dict>
+			<key>Date</key>
+			<string>January 19, Monday</string>
+			<key>Event</key>
+			<string>Martin Luther King, Jr. Day. Classes do not meet</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>29</key>
+		<dict>
+			<key>Date</key>
+			<string>January 21, Wednesday</string>
+			<key>Event</key>
+			<string>Final day to apply for a spring-term personal leave of absence The entire spring-term tuition charge or CRF will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a leave of absence effective on or before this date</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>30</key>
+		<dict>
+			<key>Date</key>
+			<string>January 23, Friday</string>
+			<key>Event</key>
+			<string>Spring-term Online Course Selection (OCS) ends Final day for registration. A fee of $50 is assessed for course schedules accepted after this date</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>31</key>
+		<dict>
+			<key>Date</key>
+			<string>February 5, Thursday</string>
+			<key>Event</key>
+			<string>One-half of the spring-term full-tuition charge will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a medical leave of absence effective on or before this date. The CRF is not prorated</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>32</key>
+		<dict>
+			<key>Date</key>
+			<string>March 2, Monday</string>
+			<key>Event</key>
+			<string>Due date to notify department of intention to submit dissertation for award of the Ph.D. in May</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>33</key>
+		<dict>
+			<key>Date</key>
+			<string>March 6, Friday</string>
+			<key>Event</key>
+			<string>Midterm Spring recess begins, 5:20 p.m. One-quarter of the spring-term full-tuition charge will be canceled for students who withdraw from the Graduate School on or before this date or who are granted a medical leave of absence effective on or before this date. The CRF is not prorated Teaching appointments will not appear on the transcripts of students who withdraw from the assignment on or before this date</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>34</key>
+		<dict>
+			<key>Date</key>
+			<string>March 16, Monday</string>
+			<key>Event</key>
+			<string>Due date for dissertations to be considered by the Degree Committees for award of the Ph.D. in May Final day to file petitions for degrees to be awarded in May</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>35</key>
+		<dict>
+			<key>Date</key>
+			<string>March 23, Monday</string>
+			<key>Event</key>
+			<string>Classes resume, 8:20 a.m.</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>36</key>
+		<dict>
+			<key>Date</key>
+			<string>April 3, Friday</string>
+			<key>Event</key>
+			<string>Final day to change enrollment in a spring-term course from Credit to Audit or from Audit to Credit Final day to withdraw from a spring-term course</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>37</key>
+		<dict>
+			<key>Date</key>
+			<string>April 13, Monday</string>
+			<key>Event</key>
+			<string>Readers’ Reports are due for dissertations to be considered by the Degree Committees for award of the Ph.D. in May Oral Proficiency Assessment for international students in all GSAS degree programs</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>38</key>
+		<dict>
+			<key>Date</key>
+			<string>April 20, Monday</string>
+			<key>Event</key>
+			<string>Final day to withdraw a degree petition for degrees to be awarded in May</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>39</key>
+		<dict>
+			<key>Date</key>
+			<string>April 23, Thursday</string>
+			<key>Event</key>
+			<string>Departmental recommendations are due for candidates for May degrees</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>40</key>
+		<dict>
+			<key>Date</key>
+			<string>April 30, Thursday</string>
+			<key>Event</key>
+			<string>Classes end, 5:20 p.m.</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>41</key>
+		<dict>
+			<key>Date</key>
+			<string>May 1, Friday</string>
+			<key>Event</key>
+			<string>Final examinations begin Final day to submit Dissertation Progress Reports Final day to submit petitions for extended registration and Dissertation Completion status for the subsequent academic year</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>Date</key>
+			<string>May 6, Wednesday</string>
+			<key>Event</key>
+			<string>Final examinations end</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>43</key>
+		<dict>
+			<key>Date</key>
+			<string>May 8, Friday</string>
+			<key>Event</key>
+			<string>Final grades for spring-term courses are due for candidates for terminal M.A. and M.S. degrees to be awarded at Commencement</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>44</key>
+		<dict>
+			<key>Date</key>
+			<string>May 17, Sunday</string>
+			<key>Event</key>
+			<string>Graduate School Convocation</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>45</key>
+		<dict>
+			<key>Date</key>
+			<string>May 18, Monday</string>
+			<key>Event</key>
+			<string>University Commencement</string>
+			<key>Type</key>
+			<string>8</string>
+		</dict>
+		<key>46</key>
+		<dict>
+			<key>Date</key>
+			<string>June 1, Monday</string>
+			<key>Event</key>
+			<string>Final grades for spring-term courses and full-year courses are due</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
+	</dict>
+</dict>
 </plist>

@@ -7,21 +7,21 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Fall 2013</string>
+			<string>Fall 2014</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>August 26, Monday</string>
+			<string>August 25, Monday</string>
 			<key>Event</key>
-			<string>Online course registration opens</string>
+			<string>Online Course Registration Opens, 8:30 a.m.</string>
 			<key>Type</key>
 			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>August 28, Wednesday</string>
+			<string>August 27, Wednesday</string>
 			<key>Event</key>
 			<string>Yale College classes begin</string>
 			<key>Type</key>
@@ -30,61 +30,61 @@
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>September 3, Tuesday</string>
+			<string>September 2, Tuesday</string>
 			<key>Event</key>
-			<string>New and returning students orientation</string>
+			<string>Placement Testing, language exams, advisories and ensemble auditions begin. New and Returning Student Orientation - MANDATORY</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>September 3-6, Tuesday - Friday</string>
+			<string>September 3, Wednesday</string>
 			<key>Event</key>
-			<string>Placement tests, language exams, advisories and ensemble auditions</string>
+			<string>Placement Testing, language exams, advisories and ensemble auditions begin. Annual Opening Convocation &amp; Reception - MANDATORY, 7:00 p.m.</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>9</string>
 		</dict>
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>September 6, Friday</string>
+			<string>September 4, Thursday</string>
 			<key>Event</key>
-			<string>YSM classes begin, 8:20 a.m.</string>
+			<string>Placement Testing, language exams, advisories and ensemble auditions begin.</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>4</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>September 9, Monday</string>
+			<string>September 5, Friday</string>
 			<key>Event</key>
-			<string>Annual Opening Convocation &amp; Reception (MANDATORY)</string>
+			<string>Placement Testing, language exams, advisories and ensemble auditions begin. Yale School of Music classes begin, 8:20 A.M.</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>2</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>September 13, Friday</string>
+			<string>September 12, Friday</string>
 			<key>Event</key>
-			<string>Fall course schedules due, 4 p.m.</string>
+			<string>Fall course schedules DUE</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>September 20, Friday</string>
+			<string>September 19, Friday</string>
 			<key>Event</key>
-			<string>Add/Drop deadline, 4 p.m.</string>
+			<string>Add/Drop Deadline</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>October 23, Wednesday</string>
+			<string>October 22, Wednesday</string>
 			<key>Event</key>
 			<string>Yale College recess begins</string>
 			<key>Type</key>
@@ -93,7 +93,7 @@
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>October 28, Monday</string>
+			<string>October 27, Monday</string>
 			<key>Event</key>
 			<string>Yale College classes resume</string>
 			<key>Type</key>
@@ -102,70 +102,70 @@
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>November 8, Friday</string>
+			<string>November 7, Friday</string>
 			<key>Event</key>
-			<string>Last day to elect Pass/Fail option, 4 p.m.</string>
+			<string>Last Day to elect Pass/Fail option</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>November 23, Saturday</string>
+			<string>November 22, Saturday</string>
 			<key>Event</key>
-			<string>November Recess begins</string>
+			<string>November recess begins</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>December 1, Sunday</string>
+			<string>December 1, Monday</string>
 			<key>Event</key>
-			<string>Deadline for Fall 2013 Applications</string>
+			<string>Fall 2015 Applications DUE. Online Course registration opens. Classes resume, 8:20 A.M.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>n</key>
 		<dict>
 			<key>Date</key>
-			<string>December 2, Monday</string>
+			<string>December 5, Friday</string>
 			<key>Event</key>
-			<string>Classes resume, 8:20 a.m.</string>
+			<string>Last day to withdraw from a class</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>7</string>
 		</dict>
 		<key>o</key>
 		<dict>
 			<key>Date</key>
-			<string>December 6, Friday</string>
+			<string>December 12, Friday</string>
 			<key>Event</key>
-			<string>Last day to withdraw from a class, 4 p.m.</string>
+			<string>Classes end</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>3</string>
 		</dict>
 		<key>p</key>
 		<dict>
 			<key>Date</key>
-			<string>December 13, Friday</string>
+			<string>December 15, Monday</string>
 			<key>Event</key>
-			<string>MMA Auditions. Classes end</string>
+			<string>Exam Week</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>4</string>
 		</dict>
 		<key>q</key>
 		<dict>
 			<key>Date</key>
-			<string>December 16-20, Monday - Friday</string>
+			<string>December 19, Friday</string>
 			<key>Event</key>
-			<string>Exam week</string>
+			<string>Last day of Exam Week</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>5</string>
 		</dict>
 		<key>r</key>
 		<dict>
 			<key>Date</key>
-			<string>December 21, Saturday</string>
+			<string>December 20, Saturday</string>
 			<key>Event</key>
 			<string>Winter Recess begins</string>
 			<key>Type</key>
@@ -177,165 +177,237 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Spring 2014</string>
+			<string>Spring 2015</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>January 13, Monday</string>
+			<string>January 12, Monday</string>
 			<key>Event</key>
-			<string>YSM and Yale College classes begin, 8:20 a.m.</string>
+			<string>YSM and Yale College classes begin, 8:20 A.M.</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>January 17, Friday</string>
+			<string>January 16, Thursday</string>
 			<key>Event</key>
-			<string>Spring term course schedule due, 4 p.m.</string>
+			<string>Spring term course schedules DUE, 4:00 P.M.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>January 20, Monday</string>
+			<string>January 19, Monday</string>
 			<key>Event</key>
-			<string>Martin Luther King Day. No classes; University offices closed</string>
+			<string>Martin Luther King Jr. Day</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>January 24, Friday</string>
+			<string>January 23, Friday</string>
 			<key>Event</key>
-			<string>Add/Drop deadline, 4 p.m.</string>
+			<string>Add/Drop Deadline, 4:00 P.M.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>February 7-10, Friday - Monday</string>
+			<string>February 6, Friday</string>
 			<key>Event</key>
-			<string>Written comprehensive examinations for MMA candidates in residence</string>
+			<string>Written comprehensive exams for MMA candidates in residence</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>9</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>February 24 - March 1, Mon - Sat</string>
+			<string>February 7, Saturday</string>
 			<key>Event</key>
-			<string>School of Music auditions</string>
+			<string>Written comprehensive exams for MMA candidates in residence</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>February 26-28, Wed - Fri</string>
+			<string>February 8, Sunday</string>
 			<key>Event</key>
-			<string>No classes</string>
+			<string>Written comprehensive exams for MMA candidates in residence</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>9</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>March 1, Saturday</string>
+			<string>February 9, Monday</string>
 			<key>Event</key>
-			<string>DMA entrance exam</string>
+			<string>Written comprehensive exams for MMA candidates in residence</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>9</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>March 8, Saturday</string>
+			<string>February 23, Monday</string>
 			<key>Event</key>
-			<string>Spring recess begins</string>
+			<string>Yale School of Music Auditions</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>4</string>
 		</dict>
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>March 24, Monday</string>
+			<string>February 24, Tuesday</string>
 			<key>Event</key>
-			<string>Classes resume, 8:20 a.m.</string>
+			<string>Yale School of Music Auditions</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>9</string>
 		</dict>
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>April 4, Friday</string>
+			<string>February 25, Wednesday</string>
 			<key>Event</key>
-			<string>Last day to elect Pass/Fail option, 4 p.m.</string>
+			<string>Yale School of Music Auditions. No classes.</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>April 25, Friday</string>
+			<string>February 26, Thursday</string>
 			<key>Event</key>
-			<string>Last day to withdraw from a class, 4 p.m.</string>
+			<string>Yale School of Music Auditions. No classes.</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>May 2, Friday</string>
+			<string>February 27, Friday</string>
 			<key>Event</key>
-			<string>Classes end. Last day of degree recitals</string>
+			<string>Yale School of Music Auditions. No classes. </string>
 			<key>Type</key>
-			<string>3</string>
+			<string>9</string>
 		</dict>
 		<key>n</key>
 		<dict>
 			<key>Date</key>
-			<string>May 4, Sunday</string>
+			<string>February 28, Saturday</string>
 			<key>Event</key>
-			<string>Honors Dinner</string>
+			<string>Yale School of Music Auditions. DMA Entrance Exam.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>5</string>
 		</dict>
 		<key>o</key>
 		<dict>
 			<key>Date</key>
-			<string>May 5-7, Monday - Wednesday</string>
+			<string>March 7, Saturday</string>
 			<key>Event</key>
-			<string>MMA oral examinations</string>
+			<string>Spring Recess Begins</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>2</string>
 		</dict>
 		<key>p</key>
 		<dict>
 			<key>Date</key>
-			<string>May 5-9, Monday - Friday</string>
+			<string>March 23, Monday</string>
 			<key>Event</key>
-			<string>Exam week</string>
+			<string>Classes resume, 8:20 A.M.</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>2</string>
 		</dict>
 		<key>q</key>
 		<dict>
 			<key>Date</key>
-			<string>May 18, Sunday</string>
+			<string>April 3, Friday</string>
 			<key>Event</key>
-			<string>Commencement concert</string>
+			<string>Last Day to elect Pass/Fail Option, 4:00 P.M.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>r</key>
 		<dict>
 			<key>Date</key>
-			<string>May 19, Monday</string>
+			<string>April 24, Friday</string>
+			<key>Event</key>
+			<string>Last day to withdraw from a class</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>s</key>
+		<dict>
+			<key>Date</key>
+			<string>May 1, Friday</string>
+			<key>Event</key>
+			<string>Classes end</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>May 3, Sunday</string>
+			<key>Event</key>
+			<string>Honors Dinner, 6:00 P.M.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>u</key>
+		<dict>
+			<key>Date</key>
+			<string>May 4, Monday</string>
+			<key>Event</key>
+			<string>MMA Oral Examinations, Exam Week.</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>v</key>
+		<dict>
+			<key>Date</key>
+			<string>May 5, Tuesday</string>
+			<key>Event</key>
+			<string>MMA Oral Examinations</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>w</key>
+		<dict>
+			<key>Date</key>
+			<string>May 6, Wednesday</string>
+			<key>Event</key>
+			<string>MMA Oral Examinations</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>x</key>
+		<dict>
+			<key>Date</key>
+			<string>May 8, Friday</string>
+			<key>Event</key>
+			<string>Last day of exams</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>y</key>
+		<dict>
+			<key>Date</key>
+			<string>May 17, Sunday</string>
+			<key>Event</key>
+			<string>Commencement Concert, 4:00 P.M.</string>
+			<key>Type</key>
+			<string>8</string>
+		</dict>
+		<key>z</key>
+		<dict>
+			<key>Date</key>
+			<string>May 18, Monday</string>
 			<key>Event</key>
 			<string>University Commencement</string>
 			<key>Type</key>

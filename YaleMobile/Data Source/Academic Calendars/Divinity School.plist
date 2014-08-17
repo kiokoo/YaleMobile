@@ -7,9 +7,291 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Spring 2013</string>
+			<string>Fall 2014</string>
 		</dict>
 		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>August 18, Monday</string>
+			<key>Event</key>
+			<string>BTFO Orientation begins</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>b</key>
+		<dict>
+			<key>Date</key>
+			<string>August 22, Friday</string>
+			<key>Event</key>
+			<string>BTFO Orientation ends</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>c</key>
+		<dict>
+			<key>Date</key>
+			<string>August 26, Tuesday</string>
+			<key>Event</key>
+			<string>On-line registration begins, 9 AM
+Opening Convocation, 4 PM</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>d</key>
+		<dict>
+			<key>Date</key>
+			<string>August 27, Wednesday</string>
+			<key>Event</key>
+			<string>Fall classes begin</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>September 1, Monday</string>
+			<key>Event</key>
+			<string>Labor Day. No Classes</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>September 2, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>g</key>
+		<dict>
+			<key>Date</key>
+			<string>September 8, Monday</string>
+			<key>Event</key>
+			<string>On-Line registration ends, midnight
+Last day for: downtown course
+permission, add/drop course without
+charge, approval of reading course</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>h</key>
+		<dict>
+			<key>Date</key>
+			<string>September 8, Monday</string>
+			<key>Event</key>
+			<string>Last day for tuition rebate for dropped courses</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>i</key>
+		<dict>
+			<key>Date</key>
+			<string>September 9, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting, 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>j</key>
+		<dict>
+			<key>Date</key>
+			<string>September 10, Wednesday</string>
+			<key>Event</key>
+			<string>Last day to change course grade mode</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>September 17, Wednesday</string>
+			<key>Event</key>
+			<string>Last day to add a course</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>l</key>
+		<dict>
+			<key>Date</key>
+			<string>October 7, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>m</key>
+		<dict>
+			<key>Date</key>
+			<string>October 8, Wednesday</string>
+			<key>Event</key>
+			<string>Last day to drop a course </string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>n</key>
+		<dict>
+			<key>Date</key>
+			<string>October 14, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting, 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>o</key>
+		<dict>
+			<key>Date</key>
+			<string>October 17, Friday</string>
+			<key>Event</key>
+			<string>Reading period begins, 9 PM</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>p</key>
+		<dict>
+			<key>Date</key>
+			<string>October 21, Tuesday</string>
+			<key>Event</key>
+			<string>Convocation begins</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>q</key>
+		<dict>
+			<key>Date</key>
+			<string>October 24, Friday</string>
+			<key>Event</key>
+			<string>Convocation ends</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>r</key>
+		<dict>
+			<key>Date</key>
+			<string>October 27, Monday</string>
+			<key>Event</key>
+			<string>Reading period ends, 8:20 AM
+Classes resume, 8:30 AM</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>s</key>
+		<dict>
+			<key>Date</key>
+			<string>November 4, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>November 11, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting, 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>u</key>
+		<dict>
+			<key>Date</key>
+			<string>November 17, Monday</string>
+			<key>Event</key>
+			<string>Advising period begins</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>v</key>
+		<dict>
+			<key>Date</key>
+			<string>November 21, Friday</string>
+			<key>Event</key>
+			<string>Reading period begins, 9 PM</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>w</key>
+		<dict>
+			<key>Date</key>
+			<string>November 26, Wednesday</string>
+			<key>Event</key>
+			<string>Reading period ends, 9 PM
+Thanksgiving recess begins, 9 PM</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>x</key>
+		<dict>
+			<key>Date</key>
+			<string>December 1, Monday</string>
+			<key>Event</key>
+			<string>Thanksgiving recess ends, 8:20 AM
+Classes resume, 8:30 AM</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>y</key>
+		<dict>
+			<key>Date</key>
+			<string>December 2, Tuesday</string>
+			<key>Event</key>
+			<string>Faculty meeting, 4 PM
+Regular classes end at 9 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>z</key>
+		<dict>
+			<key>Date</key>
+			<string>December 3, Wednesday</string>
+			<key>Event</key>
+			<string>Labor Day classes rescheduled
+Reading period begins 6 PM 
+Advent Service, 7 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>za</key>
+		<dict>
+			<key>Date</key>
+			<string>December 5, Friday</string>
+			<key>Event</key>
+			<string>Advising period ends</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>zb</key>
+		<dict>
+			<key>Date</key>
+			<string>December 9, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting, 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>zc</key>
+		<dict>
+			<key>Date</key>
+			<string>December 10, Wednesday</string>
+			<key>Event</key>
+			<string>Reading period ends, 8:20 AM
+Final exams begin, 8:30 AM</string>
+			<key>Type</key>
+			<string>4</string>
+		</dict>
+		<key>zd</key>
+		<dict>
+			<key>Date</key>
+			<string>December 16, Tuesday</string>
+			<key>Event</key>
+			<string>Exams end/Semester ends, 6 PM
+All course work due</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>ze</key>
 		<dict>
 			<key>Date</key>
 			<string>January 14, Monday</string>
@@ -18,280 +300,307 @@
 			<key>Type</key>
 			<string>2</string>
 		</dict>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>0</key>
+		<dict>
+			<key>Term</key>
+			<string>Spring 2015</string>
+		</dict>
+		<key>a</key>
+		<dict>
+			<key>Date</key>
+			<string>January 2, Friday</string>
+			<key>Event</key>
+			<string>Grades due for Fall 2014</string>
+			<key>Type</key>
+			<string>0</string>
+		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>January 15, Tuesday</string>
+			<string>January 12, Monday</string>
 			<key>Event</key>
-			<string>Faculty meeting, 4 p.m.</string>
+			<string>Spring classes begin, 8:30 AM
+On-line registration begins, 9:00 AM</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>January 21, Monday</string>
+			<string>January 13, Tuesday</string>
 			<key>Event</key>
-			<string>Martin Luther King Day. No classes</string>
+			<string>Faculty meeting, 4 PM</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>9</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>January 22, Tuesday</string>
+			<string>January 19, Monday</string>
 			<key>Event</key>
-			<string>Governing Board meeting, 4 p.m.</string>
+			<string>Martin Luther King, Jr., Day. No classes</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>January 25, Friday</string>
+			<string>January 20, Tuesday</string>
 			<key>Event</key>
-			<string>Online registration ends, midnight. Last day for rebate, downtown course permission, add/drop course without charge, approval of reading course</string>
+			<string>Governing Board meeting, 4 PM</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>January 28, Monday</string>
+			<string>January 23, Friday</string>
 			<key>Event</key>
-			<string>Last day for approval of credit/no credit</string>
+			<string>On-line registration ends, midnight
+Last day for: downtown course
+permission, add/drop course without
+charge, approval of reading course</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>February 4, Monday</string>
+			<string>January 26, Monday</string>
 			<key>Event</key>
-			<string>Last day to add a course</string>
+			<string>Last day to change course grade mode</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>February 8, Friday</string>
+			<string>February 2, Monday</string>
 			<key>Event</key>
-			<string>Reading period begins, 6 p.m.</string>
+			<string>Last day to add a course</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>February 11, Monday</string>
+			<string>February 9, Monday</string>
 			<key>Event</key>
-			<string>Last day for faculty to accept late work for fall semester</string>
+			<string>Last day for faculty to accept late work for Fall semester</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>February 14, Thursday</string>
+			<string>February 10, Tuesday</string>
 			<key>Event</key>
-			<string>Reading period ends, 8:30 a.m.</string>
+			<string>Reading period begins, 9 PM</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>k</key>
 		<dict>
 			<key>Date</key>
-			<string>February 19, Tuesday</string>
+			<string>February 16, Monday</string>
 			<key>Event</key>
-			<string>Faculty meeting, 4 p.m.</string>
+			<string>Reading period ends, 8:20 AM
+Classes resume, 8:30 AM</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>3</string>
 		</dict>
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>February 26, Tuesday</string>
+			<string>February 17, Tuesday</string>
 			<key>Event</key>
-			<string>Governing Board meeting, 4 p.m.</string>
+			<string>Faculty meeting, 4 PM</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>February 28, Thursday</string>
+			<string>February 24, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting, 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>n</key>
+		<dict>
+			<key>Date</key>
+			<string>February 26, Thursday</string>
 			<key>Event</key>
 			<string>Last day to drop a course</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
-		<key>n</key>
-		<dict>
-			<key>Date</key>
-			<string>March 5, Tuesday</string>
-			<key>Event</key>
-			<string>Faculty meeting, 4 p.m.</string>
-			<key>Type</key>
-			<string>9</string>
-		</dict>
 		<key>o</key>
 		<dict>
 			<key>Date</key>
-			<string>March 8, Friday</string>
+			<string>March 3, Tuesday</string>
 			<key>Event</key>
-			<string>Spring recess begins, 6 p.m.</string>
+			<string>Faculty meeting, 4 PM</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>9</string>
 		</dict>
 		<key>p</key>
 		<dict>
 			<key>Date</key>
-			<string>March 25, Monday</string>
+			<string>March 6, Friday</string>
 			<key>Event</key>
-			<string>Spring recess ends, 8:30 a.m. Classes resume</string>
+			<string>Spring recess begins, 9 PM</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>1</string>
 		</dict>
 		<key>q</key>
 		<dict>
 			<key>Date</key>
-			<string>March 26, Tuesday</string>
+			<string>March 23, Monday</string>
 			<key>Event</key>
-			<string>Governing Board meeting</string>
+			<string>Spring recess ends, 8:20 AM
+Classes resume, 8:30 AM</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>r</key>
 		<dict>
 			<key>Date</key>
-			<string>March 29, Friday</string>
+			<string>March 24, Tuesday</string>
+			<key>Event</key>
+			<string>Governing Board meeting. 4 PM</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>s</key>
+		<dict>
+			<key>Date</key>
+			<string>March 30, Monday</string>
+			<key>Event</key>
+			<string>Year-end consultations begin</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>April 3, Friday</string>
 			<key>Event</key>
 			<string>Good Friday. No classes</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
-		<key>s</key>
-		<dict>
-			<key>Date</key>
-			<string>April 1, Monday</string>
-			<key>Event</key>
-			<string>Year end consultations begin</string>
-			<key>Type</key>
-			<string>9</string>
-		</dict>
-		<key>t</key>
-		<dict>
-			<key>Date</key>
-			<string>April 2, Tuesday</string>
-			<key>Event</key>
-			<string>Faculty meeting, 4 p.m.</string>
-			<key>Type</key>
-			<string>9</string>
-		</dict>
 		<key>u</key>
 		<dict>
 			<key>Date</key>
-			<string>April 15, Monday</string>
+			<string>April 7, Tuesday</string>
 			<key>Event</key>
-			<string>Year end consultations end</string>
+			<string>Faculty meeting, 4 PM</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>v</key>
 		<dict>
 			<key>Date</key>
-			<string>April 16, Tuesday</string>
+			<string>April 13, Monday</string>
 			<key>Event</key>
-			<string>Governing Board meeting, 4 p.m.</string>
+			<string>Year-end consultations end</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>w</key>
 		<dict>
 			<key>Date</key>
-			<string>April 24, Wednesday</string>
+			<string>April 14, Tuesday</string>
 			<key>Event</key>
-			<string>Regular classes end, 6 p.m.</string>
+			<string>Governing Board meeting 4PM</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>9</string>
 		</dict>
 		<key>x</key>
 		<dict>
 			<key>Date</key>
-			<string>April 25, Thursday</string>
+			<string>April 21, Tuesday</string>
 			<key>Event</key>
-			<string>Martin Luther King Day classes rescheduled</string>
+			<string>Tuesday classes do not meet. Friday classes meet instead.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>y</key>
 		<dict>
 			<key>Date</key>
-			<string>April 26, Friday</string>
+			<string>April 23, Thursday</string>
 			<key>Event</key>
-			<string>Good Friday classes rescheduled. Reading period begins, 6 p.m.</string>
+			<string>Regular classes end at 9 PM</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>3</string>
 		</dict>
 		<key>z</key>
 		<dict>
 			<key>Date</key>
-			<string>May 2, Thursday</string>
+			<string>April 24, Friday</string>
 			<key>Event</key>
-			<string>Reading period ends, 8 a.m. Final exams begin</string>
+			<string>Good Friday classes rescheduled
+Reading period begins, 9 PM</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>7</string>
 		</dict>
 		<key>za</key>
 		<dict>
 			<key>Date</key>
-			<string>May 7, Tuesday</string>
+			<string>April 30, Thursday</string>
 			<key>Event</key>
-			<string>Exams end, 6 p.m. Faculty meeting, 2 p.m.</string>
+			<string>Reading period ends, 8:20 AM
+Final Exams begin, 8:30 AM</string>
 			<key>Type</key>
-			<string>5</string>
+			<string>4</string>
 		</dict>
 		<key>zb</key>
 		<dict>
 			<key>Date</key>
-			<string>May 9, Thursday</string>
+			<string>May 5, Tuesday</string>
 			<key>Event</key>
-			<string>Senior grades due for spring semester</string>
+			<string>Exams end/Semester ends, 6 PM
+Faculty meeting, 2 PM</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>5</string>
 		</dict>
 		<key>zc</key>
 		<dict>
 			<key>Date</key>
-			<string>May 14, Tuesday</string>
+			<string>May 7, Thursday</string>
 			<key>Event</key>
-			<string>Faculty meeting, 2 p.m. Governing Board meeting</string>
+			<string>Senior grades due for Spring 2015</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>0</string>
 		</dict>
 		<key>zd</key>
 		<dict>
 			<key>Date</key>
-			<string>May 18, Saturday</string>
+			<string>May 12, Tuesday</string>
 			<key>Event</key>
-			<string>BDS Commencement Evensong, 4 p.m.</string>
+			<string>Faculty meeting, 2 PM
+Governing Board meeting</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>ze</key>
 		<dict>
 			<key>Date</key>
-			<string>May 19, Sunday</string>
+			<string>May 16, Saturday</string>
 			<key>Event</key>
-			<string>YDS Commencement Service, 4 p.m.</string>
+			<string>BDS Commencement Evensong, 4 PM</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>8</string>
 		</dict>
 		<key>zf</key>
 		<dict>
 			<key>Date</key>
-			<string>May 20, Monday</string>
+			<string>May 18, Monday</string>
 			<key>Event</key>
 			<string>University and YDS Commencement</string>
 			<key>Type</key>
@@ -300,16 +609,16 @@
 		<key>zg</key>
 		<dict>
 			<key>Date</key>
-			<string>May 21, Tuesday</string>
+			<string>May 18, Tuesday</string>
 			<key>Event</key>
-			<string>All other grades due for spring semester</string>
+			<string>All other grades due for Spring 2015</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>0</string>
 		</dict>
 		<key>zh</key>
 		<dict>
 			<key>Date</key>
-			<string>June 28, Friday</string>
+			<string>June 30, Tuesday</string>
 			<key>Event</key>
 			<string>Last day for faculty to accept late work for spring semester</string>
 			<key>Type</key>

@@ -7,183 +7,237 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Fall 2013</string>
+			<string>Fall 2014</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>August 28, Wednesday</string>
+			<string>August 13-15, Wednesday - Friday</string>
 			<key>Event</key>
-			<string>Fall-term elective classes begin. Add/Drop begins</string>
+			<string>Class of 2016 Math Camp (by invitation only)</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>August 30, Friday</string>
+			<string>August 18-24, Monday - Sunday</string>
 			<key>Event</key>
-			<string>Make-up day: Monday electives meet</string>
+			<string>Class of 2016 Orientation</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>September 2, Monday</string>
+			<string>August 25-29, Monday - Friday</string>
 			<key>Event</key>
-			<string>Labor Day. Classes do not meet</string>
+			<string>MGT 401 Managing Groups &amp; Teams meets (all sessions required for this core course)</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>9</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>September 4, Wednesday</string>
+			<string>August 27, Wednesday</string>
+			<key>Event</key>
+			<string>Fall-term elective classes begin; Add/Drop begins</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>d2</key>
+		<dict>
+			<key>Date</key>
+			<string>August 29, Friday</string>
+			<key>Event</key>
+			<string>Make-up day: Monday electives meet</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>d3</key>
+		<dict>
+			<key>Date</key>
+			<string>September 1, Monday</string>
+			<key>Event</key>
+			<string>Labor Day, classes do not meet; administrative offices closed</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>e</key>
+		<dict>
+			<key>Date</key>
+			<string>September 2, Tuesday</string>
+			<key>Event</key>
+			<string>Session-1 core classes begin</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>f</key>
+		<dict>
+			<key>Date</key>
+			<string>September 3, Wednesday</string>
 			<key>Event</key>
 			<string>Last day to add full-term and session-1 courses, 11:59 p.m.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
-		<key>d2</key>
-		<dict>
-			<key>Date</key>
-			<string>September 18, Wednesday</string>
-			<key>Event</key>
-			<string>Last day to drop full-term and session 1 courses, 11:59 p.m.</string>
-			<key>Type</key>
-			<string>7</string>
-		</dict>
-		<key>d3</key>
-		<dict>
-			<key>Date</key>
-			<string>October 3, Thursday</string>
-			<key>Event</key>
-			<string>Session-1 core classes end</string>
-			<key>Type</key>
-			<string>3</string>
-		</dict>
-		<key>e</key>
-		<dict>
-			<key>Date</key>
-			<string>October 7-12, Monday - Saturday</string>
-			<key>Event</key>
-			<string>Core final exam period. Elective classes meet</string>
-			<key>Type</key>
-			<string>4</string>
-		</dict>
-		<key>f</key>
-		<dict>
-			<key>Date</key>
-			<string>October 10, Thursday</string>
-			<key>Event</key>
-			<string>Elective classes end</string>
-			<key>Type</key>
-			<string>3</string>
-		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>October 11, Friday</string>
+			<string>September 5, Friday</string>
 			<key>Event</key>
-			<string>Session-1 elective final exam period</string>
+			<string>Core classes meet (attendance required)</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>9</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>October 14-18, Monday - Friday</string>
+			<string>September 17, Wednesday</string>
 			<key>Event</key>
-			<string>Global Network Week. MGT 401 meets (all sessions mandatory for this core course)</string>
+			<string>Last day to drop full-term and session-1 courses, 11:59 p.m.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>October 21, Monday</string>
+			<string>October 9, Thursday</string>
 			<key>Event</key>
-			<string>Classes resume</string>
+			<string>Session-1 elective classes end</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>9</string>
 		</dict>
 		<key>m2</key>
 		<dict>
 			<key>Date</key>
-			<string>October 28, Monday</string>
+			<string>October 10-14, Friday - Tuesday</string>
 			<key>Event</key>
-			<string>Last day to add session 2 courses, 11:59 p.m.</string>
+			<string>Session-1 elective final exam period</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>5</string>
 		</dict>
 		<key>m3</key>
 		<dict>
 			<key>Date</key>
-			<string>November 11, Monday</string>
+			<string>October 13-17, Monday - Friday</string>
 			<key>Event</key>
-			<string>Last day to drop session 2 courses, 11:59 p.m.</string>
+			<string>Global Network Week; elective classes do not meet</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>n</key>
 		<dict>
 			<key>Date</key>
-			<string>November 22, Friday</string>
+			<string>October 16, Thursday</string>
 			<key>Event</key>
-			<string>Thanksgiving recess begins</string>
+			<string>Session-1 core classes end</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>3</string>
 		</dict>
 		<key>o</key>
 		<dict>
 			<key>Date</key>
-			<string>December 2, Monday</string>
+			<string>October 17-19, Friday - Sunday</string>
+			<key>Event</key>
+			<string>Core final exam period</string>
+			<key>Type</key>
+			<string>5</string>
+		</dict>
+		<key>p</key>
+		<dict>
+			<key>Date</key>
+			<string>October 20, Monday</string>
+			<key>Event</key>
+			<string>Classes resume; Session-2 classes begin</string>
+			<key>Type</key>
+			<string>2</string>
+		</dict>
+		<key>q</key>
+		<dict>
+			<key>Date</key>
+			<string>October 27, Monday</string>
+			<key>Event</key>
+			<string>Last day to add session-2 courses, 11:59 p.m.</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>r</key>
+		<dict>
+			<key>Date</key>
+			<string>October 31, Friday</string>
+			<key>Event</key>
+			<string>Session-1 grades due, 5 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>s</key>
+		<dict>
+			<key>Date</key>
+			<string>November 10, Monday</string>
+			<key>Event</key>
+			<string>Last day to drop session-2 courses, 11:59 p.m.</string>
+			<key>Type</key>
+			<string>7</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>November 21, Friday</string>
+			<key>Event</key>
+			<string>November recess begins</string>
+			<key>Type</key>
+			<string>1</string>
+		</dict>
+		<key>u</key>
+		<dict>
+			<key>Date</key>
+			<string>December 1, Monday</string>
 			<key>Event</key>
 			<string>Classes resume</string>
 			<key>Type</key>
 			<string>2</string>
 		</dict>
-		<key>p</key>
+		<key>v</key>
 		<dict>
 			<key>Date</key>
-			<string>December 10, Tuesday</string>
+			<string>December 9, Tuesday</string>
 			<key>Event</key>
 			<string>Classes end</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
-		<key>q</key>
+		<key>w</key>
 		<dict>
 			<key>Date</key>
-			<string>December 11, Wednesday</string>
+			<string>December 10, Wednesday</string>
 			<key>Event</key>
-			<string>Classes that meet on Wednesdays only end</string>
+			<string>Session-2 classes that meet on Wednesdays only end</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>9</string>
 		</dict>
-		<key>r</key>
+		<key>x</key>
 		<dict>
 			<key>Date</key>
-			<string>December 12, Thursday</string>
+			<string>December 10-16, Wednesday - Tuesday</string>
 			<key>Event</key>
-			<string>Classes that meet on Thursdays only end</string>
+			<string>Final exam period (elective &amp; core)</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>5</string>
 		</dict>
-		<key>s</key>
+		<key>y</key>
 		<dict>
 			<key>Date</key>
-			<string>December 11-17, Wednesday - Tuesday</string>
+			<string>December 11, Thursday</string>
 			<key>Event</key>
-			<string>Final exam period</string>
+			<string>Session-2 classes that meet on Thursdays only end</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>9</string>
 		</dict>
-		<key>t</key>
+		<key>z</key>
 		<dict>
 			<key>Date</key>
-			<string>December 18, Wednesday</string>
+			<string>December 17, Wednesday</string>
 			<key>Event</key>
 			<string>Winter recess begins</string>
 			<key>Type</key>
@@ -195,205 +249,232 @@
 		<key>0</key>
 		<dict>
 			<key>Term</key>
-			<string>Spring 2014</string>
+			<string>Spring 2015</string>
 		</dict>
 		<key>a</key>
 		<dict>
 			<key>Date</key>
-			<string>January 6-10, Monday - Friday</string>
+			<string>January 2, Friday</string>
 			<key>Event</key>
-			<string>Super Week (investment banking interviews)</string>
+			<string>Fall term grades due, 5 p.m.</string>
 			<key>Type</key>
 			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
 			<key>Date</key>
-			<string>January 13, Monday</string>
+			<string>January 5-9, Monday - Friday</string>
 			<key>Event</key>
-			<string>Spring term courses begin. Add/Drop begins</string>
+			<string>SuperWeek (investment banking interviews)</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>0</string>
 		</dict>
 		<key>c</key>
 		<dict>
 			<key>Date</key>
-			<string>January 17, Friday</string>
+			<string>January 12, Monday</string>
 			<key>Event</key>
-			<string>Make-up day for Monday classes (electives &amp; core)</string>
+			<string>Spring-term classes begin; Add/Drop begins</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>2</string>
 		</dict>
 		<key>d</key>
 		<dict>
 			<key>Date</key>
-			<string>January 20, Monday</string>
+			<string>January 16, Friday</string>
 			<key>Event</key>
-			<string>Martin Luther King Day. Classes do not meet. Administrative offices closed</string>
+			<string>Make-up day: Monday classes meet (electives &amp; core)</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>9</string>
 		</dict>
 		<key>d2</key>
 		<dict>
 			<key>Date</key>
-			<string>January 21, Tuesday</string>
+			<string>January 19, Monday</string>
 			<key>Event</key>
-			<string>Last day to add full-term and session 1 courses, 11:59 p.m.</string>
+			<string>Martin Luther King, Jr. Day; classes do not meet; administrative offices closed</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>1</string>
 		</dict>
 		<key>d3</key>
 		<dict>
 			<key>Date</key>
-			<string>February 3, Monday</string>
+			<string>January 20, Tuesday</string>
 			<key>Event</key>
-			<string>Last day to drop full-term and session 1 courses, 11:59 p.m.</string>
+			<string>Last day to add full-term and session-1 courses, 11:59 p.m.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>e</key>
 		<dict>
 			<key>Date</key>
-			<string>February 14, Friday</string>
+			<string>February 2, Monday</string>
 			<key>Event</key>
-			<string>MGT 425 The Global Macroeconomy meets (attendance required for this core course)</string>
+			<string>Last day to drop full-term and session-1 courses, 11:59 p.m.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>f</key>
 		<dict>
 			<key>Date</key>
-			<string>February 25, Tuesday</string>
+			<string>February 13, Friday</string>
 			<key>Event</key>
-			<string>Session 1 courses end</string>
+			<string>MGT 425 The Global Macroeconomy meets (attendance required for this core course)</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>9</string>
 		</dict>
 		<key>g</key>
 		<dict>
 			<key>Date</key>
-			<string>February 26, Wednesday</string>
+			<string>February 24, Tuesday</string>
 			<key>Event</key>
-			<string>Classes that meet on Wednesdays only end</string>
+			<string>Classes end</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>h</key>
 		<dict>
 			<key>Date</key>
-			<string>February 27, Thursday</string>
+			<string>February 25, Wednesday</string>
 			<key>Event</key>
-			<string>Classes that meet on Thursdays only end</string>
+			<string>Classes that meet on Wednesdays only end</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>i</key>
 		<dict>
 			<key>Date</key>
-			<string>February 26-28, Wed - Fri</string>
+			<string>February 25-27, Wednesday - Friday</string>
 			<key>Event</key>
-			<string>Examination period</string>
+			<string>Session-1 final exam period (electives &amp; core)</string>
 			<key>Type</key>
 			<string>4</string>
 		</dict>
 		<key>j</key>
 		<dict>
 			<key>Date</key>
-			<string>March 1, Saturday</string>
+			<string>February 26, Thursday</string>
+			<key>Event</key>
+			<string>Classes that meet on Thursdays only end</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>k</key>
+		<dict>
+			<key>Date</key>
+			<string>February 28, Saturday</string>
 			<key>Event</key>
 			<string>Spring recess begins</string>
 			<key>Type</key>
 			<string>1</string>
 		</dict>
-		<key>k</key>
-		<dict>
-			<key>Date</key>
-			<string>March 11, Tuesday</string>
-			<key>Event</key>
-			<string>Class of 2015 International Experience begins</string>
-			<key>Type</key>
-			<string>9</string>
-		</dict>
 		<key>l</key>
 		<dict>
 			<key>Date</key>
-			<string>March 20, Thursday</string>
+			<string>March 13, Friday</string>
 			<key>Event</key>
-			<string>Class of 2014 International Experience ends</string>
+			<string>Session-1 grades due, 5 p.m.</string>
 			<key>Type</key>
 			<string>9</string>
 		</dict>
 		<key>m</key>
 		<dict>
 			<key>Date</key>
-			<string>March 24, Monday</string>
+			<string>March 19, Thursday</string>
 			<key>Event</key>
-			<string>Classes resume</string>
+			<string>Class of 2016 Global Experience ends</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>3</string>
 		</dict>
 		<key>m2</key>
 		<dict>
 			<key>Date</key>
-			<string>March 31, Monday</string>
+			<string>March 23, Monday</string>
 			<key>Event</key>
-			<string>Last day to add session 2 courses, 11:59 p.m.</string>
+			<string>Classes resume; session-2 classes begin</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>2</string>
 		</dict>
 		<key>m3</key>
 		<dict>
 			<key>Date</key>
-			<string>April 14, Monday</string>
+			<string>March 30, Monday</string>
 			<key>Event</key>
-			<string>Last day to drop session 2 courses, 11:59 p.m.</string>
+			<string>Last day to add session-2 courses, 11:59 p.m.</string>
 			<key>Type</key>
 			<string>7</string>
 		</dict>
 		<key>n</key>
 		<dict>
 			<key>Date</key>
-			<string>May 6, Tuesday</string>
+			<string>April 13, Monday</string>
 			<key>Event</key>
-			<string>Classes end</string>
+			<string>Last day to drop session-2 courses, 11:59 p.m.</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>7</string>
 		</dict>
 		<key>o</key>
 		<dict>
 			<key>Date</key>
-			<string>May 7, Wednesday</string>
+			<string>May 5, Tuesday</string>
 			<key>Event</key>
-			<string>Classes that meet on Wednesdays only end</string>
+			<string>Classes end</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>p</key>
 		<dict>
 			<key>Date</key>
-			<string>May 8, Thursday</string>
+			<string>May 6, Wednesday</string>
 			<key>Event</key>
-			<string>Classes that meet on Thursdays only end</string>
+			<string>Session-2 classes that meet on Wednesdays only end</string>
 			<key>Type</key>
 			<string>3</string>
 		</dict>
 		<key>q</key>
 		<dict>
 			<key>Date</key>
-			<string>May 7-13, Wednesday - Tuesday</string>
+			<string>May 6-12, Wednesday - Tuesday</string>
 			<key>Event</key>
-			<string>Examination period</string>
+			<string>Final exam period (electives &amp; core)</string>
 			<key>Type</key>
 			<string>4</string>
 		</dict>
 		<key>r</key>
 		<dict>
 			<key>Date</key>
-			<string>May 19, Monday</string>
+			<string>May 7, Thursday</string>
+			<key>Event</key>
+			<string>Session-2 classes that meet on Thursdays only end</string>
+			<key>Type</key>
+			<string>3</string>
+		</dict>
+		<key>s</key>
+		<dict>
+			<key>Date</key>
+			<string>May 13, Wednesday</string>
+			<key>Event</key>
+			<string>Graduating student spring-term grades due, 5 p.m.</string>
+			<key>Type</key>
+			<string>9</string>
+		</dict>
+		<key>t</key>
+		<dict>
+			<key>Date</key>
+			<string>May 18, Monday</string>
 			<key>Event</key>
 			<string>University Commencement</string>
 			<key>Type</key>
 			<string>8</string>
+		</dict>
+		<key>u</key>
+		<dict>
+			<key>Date</key>
+			<string>May 27, Wednesday</string>
+			<key>Event</key>
+			<string>Continuing student spring-term grades due, 5 p.m.</string>
+			<key>Type</key>
+			<string>0</string>
 		</dict>
 	</dict>
 </dict>

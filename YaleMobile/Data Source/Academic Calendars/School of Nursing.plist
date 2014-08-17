@@ -34,7 +34,7 @@
 			<key>Event</key>
 			<string>Fall online course registration begins, 9:00am</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>7</string>
 		</dict>
 		<key>d</key>
 		<dict>
@@ -70,7 +70,7 @@
 			<key>Event</key>
 			<string>Deadline for graduating PhD students to defend their dissertation for December graduation</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>7</string>
 		</dict>
 		<key>h</key>
 		<dict>
@@ -79,7 +79,7 @@
 			<key>Event</key>
 			<string>No classes, Labor Day</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>1</string>
 		</dict>
 		<key>i</key>
 		<dict>
@@ -97,7 +97,7 @@
 			<key>Event</key>
 			<string>Deadline for PhD dissertations to be considered by the Degree Committees for award of degree in December. Final day to file petitions for PhD degrees to be awarded in December</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>7</string>
 		</dict>
 		<key>k</key>
 		<dict>
@@ -106,7 +106,7 @@
 			<key>Event</key>
 			<string>Fall recess begins, 8:00am (all programs)</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>1</string>
 		</dict>
 		<key>l</key>
 		<dict>
@@ -115,7 +115,7 @@
 			<key>Event</key>
 			<string>Fall recess ends, 8:00am (all programs)</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>2</string>
 		</dict>
 		<key>m</key>
 		<dict>
@@ -124,7 +124,7 @@
 			<key>Event</key>
 			<string>Thanksgiving recess begins, 8:00am (all programs)</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>1</string>
 		</dict>
 		<key>n</key>
 		<dict>
@@ -133,7 +133,7 @@
 			<key>Event</key>
 			<string>Thanksgiving recess ends, 8:00am (all programs)</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>2</string>
 		</dict>
 		<key>o</key>
 		<dict>
@@ -142,7 +142,7 @@
 			<key>Event</key>
 			<string>PhD program classes end, 5:30pm</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>3</string>
 		</dict>
 		<key>p</key>
 		<dict>
@@ -151,7 +151,7 @@
 			<key>Event</key>
 			<string>PhD program examinations begin, 9:00am</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>4</string>
 		</dict>
 		<key>q</key>
 		<dict>
@@ -160,7 +160,7 @@
 			<key>Event</key>
 			<string>Master’s, post master’s &amp; DNP program classes end, 5:00pm</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>3</string>
 		</dict>
 		<key>r</key>
 		<dict>
@@ -169,7 +169,7 @@
 			<key>Event</key>
 			<string>Master’s, post master’s &amp; DNP program final exams</string>
 			<key>Type</key>
-			<string>5</string>
+			<string>4</string>
 		</dict>
 		<key>s</key>
 		<dict>
@@ -187,7 +187,7 @@
 			<key>Event</key>
 			<string>Master’s, post master’s &amp; DNP program winter recess begins</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 	</dict>
 	<key>2</key>
@@ -204,7 +204,7 @@
 			<key>Event</key>
 			<string>Spring term begins for NMPL &amp; DNP programs, 8:00am</string>
 			<key>Type</key>
-			<string>0</string>
+			<string>2</string>
 		</dict>
 		<key>b</key>
 		<dict>
@@ -303,7 +303,7 @@
 			<key>Event</key>
 			<string>DNP Capstone Presentations</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>7</string>
 		</dict>
 		<key>m</key>
 		<dict>
@@ -312,7 +312,7 @@
 			<key>Event</key>
 			<string>PhD program classes end, 5:30pm</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>3</string>
 		</dict>
 		<key>n</key>
 		<dict>
@@ -321,7 +321,7 @@
 			<key>Event</key>
 			<string>PhD program examinations begin, 9:00am</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>4</string>
 		</dict>
 		<key>o</key>
 		<dict>
@@ -330,7 +330,7 @@
 			<key>Event</key>
 			<string>Master’s, post master’s &amp; DNP program classes end, 8:00pm</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>3</string>
 		</dict>
 		<key>p</key>
 		<dict>
@@ -339,7 +339,7 @@
 			<key>Event</key>
 			<string>Master’s, post master’s &amp; DNP program final exams begin, 8:00am</string>
 			<key>Type</key>
-			<string>5</string>
+			<string>4</string>
 		</dict>
 		<key>q</key>
 		<dict>
@@ -348,7 +348,7 @@
 			<key>Event</key>
 			<string>PhD program examinations end, 5:30pm</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>5</string>
 		</dict>
 		<key>r</key>
 		<dict>
@@ -357,7 +357,7 @@
 			<key>Event</key>
 			<string>Deadline for master’s portfolio to be submitted to academic advisors by graduating clinical master’s students</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>s</key>
 		<dict>
@@ -366,7 +366,7 @@
 			<key>Event</key>
 			<string>Spring terms ends, 8:00 pm (all programs)</string>
 			<key>Type</key>
-			<string>8</string>
+			<string>3</string>
 		</dict>
 		<key>t</key>
 		<dict>
@@ -375,7 +375,7 @@
 			<key>Event</key>
 			<string>Approval of clinical master’s portfolio submitted by academic advisors</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>u</key>
 		<dict>
@@ -384,7 +384,7 @@
 			<key>Event</key>
 			<string>University Commencement</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>8</string>
 		</dict>
 	</dict>
 	<key>3</key>
@@ -401,7 +401,7 @@
 			<key>Event</key>
 			<string>Summer term begins, 8:00am</string>
 			<key>Type</key>
-			<string>0</string>
+			<string>2</string>
 		</dict>
 		<key>b</key>
 		<dict>

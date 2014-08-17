@@ -16,7 +16,7 @@
 			<key>Event</key>
 			<string>Incoming First-Year M.Arch. I 1001c classes begin, 9 a.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>0</string>
 		</dict>
 		<key>b</key>
 		<dict>
@@ -25,7 +25,7 @@
 			<key>Event</key>
 			<string>1001c classes end, 5:20 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>3</string>
 		</dict>
 		<key>c</key>
 		<dict>
@@ -34,7 +34,7 @@
 			<key>Event</key>
 			<string>Shop Orientation for incoming students begins, 9 a.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>0</string>
 		</dict>
 		<key>d</key>
 		<dict>
@@ -43,7 +43,7 @@
 			<key>Event</key>
 			<string>Shop Orientation ends, 5 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>0</string>
 		</dict>
 		<key>e</key>
 		<dict>
@@ -52,7 +52,7 @@
 			<key>Event</key>
 			<string>Fall Term Undergraduate classes begin. University Orientation for incoming students,10:30 a.m.–12 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>f</key>
 		<dict>
@@ -70,7 +70,7 @@
 			<key>Event</key>
 			<string>Fall-term Graduate non-studio classes begin. Friday classes do not meet; Monday classes meet instead</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>h</key>
 		<dict>
@@ -79,7 +79,7 @@
 			<key>Event</key>
 			<string>No classes. Labor Day.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>i</key>
 		<dict>
@@ -97,7 +97,7 @@
 			<key>Event</key>
 			<string>Last opportunity for students to add courses, 4:00pm</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>k</key>
 		<dict>
@@ -106,7 +106,7 @@
 			<key>Event</key>
 			<string>Advanced Studio Travel Week</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>l</key>
 		<dict>
@@ -115,7 +115,7 @@
 			<key>Event</key>
 			<string>Last opportunity for students to drop courses without recorded grade of Withdraw, 4:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>m</key>
 		<dict>
@@ -124,7 +124,7 @@
 			<key>Event</key>
 			<string>Midterm week</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>4</string>
 		</dict>
 		<key>n</key>
 		<dict>
@@ -133,7 +133,7 @@
 			<key>Event</key>
 			<string>Open House for Prospective Students</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>0</string>
 		</dict>
 		<key>o</key>
 		<dict>
@@ -142,7 +142,7 @@
 			<key>Event</key>
 			<string>Fall recess begins, 5:20 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>p</key>
 		<dict>
@@ -151,7 +151,7 @@
 			<key>Event</key>
 			<string>No Classes - Fall recess</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>q</key>
 		<dict>
@@ -160,7 +160,7 @@
 			<key>Event</key>
 			<string>Last opportunity for students to drop courses with recorded grade of Withdraw, 4:00 p.m. Fall-term classes end, 5:20 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>r</key>
 		<dict>
@@ -169,7 +169,7 @@
 			<key>Event</key>
 			<string>Design Studio Jury Week</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>4</string>
 		</dict>
 		<key>s</key>
 		<dict>
@@ -178,7 +178,7 @@
 			<key>Event</key>
 			<string>Last date to submit Spring 2015 Independent Study requests, 4:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>t</key>
 		<dict>
@@ -187,7 +187,7 @@
 			<key>Event</key>
 			<string>Graduate Non-studio Examination Period</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>4</string>
 		</dict>
 		<key>u</key>
 		<dict>
@@ -196,7 +196,7 @@
 			<key>Event</key>
 			<string>Winter recess begins, 5:20 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>v</key>
 		<dict>
@@ -205,7 +205,7 @@
 			<key>Event</key>
 			<string>Last possible due date for final papers. Studio grades and evaluations of students due.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 	</dict>
 	<key>2</key>
@@ -222,7 +222,7 @@
 			<key>Event</key>
 			<string>Closing date for applications for admission in 2014. Non-studio grades and evaluations of students due. Portfolios due, for those req&apos;d, 4:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>b</key>
 		<dict>
@@ -231,7 +231,7 @@
 			<key>Event</key>
 			<string>Registration begins, 9:00 a.m. Advanced Studio Lottery, 11 a.m. Spring-term Graduate Studios begin, 2:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>c</key>
 		<dict>
@@ -240,7 +240,7 @@
 			<key>Event</key>
 			<string>Spring-term Graduate Non-Studio classes begin, 8:30 a.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>d</key>
 		<dict>
@@ -249,7 +249,7 @@
 			<key>Event</key>
 			<string>Friday classes do not meet; Monday classes meet instead</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>e</key>
 		<dict>
@@ -258,7 +258,7 @@
 			<key>Event</key>
 			<string>No classes. Martin Luther King, Jr. Holiday (Regular classes for this day to meet on Friday, Jan 16)</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>f</key>
 		<dict>
@@ -267,7 +267,7 @@
 			<key>Event</key>
 			<string>Last opportunity to add courses, 4:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>g</key>
 		<dict>
@@ -276,7 +276,7 @@
 			<key>Event</key>
 			<string>Advanced Studio Travel Week</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>h</key>
 		<dict>
@@ -285,7 +285,7 @@
 			<key>Event</key>
 			<string>Last opportunity to drop courses without recorded grade of Withdraw, 4:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>i</key>
 		<dict>
@@ -294,7 +294,7 @@
 			<key>Event</key>
 			<string>Midterm Week</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>4</string>
 		</dict>
 		<key>j</key>
 		<dict>
@@ -303,7 +303,7 @@
 			<key>Event</key>
 			<string>No classes - Spring recess</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>k</key>
 		<dict>
@@ -312,7 +312,7 @@
 			<key>Event</key>
 			<string>Classes resume</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>l</key>
 		<dict>
@@ -330,7 +330,7 @@
 			<key>Event</key>
 			<string>Last opportunity to drop courses with recorded grade of Withdraw, 4:00 p.m. Spring-term classes (except 1013b) end, 5:20 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>n</key>
 		<dict>
@@ -339,7 +339,7 @@
 			<key>Event</key>
 			<string>Design Studio Jury Week</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>4</string>
 		</dict>
 		<key>o</key>
 		<dict>
@@ -348,7 +348,7 @@
 			<key>Event</key>
 			<string>1013c fieldwork begins, Yale Building Project</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>p</key>
 		<dict>
@@ -366,7 +366,7 @@
 			<key>Event</key>
 			<string>Last date to submit Fall 2015 Independent Study requests, 4:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>r</key>
 		<dict>
@@ -375,7 +375,7 @@
 			<key>Event</key>
 			<string>Graduate Non-studio Final Examination Period, except for 2022b</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>4</string>
 		</dict>
 		<key>s</key>
 		<dict>
@@ -384,7 +384,7 @@
 			<key>Event</key>
 			<string>Last possible due date for final papers and Final Examination Period for 2022b</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>t</key>
 		<dict>
@@ -392,10 +392,9 @@
 			<string>May 11, Monday</string>
 			<key>Event</key>
 			<string>M.Arch I 2nd-yr, M.Arch II 1st-yr, and graduating students&apos; portfolios due, 4:00 p.m.
-            
-            Non-studio grades and evaluations of students due</string>
+Non-studio grades and evaluations of students due</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>7</string>
 		</dict>
 		<key>u</key>
 		<dict>
@@ -404,7 +403,7 @@
 			<key>Event</key>
 			<string>1017c classes begin, 9:30 a.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>v</key>
 		<dict>
@@ -413,7 +412,7 @@
 			<key>Event</key>
 			<string>1291c classes begin in Rome</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>w</key>
 		<dict>
@@ -422,7 +421,7 @@
 			<key>Event</key>
 			<string>Reception, year-End Exhibition, 5:00-7:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>0</string>
 		</dict>
 		<key>x</key>
 		<dict>
@@ -431,7 +430,7 @@
 			<key>Event</key>
 			<string>University Commencement</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>8</string>
 		</dict>
 		<key>y</key>
 		<dict>
@@ -440,7 +439,7 @@
 			<key>Event</key>
 			<string>1291c classes end in Rome</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>3</string>
 		</dict>
 		<key>z</key>
 		<dict>
@@ -449,7 +448,7 @@
 			<key>Event</key>
 			<string>M.Arch. I, first-year spring-term 1013c and 1017c classes end, 5:20 pm.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>3</string>
 		</dict>
 	</dict>
 </dict>

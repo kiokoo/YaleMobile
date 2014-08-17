@@ -34,7 +34,7 @@
 			<key>Event</key>
 			<string>Labor Day. No classes meet.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>1</string>
 		</dict>
 		<key>d</key>
 		<dict>
@@ -43,7 +43,7 @@
 			<key>Event</key>
 			<string>Registration for all returning students.</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>0</string>
 		</dict>
 		<key>e</key>
 		<dict>
@@ -52,7 +52,7 @@
 			<key>Event</key>
 			<string>Fall term begins, 8:10 a.m. Classes begin, 8:10 a.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>2</string>
 		</dict>
 		<key>f</key>
 		<dict>
@@ -106,7 +106,7 @@
 			<key>Event</key>
 			<string>Only Friday classes will meet.</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>7</string>
 		</dict>
 		<key>l</key>
 		<dict>
@@ -115,7 +115,7 @@
 			<key>Event</key>
 			<string>Only Monday classes will meet. Thirteen-week session ends.</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>7</string>
 		</dict>
 		<key>m</key>
 		<dict>
@@ -124,7 +124,7 @@
 			<key>Event</key>
 			<string>Classes end; winter recess begins, 6 p.m.</string>
 			<key>Type</key>
-			<string>5</string>
+			<string>1</string>
 		</dict>
 		<key>n</key>
 		<dict>
@@ -133,7 +133,7 @@
 			<key>Event</key>
 			<string>Recess ends; examination period begins, 8:30 a.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>4</string>
 		</dict>
 		<key>o</key>
 		<dict>
@@ -142,7 +142,7 @@
 			<key>Event</key>
 			<string>Examination period ends; fall term ends, 5:00 p.m.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>5</string>
 		</dict>
 	</dict>
 	<key>2</key>
@@ -159,7 +159,7 @@
 			<key>Event</key>
 			<string>Martin Luther King Holiday; no classes.</string>
 			<key>Type</key>
-			<string>0</string>
+			<string>1</string>
 		</dict>
 		<key>b</key>
 		<dict>
@@ -177,7 +177,7 @@
 			<key>Event</key>
 			<string>Add/drop period begins, 8:30 a.m.</string>
 			<key>Type</key>
-			<string>7</string>
+			<string>9</string>
 		</dict>
 		<key>d</key>
 		<dict>
@@ -186,7 +186,7 @@
 			<key>Event</key>
 			<string>Add/drop period closes, 4:30 p.m.</string>
 			<key>Type</key>
-			<string>1</string>
+			<string>7</string>
 		</dict>
 		<key>e</key>
 		<dict>
@@ -195,7 +195,7 @@
 			<key>Event</key>
 			<string>Spring recess begins, 6 p.m.</string>
 			<key>Type</key>
-			<string>2</string>
+			<string>1</string>
 		</dict>
 		<key>f</key>
 		<dict>
@@ -204,7 +204,7 @@
 			<key>Event</key>
 			<string>Spring recess ends; classes resume, 8:10 a.m.</string>
 			<key>Type</key>
-			<string>3</string>
+			<string>2</string>
 		</dict>
 		<key>g</key>
 		<dict>
@@ -213,7 +213,7 @@
 			<key>Event</key>
 			<string>Classes end.</string>
 			<key>Type</key>
-			<string>4</string>
+			<string>3</string>
 		</dict>
 		<key>h</key>
 		<dict>
@@ -222,7 +222,7 @@
 			<key>Event</key>
 			<string>Reading period begins.</string>
 			<key>Type</key>
-			<string>5</string>
+			<string>2</string>
 		</dict>
 		<key>i</key>
 		<dict>
@@ -240,7 +240,7 @@
 			<key>Event</key>
 			<string>Scheduled examinations end, 5 p.m.</string>
 			<key>Type</key>
-			<string>5</string>
+			<string>6</string>
 		</dict>
 		<key>k</key>
 		<dict>
@@ -249,7 +249,7 @@
 			<key>Event</key>
 			<string>Self-scheduled examinations end, 5 p.m.</string>
 			<key>Type</key>
-			<string>8</string>
+			<string>6</string>
 		</dict>
 		<key>l</key>
 		<dict>
@@ -258,7 +258,7 @@
 			<key>Event</key>
 			<string>Rescheduled examinations end; spring term ends, 5 p.m.</string>
 			<key>Type</key>
-			<string>0</string>
+			<string>6</string>
 		</dict>
 		<key>m</key>
 		<dict>
@@ -267,7 +267,7 @@
 			<key>Event</key>
 			<string>University Commencement</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>8</string>
 		</dict>
 		<key>n</key>
 		<dict>
@@ -276,7 +276,7 @@
 			<key>Event</key>
 			<string>Degrees voted by faculty.</string>
 			<key>Type</key>
-			<string>9</string>
+			<string>0</string>
 		</dict>
 	</dict>
 </dict>
