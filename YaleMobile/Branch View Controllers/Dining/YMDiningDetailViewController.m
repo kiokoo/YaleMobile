@@ -30,7 +30,6 @@
   [self.view addSubview:backgroundView];
   [self.view sendSubviewToBack:backgroundView];
   
-  self.tableView1.backgroundColor = [UIColor clearColor];
   self.navigationController.navigationBar.translucent = YES;
   self.navigationController.navigationBar.alpha = 0.7;
   [self updateTableHeader];
@@ -42,8 +41,8 @@
   
   float height = ([[UIScreen mainScreen] bounds].size.height == 568) ? 568 : 460;
   UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, height)];
-  view.contentMode = UIViewContentModeScaleToFill;
   view.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_overlay.png", self.abbr]];
+  view.contentMode = UIViewContentModeScaleToFill;
   [self.view insertSubview:view belowSubview:self.tableView1];
   self.overlay = view;
   view.alpha = 0;
