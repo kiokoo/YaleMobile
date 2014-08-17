@@ -111,6 +111,7 @@
 
 - (void)topDidReset:(id)sender
 {
+  self.mapView1.scrollEnabled = YES;
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Shuttle Refresh"]) {
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Shuttle Refresh"];
     [self.refresh1 setSelected:NO];
@@ -120,7 +121,6 @@
     [self loadData];
     
     // re-enable scrolling on the mapView
-    self.mapView1.scrollEnabled = YES;
     if ([self.view.gestureRecognizers containsObject:self.slidingViewController.panGesture]) {
       [self.view removeGestureRecognizer:self.slidingViewController.panGesture];
     }
