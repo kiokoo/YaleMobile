@@ -61,10 +61,6 @@
   
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Shuttle Refresh"];
 
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(topDidReset:)
-                                               name:ECSlidingViewControllerTopDidResetNotification
-                                             object:self.slidingViewController];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -100,6 +96,11 @@
     }];
   }
   
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(topDidReset:)
+                                               name:ECSlidingViewControllerTopDidResetNotification
+                                             object:self.slidingViewController];
+  
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -107,6 +108,7 @@
   DLog(@"Disappeared");
   [self.refresh1 setSelected:NO];
   [self removeCalloutViewWithAnimation];
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)topDidReset:(id)sender
@@ -146,16 +148,7 @@
     NSString *r = [Route getActiveRoutesInManagedObjectContext:self.db.managedObjectContext];
     self.routesList = r;
     if (!r) {
-      ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-      [CSNotificationView notificationViewWithParentViewController:self.navigationController
-                                                         tintColor:[YMTheme notificationWarningTintColor]
-                                                             image:nil
-                                                           message:@"No active route selected"];
-      
-      CSNotificationView *notificationView =
-        ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-      
-      [notificationView setVisible:YES animated:YES completion:nil];
+      [YMGlobalHelper showNotificationInViewController:self.navigationController message:@"No active route selected" tintColor:[YMTheme notificationWarningTintColor]];
       
       [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
       return;
@@ -184,7 +177,7 @@
 
 - (void)alertViewCallback
 {
-  [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+  [YMGlobalHelper hideNotificationView];
 }
 
 - (void)addSegments

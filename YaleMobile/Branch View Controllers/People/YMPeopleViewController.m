@@ -97,9 +97,7 @@
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     
     if ([responseString rangeOfString:@"Your search results:"].location != NSNotFound) {
@@ -128,15 +126,9 @@
     [alert show];
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:self.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Searching..."];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:self.navigationController
+                                           message:@"Searching..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [operation start];
 }
@@ -241,9 +233,9 @@
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+
+    [YMGlobalHelper hideNotificationView];
+    
     NSString *responseString = operation.responseString;
     self.individualData = [YMServerCommunicator getInformationForPerson:responseString];
     [self performSegueWithIdentifier:@"People Detail Segue" sender:self];
@@ -254,15 +246,9 @@
     [alert show];
   }];
     
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:self.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Loading..."];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  [notificationView setVisible:YES animated:YES completion:nil];
-  [notificationView setShowingActivity:YES];
+  [YMGlobalHelper showNotificationInViewController:self.navigationController
+                                           message:@"Loading..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [operation start];
 }

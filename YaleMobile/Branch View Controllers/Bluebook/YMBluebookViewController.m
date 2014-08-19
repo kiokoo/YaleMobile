@@ -171,10 +171,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
       svc.raw = responseString;
       [svc useDocument];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-      [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO
-                                                                                              animated:YES
-                                                                                            completion:nil];
-      
+      [YMGlobalHelper hideNotificationView];
       svc.tableView.scrollEnabled = YES;
       if (![YMServerCommunicator isCanceled]) {
         DLog(@"%@", operation.responseString);
@@ -191,7 +188,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
     [YMServerCommunicator resetCanceled];
     [[client operationQueue] addOperation:operation2];
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     svc.tableView.scrollEnabled = YES;
     if (![YMServerCommunicator isCanceled]) {
       [self showAlertViewWithTitle:@"Connection Error"
@@ -210,14 +207,9 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   [self prepareSubjectViewController:svc];
   
-  CSNotificationView *notificationView =
-  (((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-  [CSNotificationView notificationViewWithParentViewController:self.navigationController
-                                                     tintColor:[YMTheme notificationTintColor]
-                                                         image:nil
-                                                       message:@"Loading..."]);
-  [notificationView setVisible:YES animated:YES completion:nil];
-  [notificationView setShowingActivity:YES];
+  [YMGlobalHelper showNotificationInViewController:self.navigationController
+                                           message:@"Loading..."
+                                         tintColor:[YMTheme notificationTintColor]];
 
   svc.tableView.scrollEnabled = NO;
 

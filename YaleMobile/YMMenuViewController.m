@@ -86,22 +86,7 @@
   
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
   DLog(@"New VC: %@", newTopViewController);
-  /*
-   [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
-   CGRect frame = self.slidingViewController.topViewController.view.frame;
-   self.slidingViewController.topViewController = newTopViewController;
-   self.slidingViewController.topViewController.view.frame = frame;
-   [self.slidingViewController resetTopView];
-   }];
-   */
-  /*
-  [self.slidingViewController anchorTopViewToRightAnimated:YES onComplete:^{
-    CGRect frame = self.slidingViewController.topViewController.view.frame;
-    self.slidingViewController.topViewController = newTopViewController;
-    self.slidingViewController.topViewController.view.frame = frame;
-    [self.slidingViewController resetTopViewAnimated:YES];
-  }];
-   */
+
   UIViewController *oldTopViewController = self.slidingViewController.topViewController;
   CGFloat dX = self.view.frame.size.width - self.slidingViewController.anchorRightRevealAmount;
   [UIView animateWithDuration:0.2 animations:^{

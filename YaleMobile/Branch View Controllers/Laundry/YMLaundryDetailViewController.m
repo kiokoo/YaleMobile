@@ -81,12 +81,8 @@
 
 - (void)alertViewCallback
 {
-  CSNotificationView *notificationView =
-    [(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView];
-  [notificationView dismissWithStyle:CSNotificationViewStyleSuccess
-                             message:@"Done!"
-                            duration:0.1
-                            animated:YES];
+  [YMGlobalHelper hideNotificationView];
+  
   [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.selectedIndexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
@@ -214,14 +210,10 @@
     [[UIApplication sharedApplication] cancelLocalNotification:not];
     
     NSString *alertText = [NSString stringWithFormat:@"Alert cancelled for machine %@", machineID];
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-      [CSNotificationView notificationViewWithParentViewController:self.navigationController
-                                                         tintColor:[YMTheme notificationTintColor]
-                                                             image:nil
-                                                           message:alertText];
-    CSNotificationView *notificationView =
-      ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-    [notificationView setVisible:YES animated:YES completion:nil];
+
+    [YMGlobalHelper showNotificationInViewController:self.navigationController
+                                             message:alertText
+                                           tintColor:[YMTheme notificationTintColor]];
     
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
     return;
@@ -242,15 +234,8 @@
   [[UIApplication sharedApplication] scheduleLocalNotification:notification];
   
   NSString *alertText = [NSString stringWithFormat:@"Alert set for machine %@", machineID];
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:self.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:alertText];
-  [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:YES
-                                                                                          animated:YES
-                                                                                        completion:nil];
-  
+  [YMGlobalHelper showNotificationInViewController:self.navigationController message:alertText tintColor:[YMTheme notificationTintColor]];
+
   [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
 }
 

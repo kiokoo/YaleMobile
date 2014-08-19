@@ -11,6 +11,8 @@
 #import "YMMenuViewController.h"
 #import <ECSlidingConstants.h>
 
+#import "YMAppDelegate.h"
+
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation YMGlobalHelper
@@ -71,10 +73,7 @@
 + (void)setupMenuButtonForController:(UIViewController *)viewController
 {
   viewController.slidingViewController.anchorRightRevealAmount = 280.0f;
-  /* Deprecated code, check out the code below for new interface with
-   * ECSlidingVC.
-   [viewController.slidingViewController anchorTopViewTo:ECSlidingViewControllerTopViewPositionAnchoredRight];
-   */
+
   [viewController.slidingViewController anchorTopViewToRightAnimated:NO];
 }
 
@@ -255,5 +254,40 @@
                          attributes:@{NSFontAttributeName : font}
                             context:nil].size;
 }
+
++ (void)showNotificationInViewController:(UIViewController *)vc
+                                 message:(NSString *)msg
+                               tintColor:(UIColor *)color
+{
+  YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+  delegate.sharedNotificationView =
+    [CSNotificationView notificationViewWithParentViewController:vc
+                                                       tintColor:color
+                                                           image:nil
+                                                         message:msg];
+  [delegate.sharedNotificationView setVisible:YES animated:YES completion:nil];
+  [delegate.sharedNotificationView setShowingActivity:YES];
+}
+
++ (void)hideNotificationView
+{
+  __weak YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+  [delegate.sharedNotificationView setVisible:NO animated:YES completion:nil];
+  
+  /** 
+   * This is a slightly hacky work around to ensure notificationView is dealloc'ed
+   * when we don't need it anymore. This is very important because apparently CSNotificationView
+   * decided to put a KVO on the presenting view controller... and not to bother mentioning that
+   * in any documentation at all (aka bad).
+   */
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    // busy wait
+    while ([delegate.sharedNotificationView isShowing]);
+    // ref count is now 0
+    delegate.sharedNotificationView = nil;
+  });
+}
+
+
 
 @end

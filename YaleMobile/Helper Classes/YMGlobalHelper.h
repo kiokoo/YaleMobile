@@ -40,7 +40,9 @@
 
 + (CGSize)boundText:(NSString *)text withFont:(UIFont *)font andConstraintSize:(CGSize)size;
 
-// + (void)addEtchToSubtitleCell:(UITableViewCell *)cell;
-// + (void)addEtchToSimpleCell:(UITableViewCell *)cell;
++ (void)showNotificationInViewController:(UIViewController *)vc
+                                 message:(NSString *)msg
+                               tintColor:(UIColor *)color;
++ (void)hideNotificationView;
 
 @end

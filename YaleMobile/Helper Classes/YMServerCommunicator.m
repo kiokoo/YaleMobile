@@ -17,6 +17,7 @@
 #import <AFNetWorking.h>
 #import "AFHTTPRequestOperation.h"
 #import "YMTheme.h"
+#import "YMGlobalHelper.h"
 
 #import "YMAppDelegate.h"
 
@@ -72,9 +73,7 @@ static BOOL cancel = NO;
   NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://pantheon.yale.edu/~dl479/yalemobile/special.txt" parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSArray *array = [responseString componentsSeparatedByString:@"|"];
     completionBlock(array);
@@ -94,18 +93,14 @@ static BOOL cancel = NO;
   [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
     completionBlock([[dict objectForKey:@"data"] objectForKey:@"128"]);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView] setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach TransLoc server. Please check your Internet connection and try again."
@@ -113,17 +108,10 @@ static BOOL cancel = NO;
       [alert show];
     }
   }];
-
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Loading Routes"];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
   
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading routes"
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -138,9 +126,7 @@ static BOOL cancel = NO;
   [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
@@ -148,9 +134,7 @@ static BOOL cancel = NO;
     completionBlock([dict objectForKey:@"data"]);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     DLog(@"Segment Failed");
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach TransLoc server. Please check your Internet connection and try again."
@@ -158,15 +142,10 @@ static BOOL cancel = NO;
       [alert show];
     }
   }];
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Loading Paths..."];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading paths..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -181,14 +160,14 @@ static BOOL cancel = NO;
   [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
     completionBlock([dict objectForKey:@"data"]);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach TransLoc server. Please check your Internet connection and try again."
@@ -197,15 +176,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Loading Stops..."];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading stops..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -221,9 +194,7 @@ static BOOL cancel = NO;
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     if (controller) {
-      [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                              animated:YES
-                                                                                            completion:nil];
+      [YMGlobalHelper hideNotificationView];
     }
     NSString *responseString = operation.responseString;
     NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
@@ -233,9 +204,7 @@ static BOOL cancel = NO;
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     DLog(@"Shuttle Failed");
     if (controller) {
-      [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                              animated:YES
-                                                                                            completion:nil];
+      [YMGlobalHelper hideNotificationView];
     }
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
@@ -246,17 +215,10 @@ static BOOL cancel = NO;
     if (!controller) completionBlock(nil);
   }];
   if (controller) {
+    [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                             message:@"Loading shuttles..."
+                                           tintColor:[YMTheme notificationTintColor]];
     
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-      [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                         tintColor:[YMTheme notificationTintColor]
-                                                             image:nil
-                                                           message:@"Loading Shuttles..."];
-    CSNotificationView *notificationView =
-      ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-    
-    [notificationView setShowingActivity:YES];
-    [notificationView setVisible:YES animated:YES completion:nil];
   }
   [[manager operationQueue] addOperation:operation];
 }
@@ -271,7 +233,7 @@ static BOOL cancel = NO;
   [request setValue:TransLocAPIKey forHTTPHeaderField:@"X-Mashape-Key"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
@@ -279,7 +241,7 @@ static BOOL cancel = NO;
     if ([[dict objectForKey:@"data"] count]) completionBlock([[[dict objectForKey:@"data"] objectAtIndex:0] objectForKey:@"arrivals"]);
     else completionBlock(nil);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach TransLoc server. Please check your Internet connection and try again."
@@ -288,15 +250,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-  [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                     tintColor:[YMTheme notificationTintColor]
-                                                         image:nil
-                                                       message:@"Loading..."];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -310,14 +266,14 @@ static BOOL cancel = NO;
   NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"http://api.libcal.com/api_hours_today.php?iid=457&weeks=18&lid=%@&format=json", location] parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
     completionBlock([dict objectForKey:@"locations"]);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach Library Calendar server. Please check your Internet connection and try again."
@@ -326,16 +282,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                      tintColor:[YMTheme notificationTintColor]
-                                                          image:nil
-                                                        message:@"Loading Hours..."];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading hours..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -349,14 +298,14 @@ static BOOL cancel = NO;
   NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://www.yaledining.org/fasttrack/locations.cfm?version=2" parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
     completionBlock([dict objectForKey:@"DATA"]);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach Yale Dining server. Please check your Internet connection and try again."
@@ -365,16 +314,7 @@ static BOOL cancel = NO;
     }
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Loading..."];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController message:@"Loading..." tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -389,18 +329,14 @@ static BOOL cancel = NO;
   NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:[NSString stringWithFormat:@"http://www.yaledining.org/fasttrack/menus.cfm?location=%lu&version=2", (unsigned long)locationID] parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
     completionBlock([dict objectForKey:@"DATA"]);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach Yale Dining server. Please check your Internet connection and try again."
@@ -408,17 +344,10 @@ static BOOL cancel = NO;
       [alert show];
     }
   }];
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Loading Menu..."];
-  
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:NO completion:nil];
+
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading menu..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -432,16 +361,12 @@ static BOOL cancel = NO;
   NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://pantheon.yale.edu/~dl479/yalemobile/dining2.txt" parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSArray *array = [responseString componentsSeparatedByString:@"|"];
     completionBlock(array);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO
-                                                                                            animated:YES
-                                                                                          completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach Danqing's server. Please check your Internet connection and try again."
@@ -450,17 +375,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Loading..."];
-  
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -476,7 +393,7 @@ static BOOL cancel = NO;
   [request setValue:userAgent forHTTPHeaderField:@"User-Agent"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = [[operation.responseString stringByReplacingOccurrencesOfString:@"<span class=\"user-avail\">" withString:@"<td class=\"myclass\">"] stringByReplacingOccurrencesOfString:@"</span>" withString:@"</td>"];;
     if ([responseString rangeOfString:@"DEMO LOCATION"].location != NSNotFound) {
       if (((UITableViewController *)controller).refreshControl) [((UITableViewController *)controller).refreshControl endRefreshing];
@@ -502,7 +419,7 @@ static BOOL cancel = NO;
     completionBlock(roomData);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     if (((UITableViewController *)controller).refreshControl) [((UITableViewController *)controller).refreshControl endRefreshing];
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach laundry status server. Please check your Internet connection and try again."
@@ -531,7 +448,7 @@ static BOOL cancel = NO;
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     
     NSString *responseString = operation.responseString;
     if ([responseString rangeOfString:@"YALE UNIVERSITY"].location == NSNotFound) {
@@ -592,7 +509,7 @@ static BOOL cancel = NO;
     completionBlock(washers, dryers, machineStatuses);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     if (((UITableViewController *)controller).refreshControl) [((UITableViewController *)controller).refreshControl endRefreshing];
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach laundry status server. Please check your Internet connection and try again."
@@ -601,16 +518,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                       tintColor:[YMTheme notificationTintColor]
-                                                           image:nil
-                                                         message:@"Loading..."];
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -621,7 +531,7 @@ static BOOL cancel = NO;
   NSURLRequest *request = [NSURLRequest requestWithURL:url];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
     NSData *data = [responseString dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -641,20 +551,12 @@ static BOOL cancel = NO;
     
     completionBlock(results);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    [((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView setVisible:NO animated:YES completion:nil];
+    [YMGlobalHelper hideNotificationView];
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-  [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                     tintColor:[YMTheme notificationTintColor]
-                                                         image:nil
-                                                       message:@"Loading..."];
-  
-  CSNotificationView *notificationView =
-    ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView;
-  
-  [notificationView setShowingActivity:YES];
-  [notificationView setVisible:YES animated:YES completion:nil];
+  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+                                           message:@"Loading..."
+                                         tintColor:[YMTheme notificationTintColor]];
   
   [operation start];
 }

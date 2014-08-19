@@ -68,8 +68,7 @@ static NSString *OCICourseURL = @"http://students.yale.edu/oci/resultDetail.jsp?
         count++;
       } else {
         self.tableView.scrollEnabled = YES;
-        CSNotificationView *notificationView = [(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedNotificationView];
-        [notificationView setVisible:NO animated:YES completion:nil];
+        [YMGlobalHelper hideNotificationView];
       }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
       DLog(@"Fail. %@", error);
