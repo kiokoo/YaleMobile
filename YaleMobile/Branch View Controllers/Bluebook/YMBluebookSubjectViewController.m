@@ -110,8 +110,8 @@
 {
   YMBluebookSubjectCell *cell = (YMBluebookSubjectCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Subject Cell"];
 
-  cell.code1.textColor       = [YMTheme lightBlue];
-  cell.happens1.textColor    = [YMTheme reddishOrange];
+  cell.code1.textColor       = [YMTheme bluebookSubjectCodeTextColor];
+  cell.happens1.textColor    = [YMTheme laundryTimeAndBluebookHappensTextColor];
   cell.instructor1.textColor = [YMTheme lightGrey];
   cell.name1.textColor       = [YMTheme grey];
   

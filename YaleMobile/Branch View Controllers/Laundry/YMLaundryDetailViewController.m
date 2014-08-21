@@ -179,7 +179,7 @@
   cell.backgroundView.alpha = 0.6;
   
   cell.machineID1.textColor = [YMTheme grey];
-  cell.time1.textColor      = [YMTheme reddishOrange];
+  cell.time1.textColor      = [YMTheme laundryTimeAndBluebookHappensTextColor];
   cell.min1.textColor       = [YMTheme lightGrey];
   cell.status1.textColor    = [YMTheme lightGrey];
   

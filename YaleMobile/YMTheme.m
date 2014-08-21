@@ -20,16 +20,16 @@
 + (UIColor *)lightGrey { return [UIColor lightGrayColor]; }
 
 /** Used in dining view */
-+ (UIColor *)greenishBlue { return RGB(84, 146, 173); }
++ (UIColor *)diningSpecialTextColor { return RGB(84, 146, 173); }
 
 /** Used in laundry detail view, and bluebook subject view */
-+ (UIColor *)reddishOrange { return RGB(253, 97, 77); }
++ (UIColor *)laundryTimeAndBluebookHappensTextColor { return RGB(253, 97, 77); }
 
 /** Used in bluebook filter view */
-+ (UIColor *)brightYellow { return RGB(255, 224, 91); }
++ (UIColor *)bluebookFilterSecondaryTextColor { return RGB(255, 224, 91); }
 
 /** Used in bluebook subject view */
-+ (UIColor *)lightBlue { return RGB(120, 168, 193); }
++ (UIColor *)bluebookSubjectCodeTextColor { return RGB(120, 168, 193); }
 
 /** Used in bluebook filter view and hours library view and dining detail view */
 + (UIColor *)white { return [UIColor whiteColor]; }
@@ -46,7 +46,7 @@
 
 + (UIColor *)notificationWarningTintColor
 {
-  return [[self reddishOrange] colorWithAlphaComponent:0.5];
+  return [[self laundryTimeAndBluebookHappensTextColor] colorWithAlphaComponent:0.5];
 }
 
 + (UIColor *)notificationTintColor

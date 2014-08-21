@@ -16,19 +16,14 @@
 
 + (UIColor *)lightGrey;
 
-/** Used in dining view */
-+ (UIColor *)greenishBlue;
++ (UIColor *)diningSpecialTextColor;
 
-/** Used in laundry detail view, and bluebook subject view */
-+ (UIColor *)reddishOrange;
++ (UIColor *)laundryTimeAndBluebookHappensTextColor;
 
-/** Used in bluebook filter view */
-+ (UIColor *)brightYellow;
++ (UIColor *)bluebookFilterSecondaryTextColor;
 
-/** Used in bluebook subject view */
-+ (UIColor *)lightBlue;
++ (UIColor *)bluebookSubjectCodeTextColor;
 
-/** Used in bluebook filter view and hours library view and dining detail view */
 + (UIColor *)white;
 
 + (UIColor *)notificationWarningTintColor;

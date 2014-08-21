@@ -79,7 +79,7 @@
     cell.secondary1.text = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"Bluebook %@", cell.primary1.text]];
     
     cell.primary1.textColor = [YMTheme white];
-    cell.secondary1.textColor = [YMTheme brightYellow];
+    cell.secondary1.textColor = [YMTheme bluebookFilterSecondaryTextColor];
     
     cell.secondary1.adjustsFontSizeToFitWidth = YES;
     return cell;

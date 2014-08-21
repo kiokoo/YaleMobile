@@ -189,7 +189,7 @@
   
   cell.name1.textColor       = [YMTheme grey];
   cell.location1.textColor   = [YMTheme lightGrey];
-  cell.special1.textColor    = [YMTheme greenishBlue];
+  cell.special1.textColor    = [YMTheme diningSpecialTextColor];
   cell.crowdLabel1.textColor = [YMTheme lightGrey];
   
     return cell;
