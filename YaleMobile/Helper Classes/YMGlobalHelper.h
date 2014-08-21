@@ -27,7 +27,7 @@
 + (void)setupMenuButtonForController:(UIViewController *)viewController;
 + (void)addMenuButtonToController:(UIViewController *)viewController;
 + (NSString *)buildBluebookFilters;
-+ (NSString *)getTerm;
++ (NSString *)getTermForBluebookRequest;
 
 + (NSTimeInterval)getTimestamp;
 + (NSString *)dateStringFromString:(NSString *)string;

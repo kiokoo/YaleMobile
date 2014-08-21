@@ -129,7 +129,7 @@
 {
   if (indexPath.section == 0) {
     if (indexPath.row == 0) {
-      self.options = @[@"Fall 2010", @"Spring 2011", @"Summer 2011", @"Fall 2011", @"Spring 2012", @"Summer 2012", @"Spring 2013", @"Fall 2013", @"Spring 2014", @"Term"];
+      self.options = @[@"Fall 2010", @"Spring 2011", @"Summer 2011", @"Fall 2011", @"Spring 2012", @"Summer 2012", @"Spring 2013", @"Fall 2013", @"Spring 2014", @"Fall 2014", @"Spring 2015", @"Term"];
     } else {
       self.options = @[@"ALL", @"Undergraduate", @"Graduate", @"Professional", @"Category"];
     }

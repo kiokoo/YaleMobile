@@ -37,7 +37,7 @@ static NSString *OCICourseURL = @"http://students.yale.edu/oci/resultDetail.jsp?
     [dict setObject:((TFHppleElement *)[preParse objectAtIndex:i*7+5]).content forKey:@"instructor"];
     [dict setObject:((TFHppleElement *)[preParse objectAtIndex:i*7+6]).content forKey:@"happens"];
     
-    self.term = [YMGlobalHelper getTerm];
+    self.term = [YMGlobalHelper getTermForBluebookRequest];
     NSString *abbreviatedName = ((TFHppleElement *)[preParse2 objectAtIndex:i]).content;
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:OCICourseURL,[[((TFHppleElement *)[preParse objectAtIndex:3+7*i]).content stringByReplacingOccurrencesOfString:@"(" withString:@""] stringByReplacingOccurrencesOfString:@")" withString:@""], self.term]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

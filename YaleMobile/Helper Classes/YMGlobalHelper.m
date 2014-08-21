@@ -98,7 +98,7 @@
 + (NSString *)buildBluebookFilters
 {
   // term
-  NSString *term = [YMGlobalHelper getTerm];
+  NSString *term = [YMGlobalHelper getTermForBluebookRequest];
   
   DLog(@"Term: %@", term);
   
@@ -127,12 +127,21 @@
   return string;
 }
 
-+ (NSString *)getTerm
++ (NSString *)getTermForBluebookRequest
 {
   NSString *term = [[NSUserDefaults standardUserDefaults] objectForKey:@"Bluebook Term"];
-  term = [[[term stringByReplacingOccurrencesOfString:@"Fall" withString:@"03"]
-           stringByReplacingOccurrencesOfString:@"Spring" withString:@"01"]
-          stringByReplacingOccurrencesOfString:@"Summer" withString:@"02"];
+  term = [term stringByReplacingOccurrencesOfString:@"Fall"
+                                         withString:@"03"
+                                            options:NSCaseInsensitiveSearch
+                                              range:NSMakeRange(0, [term length])];
+  term = [term stringByReplacingOccurrencesOfString:@"Summer"
+                                         withString:@"02"
+                                            options:NSCaseInsensitiveSearch
+                                              range:NSMakeRange(0, [term length])];
+  term = [term stringByReplacingOccurrencesOfString:@"Spring"
+                                         withString:@"01"
+                                            options:NSCaseInsensitiveSearch
+                                              range:NSMakeRange(0, [term length])];
   NSArray *comp = [term componentsSeparatedByString:@" "];
   term = [NSString stringWithFormat:@"%@%@", [comp objectAtIndex:1], [comp objectAtIndex:0]];
   return term;
@@ -171,22 +180,6 @@
   NSDateComponents *components = [calendar components:NSMinuteCalendarUnit fromDate:[NSDate date] toDate:date options:0];
   return [NSString stringWithFormat:@"%li", (long)components.minute];
 }
-
-/*
- + (void)addEtchToSubtitleCell:(UITableViewCell *)cell
- {
- ((YMSubtitleCell *)cell).primary.shadowColor = [UIColor whiteColor];
- ((YMSubtitleCell *)cell).primary.shadowOffset = CGSizeMake(0, 1);
- ((YMSubtitleCell *)cell).secondary.shadowColor = [UIColor whiteColor];
- ((YMSubtitleCell *)cell).secondary.shadowOffset = CGSizeMake(0, 1);
- }
- 
- + (void)addEtchToSimpleCell:(UITableViewCell *)cell
- {
- ((YMSimpleCell *)cell).name.shadowColor = [UIColor whiteColor];
- ((YMSimpleCell *)cell).name.shadowOffset = CGSizeMake(0, 1);
- }
- */
 
 + (NSTimeInterval)getTimestamp
 {
