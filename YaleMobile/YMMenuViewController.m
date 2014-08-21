@@ -84,6 +84,8 @@
 {
   NSString *identifier = [[self.items objectAtIndex:indexPath.row] stringByAppendingString:@" Root"];
   
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
   DLog(@"New VC: %@", newTopViewController);
 

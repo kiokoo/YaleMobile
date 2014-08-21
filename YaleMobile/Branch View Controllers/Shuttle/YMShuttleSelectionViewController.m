@@ -45,15 +45,6 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-  /*if (self.db)
-   [self loadData];
-   else {
-   [YMDatabaseHelper openDatabase:@"database" usingBlock:^(UIManagedDocument *document) {
-   self.db = document;
-   [YMDatabaseHelper setManagedDocumentTo:document];
-   [self loadData];
-   }];
-   }*/
   [self.tableView reloadData];
 }
 
@@ -72,28 +63,38 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 1;
+  return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return self.routes.count;
+  if (section == 0)
+    return self.routes.count;
+  else
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  YMShuttleSelectionCell *cell = (YMShuttleSelectionCell *)[self.tableView dequeueReusableCellWithIdentifier:@"Shuttle Selection Cell"];
+  if (indexPath.section == 0) {
+    YMShuttleSelectionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Shuttle Selection Cell"];
   
-  Route *route = [self.routes objectAtIndex:indexPath.row];
+    Route *route = [self.routes objectAtIndex:indexPath.row];
   
-  cell.name1.text = route.name;
+    cell.name1.text = route.name;
   
-  [cell.contentView addSubview:[[YMRoundView alloc] initWithColor:[YMGlobalHelper colorFromHexString:route.color] andFrame:CGRectMake(60, 15, 13, 13)]];
-  cell.accessoryView = ([route.inactive boolValue]) ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
+    [cell.contentView addSubview:[[YMRoundView alloc] initWithColor:[YMGlobalHelper colorFromHexString:route.color] andFrame:CGRectMake(60, 15, 13, 13)]];
+    cell.accessoryView = ([route.inactive boolValue]) ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
   
-  cell.name1.textColor = [YMTheme white];
+    cell.name1.textColor = [YMTheme white];
   
-  return cell;
+    return cell;
+  } else {
+    YMShuttleSelectionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Shuttle Selection Cell"];
+    cell.name1.text = @"Confirm";
+    cell.name1.textColor = [YMTheme white];
+    return cell;
+  }
 }
 
 
@@ -102,21 +103,27 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Shuttle Refresh"];
-  
-  Route *route = [self.routes objectAtIndex:indexPath.row];
-  
-  if ([route.inactive boolValue]) {
-    route.inactive = [NSNumber numberWithBool:NO];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:[NSString stringWithFormat:@"%@_inactive", route.routeid]];
-  } else {
-    route.inactive = [NSNumber numberWithBool:YES];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:[NSString stringWithFormat:@"%@_inactive", route.routeid]];
+
+  if (indexPath.section == 0) {
+    Route *route = [self.routes objectAtIndex:indexPath.row];
+    
+    if ([route.inactive boolValue]) {
+      route.inactive = [NSNumber numberWithBool:NO];
+      [[NSUserDefaults standardUserDefaults] setBool:NO forKey:[NSString stringWithFormat:@"%@_inactive", route.routeid]];
+    } else {
+      route.inactive = [NSNumber numberWithBool:YES];
+      [[NSUserDefaults standardUserDefaults] setBool:YES forKey:[NSString stringWithFormat:@"%@_inactive", route.routeid]];
+    }
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryView = ([route.inactive boolValue]) ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
   }
   
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-  cell.accessoryView = ([route.inactive boolValue]) ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
   
+  // Confirm button was pressed
+  if (indexPath.section == 1) {
+    [self.slidingViewController resetTopViewAnimated:YES];
+  }
 }
 
 @end

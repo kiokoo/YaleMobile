@@ -26,6 +26,7 @@
 		9B48E408192A3D1200E9AF28 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B48E407192A3D1200E9AF28 /* UIView+AutoLayout.m */; };
 		9B48E40B192A3FAF00E9AF28 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B48E40A192A3FAF00E9AF28 /* NSString+URLEncode.m */; };
 		9B65832A1927068A008754A1 /* YMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B6583281927068A008754A1 /* YMDataModel.xcdatamodeld */; };
+		9B8ADE9F19A2F962007B6D43 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8ADE9E19A2F962007B6D43 /* MapKit.framework */; };
 		9BA262581974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA262571974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.m */; };
 		9BE97831198B13A00028EDF7 /* YMMainView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE97830198B13A00028EDF7 /* YMMainView4.xib */; };
 		9BE993BE1900AA010065EBEF /* YMBluebookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE991A91900A9FF0065EBEF /* YMBluebookDetailViewController.m */; };
@@ -171,6 +172,7 @@
 		9B48E409192A3FAF00E9AF28 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		9B48E40A192A3FAF00E9AF28 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		9B6583291927068A008754A1 /* YMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YMDataModel.xcdatamodel; sourceTree = "<group>"; };
+		9B8ADE9E19A2F962007B6D43 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9BA262561974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YMBluebookSubjectViewController+YMBluebookSubjectViewData.h"; sourceTree = "<group>"; };
 		9BA262571974D14400A1E8B0 /* YMBluebookSubjectViewController+YMBluebookSubjectViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YMBluebookSubjectViewController+YMBluebookSubjectViewData.m"; sourceTree = "<group>"; };
 		9BE97830198B13A00028EDF7 /* YMMainView4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMMainView4.xib; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8ADE9F19A2F962007B6D43 /* MapKit.framework in Frameworks */,
 				9BE9958D1900C4EF0065EBEF /* libxml2.2.dylib in Frameworks */,
 				24A8FF5F18E946FC006E81C3 /* CoreGraphics.framework in Frameworks */,
 				24A8FF6118E946FC006E81C3 /* UIKit.framework in Frameworks */,
@@ -406,6 +409,7 @@
 		24A8FF5B18E946FC006E81C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B8ADE9E19A2F962007B6D43 /* MapKit.framework */,
 				9BE9958C1900C4EF0065EBEF /* libxml2.2.dylib */,
 				24A8FF5C18E946FC006E81C3 /* Foundation.framework */,
 				24A8FF5E18E946FC006E81C3 /* CoreGraphics.framework */,

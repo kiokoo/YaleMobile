@@ -28,11 +28,12 @@
 #import "Vehicle+Initialize.h"
 #import "YMVehicleInfoSubview.h"
 
+#import <PureLayout/PureLayout.h>
+
 #import "YMTheme.h"
 #import "YMAppDelegate.h"
 
 @interface YMShuttleViewController ()
-
 @end
 
 @implementation YMShuttleViewController
@@ -60,7 +61,6 @@
   [self.refresh1 addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventTouchUpInside];
   
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Shuttle Refresh"];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -113,7 +113,6 @@
 
 - (void)topDidReset:(id)sender
 {
-  self.mapView1.scrollEnabled = YES;
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Shuttle Refresh"]) {
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Shuttle Refresh"];
     [self.refresh1 setSelected:NO];
@@ -121,11 +120,6 @@
     [self removeCalloutViewWithAnimation];
     
     [self loadData];
-    
-    // re-enable scrolling on the mapView
-    if ([self.view.gestureRecognizers containsObject:self.slidingViewController.panGesture]) {
-      [self.view removeGestureRecognizer:self.slidingViewController.panGesture];
-    }
   }
 }
 
@@ -681,11 +675,7 @@
 - (void)settings:(id)sender
 {
   self.slidingViewController.anchorLeftRevealAmount = 280.0f;
-  [self.slidingViewController anchorTopViewToLeftAnimated:NO onComplete:^{
-    // This is to allow user to drag back the shuttle view
-    self.mapView1.scrollEnabled = NO;
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
-  }];
+  [self.slidingViewController anchorTopViewToLeftAnimated:NO onComplete:nil];
 }
 
 @end
