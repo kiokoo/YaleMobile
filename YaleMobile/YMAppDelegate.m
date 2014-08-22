@@ -32,13 +32,17 @@
                            [UIFont fontWithName:@"HelveticaNeue-Medium" size:19.0], NSFontAttributeName, nil]];
 
   [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-  [[UINavigationBar appearance] setBarTintColor:[YMTheme blue]];
+  [[UINavigationBar appearance] setBarTintColor:[[YMTheme blue] colorWithAlphaComponent:0.1]];
   
   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
 #ifdef DEBUG
   [[FLEXManager sharedManager] showExplorer];
 #endif
+  
+  [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge |
+                                                  UIRemoteNotificationTypeSound |
+                                                  UIRemoteNotificationTypeAlert ];
   
   return YES;
 }
@@ -70,4 +74,15 @@
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+  [[NSUserDefaults standardUserDefaults] setObject:deviceToken
+                                            forKey:@"PushNotificationToken"];
+  DLog(@"deviceToken: %@", deviceToken);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+  DLog(@"Failed to register for push notification. Error: %@", error.localizedDescription);
+}
 @end

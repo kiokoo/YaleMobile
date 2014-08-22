@@ -33,15 +33,19 @@
   
   // Display different background and greeting depending on current time
   NSInteger hour = [YMGlobalHelper getCurrentTime];
-  if (hour == 1) {
-    self.greeting.text = [NSString stringWithFormat:@"Good morning%@! It's a brand new day :)", name];
-  } else if (hour == 2) {
-    self.greeting.text = [NSString stringWithFormat:@"Good afternoon%@! Hope you are enjoying your day :)", name];
-  } else if (hour == 3) {
-    self.greeting.text = [NSString stringWithFormat:@"Good evening%@! Hope you've had a great day :)", name];
-  }
-  else {
-    self.greeting.text = [NSString stringWithFormat:@"Good night%@! Have some good rest :)", name];
+  
+  switch (hour) {
+    case 1:
+      self.greeting.text = [NSString stringWithFormat:@"Good morning%@! It's a brand new day :)", name];
+      break;
+    case 2:
+      self.greeting.text = [NSString stringWithFormat:@"Good afternoon%@! Hope you are enjoying your day :)", name];
+      break;
+    case 3:
+      self.greeting.text = [NSString stringWithFormat:@"Good evening%@! Hope you've had a great day :)", name];
+      break;
+    default:
+      self.greeting.text = [NSString stringWithFormat:@"Good night%@! Have some good rest :)", name];
   }
   
   [YMServerCommunicator getGlobalSpecialInfoWithCompletionBlock:^(NSArray *array) {

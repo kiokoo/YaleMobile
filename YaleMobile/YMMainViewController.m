@@ -63,7 +63,9 @@
   
   [YMGlobalHelper setupSlidingViewControllerForController:self];
   [YMServerCommunicator getWeatherWithCompletionBlock:^(NSArray *weatherInfo) {
-    [self.mainView configureWeatherSubviews:weatherInfo];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.mainView configureWeatherSubviews:weatherInfo];
+    });
   }];
   
   [YMGlobalHelper showNotificationInViewController:self.navigationController

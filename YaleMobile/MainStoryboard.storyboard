@@ -9,7 +9,7 @@
         <scene sceneID="ujz-uy-9UM">
             <objects>
                 <navigationController storyboardIdentifier="Bluebook Root" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8tW-6I-lrO" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7wy-Ij-ud1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7wy-Ij-ud1" customClass="YMTransluentNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -829,7 +829,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Home Root" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vlJ-ty-wcL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aMM-ES-cRm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aMM-ES-cRm" customClass="YMTransluentNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3267,6 +3267,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hRA-J9-879"/>
+        <segue reference="81U-aC-rI3"/>
     </inferredMetricsTieBreakers>
 </document>

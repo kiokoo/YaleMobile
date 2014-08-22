@@ -21,6 +21,7 @@
 		24A8FF8618E946FC006E81C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24A8FF8418E946FC006E81C3 /* InfoPlist.strings */; };
 		24A8FF8818E946FC006E81C3 /* YaleMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8FF8718E946FC006E81C3 /* YaleMobileTests.m */; };
 		6539564A58D8424C8A355B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E13C79FA26474412B5B6523A /* libPods.a */; };
+		9B15C93419A6DFFA000CBC24 /* YMTransluentNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B15C93319A6DFFA000CBC24 /* YMTransluentNavigationBar.m */; };
 		9B3AF04F1915D31F003CACAF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3AF04E1915D31F003CACAF /* MainStoryboard.storyboard */; };
 		9B3AF0521915D8A7003CACAF /* YMBluebookSubjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3AF0511915D8A7003CACAF /* YMBluebookSubjectCell.m */; };
 		9B48E408192A3D1200E9AF28 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B48E407192A3D1200E9AF28 /* UIView+AutoLayout.m */; };
@@ -164,6 +165,8 @@
 		24A8FF8318E946FC006E81C3 /* YaleMobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YaleMobileTests-Info.plist"; sourceTree = "<group>"; };
 		24A8FF8518E946FC006E81C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24A8FF8718E946FC006E81C3 /* YaleMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YaleMobileTests.m; sourceTree = "<group>"; };
+		9B15C93219A6DFFA000CBC24 /* YMTransluentNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMTransluentNavigationBar.h; sourceTree = "<group>"; };
+		9B15C93319A6DFFA000CBC24 /* YMTransluentNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTransluentNavigationBar.m; sourceTree = "<group>"; };
 		9B3AF04E1915D31F003CACAF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9B3AF0501915D8A7003CACAF /* YMBluebookSubjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBluebookSubjectCell.h; sourceTree = "<group>"; };
 		9B3AF0511915D8A7003CACAF /* YMBluebookSubjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBluebookSubjectCell.m; sourceTree = "<group>"; };
@@ -434,6 +437,7 @@
 				9BE995841900AD7C0065EBEF /* YMMenuViewController.m */,
 				9BE995851900AD7C0065EBEF /* YMSplashViewController.h */,
 				9BE995861900AD7C0065EBEF /* YMSplashViewController.m */,
+				9B15C93119A6DFD5000CBC24 /* Custom Views */,
 				9BE991A61900A9FF0065EBEF /* Branch View Controllers */,
 				9BE991F71900A9FF0065EBEF /* Core Data */,
 				9BE992181900A9FF0065EBEF /* Data Source */,
@@ -476,6 +480,15 @@
 				24A8FF8418E946FC006E81C3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B15C93119A6DFD5000CBC24 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B15C93219A6DFFA000CBC24 /* YMTransluentNavigationBar.h */,
+				9B15C93319A6DFFA000CBC24 /* YMTransluentNavigationBar.m */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		9BE991A61900A9FF0065EBEF /* Branch View Controllers */ = {
@@ -1002,6 +1015,7 @@
 				9BE993C61900AA010065EBEF /* YMDiningViewController.m in Sources */,
 				9BE993E71900AA010065EBEF /* Office.m in Sources */,
 				9BE993ED1900AA010065EBEF /* Segment.m in Sources */,
+				9B15C93419A6DFFA000CBC24 /* YMTransluentNavigationBar.m in Sources */,
 				9BE993DF1900AA010065EBEF /* YMVehicleAnnotationView.m in Sources */,
 				9BE993D91900AA010065EBEF /* YMStopAnnotation.m in Sources */,
 				9BE9955F1900AA010065EBEF /* YMCHelper.m in Sources */,
@@ -1124,7 +1138,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "4BB6E911-2871-4CD0-A937-9115106A0AA7";
+				PROVISIONING_PROFILE = "28eb42a8-3435-4de2-80b2-c820a22c7b62";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1183,7 +1197,7 @@
 				INFOPLIST_FILE = "YaleMobile/YaleMobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4BB6E911-2871-4CD0-A937-9115106A0AA7";
+				PROVISIONING_PROFILE = "28eb42a8-3435-4de2-80b2-c820a22c7b62";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

@@ -87,7 +87,7 @@
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
   
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
-  DLog(@"New VC: %@", newTopViewController);
+  [newTopViewController.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 
   UIViewController *oldTopViewController = self.slidingViewController.topViewController;
   CGFloat dX = self.view.frame.size.width - self.slidingViewController.anchorRightRevealAmount;
