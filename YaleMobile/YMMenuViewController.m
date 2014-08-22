@@ -40,6 +40,8 @@
   
   self.tableView.tableHeaderView = placeHolder;
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
+  
+  [self.tableView registerClass:[YMMenuCell class] forCellReuseIdentifier:@"Menu Cell"];
 }
 
 - (void)didReceiveMemoryWarning
