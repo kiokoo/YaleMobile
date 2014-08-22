@@ -24,13 +24,13 @@ typedef void (^dict_block_t)(NSDictionary *dict);
 // YaleMobile 2.x JSON APIs - not yet 2.0
 
 + (NSArray *)getLocationFromName:(NSString *)name;
-+ (void)getGlobalSpecialInfoForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
++ (void)getGlobalSpecialInfoWithCompletionBlock:(array_block_t)completionBlock;
 + (void)getAllDiningStatusForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
 + (void)getDiningDetailForLocation:(NSUInteger)locationID forController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
 + (void)getDiningSpecialInfoForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
 + (void)getAllLaundryStatusForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
 + (void)getLaundryStatusForLocation:(NSString *)code forController:(UIViewController *)controller usingBlock:(triple_array_block_t)completionBlock;
-+ (void)getWeatherForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
++ (void)getWeatherWithCompletionBlock:(array_block_t)completionBlock;
 + (void)getRouteInfoForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
 + (void)getStopInfoForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
 + (void)getSegmentInfoForController:(UIViewController *)controller andRoutes:(NSString *)routes usingBlock:(dict_block_t)completionBlock;

@@ -26,27 +26,14 @@
   storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
   slidingViewController.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"Home Root"];
   
-  /* Deprecated code, but kept as reference.
-   * If the new code does not work properly below, check this to preserve the original effect
-  [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                        [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0], UITextAttributeTextColor,
-                                                        [UIFont fontWithName:@"Helvetica" size:19.0], UITextAttributeFont,
-                                                        [UIColor colorWithRed:7.0/255.0 green:80.0/255.0 blue:140.0/255.0 alpha:0.8], UITextAttributeTextShadowColor,
-                                                        [NSValue valueWithUIOffset:UIOffsetMake(0, 1)], UITextAttributeTextShadowOffset, nil]];
-   */
-  
-//  NSShadow *shadow = [[NSShadow alloc] init];
-//  shadow.shadowColor = [UIColor colorWithRed:7.0/255.0 green:80.0/255.0 blue:140.0/255.0 alpha:0.8];
-//  shadow.shadowOffset = CGSizeMake(0, 1);
   [[UINavigationBar appearance]
    setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                            [UIColor whiteColor], NSForegroundColorAttributeName,
                            [UIFont fontWithName:@"HelveticaNeue-Medium" size:19.0], NSFontAttributeName, nil]];
-  //
-//
 
   [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
   [[UINavigationBar appearance] setBarTintColor:[YMTheme blue]];
+  
   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
 #ifdef DEBUG

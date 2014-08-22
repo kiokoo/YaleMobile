@@ -64,7 +64,7 @@ static BOOL cancel = NO;
   return nil;
 }
 
-+ (void)getGlobalSpecialInfoForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock
++ (void)getGlobalSpecialInfoWithCompletionBlock:(array_block_t)completionBlock
 {
   cancel = NO;
   
@@ -525,7 +525,7 @@ static BOOL cancel = NO;
   [[manager operationQueue] addOperation:operation];
 }
 
-+ (void)getWeatherForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock
++ (void)getWeatherWithCompletionBlock:(array_block_t)completionBlock
 {
   NSURL *url = ([[NSUserDefaults standardUserDefaults] boolForKey:@"Celsius"]) ? [NSURL URLWithString:@"http://xml.weather.yahoo.com/forecastrss/06511_c.xml"] : [NSURL URLWithString:@"http://xml.weather.yahoo.com/forecastrss/06511_f.xml"];
   NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -553,11 +553,7 @@ static BOOL cancel = NO;
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     [YMGlobalHelper hideNotificationView];
   }];
-  
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
-                                           message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]];
-  
+    
   [operation start];
 }
 

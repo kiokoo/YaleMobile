@@ -31,4 +31,6 @@
 @property (nonatomic, strong) IBOutlet UIImageView *weather5;
 @property (nonatomic, strong) IBOutlet UILabel *temp5;
 
+- (void)configureWeatherSubviews:(NSArray *)weatherInfo;
+
 @end

@@ -152,8 +152,23 @@
          */
         // MAY NOT NEED ABOVE ----------------
         
-#warning TODO(HC) Probably should come up with a higher order function to do this...
-        while (!([tempString hasPrefix:@"A"] || [tempString hasPrefix:@"B"] || [tempString hasPrefix:@"C"] || [tempString hasPrefix:@"D"] || [tempString hasPrefix:@"E"] || [tempString hasPrefix:@"F"] || [tempString hasPrefix:@"G"] || [tempString hasPrefix:@"H"] || [tempString hasPrefix:@"I"] || [tempString hasPrefix:@"J"] || [tempString hasPrefix:@"K"] || [tempString hasPrefix:@"L"] || [tempString hasPrefix:@"M"] || [tempString hasPrefix:@"N"] || [tempString hasPrefix:@"O"] || [tempString hasPrefix:@"P"] || [tempString hasPrefix:@"Q"] || [tempString hasPrefix:@"R"] || [tempString hasPrefix:@"S"] || [tempString hasPrefix:@"T"] || [tempString hasPrefix:@"U"] || [tempString hasPrefix:@"V"] || [tempString hasPrefix:@"W"] || [tempString hasPrefix:@"X"] || [tempString hasPrefix:@"Y"] || [tempString hasPrefix:@"Z"])) {
+        NSMutableArray *alphabetArray = [NSMutableArray arrayWithCapacity:26];
+        for (char a = 'A'; a < 'Z'; a++) {
+          [alphabetArray addObject:[NSString stringWithFormat:@"%c", a]];
+        }
+        
+        // Here's the function that does the equivalent of what happens in the while loop before
+        BOOL (^checkPrefix)(NSString *str) = ^(NSString *str) {
+          BOOL result = NO;
+          for (NSString *a in alphabetArray) {
+            result = result || [str hasPrefix:a];
+            // we can terminate as soon as it's true
+            if (result) return result;
+          }
+          return result;
+        };
+        
+        while (!checkPrefix(tempString)) {
           range.length = 1;
           tempString = [tempString stringByReplacingCharactersInRange:range withString:@""];
         }

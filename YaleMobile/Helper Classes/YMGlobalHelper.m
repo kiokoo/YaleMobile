@@ -264,6 +264,9 @@
 + (void)hideNotificationView
 {
   __weak YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+  
+  if (!delegate.sharedNotificationView) return;
+  
   [delegate.sharedNotificationView setVisible:NO animated:YES completion:nil];
   
   /** 
