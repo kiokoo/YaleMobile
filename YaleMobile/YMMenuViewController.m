@@ -89,18 +89,6 @@
   [newTopViewController.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
   
   [self.revealViewController pushFrontViewController:newTopViewController animated:YES];
-  
-  /*
-  UIViewController *oldTopViewController = self.revealViewController.frontViewController;
-
-  CGFloat dX = self.view.frame.size.width - self.slidingViewController.anchorRightRevealAmount;
-  [UIView animateWithDuration:0.2 animations:^{
-    oldTopViewController.view.layer.transform = CATransform3DTranslate(oldTopViewController.view.layer.transform, dX, 0, 0);
-  } completion:^(BOOL finished) {
-    self.slidingViewController.topViewController = newTopViewController;
-    [self.slidingViewController resetTopViewAnimated:YES];
-  }];
-   */
 }
 
 @end

@@ -100,6 +100,8 @@
   }
   
   self.revealViewController.delegate = self;
+  
+  [YMGlobalHelper setupSlidingViewControllerForController:self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -109,6 +111,7 @@
   DLog(@"Disappeared");
   [self.refresh1 setSelected:NO];
   [self removeCalloutViewWithAnimation];
+  self.revealViewController.rightViewController = nil;
 }
 
 - (void)topDidReset:(id)sender
@@ -684,9 +687,21 @@
 - (void)revealController:(SWRevealViewController *)revealController
        didMoveToPosition:(FrontViewPosition)position
 {
+  DLog(@"Front view moved to: %ld", revealController.frontViewPosition);
   if (revealController.frontViewPosition == FrontViewPositionLeft) {
+    self.mapView1.userInteractionEnabled = YES;
     [self topDidReset:self];
+  } else if (revealController.frontViewPosition == FrontViewPositionLeftSide) {
+    self.mapView1.userInteractionEnabled = NO;
   }
+}
+
+- (BOOL)revealControllerPanGestureShouldBegin:(SWRevealViewController *)revealController
+{
+  if (revealController.frontViewPosition == FrontViewPositionLeftSide) {
+    return YES;
+  }
+  return NO;
 }
 
 @end

@@ -83,7 +83,8 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   [YMServerCommunicator cancelAllHTTPRequests];
   [YMGlobalHelper setupSlidingViewControllerForController:self];
-  [YMGlobalHelper setupRightSlidingViewControllerForController:self withRightController:[UINavigationController class] named:@"Bluebook Filter Root"];
+  YMBluebookFilterViewController *filterRoot = [self.storyboard instantiateViewControllerWithIdentifier:@"Bluebook Filter Root"];
+  self.revealViewController.rightViewController = filterRoot;
   if (self.selectedIndexPath) {
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
@@ -95,6 +96,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 {
   [super viewWillDisappear:animated];
   [self removeDisplayOverlay];
+  self.revealViewController.rightViewController = nil;
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer

@@ -60,14 +60,6 @@
   viewController.navigationController.view.layer.shadowColor = [UIColor blackColor].CGColor;
 }
 
-+ (void)setupRightSlidingViewControllerForController:(UIViewController *)topController withRightController:(Class)class named:(NSString *)identifier
-{
-  if (![topController.revealViewController.rightViewController isKindOfClass:class]) {
-    topController.revealViewController.rightViewController = [topController.storyboard instantiateViewControllerWithIdentifier:identifier];
-  }
-  [topController.revealViewController setRightViewRevealWidth:280.0f];
-}
-
 + (void)setupMenuButtonForController:(UIViewController *)viewController
 {
   viewController.revealViewController.rearViewRevealWidth = 280.0f;

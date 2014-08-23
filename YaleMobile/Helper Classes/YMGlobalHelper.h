@@ -23,7 +23,6 @@
 
 + (void)setupUserDefaults;
 + (void)setupSlidingViewControllerForController:(UIViewController *)viewController;
-+ (void)setupRightSlidingViewControllerForController:(UIViewController *)topController withRightController:(Class)class named:(NSString *)identifier;
 + (void)setupMenuButtonForController:(UIViewController *)viewController;
 + (void)addMenuButtonToController:(UIViewController *)viewController;
 + (NSString *)buildBluebookFilters;
