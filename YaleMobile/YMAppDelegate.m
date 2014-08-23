@@ -10,7 +10,6 @@
 #import "YMDatabaseHelper.h"
 #import "YMGlobalHelper.h"
 #import "YMTheme.h"
-#import <UIViewController+ECSlidingViewController.h>
 
 #import <FlexManager.h>
 
@@ -20,11 +19,6 @@
 {
   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Just Launched"];
   [YMDatabaseHelper openDatabase:@"database" usingBlock:^(UIManagedDocument *document) {}];
-  
-  ECSlidingViewController *slidingViewController = (ECSlidingViewController *)self.window.rootViewController;
-  UIStoryboard *storyboard;
-  storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-  slidingViewController.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"Home Root"];
   
   [[UINavigationBar appearance]
    setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -43,6 +37,11 @@
   [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge |
                                                   UIRemoteNotificationTypeSound |
                                                   UIRemoteNotificationTypeAlert ];
+  
+  SWRevealViewController *revealVC = (SWRevealViewController *)self.window.rootViewController;
+  UIStoryboard *storyboard;
+  storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+  [revealVC pushFrontViewController:[storyboard instantiateViewControllerWithIdentifier:@"Home Root"] animated:NO];
   
   return YES;
 }

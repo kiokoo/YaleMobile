@@ -21,30 +21,30 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - CSNotificationView (0.4.2)
-  - ECSlidingViewController (2.0.1)
   - FLEX (1.1.0)
   - FXBlurView (1.6.2)
   - Mantle (1.5):
     - Mantle/extobjc
   - Mantle/extobjc (1.5)
   - PureLayout (1.0.1)
+  - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CSNotificationView (= 0.4.2)
-  - ECSlidingViewController (= 2.0.1)
   - FLEX (~> 1.1.0)
   - FXBlurView (~> 1.6.2)
   - Mantle (~> 1.4)
   - PureLayout
+  - SWRevealViewController (~> 2.3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
   CSNotificationView: eefeaed92a8bf0786fbb81047abab35283b05dae
-  ECSlidingViewController: e93ab7e075fc9a99a874fa050ce3b2a64026eb85
   FLEX: fa5e81b7b25ba64afe4fad14deb27d4b95efd75e
   FXBlurView: 47496afc9160097fa34af35fc4b310bd85d65dca
   Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
   PureLayout: 972964b21dbcbc5cc36785aed16aba03176f057d
+  SWRevealViewController: f6d80638b8e12323e87ac79562345403a799cb77
 
 COCOAPODS: 0.33.1

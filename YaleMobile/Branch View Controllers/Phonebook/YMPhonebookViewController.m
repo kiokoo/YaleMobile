@@ -43,6 +43,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
+  
   [YMServerCommunicator cancelAllHTTPRequests];
   
   self.searchDisplayController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -60,6 +62,7 @@
       [self loadData];
     }];
   }
+
 }
 
 - (void)loadData

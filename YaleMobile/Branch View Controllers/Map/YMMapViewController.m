@@ -63,10 +63,12 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
+  
   [YMServerCommunicator cancelAllHTTPRequests];
   
-  if (![self.slidingViewController.underLeftViewController isKindOfClass:[YMMenuViewController class]]) {
-    self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+  if (![self.revealViewController.rearViewController isKindOfClass:[YMMenuViewController class]]) {
+    self.revealViewController.rearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
   }
   
   CLLocationCoordinate2D zoomLocation;
@@ -85,6 +87,7 @@
       [YMDatabaseHelper setManagedDocumentTo:document];
     }];
   }
+  
 }
 
 

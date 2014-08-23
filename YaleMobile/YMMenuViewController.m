@@ -33,12 +33,7 @@
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   self.items = @[@"Home", @"Bluebook", @"Dining", @"Campus Map", @"Shuttle", @"People Directory", @"Laundry", @"Facility Hours", @"Calendar", @"Phonebook", @"Settings"];
   self.iconNames = @[@"home", @"bluebook", @"dining", @"map", @"shuttle", @"people", @"laundry", @"hours", @"calendar", @"phonebook", @"settings"];
-  UIView *placeHolder = [UIView new];
-  CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-  placeHolder.frame = CGRectMake(0, 0, self.tableView.frame.size.width, statusHeight);
-  placeHolder.backgroundColor = [UIColor clearColor];
   
-  self.tableView.tableHeaderView = placeHolder;
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
   
   [self.tableView registerClass:[YMMenuCell class] forCellReuseIdentifier:@"Menu Cell"];
@@ -70,6 +65,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   YMMenuCell *cell = (YMMenuCell *)[tableView dequeueReusableCellWithIdentifier:@"Menu Cell"];
+  [cell updateConstraintsIfNeeded];
+  [cell layoutIfNeeded];
   cell.name1.textColor = [YMTheme white];
   cell.name1.text = [self.items objectAtIndex:indexPath.row];
   NSString *imageName = [NSString stringWithFormat:@"icon_sidebar_%@", [(NSString *)self.iconNames[indexPath.row] lowercaseString]];
@@ -90,8 +87,12 @@
   
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
   [newTopViewController.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
+  
+  [self.revealViewController pushFrontViewController:newTopViewController animated:YES];
+  
+  /*
+  UIViewController *oldTopViewController = self.revealViewController.frontViewController;
 
-  UIViewController *oldTopViewController = self.slidingViewController.topViewController;
   CGFloat dX = self.view.frame.size.width - self.slidingViewController.anchorRightRevealAmount;
   [UIView animateWithDuration:0.2 animations:^{
     oldTopViewController.view.layer.transform = CATransform3DTranslate(oldTopViewController.view.layer.transform, dX, 0, 0);
@@ -99,6 +100,7 @@
     self.slidingViewController.topViewController = newTopViewController;
     [self.slidingViewController resetTopViewAnimated:YES];
   }];
+   */
 }
 
 @end

@@ -38,6 +38,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
+  
   self.navigationController.navigationBar.alpha = 1;
   self.navigationController.navigationBar.translucent = NO;
   if (self.selectedIndexPath) {

@@ -54,12 +54,6 @@
 #define COCOAPODS_VERSION_MINOR_CSNotificationView 4
 #define COCOAPODS_VERSION_PATCH_CSNotificationView 2
 
-// ECSlidingViewController
-#define COCOAPODS_POD_AVAILABLE_ECSlidingViewController
-#define COCOAPODS_VERSION_MAJOR_ECSlidingViewController 2
-#define COCOAPODS_VERSION_MINOR_ECSlidingViewController 0
-#define COCOAPODS_VERSION_PATCH_ECSlidingViewController 1
-
 // FLEX
 #define COCOAPODS_POD_AVAILABLE_FLEX
 #define COCOAPODS_VERSION_MAJOR_FLEX 1
@@ -89,4 +83,10 @@
 #define COCOAPODS_VERSION_MAJOR_PureLayout 1
 #define COCOAPODS_VERSION_MINOR_PureLayout 0
 #define COCOAPODS_VERSION_PATCH_PureLayout 1
+
+// SWRevealViewController
+#define COCOAPODS_POD_AVAILABLE_SWRevealViewController
+#define COCOAPODS_VERSION_MAJOR_SWRevealViewController 2
+#define COCOAPODS_VERSION_MINOR_SWRevealViewController 3
+#define COCOAPODS_VERSION_PATCH_SWRevealViewController 0
 

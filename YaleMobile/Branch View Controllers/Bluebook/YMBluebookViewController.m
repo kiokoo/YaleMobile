@@ -79,6 +79,8 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
+  
   [YMServerCommunicator cancelAllHTTPRequests];
   [YMGlobalHelper setupSlidingViewControllerForController:self];
   [YMGlobalHelper setupRightSlidingViewControllerForController:self withRightController:[UINavigationController class] named:@"Bluebook Filter Root"];
@@ -91,6 +93,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+  [super viewWillDisappear:animated];
   [self removeDisplayOverlay];
 }
 
@@ -116,8 +119,8 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 
 - (void)settings:(id)sender
 {
-  self.slidingViewController.anchorLeftRevealAmount = 280.0f;
-  [self.slidingViewController anchorTopViewToLeftAnimated:NO];
+  self.revealViewController.rearViewRevealWidth = 280.0f;
+  [self.revealViewController setFrontViewPosition:FrontViewPositionLeftSide animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

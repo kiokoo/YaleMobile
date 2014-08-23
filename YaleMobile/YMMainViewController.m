@@ -58,6 +58,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
+  
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   self.name = (name) ? [NSString stringWithFormat:@", %@", name] : @"";
   

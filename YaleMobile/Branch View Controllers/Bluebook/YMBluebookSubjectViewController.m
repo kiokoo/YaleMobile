@@ -50,6 +50,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
+  
   if (self.selectedIndexPath) {
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;

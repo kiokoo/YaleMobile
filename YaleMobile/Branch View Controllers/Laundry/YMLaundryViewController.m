@@ -54,6 +54,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  
+  [super viewWillAppear:animated];
+  
   [YMServerCommunicator cancelAllHTTPRequests];
   
   [YMGlobalHelper setupSlidingViewControllerForController:self];
@@ -65,6 +68,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+  [super viewDidAppear:animated];
+  
   if (self.data == nil) [self refresh];
 }
 

@@ -9,7 +9,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "YMGlobalHelper.h"
 #import "YMMenuViewController.h"
-#import <ECSlidingConstants.h>
 
 #import "YMAppDelegate.h"
 
@@ -44,16 +43,16 @@
 
 + (void)setupSlidingViewControllerForController:(UIViewController *)viewController
 {
-  if (![viewController.slidingViewController.underLeftViewController isKindOfClass:[YMMenuViewController class]]) {
-    viewController.slidingViewController.underLeftViewController = [viewController.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+  if (![viewController.revealViewController.rearViewController isKindOfClass:[YMMenuViewController class]]) {
+    viewController.revealViewController.rearViewController = [viewController.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
   }
   
-  viewController.slidingViewController.anchorLeftRevealAmount = 0;
+  viewController.revealViewController.rearViewRevealWidth = 0;
   
   // Slide view gesture recognizer setup
-  [viewController.navigationController.view addGestureRecognizer:viewController.slidingViewController.panGesture];
-  [viewController.slidingViewController.panGesture setDelegate:(id<UIGestureRecognizerDelegate>)viewController];
-  [viewController.slidingViewController setAnchorRightRevealAmount:280.0f];
+  [viewController.navigationController.view addGestureRecognizer:[viewController.revealViewController panGestureRecognizer]];
+  [viewController.revealViewController setDelegate:(id<SWRevealViewControllerDelegate>)viewController];
+  [viewController.revealViewController setRearViewRevealWidth:280.0f];
   
   // Slide view shadow setup
   viewController.navigationController.view.layer.shadowOpacity = 0.75f;
@@ -63,17 +62,18 @@
 
 + (void)setupRightSlidingViewControllerForController:(UIViewController *)topController withRightController:(Class)class named:(NSString *)identifier
 {
-  if (![topController.slidingViewController.underRightViewController isKindOfClass:class]) {
-    topController.slidingViewController.underRightViewController = [topController.storyboard instantiateViewControllerWithIdentifier:identifier];
+  if (![topController.revealViewController.rightViewController isKindOfClass:class]) {
+    topController.revealViewController.rightViewController = [topController.storyboard instantiateViewControllerWithIdentifier:identifier];
   }
-  [topController.slidingViewController setAnchorLeftRevealAmount:280.0f];
+  [topController.revealViewController setRightViewRevealWidth:280.0f];
 }
 
 + (void)setupMenuButtonForController:(UIViewController *)viewController
 {
-  viewController.slidingViewController.anchorRightRevealAmount = 280.0f;
+  viewController.revealViewController.rearViewRevealWidth = 280.0f;
 
-  [viewController.slidingViewController anchorTopViewToRightAnimated:NO];
+  [viewController.revealViewController setFrontViewPosition:FrontViewPositionRight
+                                                   animated:YES];
 }
 
 + (void)addMenuButtonToController:(UIViewController *)viewController

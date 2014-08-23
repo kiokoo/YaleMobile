@@ -39,6 +39,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
   [self.tableView reloadData];
 }
 
@@ -104,7 +105,7 @@
   headerLabel.backgroundColor = [UIColor clearColor];
 	headerLabel.textColor = [UIColor lightGrayColor];
 	headerLabel.font = [UIFont boldSystemFontOfSize:13];
-	headerLabel.frame = CGRectMake(61.0, 0.0, 300.0, 22.0);
+	headerLabel.frame = CGRectMake(81.0, 0.0, 300.0, 22.0);
 
 	if (section == 1) {
     headerLabel.text = @"Area Filters";

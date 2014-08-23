@@ -79,6 +79,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
+  
   if (self.selectedIndexPath) {
     [self.tableView1 deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
@@ -87,6 +89,8 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+  [super viewDidDisappear:animated];
+  
   [YMServerCommunicator cancelAllHTTPRequests];
 }
 

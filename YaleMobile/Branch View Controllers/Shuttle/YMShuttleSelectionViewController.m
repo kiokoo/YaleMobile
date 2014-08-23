@@ -12,6 +12,7 @@
 #import "YMDatabaseHelper.h"
 #import "YMRoundView.h"
 #import "Route.h"
+#import <PureLayout/PureLayout.h>
 
 #import "YMTheme.h"
 
@@ -34,17 +35,13 @@
 {
   [super viewDidLoad];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
-  
-  UIView *placeHolder = [UIView new];
-  CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-  placeHolder.frame = CGRectMake(0, 0, self.tableView.frame.size.width, statusHeight);
-  self.tableView.tableHeaderView = placeHolder;
-  
+    
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
   [self.tableView reloadData];
 }
 
@@ -83,7 +80,16 @@
   
     cell.name1.text = route.name;
   
-    [cell.contentView addSubview:[[YMRoundView alloc] initWithColor:[YMGlobalHelper colorFromHexString:route.color] andFrame:CGRectMake(60, 15, 13, 13)]];
+    /*
+    [cell.contentView addSubview:[[YMRoundView alloc] initWithColor:[YMGlobalHelper colorFromHexString:route.color] andFrame:CGRectMake(80, 15, 13, 13)]];
+     */
+    YMRoundView *roundView = [[YMRoundView alloc] initWithColor:[YMGlobalHelper colorFromHexString:route.color] andFrame:CGRectMake(0, 0, 1, 1)];
+    [cell.contentView addSubview:roundView];
+    roundView.translatesAutoresizingMaskIntoConstraints = NO;
+    [roundView autoSetDimensionsToSize:CGSizeMake(13, 13)];
+    [roundView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [roundView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:80];
+    
     cell.accessoryView = ([route.inactive boolValue]) ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]];
   
     cell.name1.textColor = [YMTheme white];
@@ -122,7 +128,7 @@
   
   // Confirm button was pressed
   if (indexPath.section == 1) {
-    [self.slidingViewController resetTopViewAnimated:YES];
+    [self.revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
   }
 }
 

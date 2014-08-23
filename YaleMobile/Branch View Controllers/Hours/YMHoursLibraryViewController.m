@@ -58,6 +58,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+  [super viewDidDisappear:animated];
   [YMServerCommunicator cancelAllHTTPRequests];
 }
 

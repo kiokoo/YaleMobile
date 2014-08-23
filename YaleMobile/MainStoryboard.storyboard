@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3iU-j0-Yy1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3iU-j0-Yy1">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -20,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="-415"/>
         </scene>
-        <!--Bluebook View Controller - Bluebook-->
+        <!--Bluebook-->
         <scene sceneID="w5Y-kb-J5T">
             <objects>
                 <tableViewController storyboardIdentifier="Bluebook" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yIk-d8-nQQ" customClass="YMBluebookViewController" sceneMemberID="viewController">
@@ -183,7 +182,7 @@
             </objects>
             <point key="canvasLocation" x="2063" y="-415"/>
         </scene>
-        <!--Bluebook Detail View Controller - Course Detail-->
+        <!--Course Detail-->
         <scene sceneID="5Or-35-FAu">
             <objects>
                 <tableViewController id="4Bn-DI-2HA" customClass="YMBluebookDetailViewController" sceneMemberID="viewController">
@@ -247,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="-415"/>
         </scene>
-        <!--People View Controller - People Directory-->
+        <!--People Directory-->
         <scene sceneID="32N-6U-0s6">
             <objects>
                 <viewController storyboardIdentifier="People Directory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mOB-d8-0A7" customClass="YMPeopleViewController" sceneMemberID="viewController">
@@ -416,7 +415,7 @@
             </objects>
             <point key="canvasLocation" x="1580" y="294"/>
         </scene>
-        <!--Phonebook View Controller - Phonebook-->
+        <!--Phonebook-->
         <scene sceneID="6VB-wX-GDP">
             <objects>
                 <tableViewController storyboardIdentifier="Department Phonebook" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KZG-wO-Yce" customClass="YMPhonebookViewController" sceneMemberID="viewController">
@@ -499,7 +498,7 @@
             </objects>
             <point key="canvasLocation" x="1580" y="1010"/>
         </scene>
-        <!--People Detail View Controller - Search Result-->
+        <!--Search Result-->
         <scene sceneID="lpE-eB-lH1">
             <objects>
                 <viewController id="ti4-nB-t73" customClass="YMPeopleDetailViewController" sceneMemberID="viewController">
@@ -625,10 +624,10 @@
             </objects>
             <point key="canvasLocation" x="2063" y="294"/>
         </scene>
-        <!--Sliding View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="zOy-U8-Sa7">
             <objects>
-                <viewController id="3iU-j0-Yy1" customClass="ECSlidingViewController" sceneMemberID="viewController">
+                <viewController id="3iU-j0-Yy1" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KHs-pi-19e"/>
                         <viewControllerLayoutGuide type="bottom" id="R7w-ct-C8O"/>
@@ -719,7 +718,7 @@
             </objects>
             <point key="canvasLocation" x="1580" y="1735"/>
         </scene>
-        <!--Settings Modal View Controller - Hello!-->
+        <!--Hello!-->
         <scene sceneID="NaF-Mm-aHf">
             <objects>
                 <viewController id="JhK-zd-xcg" customClass="YMSettingsModalViewController" sceneMemberID="viewController">
@@ -819,7 +818,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="2462"/>
         </scene>
-        <!--Map View Controller - Campus Map-->
+        <!--Campus Map-->
         <scene sceneID="DCa-bx-5Te">
             <objects>
                 <viewController storyboardIdentifier="Campus Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TiP-kw-3HF" customClass="YMMapViewController" sceneMemberID="viewController">
@@ -1013,7 +1012,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="3208"/>
         </scene>
-        <!--Settings View Controller - Settings-->
+        <!--Settings-->
         <scene sceneID="b7f-4K-t09">
             <objects>
                 <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="chs-qO-LMx" customClass="YMSettingsViewController" sceneMemberID="viewController">
@@ -1325,7 +1324,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="3905"/>
         </scene>
-        <!--Shuttle View Controller - Shuttles-->
+        <!--Shuttles-->
         <scene sceneID="reE-Cy-ErX">
             <objects>
                 <viewController id="3qL-BG-fSt" customClass="YMShuttleViewController" sceneMemberID="viewController">
@@ -1406,7 +1405,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-bC-P3F">
-                                            <rect key="frame" x="87" y="11" width="201" height="21"/>
+                                            <rect key="frame" x="107" y="11" width="201" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="201" id="RqN-DR-dpE"/>
                                             </constraints>
@@ -1417,7 +1416,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="gMi-bC-P3F" firstAttribute="top" secondItem="1Hn-Y9-s5q" secondAttribute="top" constant="11" id="Cab-VJ-M5M"/>
-                                        <constraint firstItem="gMi-bC-P3F" firstAttribute="leading" secondItem="1Hn-Y9-s5q" secondAttribute="leading" constant="87" id="ecC-82-UDT"/>
+                                        <constraint firstItem="gMi-bC-P3F" firstAttribute="leading" secondItem="1Hn-Y9-s5q" secondAttribute="leading" constant="107" id="ecC-82-UDT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1454,7 +1453,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="4635"/>
         </scene>
-        <!--Dining View Controller - Dining-->
+        <!--Dining-->
         <scene sceneID="Yci-pD-GXk">
             <objects>
                 <tableViewController storyboardIdentifier="Dining" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MvU-Wh-cQb" customClass="YMDiningViewController" sceneMemberID="viewController">
@@ -2129,7 +2128,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGG-kW-98u">
-                                            <rect key="frame" x="61" y="11" width="171" height="21"/>
+                                            <rect key="frame" x="81" y="11" width="171" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="171" id="do1-fA-EfR"/>
@@ -2140,7 +2139,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fGG-kW-98u" firstAttribute="leading" secondItem="M5B-jF-Zzu" secondAttribute="leading" constant="61" id="Ayg-Dw-Um4"/>
+                                        <constraint firstItem="fGG-kW-98u" firstAttribute="leading" secondItem="M5B-jF-Zzu" secondAttribute="leading" constant="81" id="Ayg-Dw-Um4"/>
                                         <constraint firstItem="fGG-kW-98u" firstAttribute="top" secondItem="M5B-jF-Zzu" secondAttribute="top" constant="11" id="FtA-oo-8BV"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -2156,7 +2155,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33d-df-v7a" userLabel="Label - primary">
-                                            <rect key="frame" x="61" y="11" width="174" height="21"/>
+                                            <rect key="frame" x="81" y="11" width="174" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="174" id="1va-uS-5pU"/>
@@ -2166,7 +2165,7 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-lc-WE7" userLabel="Label - secondary">
-                                            <rect key="frame" x="149" y="11" width="139" height="21"/>
+                                            <rect key="frame" x="169" y="11" width="139" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="139" id="hPt-az-J6L"/>
@@ -2179,8 +2178,8 @@
                                     <constraints>
                                         <constraint firstItem="33d-df-v7a" firstAttribute="top" secondItem="BBW-GT-j5o" secondAttribute="top" constant="11" id="0HP-BK-ba6"/>
                                         <constraint firstItem="33d-df-v7a" firstAttribute="baseline" secondItem="cnX-lc-WE7" secondAttribute="baseline" id="hSb-CR-AKz"/>
-                                        <constraint firstItem="cnX-lc-WE7" firstAttribute="leading" secondItem="BBW-GT-j5o" secondAttribute="leading" constant="149" id="hzJ-uL-DPJ"/>
-                                        <constraint firstItem="33d-df-v7a" firstAttribute="leading" secondItem="BBW-GT-j5o" secondAttribute="leading" constant="61" id="yhq-lp-9Hc"/>
+                                        <constraint firstItem="cnX-lc-WE7" firstAttribute="leading" secondItem="33d-df-v7a" secondAttribute="trailing" constant="-86" id="q1h-Fz-cxd"/>
+                                        <constraint firstItem="33d-df-v7a" firstAttribute="leading" secondItem="BBW-GT-j5o" secondAttribute="leading" constant="81" id="yhq-lp-9Hc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -2220,7 +2219,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fW-bG-ZGJ">
-                                            <rect key="frame" x="61" y="11" width="171" height="21"/>
+                                            <rect key="frame" x="81" y="11" width="171" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="171" id="WP2-9x-aQi"/>
@@ -2231,7 +2230,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="1fW-bG-ZGJ" firstAttribute="leading" secondItem="YAS-iI-xIj" secondAttribute="leading" constant="61" id="mSe-88-xRp"/>
+                                        <constraint firstItem="1fW-bG-ZGJ" firstAttribute="leading" secondItem="YAS-iI-xIj" secondAttribute="leading" constant="81" id="mSe-88-xRp"/>
                                         <constraint firstItem="1fW-bG-ZGJ" firstAttribute="top" secondItem="YAS-iI-xIj" secondAttribute="top" constant="11" id="nYh-fp-xyH"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -2269,7 +2268,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="6759"/>
         </scene>
-        <!--Hours View Controller - Facility Hours-->
+        <!--Facility Hours-->
         <scene sceneID="ZV2-1u-kgB">
             <objects>
                 <tableViewController id="gmR-F4-asq" customClass="YMHoursViewController" sceneMemberID="viewController">
@@ -2720,7 +2719,7 @@
             </objects>
             <point key="canvasLocation" x="2063" y="8198"/>
         </scene>
-        <!--Calendar View Controller - Calendar-->
+        <!--Calendar-->
         <scene sceneID="j6c-9X-pDk">
             <objects>
                 <tableViewController storyboardIdentifier="Calendar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Rz-Gi-yfh" customClass="YMCalendarViewController" sceneMemberID="viewController">
@@ -3088,7 +3087,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="8978"/>
         </scene>
-        <!--Jump Station View Controller - Jump Station-->
+        <!--Jump Station-->
         <scene sceneID="3FX-Tf-rx2">
             <objects>
                 <tableViewController id="caY-UE-O5a" customClass="YMJumpStationViewController" sceneMemberID="viewController">
@@ -3223,7 +3222,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="81U-aC-rI3"/>

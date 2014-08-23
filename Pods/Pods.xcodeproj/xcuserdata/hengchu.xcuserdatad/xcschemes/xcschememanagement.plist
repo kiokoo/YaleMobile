@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ECSlidingViewController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-FLEX.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SWRevealViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03C1FDFA0CD848FFAB7BDC78</key>
+		<key>2EACF94D82184CC1B78E0EE8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>108A6C9743124A628E4BC6A5</key>
+		<key>35DB57A2B14C4177934F196F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>138229BE7875467CB1B438FF</key>
+		<key>49B42D7A14404FB69FC79A85</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>47BB71224BB24B539C0C00BD</key>
+		<key>5ACE0FDB377F41CE9C974A0E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56E89F20DBE14EF8BEDA61FB</key>
+		<key>762C371B9D2243CD89B38CD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B51D827EC40A47E4B80AC95E</key>
+		<key>79A238E6F8E1456C8CECF7BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D09FFB75F793460F957A89A2</key>
+		<key>D6B86A2420654235B7C4F693</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E84BB20FD523460C8FE951E7</key>
+		<key>EA28ED2EBA0D4D928EE3DC8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

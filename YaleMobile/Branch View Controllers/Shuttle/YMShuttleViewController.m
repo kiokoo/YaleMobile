@@ -29,11 +29,13 @@
 #import "YMVehicleInfoSubview.h"
 
 #import <PureLayout/PureLayout.h>
+#import <SWRevealViewController.h>
 
 #import "YMTheme.h"
 #import "YMAppDelegate.h"
 
-@interface YMShuttleViewController ()
+@interface YMShuttleViewController () <SWRevealViewControllerDelegate>
+@property (nonatomic, strong) UIButton *settings;
 @end
 
 @implementation YMShuttleViewController
@@ -52,10 +54,11 @@
   [super viewDidLoad];
   [YMGlobalHelper addMenuButtonToController:self];
   
-  UIButton *settings = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 23, 23)];
-  [settings setBackgroundImage:[UIImage imageNamed:@"button_navbar_settings.png"] forState:UIControlStateNormal];
-  [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:settings]];
-  [settings addTarget:self action:@selector(settings:) forControlEvents:UIControlEventTouchUpInside];
+  self.settings = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 23, 23)];
+  [self.settings setBackgroundImage:[UIImage imageNamed:@"button_navbar_settings.png"] forState:UIControlStateNormal];
+  [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:self.settings]];
+  [self.settings addTarget:self action:@selector(settings:) forControlEvents:UIControlEventTouchUpInside];
+  self.settings.enabled = NO;
   self.zoomLevel = 0;
   [self.locate1 addTarget:self action:@selector(locate:) forControlEvents:UIControlEventTouchUpInside];
   [self.refresh1 addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventTouchUpInside];
@@ -65,17 +68,17 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
+  
   [YMServerCommunicator cancelAllHTTPRequests];
   
-  if (![self.slidingViewController.underLeftViewController isKindOfClass:[YMMenuViewController class]]) {
-    self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+  if (![self.revealViewController.rearViewController isKindOfClass:[YMMenuViewController class]]) {
+    self.revealViewController.rearViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
   }
   
   self.navigationController.view.layer.shadowOpacity = 0.75f;
   self.navigationController.view.layer.shadowRadius = 10.0f;
   self.navigationController.view.layer.shadowColor = [UIColor blackColor].CGColor;
-  
-  [YMGlobalHelper setupRightSlidingViewControllerForController:self withRightController:[YMShuttleSelectionViewController class] named:@"Shuttle Selection"];
   
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Resumed"];
   
@@ -96,19 +99,16 @@
     }];
   }
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(topDidReset:)
-                                               name:ECSlidingViewControllerTopDidResetNotification
-                                             object:self.slidingViewController];
-  
+  self.revealViewController.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+  [super viewWillDisappear:animated];
+  
   DLog(@"Disappeared");
   [self.refresh1 setSelected:NO];
   [self removeCalloutViewWithAnimation];
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)topDidReset:(id)sender
@@ -136,8 +136,11 @@
     for (NSDictionary *dict in data)
       [Route routeWithData:dict forTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
     NSArray *routes = [Route getAllRoutesInManagedObjectContext:self.db.managedObjectContext];
-    YMShuttleSelectionViewController *ssvc = (YMShuttleSelectionViewController *)self.slidingViewController.underRightViewController;
+
+    YMShuttleSelectionViewController *ssvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Shuttle Selection"];
     ssvc.routes = routes;
+    self.revealViewController.rightViewController = ssvc;
+    self.settings.enabled = YES;
     
     NSString *r = [Route getActiveRoutesInManagedObjectContext:self.db.managedObjectContext];
     self.routesList = r;
@@ -674,8 +677,16 @@
 
 - (void)settings:(id)sender
 {
-  self.slidingViewController.anchorLeftRevealAmount = 280.0f;
-  [self.slidingViewController anchorTopViewToLeftAnimated:NO onComplete:nil];
+  self.revealViewController.rightViewRevealWidth = 280.0f;
+  [self.revealViewController setFrontViewPosition:FrontViewPositionLeftSide animated:YES];
+}
+
+- (void)revealController:(SWRevealViewController *)revealController
+       didMoveToPosition:(FrontViewPosition)position
+{
+  if (revealController.frontViewPosition == FrontViewPositionLeft) {
+    [self topDidReset:self];
+  }
 }
 
 @end
