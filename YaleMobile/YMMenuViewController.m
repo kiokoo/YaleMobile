@@ -10,6 +10,8 @@
 #import "YMMenuCell.h"
 #import "YMTheme.h"
 
+#import <SWRevealViewController/SWRevealViewController.h>
+
 @interface YMMenuViewController ()
 
 @property (nonatomic, strong) NSArray *iconNames;

@@ -13,8 +13,6 @@
 #ifdef __OBJC__
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
-  #import <CSNotificationView.h>
-  #import <SWRevealViewController/SWRevealViewController.h>
 #endif
 
 #ifdef DEBUG

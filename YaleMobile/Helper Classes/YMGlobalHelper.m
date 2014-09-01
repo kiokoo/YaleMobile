@@ -9,6 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "YMGlobalHelper.h"
 #import "YMMenuViewController.h"
+#import <SWRevealViewController/SWRevealViewController.h>
 
 #import "YMAppDelegate.h"
 

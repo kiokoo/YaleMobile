@@ -20,6 +20,8 @@
 #import "UIColor+YaleMobile.h"
 #import "YMServerCommunicator.h"
 
+#import <SWRevealViewController/SWRevealViewController.h>
+
 #import "YMTheme.h"
 
 @interface YMMapViewController ()

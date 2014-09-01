@@ -10,6 +10,7 @@
 #import "YMDatabaseHelper.h"
 #import "YMGlobalHelper.h"
 #import "YMTheme.h"
+#import <SWRevealViewController/SWRevealViewController.h>
 
 #import <FlexManager.h>
 
@@ -34,9 +35,9 @@
   [[FLEXManager sharedManager] showExplorer];
 #endif
   
-  [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge |
-                                                  UIRemoteNotificationTypeSound |
-                                                  UIRemoteNotificationTypeAlert ];
+//  [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge |
+//                                                  UIRemoteNotificationTypeSound |
+//                                                  UIRemoteNotificationTypeAlert ];
   
   SWRevealViewController *revealVC = (SWRevealViewController *)self.window.rootViewController;
   UIStoryboard *storyboard;

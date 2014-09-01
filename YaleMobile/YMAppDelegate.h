@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CSNotificationView/CSNotificationView.h>
 
 @interface YMAppDelegate : UIResponder <UIApplicationDelegate>
 

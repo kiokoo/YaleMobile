@@ -20,6 +20,7 @@
 #import "UIView+AutoLayout.h"
 #import "NSString+URLEncode.h"
 #import "YMAppDelegate.h"
+#import <SWRevealViewController/SWRevealViewController.h>
 
 #import <PureLayout/PureLayout.h>
 
