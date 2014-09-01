@@ -55,6 +55,8 @@
   [viewController.revealViewController setDelegate:(id<SWRevealViewControllerDelegate>)viewController];
   [viewController.revealViewController setRearViewRevealWidth:280.0f];
   
+  [viewController.navigationController.view addGestureRecognizer:[viewController.revealViewController tapGestureRecognizer]];
+  
   // Slide view shadow setup
   viewController.navigationController.view.layer.shadowOpacity = 0.75f;
   viewController.navigationController.view.layer.shadowRadius = 10.0f;
