@@ -134,6 +134,7 @@
 		9BE9958A1900AD7C0065EBEF /* YMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE995841900AD7C0065EBEF /* YMMenuViewController.m */; };
 		9BE9958B1900AD7C0065EBEF /* YMSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE995861900AD7C0065EBEF /* YMSplashViewController.m */; };
 		9BE9958D1900C4EF0065EBEF /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE9958C1900C4EF0065EBEF /* libxml2.2.dylib */; };
+		9BED9BBF19B517E900DDC146 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BED9BBE19B517E900DDC146 /* UIImage+ImageWithColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -358,6 +359,8 @@
 		9BE995851900AD7C0065EBEF /* YMSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSplashViewController.h; sourceTree = "<group>"; };
 		9BE995861900AD7C0065EBEF /* YMSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSplashViewController.m; sourceTree = "<group>"; };
 		9BE9958C1900C4EF0065EBEF /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		9BED9BBD19B517E900DDC146 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
+		9BED9BBE19B517E900DDC146 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
 		AC80F901303847FD9AAFD111 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E13C79FA26474412B5B6523A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -747,6 +750,8 @@
 		9BE9938B1900AA000065EBEF /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9BED9BBD19B517E900DDC146 /* UIImage+ImageWithColor.h */,
+				9BED9BBE19B517E900DDC146 /* UIImage+ImageWithColor.m */,
 				9B48E409192A3FAF00E9AF28 /* NSString+URLEncode.h */,
 				9B48E40A192A3FAF00E9AF28 /* NSString+URLEncode.m */,
 				9B48E406192A3D1200E9AF28 /* UIView+AutoLayout.h */,
@@ -1053,6 +1058,7 @@
 				9BE993C51900AA010065EBEF /* YMDiningDetailViewController.m in Sources */,
 				9BE993E01900AA010065EBEF /* YMVehicleInfoSubview.m in Sources */,
 				24391F641988A40900A0F284 /* YMTheme.m in Sources */,
+				9BED9BBF19B517E900DDC146 /* UIImage+ImageWithColor.m in Sources */,
 				9BE995571900AA010065EBEF /* TFHpple.m in Sources */,
 				9BE995591900AA010065EBEF /* XPathQuery.m in Sources */,
 				9BE993D71900AA010065EBEF /* YMShuttleSelectionViewController.m in Sources */,

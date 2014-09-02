@@ -30,6 +30,7 @@ static CGFloat const kSpaceToCoverStatusBars = 20.0f;
 
 - (void)layoutSubviews {
   [super layoutSubviews];
+  self.shadowImage = [UIImage new];
   if (self.colorLayer != nil) {
     self.colorLayer.frame = CGRectMake(0, 0 - kSpaceToCoverStatusBars, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + kSpaceToCoverStatusBars);
     
