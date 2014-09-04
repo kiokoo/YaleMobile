@@ -10,6 +10,7 @@
 #import "YMDatabaseHelper.h"
 #import "YMGlobalHelper.h"
 #import "YMTheme.h"
+#import "UIImage+ImageWithColor.h"
 #import <SWRevealViewController/SWRevealViewController.h>
 
 #import <FlexManager.h>
@@ -28,6 +29,9 @@
 
   [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
   [[UINavigationBar appearance] setBarTintColor:[[YMTheme blue] colorWithAlphaComponent:0.1]];
+  [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[[YMTheme blue] colorWithAlphaComponent:0.85]]
+                                     forBarMetrics:UIBarMetricsDefault];
+  [[UINavigationBar appearance] setShadowImage:[UIImage new]];
   
   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
