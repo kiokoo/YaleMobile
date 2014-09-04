@@ -12,9 +12,11 @@
 
 + (UIColor *)blue;
 
-+ (UIColor *)grey;
++ (UIColor *)gray;
 
-+ (UIColor *)lightGrey;
++ (UIColor *)lightGray;
+
++ (UIColor *)separatorGray;
 
 + (UIColor *)diningSpecialTextColor;
 

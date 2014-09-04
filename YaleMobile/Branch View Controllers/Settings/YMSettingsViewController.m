@@ -150,8 +150,8 @@
     cell.primary1.text = [self.settings objectAtIndex:indexPath.row];
     cell.backgroundView.alpha = 0.6;
     
-    cell.primary1.textColor   = [YMTheme grey];
-    cell.secondary1.textColor = [YMTheme lightGrey];
+    cell.primary1.textColor   = [YMTheme gray];
+    cell.secondary1.textColor = [YMTheme lightGray];
     
     return cell;
   } else {
@@ -184,7 +184,7 @@
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     }
     
-    cell.name1.textColor = [YMTheme grey];
+    cell.name1.textColor = [YMTheme gray];
     cell.backgroundView.alpha = 0.6;
     return cell;
   }

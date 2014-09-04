@@ -112,7 +112,7 @@
 {
   if (indexPath.row == 0) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Detail Header"];
-    cell.name1.textColor = [YMTheme grey];
+    cell.name1.textColor = [YMTheme gray];
     cell.name1.text = (indexPath.section == 0) ? [NSString stringWithFormat:@"Washers: %@ of %@ available", [self.washers objectAtIndex:0], [self.washers objectAtIndex:1]] : [NSString stringWithFormat:@"Dryers: %@ of %@ available", [self.dryers objectAtIndex:0], [self.dryers objectAtIndex:1]];
     return cell;
   }
@@ -179,10 +179,10 @@
   
   cell.backgroundView.alpha = 0.6;
   
-  cell.machineID1.textColor = [YMTheme grey];
+  cell.machineID1.textColor = [YMTheme gray];
   cell.time1.textColor      = [YMTheme laundryTimeAndBluebookHappensTextColor];
-  cell.min1.textColor       = [YMTheme lightGrey];
-  cell.status1.textColor    = [YMTheme lightGrey];
+  cell.min1.textColor       = [YMTheme lightGray];
+  cell.status1.textColor    = [YMTheme lightGray];
   
   return cell;
 }

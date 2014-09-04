@@ -49,8 +49,8 @@
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   if (name) self.textField1.text = name;
   
-  self.textField1.textColor = [YMTheme grey];
-  self.welcomLabel.textColor = [YMTheme grey];
+  self.textField1.textColor = [YMTheme gray];
+  self.welcomLabel.textColor = [YMTheme gray];
 }
 
 - (void)confirm:(id)sender

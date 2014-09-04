@@ -15,9 +15,11 @@
 
 + (UIColor *)blue { return [UIColor colorWithRed:0.05 green:0.3 blue:0.57 alpha:1]; }
 
-+ (UIColor *)grey { return RGB(111, 132, 132); }
++ (UIColor *)gray { return RGB(110, 115, 115); }
 
-+ (UIColor *)lightGrey { return [UIColor lightGrayColor]; }
++ (UIColor *)lightGray { return [UIColor lightGrayColor]; }
+
++ (UIColor *)separatorGray { return RGB(245, 245, 245); }
 
 /** Used in dining view */
 + (UIColor *)diningSpecialTextColor { return RGB(84, 146, 173); }

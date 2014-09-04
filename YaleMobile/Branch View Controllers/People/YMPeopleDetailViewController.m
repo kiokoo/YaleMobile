@@ -206,8 +206,8 @@
   cell.userInteractionEnabled = ([title isEqualToString:@"Email"] || [title isEqualToString:@"Phone"]) ? YES : NO;
   
   
-  cell.primary1.textColor = [YMTheme grey];
-  cell.secondary1.textColor = [YMTheme lightGrey];
+  cell.primary1.textColor = [YMTheme gray];
+  cell.secondary1.textColor = [YMTheme lightGray];
   cell.backgroundView.alpha = 0.6;
   
   return cell;

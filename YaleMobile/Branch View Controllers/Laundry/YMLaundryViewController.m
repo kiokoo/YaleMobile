@@ -124,7 +124,7 @@
 {
   if (indexPath.row == 0) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Header"];
-    cell.name1.textColor = [YMTheme grey];
+    cell.name1.textColor = [YMTheme gray];
     cell.name1.text = @"Select a location";
     return cell;
   } else {
@@ -170,9 +170,9 @@
     }
     
     cell.backgroundView.alpha = 0.6;
-    cell.location1.textColor = [YMTheme grey];
-    cell.washer1.textColor   = [YMTheme grey];
-    cell.dryer1.textColor    = [YMTheme grey];
+    cell.location1.textColor = [YMTheme gray];
+    cell.washer1.textColor   = [YMTheme gray];
+    cell.dryer1.textColor    = [YMTheme gray];
     
     return cell;
   }

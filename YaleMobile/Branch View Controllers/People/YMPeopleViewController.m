@@ -187,7 +187,7 @@
   if (indexPath.row == 0) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"People Header"];
     cell.name1.text = [NSString stringWithFormat:@"Found %lu results", (unsigned long)self.people.count];
-    cell.name1.textColor = [YMTheme grey];
+    cell.name1.textColor = [YMTheme gray];
     return cell;
   } else {
     YMSubtitleCell *cell = (indexPath.row == 1) ? (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"People Top Cell"] : (YMSubtitleCell *)[tableView dequeueReusableCellWithIdentifier:@"People Cell"];
@@ -207,8 +207,8 @@
     cell.secondary1.text = detail;
     
     cell.backgroundView.alpha = 0.6;
-    cell.primary1.textColor   = [YMTheme grey];
-    cell.secondary1.textColor = [YMTheme lightGrey];
+    cell.primary1.textColor   = [YMTheme gray];
+    cell.secondary1.textColor = [YMTheme lightGray];
     
     return cell;
   }

@@ -189,10 +189,10 @@
   if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] != 0)
     cell.crowdLabel1.text = @"Special";
   
-  cell.name1.textColor       = [YMTheme grey];
-  cell.location1.textColor   = [YMTheme lightGrey];
+  cell.name1.textColor       = [YMTheme gray];
+  cell.location1.textColor   = [YMTheme lightGray];
   cell.special1.textColor    = [YMTheme diningSpecialTextColor];
-  cell.crowdLabel1.textColor = [YMTheme lightGrey];
+  cell.crowdLabel1.textColor = [YMTheme lightGray];
   
   return cell;
 }

@@ -41,7 +41,7 @@
     self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
   }
   
-  self.tableView.separatorColor = [YMTheme lightGrey];
+  self.tableView.separatorColor = [YMTheme separatorGray];
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
   
   // Gets rid of extra separator for ya :)
@@ -114,8 +114,8 @@
 
   cell.code1.textColor       = [YMTheme bluebookSubjectCodeTextColor];
   cell.happens1.textColor    = [YMTheme laundryTimeAndBluebookHappensTextColor];
-  cell.instructor1.textColor = [YMTheme lightGrey];
-  cell.name1.textColor       = [YMTheme grey];
+  cell.instructor1.textColor = [YMTheme lightGray];
+  cell.name1.textColor       = [YMTheme gray];
   
   Course *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
   cell.name1.text = course.name;

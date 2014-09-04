@@ -103,7 +103,7 @@
     cell.name1.text = text;
   }
   
-  cell.name1.textColor = [YMTheme grey];
+  cell.name1.textColor = [YMTheme gray];
   
   return cell;
 }
