@@ -74,6 +74,8 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
     self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
   }
   
+  self.tableView.separatorInset = UIEdgeInsetsZero;
+  
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
   self.tableView.separatorColor = [YMTheme lightGrey];
 }

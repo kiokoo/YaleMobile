@@ -135,7 +135,7 @@
 
 - (void)updateTableHeader
 {
-  float extra = ([[UIScreen mainScreen] bounds].size.height == 568) ? 336 : 248;
+  float extra = ([[UIScreen mainScreen] bounds].size.height == 568) ? 316 : 228;
   
   UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 140 + extra, 286, 28)];
   headerLabel.text = self.titleText;
@@ -143,9 +143,7 @@
   headerLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:18];
   headerLabel.backgroundColor = [UIColor clearColor];
   headerLabel.numberOfLines = 0;
-  /* deprecated
-   CGSize textSize = [self.titleText sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:18] constrainedToSize:CGSizeMake(286.0, 3000)];
-   */
+
   CGSize textSize = [YMGlobalHelper boundText:self.titleText withFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:18] andConstraintSize:CGSizeMake(286.0, 3000)];
   CGRect newFrame = headerLabel.frame;
   newFrame.size.height = textSize.height;

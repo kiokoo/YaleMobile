@@ -41,6 +41,8 @@
     self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
   }
   
+  [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, -15, 0, 0)];
+  
   self.tableView.separatorColor = [YMTheme lightGrey];
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
   
