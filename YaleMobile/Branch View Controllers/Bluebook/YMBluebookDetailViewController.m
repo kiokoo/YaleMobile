@@ -328,8 +328,8 @@
   
   cell.secondary1.text = index;
   
-  cell.secondary1.textColor = [YMTheme lightGrey];
-  cell.primary1.textColor   = [YMTheme grey];
+  cell.secondary1.textColor = [YMTheme lightGray];
+  cell.primary1.textColor   = [YMTheme gray];
   
   return cell;
 }

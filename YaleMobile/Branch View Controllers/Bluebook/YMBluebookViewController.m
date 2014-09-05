@@ -76,8 +76,8 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   self.tableView.separatorInset = UIEdgeInsetsZero;
   
+  self.tableView.separatorColor = [YMTheme separatorGray];
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-  self.tableView.separatorColor = [YMTheme lightGrey];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -302,7 +302,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:[self.courses objectForKey:[self.keys objectAtIndex:indexPath.section]]];
   NSArray *keys = [[dict allKeys] sortedArrayUsingSelector:@selector(compare:)];
   
-  cell.name1.textColor = [YMTheme grey];
+  cell.name1.textColor = [YMTheme gray];
   
   cell.name1.text = [((NSDictionary *)[dict objectForKey:[keys objectAtIndex:indexPath.row]]) objectForKey:@"Name"];
   

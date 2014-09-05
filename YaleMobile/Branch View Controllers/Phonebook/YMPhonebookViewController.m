@@ -264,8 +264,8 @@
   cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
   cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
   
-  cell.primary1.textColor   = [YMTheme grey];
-  cell.secondary1.textColor = [YMTheme lightGrey];
+  cell.primary1.textColor   = [YMTheme gray];
+  cell.secondary1.textColor = [YMTheme lightGray];
   
   return cell;
 }

@@ -356,9 +356,9 @@
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
   }
   
-  cell.name1.textColor  = [YMTheme grey];
-  cell.sub1_1.textColor = [YMTheme lightGrey];
-  cell.sub2_1.textColor = [YMTheme lightGrey];
+  cell.name1.textColor  = [YMTheme gray];
+  cell.sub1_1.textColor = [YMTheme lightGray];
+  cell.sub2_1.textColor = [YMTheme lightGray];
   
   cell.backgroundView.alpha = 0.9;
   
