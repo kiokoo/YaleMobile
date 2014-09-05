@@ -61,6 +61,11 @@
   return RGB(111, 113, 121);
 }
 
++ (UIColor *)cellHighlightBackgroundViewColor
+{
+  return [[UIColor blackColor] colorWithAlphaComponent:0.1];
+}
+
 /* Migrated from UIColor+YaleMobile */
 + (UIColor *)YMOrange
 {

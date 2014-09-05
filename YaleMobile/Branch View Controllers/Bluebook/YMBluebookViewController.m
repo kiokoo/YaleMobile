@@ -49,7 +49,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 {
   [super viewDidLoad];
   self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
-
+  
   [self updateTable];
   [YMGlobalHelper addMenuButtonToController:self];
   
@@ -301,10 +301,11 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   YMSimpleCell *cell = (YMSimpleCell *)[self.tableView dequeueReusableCellWithIdentifier:@"Bluebook First Cell"];
   NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:[self.courses objectForKey:[self.keys objectAtIndex:indexPath.section]]];
   NSArray *keys = [[dict allKeys] sortedArrayUsingSelector:@selector(compare:)];
-  
   cell.name1.textColor = [YMTheme gray];
-  
   cell.name1.text = [((NSDictionary *)[dict objectForKey:[keys objectAtIndex:indexPath.row]]) objectForKey:@"Name"];
+  
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
   
   return cell;
 }
@@ -357,6 +358,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   [self performSegueWithIdentifier:@"Bluebook First Segue" sender:self];
 }
 

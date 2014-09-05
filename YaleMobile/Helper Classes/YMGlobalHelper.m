@@ -278,6 +278,13 @@
   });
 }
 
-
++ (void)setupHighlightBackgroundViewWithColor:(UIColor *)color
+                                      forCell:(UITableViewCell *)cell
+{
+  UIView *highlightView = [[UIView alloc] initWithFrame:cell.bounds];
+  highlightView.backgroundColor = color;
+  [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
+  [cell setSelectedBackgroundView:highlightView];
+}
 
 @end

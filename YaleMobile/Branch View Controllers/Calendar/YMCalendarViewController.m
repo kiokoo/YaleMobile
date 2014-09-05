@@ -125,6 +125,9 @@
   
   cell.backgroundView.alpha = 0.6;
   
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
+  
   return cell;
 }
 
@@ -143,6 +146,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   [self performSegueWithIdentifier:@"Academic Calendar Segue" sender:self];
 }
 

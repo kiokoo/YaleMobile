@@ -132,6 +132,9 @@
   newFrame.size.height = textSize.height;
   cell.name1.frame = newFrame;
   
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
+  
   return cell;
 }
 
@@ -152,6 +155,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   [self performSegueWithIdentifier:@"Bluebook Detail Segue" sender:self];
 }
 

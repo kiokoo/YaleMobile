@@ -95,11 +95,18 @@
   
     cell.name1.textColor = [YMTheme white];
   
+    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                  forCell:cell];
+    
     return cell;
   } else {
     YMShuttleSelectionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Shuttle Selection Cell"];
     cell.name1.text = @"Confirm";
     cell.name1.textColor = [YMTheme white];
+    
+    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                  forCell:cell];
+    
     return cell;
   }
 }

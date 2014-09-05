@@ -9,6 +9,7 @@
 #import "YMMenuViewController.h"
 #import "YMMenuCell.h"
 #import "YMTheme.h"
+#import "YMGlobalHelper.h"
 
 #import <SWRevealViewController/SWRevealViewController.h>
 
@@ -74,6 +75,9 @@
   NSString *imageName = [NSString stringWithFormat:@"icon_sidebar_%@", [(NSString *)self.iconNames[indexPath.row] lowercaseString]];
   UIImage *icon = [UIImage imageNamed:imageName];
   cell.icon1.image = icon ? icon : [UIImage imageNamed:[NSString stringWithFormat:@"menu%ld.png", (long)indexPath.row]];
+  
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
   
   return cell;
 }

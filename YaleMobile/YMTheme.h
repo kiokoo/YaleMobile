@@ -38,6 +38,8 @@
 
 + (UIColor *)mainViewTemperatureLabelColor;
 
++ (UIColor *)cellHighlightBackgroundViewColor;
+
 /* Migrated from UIColor+YaleMobile */
 + (UIColor *)YMOrange;
 + (UIColor *)YMLightOrange;

@@ -120,6 +120,8 @@
     }
   }
   
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
   
   cell.name1.textColor = [YMTheme gray];
   cell.backgroundView.alpha = 0.6;
@@ -141,6 +143,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   [self performSegueWithIdentifier:@"Hours Library Segue" sender:self];
 }
 

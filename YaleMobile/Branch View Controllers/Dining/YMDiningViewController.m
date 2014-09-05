@@ -193,6 +193,9 @@
   cell.special1.textColor    = [YMTheme diningSpecialTextColor];
   cell.crowdLabel1.textColor = [YMTheme lightGray];
   
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
+  
   return cell;
 }
 
@@ -240,6 +243,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   [self performSegueWithIdentifier:@"Dining Segue" sender:self];
 }
 

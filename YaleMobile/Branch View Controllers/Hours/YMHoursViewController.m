@@ -143,6 +143,9 @@
   cell.name1.textColor = [YMTheme gray];
   cell.backgroundView.alpha = 0.6;
   
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
+  
   return cell;
 }
 
@@ -162,6 +165,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   if (indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4) {
     NSString *path;
     if (indexPath.row == 2) {

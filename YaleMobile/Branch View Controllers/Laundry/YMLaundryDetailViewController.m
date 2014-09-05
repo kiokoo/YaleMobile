@@ -183,6 +183,9 @@
   cell.min1.textColor       = [YMTheme lightGray];
   cell.status1.textColor    = [YMTheme lightGray];
   
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
+  
   return cell;
 }
 
@@ -201,6 +204,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   
   NSUInteger index = indexPath.section * [[self.washers objectAtIndex:1] integerValue] + indexPath.row - 1;
   NSString *machineID = [NSString stringWithFormat:@"%@", [[(NSDictionary *)[self.machineStatuses objectAtIndex:index] allKeys] objectAtIndex:0]];

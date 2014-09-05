@@ -210,6 +210,9 @@
     cell.primary1.textColor   = [YMTheme gray];
     cell.secondary1.textColor = [YMTheme lightGray];
     
+    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                  forCell:cell];
+    
     return cell;
   }
 }
@@ -229,6 +232,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [self.tableView1 deselectRowAtIndexPath:indexPath animated:YES];
   NSString *urlString = [[self.people objectAtIndex:indexPath.row-1] objectForKey:@"link"];
   NSURL *url = [NSURL URLWithString:urlString];
   NSURLRequest *request = [NSURLRequest requestWithURL:url];

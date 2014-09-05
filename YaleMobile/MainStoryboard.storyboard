@@ -1846,7 +1846,7 @@
                                     <outlet property="washerIcon1" destination="TWg-zA-lxp" id="xhi-fk-EfD"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Header" id="0R7-Ob-sQB" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Header" id="0R7-Ob-sQB" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="238" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0R7-Ob-sQB" id="wmE-78-v7B">
@@ -2359,7 +2359,7 @@
                                     <outlet property="name1" destination="t49-nh-kfI" id="eE4-cH-nQ2"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Hours Cell 0" id="tlY-Bg-bNn" customClass="YMSimpleCell">
+                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Hours Cell 0" id="tlY-Bg-bNn" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="217" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tlY-Bg-bNn" id="1mE-Wd-dHS">

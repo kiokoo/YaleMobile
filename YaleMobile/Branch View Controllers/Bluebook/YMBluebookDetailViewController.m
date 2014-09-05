@@ -332,6 +332,9 @@
   cell.secondary1.textColor = [YMTheme lightGray];
   cell.primary1.textColor   = [YMTheme gray];
   
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
+  
   return cell;
 }
 

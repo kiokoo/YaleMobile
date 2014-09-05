@@ -10,6 +10,7 @@
 #import "YMBluebookFilterSelectionViewController.h"
 #import "YMSimpleCell.h"
 #import "YMSubtitleCell.h"
+#import "YMGlobalHelper.h"
 
 #import "YMTheme.h"
 
@@ -83,6 +84,10 @@
     cell.secondary1.textColor = [YMTheme bluebookFilterSecondaryTextColor];
     
     cell.secondary1.adjustsFontSizeToFitWidth = YES;
+    
+    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                  forCell:cell];
+    
     return cell;
   } else {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Simple"];
@@ -91,6 +96,10 @@
     
     cell.name1.text = [((NSArray *)[self.filters objectAtIndex:indexPath.section]) objectAtIndex:indexPath.row];
     cell.accessoryView = ([[NSUserDefaults standardUserDefaults] boolForKey:[NSString stringWithFormat:@"Bluebook %@", cell.name1.text]]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
+    
+    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                  forCell:cell];
+    
     return cell;
   }
   

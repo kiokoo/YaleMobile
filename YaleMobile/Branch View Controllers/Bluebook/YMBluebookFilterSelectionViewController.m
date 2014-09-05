@@ -8,6 +8,7 @@
 
 #import "YMBluebookFilterSelectionViewController.h"
 #import "YMSimpleCell.h"
+#import "YMGlobalHelper.h"
 #import <QuartzCore/QuartzCore.h>
 
 #import "YMTheme.h"
@@ -75,6 +76,9 @@
   
   cell.accessoryView = ([self.selected isEqualToString:cell.name1.text]) ? [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check.png"]] : nil;
   
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+                                                forCell:cell];
+  
   return cell;
 }
 
@@ -107,6 +111,7 @@
 {
   YMSimpleCell *cell = (YMSimpleCell *)[self.tableView cellForRowAtIndexPath:indexPath];
   self.selected = cell.name1.text;
+  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   [[NSUserDefaults standardUserDefaults] setObject:self.selected forKey:[NSString stringWithFormat:@"Bluebook %@", [self.options objectAtIndex:self.options.count - 1]]];
   [self.tableView reloadData];
   

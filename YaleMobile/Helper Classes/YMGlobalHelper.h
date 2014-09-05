@@ -43,5 +43,7 @@
                                  message:(NSString *)msg
                                tintColor:(UIColor *)color;
 + (void)hideNotificationView;
++ (void)setupHighlightBackgroundViewWithColor:(UIColor *)color
+                                      forCell:(UITableViewCell *)cell;
 
 @end
