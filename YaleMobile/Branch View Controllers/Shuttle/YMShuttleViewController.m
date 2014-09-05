@@ -698,12 +698,15 @@
     [self topDidReset:self];
   } else if (revealController.frontViewPosition == FrontViewPositionLeftSide) {
     self.mapView1.userInteractionEnabled = NO;
+  } else if (revealController.frontViewPosition == FrontViewPositionRight) {
+      self.mapView1.userInteractionEnabled = NO;
+
   }
 }
 
 - (BOOL)revealControllerPanGestureShouldBegin:(SWRevealViewController *)revealController
 {
-  if (revealController.frontViewPosition == FrontViewPositionLeftSide) {
+  if (revealController.frontViewPosition == FrontViewPositionLeftSide || revealController.frontViewPosition == FrontViewPositionRight) {
     return YES;
   }
   return NO;

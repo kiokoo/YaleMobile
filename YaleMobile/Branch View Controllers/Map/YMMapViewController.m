@@ -19,12 +19,11 @@
 #import "YMDatabaseHelper.h"
 #import "YMServerCommunicator.h"
 #import "YMTheme.h"
-
 #import <SWRevealViewController/SWRevealViewController.h>
 
 #import "YMTheme.h"
 
-@interface YMMapViewController ()
+@interface YMMapViewController () <SWRevealViewControllerDelegate>
 
 @end
 
@@ -90,6 +89,10 @@
     }];
   }
   
+    
+    self.revealViewController.delegate = self;
+    [YMGlobalHelper setupSlidingViewControllerForController:self];
+
 }
 
 
@@ -298,6 +301,26 @@
     pinView.animatesDrop = YES;
   }
   return pinView;
+}
+
+/* Check for Menu position to allow user to swipe to dismiss menu by disabling the map */
+
+- (void)revealController:(SWRevealViewController *)revealController
+       didMoveToPosition:(FrontViewPosition)position
+{
+    if (revealController.frontViewPosition == FrontViewPositionLeft) {
+        self.mapView1.userInteractionEnabled = YES;
+    } else if (revealController.frontViewPosition == FrontViewPositionRight) {
+        self.mapView1.userInteractionEnabled = NO;
+    }
+}
+
+- (BOOL)revealControllerPanGestureShouldBegin:(SWRevealViewController *)revealController
+{
+    if (revealController.frontViewPosition == FrontViewPositionRight) {
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark - Table view data source
