@@ -30,6 +30,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *day5;
 @property (nonatomic, strong) IBOutlet UIImageView *weather5;
 @property (nonatomic, strong) IBOutlet UILabel *temp5;
+@property (strong, nonatomic) IBOutlet UIButton *changeUnitsButton;
 
 - (void)configureWeatherSubviews:(NSArray *)weatherInfo;
 
