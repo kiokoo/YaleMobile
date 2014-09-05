@@ -11,7 +11,6 @@
 #import "YMGlobalHelper.h"
 #import "YMDiningCell.h"
 #import "YMServerCommunicator.h"
-#import "UIColor+YaleMobile.h"
 
 #import "YMTheme.h"
 
@@ -164,14 +163,14 @@
   if (self.special.count) {
     cell.special1.text = [self.special objectAtIndex:indexPath.row * 3 + 1];
     if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] == 0) {
-      cell.special1.textColor = [UIColor YMDiningBlue];
-      cell.special1.highlightedTextColor = [UIColor YMDiningBlue];
+      cell.special1.textColor = [YMTheme YMDiningBlue];
+      cell.special1.highlightedTextColor = [YMTheme YMDiningBlue];
     } else if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] == 1) {
-      cell.special1.textColor = [UIColor YMDiningRed];
-      cell.special1.highlightedTextColor = [UIColor YMDiningRed];
+      cell.special1.textColor = [YMTheme YMDiningRed];
+      cell.special1.highlightedTextColor = [YMTheme YMDiningRed];
     } else {
-      cell.special1.textColor = [UIColor YMDiningGreen];
-      cell.special1.highlightedTextColor = [UIColor YMDiningGreen];
+      cell.special1.textColor = [YMTheme YMDiningGreen];
+      cell.special1.highlightedTextColor = [YMTheme YMDiningGreen];
     }
   } else {
     cell.special1.text = @"Status Unavailable";
@@ -180,7 +179,7 @@
   }
   
   cell.crowdLabel1.text = [self crowdedness:[[array objectAtIndex:4] integerValue]];
-  cell.crowdedness1.image = [UIImage imageNamed:[NSString stringWithFormat:@"dots%ld.png", ([[array objectAtIndex:4] integerValue] + 1) / 2]];
+  cell.crowdedness1.image = [UIImage imageNamed:[NSString stringWithFormat:@"dots%d.png", ([[array objectAtIndex:4] integerValue] + 1) / 2]];
   if ([[array objectAtIndex:6] integerValue]) {
     cell.crowdLabel1.text = @"Closed";
     cell.crowdedness1.image = [UIImage imageNamed:@"dots0.png"];

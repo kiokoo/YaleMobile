@@ -9,7 +9,6 @@
 #import "YMServerCommunicator.h"
 #import "YMMainView.h"
 #import "YMSplashViewController.h"
-#import "UIColor+YaleMobile.h"
 #import "YMTransluentNavigationBar.h"
 #import "UIImage+ImageWithColor.h"
 

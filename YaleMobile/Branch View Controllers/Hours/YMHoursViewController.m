@@ -11,7 +11,7 @@
 #import "YMHoursDetailViewController.h"
 #import "YMSimpleCell.h"
 #import "YMGlobalHelper.h"
-#import "UIColor+YaleMobile.h"
+#import "YMTheme.h"
 #import "YMServerCommunicator.h"
 
 #import "YMTheme.h"

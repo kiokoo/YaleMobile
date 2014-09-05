@@ -8,8 +8,8 @@
 
 #import "YMMainView.h"
 #import "YMGlobalHelper.h"
-#import "UIColor+YaleMobile.h"
 #import "YMServerCommunicator.h"
+#import "YMTheme.h"
 
 @implementation YMMainView
 
@@ -25,7 +25,16 @@
 
 - (void)_commonInit
 {
-  self.greeting.textColor = [UIColor YMTeal];
+  self.greeting.textColor    = [YMTheme YMTeal];
+  self.condition.textColor   = [YMTheme YMBluebookBlue];
+  self.temperature.textColor = [YMTheme mainViewTemperatureLabelColor];
+  
+  for (NSInteger i = 1; i <= 5; i++) {
+    UILabel *dayLabel = [self valueForKey:[NSString stringWithFormat:@"day%ld", (long)i]];
+    UILabel *tempLabel = [self valueForKey:[NSString stringWithFormat:@"temp%ld", (long)i]];
+    dayLabel.textColor = [YMTheme mainViewTemperatureLabelColor];
+    tempLabel.textColor = [YMTheme YMBluebookBlue];
+  }
   
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   
@@ -53,7 +62,7 @@
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"psa"] < i || [[array objectAtIndex:1] integerValue] != 0) {
       NSString *prefix = (name) ? [NSString stringWithFormat:@"Hey %@!", name] : @"Hey there!";
       self.greeting.text = [NSString stringWithFormat:@"%@ %@", prefix, [array objectAtIndex:2]];
-      self.greeting.textColor = [UIColor YMDiningRed];
+      self.greeting.textColor = [YMTheme YMDiningRed];
       [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"psa"];
     }
   }];
@@ -81,9 +90,9 @@
   
   for (NSInteger i = 1; i <= 5; i++) {
     NSDictionary *day = [weatherInfo objectAtIndex:i];
-    UILabel *dayLabel = [self valueForKey:[NSString stringWithFormat:@"day%ld", i]];
-    UILabel *tempLabel = [self valueForKey:[NSString stringWithFormat:@"temp%ld", i]];
-    UIImageView *weatherImageView = [self valueForKey:[NSString stringWithFormat:@"weather%ld", i]];
+    UILabel *dayLabel = [self valueForKey:[NSString stringWithFormat:@"day%ld", (long)i]];
+    UILabel *tempLabel = [self valueForKey:[NSString stringWithFormat:@"temp%ld", (long)i]];
+    UIImageView *weatherImageView = [self valueForKey:[NSString stringWithFormat:@"weather%ld", (long)i]];
     dayLabel.text = day[@"day"];
     tempLabel.text = [NSString stringWithFormat:@"%@/%@", day[@"high"], day[@"low"]];
     weatherImageView.image = [UIImage imageNamed:[YMGlobalHelper getIconNameForWeather:[day[@"code"] integerValue]]];

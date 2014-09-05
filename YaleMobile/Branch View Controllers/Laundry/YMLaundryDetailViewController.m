@@ -11,7 +11,6 @@
 #import "YMGlobalHelper.h"
 #import "YMSimpleCell.h"
 #import "YMLaundryDetailCell.h"
-#import "UIColor+YaleMobile.h"
 #import "YMAppDelegate.h"
 
 #import "YMTheme.h"
@@ -130,10 +129,10 @@
   
   if ([status rangeOfString:@"available"].location != NSNotFound) {
     cell.status1.text = @"Available";
-    cell.status1.textColor = [UIColor YMGreen];
+    cell.status1.textColor = [YMTheme YMGreen];
   } else if ([status rangeOfString:@"cycle has ended"].location != NSNotFound) {
     cell.status1.text = @"Cycle Ended";
-    cell.status1.textColor = [UIColor YMLaundryOrange];
+    cell.status1.textColor = [YMTheme YMLaundryOrange];
   } else if ([status rangeOfString:@"extended cycle"].location != NSNotFound) {
     cell.status1.text = @"Extended Cycle";
     cell.status1.textColor = [UIColor colorWithRed:229/255.0 green:73/255.0 blue:45/255.0 alpha:1];

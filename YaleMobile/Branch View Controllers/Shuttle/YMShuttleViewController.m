@@ -693,7 +693,6 @@
 - (void)revealController:(SWRevealViewController *)revealController
        didMoveToPosition:(FrontViewPosition)position
 {
-  DLog(@"Front view moved to: %ld", revealController.frontViewPosition);
   if (revealController.frontViewPosition == FrontViewPositionLeft) {
     self.mapView1.userInteractionEnabled = YES;
     [self topDidReset:self];

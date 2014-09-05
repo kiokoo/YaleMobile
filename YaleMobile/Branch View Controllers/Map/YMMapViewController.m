@@ -17,8 +17,8 @@
 #import "Place.h"
 #import "Abbreviation.h"
 #import "YMDatabaseHelper.h"
-#import "UIColor+YaleMobile.h"
 #import "YMServerCommunicator.h"
+#import "YMTheme.h"
 
 #import <SWRevealViewController/SWRevealViewController.h>
 
@@ -326,10 +326,10 @@
   Place *place;
   if (indexPath.section == 0) {
     place = [((NSArray *)[self.searchResults objectAtIndex:0]) objectAtIndex:indexPath.row];
-    cell.name1.textColor = [UIColor YMBluebookOrange];
+    cell.name1.textColor = [YMTheme YMBluebookOrange];
   } else {
     place = [((NSArray *)[self.searchResults objectAtIndex:1]) objectAtIndex:indexPath.row];
-    cell.name1.textColor = [UIColor YMTeal];
+    cell.name1.textColor = [YMTheme YMTeal];
   }
   
   cell.name1.text = place.name;

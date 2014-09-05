@@ -8,7 +8,6 @@
 
 #import "YMBluebookDetailViewController.h"
 #import "YMGlobalHelper.h"
-#import "UIColor+YaleMobile.h"
 #import "YMSubtitleCell.h"
 #import "Course.h"
 #import "TFHpple.h"
@@ -197,7 +196,7 @@
   titleView.text          = string;
   titleView.font          = font;
   titleView.numberOfLines = 0;
-  titleView.textColor     = [UIColor YMBluebookBlue];
+  titleView.textColor     = [YMTheme YMBluebookBlue];
   
   UILabel *subtitleView      = [[UILabel alloc] initWithFrame:CGRectMake(20, 20 + titleView.frame.size.height, 280, 30)];
   subtitleView.numberOfLines = 0;

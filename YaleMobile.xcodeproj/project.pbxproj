@@ -111,7 +111,6 @@
 		9BE995581900AA010065EBEF /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993921900AA000065EBEF /* TFHppleElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9BE995591900AA010065EBEF /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993941900AA000065EBEF /* XPathQuery.m */; };
 		9BE9955B1900AA010065EBEF /* MKPolyline+EncodedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993981900AA000065EBEF /* MKPolyline+EncodedString.m */; };
-		9BE9955C1900AA010065EBEF /* UIColor+YaleMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE9939A1900AA000065EBEF /* UIColor+YaleMobile.m */; };
 		9BE9955D1900AA010065EBEF /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE9939C1900AA000065EBEF /* UIImage+Blur.m */; };
 		9BE9955E1900AA010065EBEF /* UIImage+Emboss.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE9939E1900AA000065EBEF /* UIImage+Emboss.m */; };
 		9BE9955F1900AA010065EBEF /* YMCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE993A01900AA000065EBEF /* YMCHelper.m */; };
@@ -315,8 +314,6 @@
 		9BE993941900AA000065EBEF /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		9BE993971900AA000065EBEF /* MKPolyline+EncodedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKPolyline+EncodedString.h"; sourceTree = "<group>"; };
 		9BE993981900AA000065EBEF /* MKPolyline+EncodedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKPolyline+EncodedString.m"; sourceTree = "<group>"; };
-		9BE993991900AA000065EBEF /* UIColor+YaleMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YaleMobile.h"; sourceTree = "<group>"; };
-		9BE9939A1900AA000065EBEF /* UIColor+YaleMobile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YaleMobile.m"; sourceTree = "<group>"; };
 		9BE9939B1900AA000065EBEF /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
 		9BE9939C1900AA000065EBEF /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
 		9BE9939D1900AA000065EBEF /* UIImage+Emboss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Emboss.h"; sourceTree = "<group>"; };
@@ -761,8 +758,6 @@
 				9BE9938E1900AA000065EBEF /* Hpple */,
 				9BE993971900AA000065EBEF /* MKPolyline+EncodedString.h */,
 				9BE993981900AA000065EBEF /* MKPolyline+EncodedString.m */,
-				9BE993991900AA000065EBEF /* UIColor+YaleMobile.h */,
-				9BE9939A1900AA000065EBEF /* UIColor+YaleMobile.m */,
 				9BE9939B1900AA000065EBEF /* UIImage+Blur.h */,
 				9BE9939C1900AA000065EBEF /* UIImage+Blur.m */,
 				9BE9939D1900AA000065EBEF /* UIImage+Emboss.h */,
@@ -1030,7 +1025,6 @@
 				9BE9955F1900AA010065EBEF /* YMCHelper.m in Sources */,
 				9BE995651900AA010065EBEF /* YMDiningCell.m in Sources */,
 				9BE9956D1900AA010065EBEF /* YMTwoSubtitlesCell.m in Sources */,
-				9BE9955C1900AA010065EBEF /* UIColor+YaleMobile.m in Sources */,
 				9B3AF0521915D8A7003CACAF /* YMBluebookSubjectCell.m in Sources */,
 				9BE995691900AA010065EBEF /* YMPathishCell.m in Sources */,
 				9BE995601900AA010065EBEF /* YMDatabaseHelper.m in Sources */,

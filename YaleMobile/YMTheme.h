@@ -36,4 +36,22 @@
 
 + (UIColor *)notificationTintColor;
 
++ (UIColor *)mainViewTemperatureLabelColor;
+
+/* Migrated from UIColor+YaleMobile */
++ (UIColor *)YMOrange;
++ (UIColor *)YMLightOrange;
++ (UIColor *)YMBlue;
++ (UIColor *)YMLightBlue;
++ (UIColor *)YMTeal;
++ (UIColor *)YMLightTeal;
++ (UIColor *)YMBluebookOrange;
++ (UIColor *)YMRed;
++ (UIColor *)YMGreen;
++ (UIColor *)YMBluebookBlue;
++ (UIColor *)YMLaundryOrange;
++ (UIColor *)YMDiningBlue;
++ (UIColor *)YMDiningRed;
++ (UIColor *)YMDiningGreen;
+
 @end

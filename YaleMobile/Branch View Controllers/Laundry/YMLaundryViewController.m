@@ -13,7 +13,6 @@
 #import "YMServerCommunicator.h"
 #import "YMLaundryCell.h"
 #import "YMSimpleCell.h"
-#import "UIColor+YaleMobile.h"
 
 #import "YMTheme.h"
 
@@ -144,13 +143,13 @@
       cell.dryer1.textColor = [UIColor lightGrayColor];
       
       if ([washerCount isEqualToString:@"0"]) {
-        cell.washer1.textColor = [UIColor YMBluebookOrange];
-        cell.washer1.highlightedTextColor = [UIColor YMOrange];
+        cell.washer1.textColor = [YMTheme YMBluebookOrange];
+        cell.washer1.highlightedTextColor = [YMTheme YMOrange];
       }
       
       if ([dryerCount isEqualToString:@"0"]) {
-        cell.dryer1.textColor = [UIColor YMBluebookOrange];
-        cell.dryer1.highlightedTextColor = [UIColor YMOrange];
+        cell.dryer1.textColor = [YMTheme YMBluebookOrange];
+        cell.dryer1.highlightedTextColor = [YMTheme YMOrange];
       }
     } else {
       cell.washer1.text = @"Pls refresh";
