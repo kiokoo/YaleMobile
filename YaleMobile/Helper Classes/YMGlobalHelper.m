@@ -281,7 +281,8 @@
 + (void)setupHighlightBackgroundViewWithColor:(UIColor *)color
                                       forCell:(UITableViewCell *)cell
 {
-  UIView *highlightView = [[UIView alloc] initWithFrame:cell.bounds];
+  cell.contentView.layer.masksToBounds = YES;
+  UIView *highlightView = [[UIView alloc] initWithFrame:cell.contentView.bounds];
   highlightView.backgroundColor = color;
   [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
   [cell setSelectedBackgroundView:highlightView];

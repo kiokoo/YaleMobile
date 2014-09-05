@@ -117,6 +117,7 @@
   } else if (indexPath.row == self.types.count + 1) {
     NSString *text = @"Library hours are synced with Yale Library website but may not reflect special conditions. Dining and gym hours only refer to regular schedule. Please double check during holidays and special events.";
     cell.name1.text = text;
+    cell.name1.numberOfLines = 0;
     /* deprecated
      CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14] constrainedToSize:CGSizeMake(280, 5000)];
      */
