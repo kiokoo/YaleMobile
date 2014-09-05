@@ -34,7 +34,9 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-//  self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
+  self.tableView.separatorInset = UIEdgeInsetsZero;
+  self.tableView.separatorColor = [YMTheme separatorGray];
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 }
 
 - (void)didReceiveMemoryWarning
