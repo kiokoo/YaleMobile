@@ -708,4 +708,10 @@
           revealController.frontViewPosition == FrontViewPositionRight);
 }
 
+- (BOOL)revealControllerTapGestureShouldBegin:(SWRevealViewController *)revealController
+{
+  return (revealController.frontViewPosition == FrontViewPositionLeftSide ||
+          revealController.frontViewPosition == FrontViewPositionRight);
+}
+
 @end
