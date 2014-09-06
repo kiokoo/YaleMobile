@@ -108,7 +108,7 @@
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Bluebook Writing"]) [filters addObject:@"WR"];
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Bluebook Quantitative Reasoning"]) [filters addObject:@"QR"];
   NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:@"Bluebook Language"];
-  if (![language isEqualToString:@"None"]) {
+  if (![[language lowercaseString] isEqualToString:[@"None" lowercaseString]]) {
     language = [language stringByReplacingOccurrencesOfString:@"evel " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [language length])];
     [filters addObject:language];
   }
