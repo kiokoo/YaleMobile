@@ -40,7 +40,7 @@
   footerPlaceholder.backgroundColor = [UIColor clearColor];
   self.tableView1.tableFooterView = footerPlaceholder;
   
-  float height = ([[UIScreen mainScreen] bounds].size.height == 568) ? 568 : 460;
+  float height = ([[UIScreen mainScreen] bounds].size.height == 568) ? 568 : 480;
   UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, height)];
   view.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_overlay.png", [self.data objectForKey:@"code"]]];
   view.contentMode = UIViewContentModeScaleToFill;

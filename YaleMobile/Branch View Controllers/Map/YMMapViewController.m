@@ -104,6 +104,7 @@
 
 - (void)menu:(id)sender
 {
+  [self hideKeyboard];
   [YMGlobalHelper setupMenuButtonForController:self];
 }
 
