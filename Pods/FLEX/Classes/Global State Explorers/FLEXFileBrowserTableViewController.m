@@ -15,7 +15,12 @@
 
 @property (nonatomic, copy) NSString *path;
 @property (nonatomic, copy) NSArray *childPaths;
+@property (nonatomic, strong) NSArray *searchPaths;
 @property (nonatomic, strong) NSNumber *recursiveSize;
+@property (nonatomic, strong) NSNumber *searchPathsSize;
+@property (nonatomic, strong) UISearchDisplayController *searchController;
+@property (nonatomic) NSOperationQueue *operationQueue;
+@property (nonatomic, strong) UIDocumentInteractionController *documentController;
 
 @end
 
@@ -32,10 +37,21 @@
     if (self) {
         self.path = path;
         self.title = [path lastPathComponent];
+        self.operationQueue = [NSOperationQueue new];
         
+        //add search controller
+        UISearchBar *searchBar = [UISearchBar new];
+        [searchBar sizeToFit];
+        self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
+        self.searchController.delegate = self;
+        self.searchController.searchResultsDataSource = self;
+        self.searchController.searchResultsDelegate = self;
+        self.tableView.tableHeaderView = self.searchController.searchBar;
+        
+        //computing path size
         FLEXFileBrowserTableViewController *__weak weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSFileManager *fileManager = [[NSFileManager alloc] init];
+            NSFileManager *fileManager = [NSFileManager defaultManager];
             NSDictionary *attributes = [fileManager attributesOfItemAtPath:path error:NULL];
             uint64_t totalSize = [attributes fileSize];
             
@@ -61,6 +77,37 @@
     return self;
 }
 
+#pragma mark - FLEXFileBrowserSearchOperationDelegate
+
+- (void)fileBrowserSearchOperationResult:(NSArray *)searchResult size:(uint64_t)size
+{
+    self.searchPaths = searchResult;
+    self.searchPathsSize = @(size);
+    [self.searchController.searchResultsTableView reloadData];
+}
+
+#pragma mark - UISearchDisplayDelegate
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    self.searchPaths = nil;
+    self.searchPathsSize = nil;
+    
+    //clear pre search request and start a new one
+    [self.operationQueue cancelAllOperations];
+    FLEXFileBrowserSearchOperation *newOperation = [[FLEXFileBrowserSearchOperation alloc] initWithPath:self.path searchString:searchString];
+    newOperation.delegate = self;
+    [self.operationQueue addOperation:newOperation];
+
+    return YES;
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView
+{
+    //confirm to clear all operations
+    [self.operationQueue cancelAllOperations];
+}
+
 
 #pragma mark - Table view data source
 
@@ -71,25 +118,46 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.childPaths count];
+    if (tableView == self.tableView) {
+        return [self.childPaths count];
+    } else {
+        return [self.searchPaths count];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    NSString *sizeString = nil;
-    if (!self.recursiveSize) {
-        sizeString = @"Computing size…";
+    NSNumber *currentSize = nil;
+    NSArray *currentPaths = nil;
+    
+    if (tableView == self.tableView) {
+        currentSize = self.recursiveSize;
+        currentPaths = self.childPaths;
     } else {
-        sizeString = [NSByteCountFormatter stringFromByteCount:[self.recursiveSize longLongValue] countStyle:NSByteCountFormatterCountStyleFile];
+        currentSize = self.searchPathsSize;
+        currentPaths = self.searchPaths;
     }
     
-    return [NSString stringWithFormat:@"%lu files (%@)", (unsigned long)[self.childPaths count], sizeString];
+    NSString *sizeString = nil;
+    if (!currentSize) {
+        sizeString = @"Computing size…";
+    } else {
+        sizeString = [NSByteCountFormatter stringFromByteCount:[currentSize longLongValue] countStyle:NSByteCountFormatterCountStyleFile];
+    }
+    
+    return [NSString stringWithFormat:@"%lu files (%@)", (unsigned long)[currentPaths count], sizeString];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *subpath = [self.childPaths objectAtIndex:indexPath.row];
-    NSString *fullPath = [self.path stringByAppendingPathComponent:subpath];
+    NSString *fullPath = nil;
+    if (tableView == self.tableView) {
+        NSString *subpath = [self.childPaths objectAtIndex:indexPath.row];
+        fullPath = [self.path stringByAppendingPathComponent:subpath];
+    } else {
+        fullPath = [self.searchPaths objectAtIndex:indexPath.row];
+    }
+    
     NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:fullPath error:NULL];
     BOOL isDirectory = [[attributes fileType] isEqual:NSFileTypeDirectory];
     NSString *subtitle = nil;
@@ -108,7 +176,7 @@
     // Separate image and text only cells because otherwise the separator lines get out-of-whack on image cells reused with text only.
     BOOL showImagePreview = [FLEXUtility isImagePathExtension:[fullPath pathExtension]];
     NSString *cellIdentifier = showImagePreview ? imageCellIdentifier : textCellIdentifier;
-
+    
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
         cell.textLabel.font = [FLEXUtility defaultTableViewCellLabelFont];
@@ -116,7 +184,7 @@
         cell.detailTextLabel.textColor = [UIColor grayColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    NSString *cellTitle = [subpath lastPathComponent];
+    NSString *cellTitle = [fullPath lastPathComponent];
     cell.textLabel.text = cellTitle;
     cell.detailTextLabel.text = subtitle;
     
@@ -130,8 +198,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *subpath = [self.childPaths objectAtIndex:indexPath.row];
-    NSString *fullPath = [self.path stringByAppendingPathComponent:subpath];
+    NSString *subpath = nil;
+    NSString *fullPath = nil;
+    
+    if (tableView == self.tableView) {
+        subpath = [self.childPaths objectAtIndex:indexPath.row];
+        fullPath = [self.path stringByAppendingPathComponent:subpath];
+    } else {
+        fullPath = [self.searchPaths objectAtIndex:indexPath.row];
+        subpath = [fullPath lastPathComponent];
+    }
+    
     BOOL isDirectory = NO;
     BOOL stillExists = [[NSFileManager defaultManager] fileExistsAtPath:fullPath isDirectory:&isDirectory];
     if (stillExists) {
@@ -171,11 +248,21 @@
             drillInViewController.title = [subpath lastPathComponent];
             [self.navigationController pushViewController:drillInViewController animated:YES];
         } else {
+            [self openFileController:fullPath];
             [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
         }
     } else {
         [[[UIAlertView alloc] initWithTitle:@"File Removed" message:@"The file at the specified path no longer exists." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
+}
+
+- (void)openFileController:(NSString *)fullPath
+{
+    UIDocumentInteractionController *controller = [UIDocumentInteractionController new];
+    controller.URL = [[NSURL alloc] initFileURLWithPath:fullPath];
+  
+    [controller presentOptionsMenuFromRect:self.view.bounds inView:self.view animated:YES];
+    self.documentController = controller;
 }
 
 @end

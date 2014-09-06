@@ -145,7 +145,13 @@ typedef NS_ENUM(NSUInteger, FLEXExplorerMode) {
     UIViewController *viewControllerToAsk = [self viewControllerForStatusBarAndOrientationProperties];
     UIStatusBarStyle preferredStyle = UIStatusBarStyleDefault;
     if (viewControllerToAsk && viewControllerToAsk != self) {
-        preferredStyle = [viewControllerToAsk preferredStatusBarStyle];
+        // We might need to foward to a child
+        UIViewController *childViewControllerToAsk = [viewControllerToAsk childViewControllerForStatusBarStyle];
+        if (childViewControllerToAsk) {
+            preferredStyle = [childViewControllerToAsk preferredStatusBarStyle];
+        } else {
+            preferredStyle = [viewControllerToAsk preferredStatusBarStyle];
+        }
     }
     return preferredStyle;
 }
@@ -165,7 +171,13 @@ typedef NS_ENUM(NSUInteger, FLEXExplorerMode) {
     UIViewController *viewControllerToAsk = [self viewControllerForStatusBarAndOrientationProperties];
     BOOL prefersHidden = NO;
     if (viewControllerToAsk && viewControllerToAsk != self) {
-        prefersHidden = [viewControllerToAsk prefersStatusBarHidden];
+        // Again, we might need to forward to a child
+        UIViewController *childViewControllerToAsk = [viewControllerToAsk childViewControllerForStatusBarHidden];
+        if (childViewControllerToAsk) {
+            prefersHidden = [childViewControllerToAsk prefersStatusBarHidden];
+        } else {
+            prefersHidden = [viewControllerToAsk prefersStatusBarHidden];
+        }
     }
     return prefersHidden;
 }
@@ -735,8 +747,8 @@ typedef NS_ENUM(NSUInteger, FLEXExplorerMode) {
 {
     CGPoint translation = [movePanGR translationInView:self.selectedView.superview];
     CGRect newSelectedViewFrame = self.selectedViewFrameBeforeDragging;
-    newSelectedViewFrame.origin.x = floor(newSelectedViewFrame.origin.x + translation.x);
-    newSelectedViewFrame.origin.y = floor(newSelectedViewFrame.origin.y + translation.y);
+    newSelectedViewFrame.origin.x = FLEXFloor(newSelectedViewFrame.origin.x + translation.x);
+    newSelectedViewFrame.origin.y = FLEXFloor(newSelectedViewFrame.origin.y + translation.y);
     self.selectedView.frame = newSelectedViewFrame;
 }
 
