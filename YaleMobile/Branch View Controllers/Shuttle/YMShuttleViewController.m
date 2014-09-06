@@ -696,20 +696,16 @@
   if (revealController.frontViewPosition == FrontViewPositionLeft) {
     self.mapView1.userInteractionEnabled = YES;
     [self topDidReset:self];
-  } else if (revealController.frontViewPosition == FrontViewPositionLeftSide) {
+  } else if (revealController.frontViewPosition == FrontViewPositionLeftSide ||
+             revealController.frontViewPosition == FrontViewPositionRight) {
     self.mapView1.userInteractionEnabled = NO;
-  } else if (revealController.frontViewPosition == FrontViewPositionRight) {
-      self.mapView1.userInteractionEnabled = NO;
-
   }
 }
 
 - (BOOL)revealControllerPanGestureShouldBegin:(SWRevealViewController *)revealController
 {
-  if (revealController.frontViewPosition == FrontViewPositionLeftSide || revealController.frontViewPosition == FrontViewPositionRight) {
-    return YES;
-  }
-  return NO;
+  return (revealController.frontViewPosition == FrontViewPositionLeftSide ||
+          revealController.frontViewPosition == FrontViewPositionRight);
 }
 
 @end

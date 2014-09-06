@@ -109,7 +109,7 @@
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Bluebook Quantitative Reasoning"]) [filters addObject:@"QR"];
   NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:@"Bluebook Language"];
   if (![language isEqualToString:@"None"]) {
-    language = [language stringByReplacingOccurrencesOfString:@"evel " withString:@""];
+    language = [language stringByReplacingOccurrencesOfString:@"evel " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [language length])];
     [filters addObject:language];
   }
   

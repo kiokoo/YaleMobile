@@ -88,6 +88,8 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   [YMGlobalHelper setupSlidingViewControllerForController:self];
   YMBluebookFilterViewController *filterRoot = [self.storyboard instantiateViewControllerWithIdentifier:@"Bluebook Filter Root"];
   self.revealViewController.rightViewController = filterRoot;
+#warning TODO(hc) This if block seems to be causing a lot of \
+                  trouble, figure out what's happening
   if (self.selectedIndexPath) {
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
@@ -153,7 +155,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   svc.title = ([subject isEqualToString:@"ALL"]) ? @"Search Results" : subject;
   
   NSString *filters = [YMGlobalHelper buildBluebookFilters];
-  filters = [filters stringByAppendingFormat:filterFormatString, [subject stringByReplacingOccurrencesOfString:@"&" withString:@"%26"], [self.instructorName urlEncode], [self.exactPhrase urlEncode], [self.courseNumber urlEncode]];
+  filters = [filters stringByAppendingFormat:filterFormatString, [subject urlEncode], [self.instructorName urlEncode], [self.exactPhrase urlEncode], [self.courseNumber urlEncode]];
   self.instructorName = @""; self.courseNumber = @""; self.exactPhrase = @"";
   
   __block AFHTTPRequestOperationManager *client = [YMServerCommunicator getOperationManager];
@@ -358,7 +360,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
-  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   [self performSegueWithIdentifier:@"Bluebook First Segue" sender:self];
 }
 

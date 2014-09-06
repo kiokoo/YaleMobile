@@ -317,10 +317,7 @@
 
 - (BOOL)revealControllerPanGestureShouldBegin:(SWRevealViewController *)revealController
 {
-    if (revealController.frontViewPosition == FrontViewPositionRight) {
-        return YES;
-    }
-    return NO;
+  return revealController.frontViewPosition == FrontViewPositionRight;
 }
 
 #pragma mark - Table view data source
