@@ -78,6 +78,16 @@ The code injection is left as an exercise for the reader. :innocent:
 ![Springboard Lock Screen](http://engineering.flipboard.com/assets/flex/flex-readme-reverse-1.png) ![Springboard Home Screen](http://engineering.flipboard.com/assets/flex/flex-readme-reverse-2.png)
 
 
+## Installation
+FLEX is available on [Cocoapods](http://cocoapods.org/). Simply add the following line to your podfile:
+
+```ruby
+pod 'FLEX', '~> 1.1'
+```
+
+Alternatively, you can manually add the files in `Classes/` to your Xcode project. FLEX requires iOS 6 or higher.
+
+
 ## Excluding FLEX from Release (App Store) Builds
 FLEX makes it easy to explore the internals of your app, so it is not something you should expose to your users. Fortunately, it is easy to exclude FLEX files from Release builds. In Xcode, navigate to the "Build Settings" tab of your project. Click the plus and select `Add User-Defined Setting`.
 
@@ -115,6 +125,9 @@ We welcome pull requests for bug fixes, new features, and improvements to FLEX. 
 
 ## Changes
 
+#### v1.2.0 (in progress)
+- Search bar filtering and sorting by file size in the file browser (@DaidoujiChen)
+
 #### v1.1.0 2014/7/31
 - Support adding custom entries to the "Globals" menu (@JaviSoto)
 - Warnings cleanup (@JaviSoto)
@@ -128,7 +141,6 @@ We welcome pull requests for bug fixes, new features, and improvements to FLEX. 
 ## TODO
 - Swift runtime introspection (swift classes, swift objects on the heap, etc.)
 - Network request logging
-- Search bar filtering and sorting by file size in the file browser
 - Improved file type detection and display in the file browser
 - Add new NSUserDefault key/value pairs on the fly
 
