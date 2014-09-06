@@ -2052,7 +2052,7 @@
                                     <outlet property="time1" destination="h5O-ZG-ckK" id="OHL-fP-hrl"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Header" id="66L-Pu-J3s" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Laundry Detail Header" id="66L-Pu-J3s" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="202" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="66L-Pu-J3s" id="YMT-tA-6Ny">

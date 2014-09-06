@@ -120,8 +120,8 @@
     }
   }
   
-  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-                                                forCell:cell];
+//  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+//                                                forCell:cell];
   
   cell.name1.textColor = [YMTheme gray];
   cell.backgroundView.alpha = 0.6;

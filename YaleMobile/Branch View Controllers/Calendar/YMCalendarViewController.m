@@ -125,8 +125,8 @@
   
   cell.backgroundView.alpha = 0.6;
   
-  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-                                                forCell:cell];
+//  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+//                                                forCell:cell];
   
   return cell;
 }

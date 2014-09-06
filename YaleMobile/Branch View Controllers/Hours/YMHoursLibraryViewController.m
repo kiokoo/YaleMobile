@@ -250,8 +250,8 @@
   cell.primary1.textColor   = [YMTheme white];
   cell.secondary1.textColor = [YMTheme white];
   
-  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-                                                forCell:cell];
+//  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+//                                                forCell:cell];
   
   cell.backgroundView.alpha = 0.4;
   

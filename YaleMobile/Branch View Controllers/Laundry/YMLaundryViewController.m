@@ -173,8 +173,8 @@
     cell.washer1.textColor   = [YMTheme gray];
     cell.dryer1.textColor    = [YMTheme gray];
     
-    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-                                                  forCell:cell];
+//    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+//                                                  forCell:cell];
     
     return cell;
   }
@@ -193,7 +193,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
-  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   [self performSegueWithIdentifier:@"Laundry Segue" sender:self];
 }
 

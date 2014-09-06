@@ -153,9 +153,6 @@
     cell.primary1.textColor   = [YMTheme gray];
     cell.secondary1.textColor = [YMTheme lightGray];
     
-    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-                                                  forCell:cell];
-    
     return cell;
   } else {
     
@@ -189,10 +186,7 @@
     
     cell.name1.textColor = [YMTheme gray];
     cell.backgroundView.alpha = 0.6;
-    
-    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-                                                  forCell:cell];
-    
+        
     return cell;
   }
 }

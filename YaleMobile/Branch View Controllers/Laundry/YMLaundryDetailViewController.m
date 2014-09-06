@@ -183,8 +183,8 @@
   cell.min1.textColor       = [YMTheme lightGray];
   cell.status1.textColor    = [YMTheme lightGray];
   
-  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-                                                forCell:cell];
+//  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
+//                                                forCell:cell];
   
   return cell;
 }

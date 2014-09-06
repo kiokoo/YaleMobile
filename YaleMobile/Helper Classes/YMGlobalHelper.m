@@ -282,7 +282,7 @@
                                       forCell:(UITableViewCell *)cell
 {
   cell.contentView.layer.masksToBounds = YES;
-  UIView *highlightView = [[UIView alloc] initWithFrame:cell.contentView.bounds];
+  UIView *highlightView = [[UIView alloc] initWithFrame:cell.contentView.frame];
   highlightView.backgroundColor = color;
   [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
   [cell setSelectedBackgroundView:highlightView];
