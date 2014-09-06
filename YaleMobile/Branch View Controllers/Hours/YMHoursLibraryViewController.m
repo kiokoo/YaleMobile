@@ -100,7 +100,7 @@
 
 - (void)updateTableHeader
 {
-  float extra = ([[UIScreen mainScreen] bounds].size.height == 568) ? 336 : 248;
+  float extra = ([[UIScreen mainScreen] bounds].size.height == 568) ? 316 : 228;
   
   UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 140 + extra, 286, 28)];
   headerLabel.text = self.name;
