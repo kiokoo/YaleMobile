@@ -204,7 +204,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
-  [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   
   NSUInteger index = indexPath.section * [[self.washers objectAtIndex:1] integerValue] + indexPath.row - 1;
   NSString *machineID = [NSString stringWithFormat:@"%@", [[(NSDictionary *)[self.machineStatuses objectAtIndex:index] allKeys] objectAtIndex:0]];
@@ -238,6 +237,7 @@
   [[UIApplication sharedApplication] scheduleLocalNotification:notification];
   
   NSString *alertText = [NSString stringWithFormat:@"Alert set for machine %@", machineID];
+  
   [YMGlobalHelper showNotificationInViewController:self.navigationController message:alertText tintColor:[YMTheme notificationTintColor]];
 
   [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];

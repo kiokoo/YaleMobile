@@ -247,6 +247,10 @@
                                tintColor:(UIColor *)color
 {
   YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+  // Hide any showing notification first.
+  if ([delegate.sharedNotificationView isShowing]) {
+    [self hideNotificationView];
+  }
   delegate.sharedNotificationView =
     [CSNotificationView notificationViewWithParentViewController:vc
                                                        tintColor:color
