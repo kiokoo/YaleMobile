@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3iU-j0-Yy1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3iU-j0-Yy1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="-415"/>
         </scene>
-        <!--Bluebook View Controller - Bluebook-->
+        <!--Bluebook-->
         <scene sceneID="w5Y-kb-J5T">
             <objects>
                 <tableViewController storyboardIdentifier="Bluebook" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yIk-d8-nQQ" customClass="YMBluebookViewController" sceneMemberID="viewController">
@@ -182,7 +183,7 @@
             </objects>
             <point key="canvasLocation" x="2063" y="-415"/>
         </scene>
-        <!--Bluebook Detail View Controller - Course Detail-->
+        <!--Course Detail-->
         <scene sceneID="5Or-35-FAu">
             <objects>
                 <tableViewController id="4Bn-DI-2HA" customClass="YMBluebookDetailViewController" sceneMemberID="viewController">
@@ -246,7 +247,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="-415"/>
         </scene>
-        <!--People View Controller - People Directory-->
+        <!--People Directory-->
         <scene sceneID="32N-6U-0s6">
             <objects>
                 <viewController storyboardIdentifier="People Directory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mOB-d8-0A7" customClass="YMPeopleViewController" sceneMemberID="viewController">
@@ -415,7 +416,7 @@
             </objects>
             <point key="canvasLocation" x="1580" y="294"/>
         </scene>
-        <!--Phonebook View Controller - Phonebook-->
+        <!--Phonebook-->
         <scene sceneID="6VB-wX-GDP">
             <objects>
                 <tableViewController storyboardIdentifier="Department Phonebook" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KZG-wO-Yce" customClass="YMPhonebookViewController" sceneMemberID="viewController">
@@ -498,7 +499,7 @@
             </objects>
             <point key="canvasLocation" x="1580" y="1010"/>
         </scene>
-        <!--People Detail View Controller - Search Result-->
+        <!--Search Result-->
         <scene sceneID="lpE-eB-lH1">
             <objects>
                 <viewController id="ti4-nB-t73" customClass="YMPeopleDetailViewController" sceneMemberID="viewController">
@@ -718,7 +719,7 @@
             </objects>
             <point key="canvasLocation" x="1580" y="1735"/>
         </scene>
-        <!--Settings Modal View Controller - Hello!-->
+        <!--Hello!-->
         <scene sceneID="NaF-Mm-aHf">
             <objects>
                 <viewController id="JhK-zd-xcg" customClass="YMSettingsModalViewController" sceneMemberID="viewController">
@@ -818,7 +819,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="2462"/>
         </scene>
-        <!--Map View Controller - Campus Map-->
+        <!--Campus Map-->
         <scene sceneID="DCa-bx-5Te">
             <objects>
                 <viewController storyboardIdentifier="Campus Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TiP-kw-3HF" customClass="YMMapViewController" sceneMemberID="viewController">
@@ -1012,7 +1013,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="3208"/>
         </scene>
-        <!--Settings View Controller - Settings-->
+        <!--Settings-->
         <scene sceneID="b7f-4K-t09">
             <objects>
                 <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="chs-qO-LMx" customClass="YMSettingsViewController" sceneMemberID="viewController">
@@ -1156,7 +1157,7 @@
                                     <outlet property="secondary1" destination="fXJ-OB-lwX" id="dde-yT-PJq"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Header" id="5Sb-WS-Stf" userLabel="Simple Cell - Settings Header" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Header" id="5Sb-WS-Stf" userLabel="Simple Cell - Settings Header" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="278" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Sb-WS-Stf" id="eBN-5o-aUi">
@@ -1184,7 +1185,7 @@
                                     <outlet property="name1" destination="V9H-OX-K2B" id="xt2-5z-FsH"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Footer" rowHeight="33" id="qRW-NP-D5w" userLabel="Simple Cell - Settings Footer" customClass="YMSimpleCell">
+                            <tableViewCell opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings Footer" rowHeight="33" id="qRW-NP-D5w" userLabel="Simple Cell - Settings Footer" customClass="YMSimpleCell">
                                 <rect key="frame" x="0.0" y="322" width="320" height="33"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qRW-NP-D5w" id="cld-Fw-rky">
@@ -1324,7 +1325,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="3905"/>
         </scene>
-        <!--Shuttle View Controller - Shuttles-->
+        <!--Shuttles-->
         <scene sceneID="reE-Cy-ErX">
             <objects>
                 <viewController id="3qL-BG-fSt" customClass="YMShuttleViewController" sceneMemberID="viewController">
@@ -1453,7 +1454,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="4635"/>
         </scene>
-        <!--Dining View Controller - Dining-->
+        <!--Dining-->
         <scene sceneID="Yci-pD-GXk">
             <objects>
                 <tableViewController storyboardIdentifier="Dining" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MvU-Wh-cQb" customClass="YMDiningViewController" sceneMemberID="viewController">
@@ -2268,7 +2269,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="6759"/>
         </scene>
-        <!--Hours View Controller - Facility Hours-->
+        <!--Facility Hours-->
         <scene sceneID="ZV2-1u-kgB">
             <objects>
                 <tableViewController id="gmR-F4-asq" customClass="YMHoursViewController" sceneMemberID="viewController">
@@ -2719,7 +2720,7 @@
             </objects>
             <point key="canvasLocation" x="2063" y="8198"/>
         </scene>
-        <!--Calendar View Controller - Calendar-->
+        <!--Calendar-->
         <scene sceneID="j6c-9X-pDk">
             <objects>
                 <tableViewController storyboardIdentifier="Calendar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Rz-Gi-yfh" customClass="YMCalendarViewController" sceneMemberID="viewController">
@@ -3087,7 +3088,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="8978"/>
         </scene>
-        <!--Jump Station View Controller - Jump Station-->
+        <!--Jump Station-->
         <scene sceneID="3FX-Tf-rx2">
             <objects>
                 <tableViewController id="caY-UE-O5a" customClass="YMJumpStationViewController" sceneMemberID="viewController">
@@ -3222,7 +3223,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="81U-aC-rI3"/>
