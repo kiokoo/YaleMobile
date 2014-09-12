@@ -216,7 +216,7 @@
 
     [YMGlobalHelper showNotificationInViewController:self.navigationController
                                              message:alertText
-                                           tintColor:[[YMTheme YMRed] colorWithAlphaComponent:0.3]
+                                           tintColor:[[UIColor redColor] colorWithAlphaComponent:0.3]
                                                image:[CSNotificationView imageForStyle:CSNotificationViewStyleSuccess]];
     
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];

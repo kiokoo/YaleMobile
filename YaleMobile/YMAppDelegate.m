@@ -44,12 +44,10 @@
 //                                                  UIRemoteNotificationTypeAlert ];
   
   // This is iOS8 only.
-  /*
   if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
     [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound
                                                                                   categories:nil]];
   }
-  */
   
   SWRevealViewController *revealVC = (SWRevealViewController *)self.window.rootViewController;
   UIStoryboard *storyboard;
@@ -84,6 +82,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+  
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
