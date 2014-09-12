@@ -28,7 +28,7 @@ static NSString* filterFormatString = @"&ProgramSubject=%@&InstructorName=%@&Exa
 static NSString* resultWindowUrl    = @"http://students.yale.edu/oci/resultWindow.jsp";
 static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.jsp";
 
-@interface YMBluebookViewController ()
+@interface YMBluebookViewController () <SWRevealViewControllerDelegate>
 
 - (void)updateTable;
 
@@ -353,6 +353,14 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   } else {
     return index - 1;
   }
+}
+
+#pragma mark - Reveal delegate methods
+
+- (void)revealController:(SWRevealViewController *)revealController
+       didMoveToPosition:(FrontViewPosition)position
+{
+  self.searchBar1.userInteractionEnabled = (FrontViewPositionLeft == revealController.frontViewPosition);
 }
 
 #pragma mark - Table view delegate

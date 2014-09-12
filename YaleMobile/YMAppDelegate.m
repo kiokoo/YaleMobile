@@ -43,6 +43,14 @@
 //                                                  UIRemoteNotificationTypeSound |
 //                                                  UIRemoteNotificationTypeAlert ];
   
+  // This is iOS8 only.
+  /*
+  if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound
+                                                                                  categories:nil]];
+  }
+  */
+  
   SWRevealViewController *revealVC = (SWRevealViewController *)self.window.rootViewController;
   UIStoryboard *storyboard;
   storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];

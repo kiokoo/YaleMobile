@@ -304,16 +304,22 @@
   return pinView;
 }
 
+#pragma mark - Reveal view controller delegate methods
+
 /* Check for Menu position to allow user to swipe to dismiss menu by disabling the map */
 
 - (void)revealController:(SWRevealViewController *)revealController
        didMoveToPosition:(FrontViewPosition)position
 {
-    if (revealController.frontViewPosition == FrontViewPositionLeft) {
-        self.mapView1.userInteractionEnabled = YES;
-    } else if (revealController.frontViewPosition == FrontViewPositionRight) {
-        self.mapView1.userInteractionEnabled = NO;
-    }
+  
+  self.searchBar1.userInteractionEnabled =
+    (revealController.frontViewPosition == FrontViewPositionLeft);
+  
+  if (revealController.frontViewPosition == FrontViewPositionLeft) {
+      self.mapView1.userInteractionEnabled = YES;
+  } else if (revealController.frontViewPosition == FrontViewPositionRight) {
+      self.mapView1.userInteractionEnabled = NO;
+  }
 }
 
 - (BOOL)revealControllerPanGestureShouldBegin:(SWRevealViewController *)revealController

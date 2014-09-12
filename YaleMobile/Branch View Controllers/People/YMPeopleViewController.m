@@ -18,7 +18,9 @@
 #import "YMAppDelegate.h"
 #import "YMTheme.h"
 
-@interface YMPeopleViewController ()
+#import <SWRevealViewController/SWRevealViewController.h>
+
+@interface YMPeopleViewController () <SWRevealViewControllerDelegate>
 
 @end
 
@@ -227,6 +229,14 @@
   } else {
     return 54;
   }
+}
+
+#pragma mark - Reveal view controller delegate
+
+- (void)revealController:(SWRevealViewController *)revealController
+       didMoveToPosition:(FrontViewPosition)position
+{
+  self.searchBar1.userInteractionEnabled = (revealController.frontViewPosition == FrontViewPositionLeft);
 }
 
 #pragma mark - Table view delegate
