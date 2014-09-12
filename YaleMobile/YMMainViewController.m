@@ -69,7 +69,8 @@
   
   [YMGlobalHelper showNotificationInViewController:self.navigationController
                                            message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                         tintColor:[YMTheme notificationTintColor]
+                                             image:nil];
   
   [YMServerCommunicator getWeatherWithCompletionBlock:^(NSArray *weatherInfo) {
     [self.mainView configureWeatherSubviews:weatherInfo];

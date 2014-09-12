@@ -7,7 +7,7 @@
 
 #import "YMSubtitleCell.h"
 #import "YMSimpleCell.h"
-
+#import <CSNotificationView/CSNotificationView.h>
 
 @interface YMGlobalHelper : NSObject
 
@@ -42,6 +42,13 @@
 + (void)showNotificationInViewController:(UIViewController *)vc
                                  message:(NSString *)msg
                                tintColor:(UIColor *)color;
+
++ (void)showNotificationInViewController:(UIViewController *)vc
+                                 message:(NSString *)msg
+                               tintColor:(UIColor *)color
+                                   image:(UIImage *)image;
+
+
 + (void)hideNotificationView;
 + (void)setupHighlightBackgroundViewWithColor:(UIColor *)color
                                       forCell:(UITableViewCell *)cell;

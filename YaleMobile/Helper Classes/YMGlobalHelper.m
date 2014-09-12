@@ -246,6 +246,14 @@
                                  message:(NSString *)msg
                                tintColor:(UIColor *)color
 {
+  [self showNotificationInViewController:vc message:msg tintColor:color image:nil];
+}
+
++ (void)showNotificationInViewController:(UIViewController *)vc
+                                 message:(NSString *)msg
+                               tintColor:(UIColor *)color
+                                   image:(UIImage *)image
+{
   YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
   // Hide any showing notification first.
   if ([delegate.sharedNotificationView isShowing]) {
@@ -254,10 +262,14 @@
   delegate.sharedNotificationView =
     [CSNotificationView notificationViewWithParentViewController:vc
                                                        tintColor:color
-                                                           image:nil
+                                                           image:image
                                                          message:msg];
+  
   [delegate.sharedNotificationView setVisible:YES animated:YES completion:nil];
-  [delegate.sharedNotificationView setShowingActivity:YES];
+  
+  if (!image) {
+    [delegate.sharedNotificationView setShowingActivity:YES];
+  }
 }
 
 + (void)hideNotificationView

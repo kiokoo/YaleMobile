@@ -216,7 +216,8 @@
 
     [YMGlobalHelper showNotificationInViewController:self.navigationController
                                              message:alertText
-                                           tintColor:[YMTheme notificationTintColor]];
+                                           tintColor:[[YMTheme YMRed] colorWithAlphaComponent:0.3]
+                                               image:[CSNotificationView imageForStyle:CSNotificationViewStyleSuccess]];
     
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
     return;
@@ -238,7 +239,7 @@
   
   NSString *alertText = [NSString stringWithFormat:@"Alert set for machine %@", machineID];
   
-  [YMGlobalHelper showNotificationInViewController:self.navigationController message:alertText tintColor:[YMTheme notificationTintColor]];
+  [YMGlobalHelper showNotificationInViewController:self.navigationController message:alertText tintColor:[YMTheme notificationTintColor] image:[CSNotificationView imageForStyle:CSNotificationViewStyleSuccess]];
 
   [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
 }

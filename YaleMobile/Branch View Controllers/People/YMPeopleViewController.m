@@ -131,7 +131,8 @@
   
   [YMGlobalHelper showNotificationInViewController:self.navigationController
                                            message:@"Searching..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                         tintColor:[YMTheme notificationTintColor]
+                                             image:nil];
   
   [operation start];
 }
@@ -255,7 +256,8 @@
     
   [YMGlobalHelper showNotificationInViewController:self.navigationController
                                            message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                         tintColor:[YMTheme notificationTintColor]
+                                             image:nil];
   
   [operation start];
 }
