@@ -30,8 +30,6 @@
   [self.view addSubview:backgroundView];
   [self.view sendSubviewToBack:backgroundView];
   
-  self.navigationController.navigationBar.translucent = YES;
-  self.navigationController.navigationBar.alpha = 0.7;
   [self updateTableHeader];
   self.tableView1.showsVerticalScrollIndicator = NO;
   
@@ -85,6 +83,9 @@
     [self.tableView1 deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
+  
+  self.navigationController.navigationBar.translucent = YES;
+  self.navigationController.navigationBar.alpha = 0.7;
 }
 
 - (void)viewDidDisappear:(BOOL)animated

@@ -30,8 +30,6 @@
    [self.view sendSubviewToBack:backgroundView];
   
   self.tableView1.backgroundColor = [UIColor clearColor];
-  self.navigationController.navigationBar.translucent = YES;
-  self.navigationController.navigationBar.alpha = 0.7;
   self.tableView1.showsVerticalScrollIndicator = NO;
   [self updateTableHeader];
 
@@ -54,6 +52,14 @@
   }];
  
   self.tableView1.backgroundColor = [UIColor clearColor];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  
+  self.navigationController.navigationBar.translucent = YES;
+  self.navigationController.navigationBar.alpha = 0.7;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
