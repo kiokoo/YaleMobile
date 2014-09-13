@@ -113,7 +113,9 @@
   if (indexPath.row == 0) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Detail Header"];
     cell.name1.textColor = [YMTheme gray];
-    cell.name1.text = (indexPath.section == 0) ? [NSString stringWithFormat:@"Washers: %@ of %@ available", [self.washers objectAtIndex:0], [self.washers objectAtIndex:1]] : [NSString stringWithFormat:@"Dryers: %@ of %@ available", [self.dryers objectAtIndex:0], [self.dryers objectAtIndex:1]];
+    NSInteger currCount = [[self.washers objectAtIndex:0] intValue];
+    NSInteger totalCount = [[self.washers objectAtIndex:1] intValue];
+    cell.name1.text = (indexPath.section == 0) ? [NSString stringWithFormat:@"Washers: %ld of %ld available", currCount, totalCount] : [NSString stringWithFormat:@"Dryers: %@ of %@ available", [self.dryers objectAtIndex:0], [self.dryers objectAtIndex:1]];
     return cell;
   }
   
