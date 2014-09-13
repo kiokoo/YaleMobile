@@ -46,6 +46,9 @@
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
+  
+  self.navigationController.navigationBar.translucent = YES;
+  self.navigationController.navigationBar.alpha = 1.0;
 }
 
 - (void)didReceiveMemoryWarning
