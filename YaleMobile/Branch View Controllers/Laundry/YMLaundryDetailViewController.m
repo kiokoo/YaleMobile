@@ -35,6 +35,7 @@
   [super viewDidLoad];
   self.washers = nil;
   self.dryers = nil;
+  self.title = @"Laundry Room";
   
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   

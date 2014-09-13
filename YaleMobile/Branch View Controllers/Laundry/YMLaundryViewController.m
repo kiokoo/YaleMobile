@@ -34,6 +34,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.title = @"Laundry";
   
   [YMGlobalHelper addMenuButtonToController:self];
   
