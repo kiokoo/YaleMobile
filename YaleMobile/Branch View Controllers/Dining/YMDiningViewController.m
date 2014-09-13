@@ -35,7 +35,6 @@
   
   [super viewDidLoad];
   [YMGlobalHelper addMenuButtonToController:self];
-  self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
   
   NSString *path = [[NSBundle mainBundle] pathForResource:@"Dining" ofType:@"plist"];
   self.locations = [[NSDictionary alloc] initWithContentsOfFile:path];
@@ -48,19 +47,24 @@
       [self.tableView reloadData];
     }];
   }];
+  
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+  self.tableView.separatorInset = UIEdgeInsetsZero;
+  self.tableView.separatorColor = [YMTheme separatorGray];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
   [super viewWillAppear:animated];
   
-  self.navigationController.navigationBar.alpha = 1;
-  self.navigationController.navigationBar.translucent = NO;
   [YMGlobalHelper setupSlidingViewControllerForController:self];
   if (self.selectedIndexPath) {
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
+  
+  self.navigationController.navigationBar.translucent = YES;
+  self.navigationController.navigationBar.alpha = 0.7;
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
@@ -157,8 +161,7 @@
   cell.special1.shadowOffset = CGSizeMake(0, 1);
   cell.crowdLabel1.shadowColor = [UIColor whiteColor];
   cell.crowdLabel1.shadowOffset = CGSizeMake(0, 1);
-  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
-  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
+  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor] forCell:cell];
   
   if (self.special.count) {
     cell.special1.text = [self.special objectAtIndex:indexPath.row * 3 + 1];
@@ -179,7 +182,7 @@
   }
   
   cell.crowdLabel1.text = [self crowdedness:[[array objectAtIndex:4] integerValue]];
-  cell.crowdedness1.image = [UIImage imageNamed:[NSString stringWithFormat:@"dots%d.png", ([[array objectAtIndex:4] integerValue] + 1) / 2]];
+  cell.crowdedness1.image = [UIImage imageNamed:[NSString stringWithFormat:@"dots%ld.png", ([[array objectAtIndex:4] integerValue] + 1) / 2]];
   if ([[array objectAtIndex:6] integerValue]) {
     cell.crowdLabel1.text = @"Closed";
     cell.crowdedness1.image = [UIImage imageNamed:@"dots0.png"];
