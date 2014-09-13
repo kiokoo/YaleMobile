@@ -14,6 +14,8 @@
 
 #import "YMTheme.h"
 
+#import "UIImage+ImageWithColor.h"
+
 @interface YMDiningViewController ()
 
 @end
@@ -62,9 +64,9 @@
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
-  
+    
   self.navigationController.navigationBar.translucent = YES;
-  self.navigationController.navigationBar.alpha = 0.7;
+  self.navigationController.navigationBar.alpha = 1.0;
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
