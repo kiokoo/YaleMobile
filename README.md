@@ -1,24 +1,58 @@
-Work in Progress
+YaleMobile
 ==========
 
-This is the upcoming (3.0) version of YaleMobile. It is work in progress!
+Welcome to YaleMobile, the first and best iOS app for Yale University students!
 
-## The Modules
+## Components
 
-Most interesting (i.e. reusable) modules of the app should be LaundryView and TransLoc integration. More on that later...
+YaleMobile currently have the following components:
 
-## The License
+* **Bluebook**, the course catalog of Yale University. Its web version can be accessed at yale.edu/oci.
+* **Dining**, including dining hall status and menu.
+* **Campus Map**, featuring a Yale-specific map that supports searching by abbreviations.
+* **Shuttle**, real-time Yale Shuttle status. Data provided by TransLoc.
+* **People Directory**, where you can find all Yale personnel. The web version can be found at directory.yale.edu/phonebook/index.htm.
+* **Laundry**, real-time laundry machine status across Yale campus. Data provided by MacGray Corporation.
+* **Facility hours**, live libary hours provided by Yale University Library, and hours of other facilities such as gym and retail dining locations.
+* **Calendar**, the academic calendars of all schools in Yale.
+* **Phonebook**, where you can find numbers of all departments, offices and the like.
 
-YaleMobile is licensed under GPLv2 license. The components of this application are mostly useful for other universities like Yale, and we would hope that our peers can open source their software as well.
+If you are a Yale student and you have a new feature in mind, please either open an issue or email us at yale.mobile.app@gmail.com.
 
-## The Credits
+## Code
 
-YaleMobile 3 is currently under construction by [Hengchu Zhang](https://github.com/hengchu) (CC '15, development) and [Danqing Liu](https://github.com/ik) (CC '13, advisory & design). It is supported by [Yale Student Technology Collaborative](https://github.com/yalestc), which also supports several other open source software.
+All code for the app is in this repository, and grouped into components outlined above. Since TransLoc and MacGray LaundryView are services provided to other institutions as well, you may find code related to them particularly useful.
 
-YaleMobile 3 is powered by [AFNetworking 2](https://github.com/AFNetworking/AFNetworking), [SWRevealViewController](https://github.com/John-Lluch/SWRevealViewController), and [Mantle](https://github.com/MantleFramework/Mantle).
+YaleMobile uses several open source libraries, including:
 
-YaleMobile started as a personal project of Danqing in 2012 and has undergone two major versions. The second version of the application, designed for iOS 6.x, is also open source and can be found [here](https://github.com/ik/yalemobile-old). Many Yalies contributed to the project along the way, and you can see the full list in its Credit page.
+* **AFNetworking**, the de facto standard networking library for iOS.
+* **SWRevealViewController**, a side menu library.
+* **Mantle**, GitHub's model library for iOS, which is easier to use than Core Data (sans persistent).
 
-YaleMobile 1 & 2 was powered by ASIHTTPRequest, AFNetworking (v1), ECSlidingViewController (v1), Hpple and MBProgressHUD libraries.
+Check out the podfile to see the most up-to-date list. The maintainer of the repository should make sure all libraries are listed here.
 
-All versions of YaleMobile contains data from Yale University, MacGray Corp. and TransLōc. Please note their respective licenses and copyrights when reusing or modifying YaleMobile.
+
+## Credits
+
+### Version 3
+
+* Code: Hengchu Zhang, Danqing Liu, Jenny Allen, cmwalther.
+* Graphics: Danqing Liu.
+
+### Version 2
+
+* Make: Danqing Liu.
+* Photography: Yingqi Tan, Jian Li, Hengchu Zhang, Tong Zuo, Yinshuo Zhang, Linda Lai.
+* Special thanks: Jing Han, Christina Zhang, Edwin Bebyn, Adam Bray.
+
+### Version 1
+
+* Make: Danqing Liu.
+* Photography: Yingqi Tan, Jian Li.
+* Special thanks: Sherwin Yu, Bryan Ford, Sijia Song, Simon Song.
+
+YaleMobile started as a personal project of Danqing Liu in 2012 and became a YaleSTC sponsored project in 2014. Yale University does not officially endorse the app, and has its own, official iOS app.
+
+## License
+
+MIT.
