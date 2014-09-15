@@ -1337,8 +1337,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-f7-hzm">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3qL-BG-fSt" id="C8F-Yq-98b"/>
+                                </connections>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY4-Zs-FwT" userLabel="refresh">
-                                <rect key="frame" x="279" y="528" width="32" height="32"/>
+                                <rect key="frame" x="279" y="516" width="32" height="32"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="refresh_alone.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1346,10 +1353,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scl-rL-5b6" userLabel="locate">
-                                <rect key="frame" x="9" y="248" width="312" height="312"/>
+                                <rect key="frame" x="9" y="516" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="312" id="05A-n8-BHK"/>
-                                    <constraint firstAttribute="width" constant="312" id="K7X-no-9R6"/>
+                                    <constraint firstAttribute="height" constant="32" id="05A-n8-BHK"/>
+                                    <constraint firstAttribute="width" constant="32" id="K7X-no-9R6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1358,13 +1365,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-f7-hzm">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="delegate" destination="3qL-BG-fSt" id="C8F-Yq-98b"/>
-                                </connections>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -1373,7 +1373,7 @@
                             <constraint firstItem="gY4-Zs-FwT" firstAttribute="bottom" secondItem="scl-rL-5b6" secondAttribute="bottom" id="JAH-6E-Neh"/>
                             <constraint firstItem="5GX-f7-hzm" firstAttribute="leading" secondItem="p4h-tM-OLh" secondAttribute="leading" id="Usx-WL-S6E"/>
                             <constraint firstItem="5GX-f7-hzm" firstAttribute="top" secondItem="g0a-Y7-AJT" secondAttribute="bottom" id="bOm-IZ-e6d"/>
-                            <constraint firstItem="kpl-J4-CRb" firstAttribute="top" secondItem="scl-rL-5b6" secondAttribute="bottom" constant="20" symbolic="YES" id="iD1-Fl-qkj"/>
+                            <constraint firstItem="kpl-J4-CRb" firstAttribute="top" secondItem="scl-rL-5b6" secondAttribute="bottom" constant="20" id="iD1-Fl-qkj"/>
                             <constraint firstAttribute="trailing" secondItem="gY4-Zs-FwT" secondAttribute="trailing" constant="9" id="rmN-9L-gWw"/>
                             <constraint firstItem="scl-rL-5b6" firstAttribute="leading" secondItem="p4h-tM-OLh" secondAttribute="leading" constant="9" id="tNb-sx-oXd"/>
                         </constraints>

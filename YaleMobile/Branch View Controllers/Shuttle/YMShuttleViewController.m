@@ -292,7 +292,7 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-  if ([annotation isKindOfClass:[MKUserLocation class]]) return nil;
+  if (annotation == mapView.userLocation) return nil;
   
   if ([annotation isKindOfClass:[YMStopAnnotation class]]) {
     MKAnnotationView *stopView = nil;
