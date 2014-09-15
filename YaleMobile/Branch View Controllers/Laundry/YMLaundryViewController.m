@@ -50,6 +50,8 @@
   UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
   [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
   self.refreshControl = refreshControl;
+
+  self.refreshControl.layer.zPosition += 1;
 }
 
 - (void)viewWillAppear:(BOOL)animated
