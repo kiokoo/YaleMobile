@@ -241,7 +241,6 @@
       mailer.mailComposeDelegate = self;
       NSArray *toRecipients = [NSArray arrayWithObjects:cell.primary1.text, nil];
       [mailer setToRecipients:toRecipients];
-      [[mailer navigationBar] setTintColor:[UIColor colorWithRed:63/255.0 green:155/255.0 blue:194/255.0 alpha:0.1]];
       [self presentViewController:mailer animated:YES completion:nil];
     } else {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"YaleMobile is unable to launch the email service. Your device doesn't support the composer sheet."
