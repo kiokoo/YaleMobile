@@ -176,7 +176,7 @@
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     } else if (indexPath.row == self.abouts.count + 1) {
       cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Footer"];
-      cell.name1.text = @"Copyright © Danqing 2013. 718529.";
+      cell.name1.text = @"Copyright © Danqing 2012-2014.";
     } else {
       cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Setting Simple Cell 2"];
       cell.name1.text = [self.abouts objectAtIndex:indexPath.row - 1];
