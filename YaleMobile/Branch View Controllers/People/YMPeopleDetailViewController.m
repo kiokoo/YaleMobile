@@ -175,19 +175,20 @@
   cell.secondary1.text = title;
   cell.primary1.text = [self.data objectForKey:title];
   
-  CGSize textSize = [[self.data objectForKey:title] sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15.0f] constrainedToSize:CGSizeMake(200.0f, 1000.0f)];
-  /* deprecated
-  CGSize textSize2 = [title sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:12] constrainedToSize:CGSizeMake(60.0f, 5000.0f)];
-   */
-  CGSize textSize2 = [YMGlobalHelper boundText:title withFont:[UIFont fontWithName:@"HelveticaNeue" size:12] andConstraintSize:CGSizeMake(60.0f, 5000.0f)];
-  
-  CGRect primaryFrame = cell.primary1.frame;
-  primaryFrame.size.height = textSize.height;
-  cell.primary1.frame = primaryFrame;
-  
-  CGRect secondaryFrame = cell.secondary1.frame;
-  secondaryFrame.size.height = textSize2.height;
-  cell.secondary1.frame = secondaryFrame;
+  /* Shouldn't do this because we're using LayoutConstraints in SB, the label should determine its size
+   * automatically through its content.
+//  CGSize textSize = [[self.data objectForKey:title] sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15.0f] constrainedToSize:CGSizeMake(200.0f, 1000.0f)];
+//
+//  CGSize textSize2 = [YMGlobalHelper boundText:title withFont:[UIFont fontWithName:@"HelveticaNeue" size:12] andConstraintSize:CGSizeMake(60.0f, 5000.0f)];
+//  
+//  CGRect primaryFrame = cell.primary1.frame;
+//  primaryFrame.size.height = textSize.height;
+//  cell.primary1.frame = primaryFrame;
+//  
+//  CGRect secondaryFrame = cell.secondary1.frame;
+//  secondaryFrame.size.height = textSize2.height;
+//  cell.secondary1.frame = secondaryFrame;
+  */
   
   if (self.data.count == 1) {
     cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)]];
