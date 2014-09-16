@@ -13,6 +13,7 @@
 #import "YMTheme.h"
 #import "Office+Initialize.h"
 #import "YMServerCommunicator.h"
+#import <PureLayout/PureLayout.h>
 
 @interface YMPhonebookViewController ()
 
@@ -39,6 +40,9 @@
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
   }
+  
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+  self.tableView.separatorColor = [YMTheme separatorGray];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -48,9 +52,7 @@
   [YMServerCommunicator cancelAllHTTPRequests];
   
   self.searchDisplayController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-  self.searchDisplayController.searchResultsTableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
-  self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plaintabletop.png"]];
-  
+
   [YMGlobalHelper setupSlidingViewControllerForController:self];
   
   if ((self.database = [YMDatabaseHelper getManagedDocument]))
@@ -261,8 +263,6 @@
   cell.primary1.shadowOffset = CGSizeMake(0, 1);
   cell.secondary1.shadowColor = [UIColor whiteColor];
   cell.secondary1.shadowOffset = CGSizeMake(0, 1);
-  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, 0)]];
-  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"plaintablebg_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 0, 5, 0)]];
   
   cell.primary1.textColor   = [YMTheme gray];
   cell.secondary1.textColor = [YMTheme lightGray];
@@ -318,15 +318,11 @@
 	UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 26.0)];
 	
 	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-	headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bbsection.png"]];
   
-  headerLabel.backgroundColor = [UIColor clearColor];
+  headerLabel.backgroundColor = [UIColor whiteColor];
 	headerLabel.textColor = [UIColor grayColor];
 	headerLabel.font = [UIFont boldSystemFontOfSize:14];
-	headerLabel.frame = CGRectMake(17.0, 1.0, 300.0, 22.0);
-  
-  headerLabel.shadowColor = [UIColor whiteColor];
-  headerLabel.shadowOffset = CGSizeMake(0, 1);
+	headerLabel.frame = CGRectMake(17.0, 0.0, 300.0, 23.0);
   
   if (self.searchDisplayController.active) {
     NSInteger count = [[[self fetchedResultsControllerForTableView:tableView].sections objectAtIndex:0] numberOfObjects];
@@ -340,6 +336,22 @@
   else headerLabel.text = [[self.fetchedResultsController sectionIndexTitles] objectAtIndex:section];
 	
   [headerView addSubview:headerLabel];
+  
+  UIView *hairlineBorderView = [UIView newAutoLayoutView];
+  [headerView addSubview:hairlineBorderView];
+  hairlineBorderView.backgroundColor = [YMTheme separatorGray];
+  [hairlineBorderView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
+  [hairlineBorderView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+  [hairlineBorderView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:headerLabel];
+  [hairlineBorderView autoSetDimension:ALDimensionHeight toSize:0.5];
+  
+  UIView *topBorderView = [UIView newAutoLayoutView];
+  [headerView addSubview:topBorderView];
+  topBorderView.backgroundColor = [YMTheme separatorGray];
+  [topBorderView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
+  [topBorderView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+  [topBorderView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:headerLabel];
+  [topBorderView autoSetDimension:ALDimensionHeight toSize:0.5];
   
 	return headerView;
 }
