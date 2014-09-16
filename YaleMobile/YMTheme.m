@@ -19,7 +19,7 @@
 
 + (UIColor *)lightGray { return [UIColor lightGrayColor]; }
 
-+ (UIColor *)separatorGray { return RGB(245, 245, 245); }
++ (UIColor *)separatorGray { return RGB(240, 240, 240); }
 
 /** Used in dining view */
 + (UIColor *)diningSpecialTextColor { return RGB(84, 146, 173); }
@@ -31,7 +31,7 @@
 + (UIColor *)bluebookFilterSecondaryTextColor { return RGB(255, 224, 91); }
 
 /** Used in bluebook subject view */
-+ (UIColor *)bluebookSubjectCodeTextColor { return RGB(120, 168, 193); }
++ (UIColor *)bluebookSubjectCodeTextColor { return [UIColor colorWithRed:0.26 green:0.6 blue:0.76 alpha:1]; }
 
 /** Used in bluebook filter view and hours library view and dining detail view */
 + (UIColor *)white { return [UIColor whiteColor]; }

@@ -323,7 +323,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 	
 	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
   
-  headerLabel.backgroundColor = [UIColor whiteColor];
+  headerLabel.backgroundColor = [UIColor clearColor];
 	headerLabel.textColor = [UIColor grayColor];
 	headerLabel.font = [UIFont boldSystemFontOfSize:14];
 	headerLabel.frame = CGRectMake(17.0, 0.0, 300.0, 23.0);
@@ -331,13 +331,14 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   headerLabel.text = [[[self.courses allKeys] sortedArrayUsingSelector:@selector(compare:)] objectAtIndex:section];
 	
   [headerView addSubview:headerLabel];
+  headerView.backgroundColor = [[YMTheme separatorGray] colorWithAlphaComponent:0.6];
   
   UIView *hairlineBorderView = [UIView newAutoLayoutView];
   [headerView addSubview:hairlineBorderView];
   hairlineBorderView.backgroundColor = [YMTheme separatorGray];
   [hairlineBorderView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
   [hairlineBorderView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
-  [hairlineBorderView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:headerLabel];
+  [hairlineBorderView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:headerView];
   [hairlineBorderView autoSetDimension:ALDimensionHeight toSize:0.5];
   
   UIView *topBorderView = [UIView newAutoLayoutView];
@@ -345,7 +346,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   topBorderView.backgroundColor = [YMTheme separatorGray];
   [topBorderView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
   [topBorderView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
-  [topBorderView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:headerLabel];
+  [topBorderView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:headerView];
   [topBorderView autoSetDimension:ALDimensionHeight toSize:0.5];
   
 	return headerView;

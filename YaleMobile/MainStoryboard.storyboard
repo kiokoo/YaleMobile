@@ -50,7 +50,7 @@
                                                 <constraint firstAttribute="width" constant="272" id="8z4-xU-Y4s"/>
                                                 <constraint firstAttribute="height" constant="21" id="eaD-pT-Lr4"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
@@ -134,14 +134,14 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Lic-jA-0GE"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-S2-oOf" userLabel="Label - name">
                                             <rect key="frame" x="20" y="51" width="280" height="19"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
