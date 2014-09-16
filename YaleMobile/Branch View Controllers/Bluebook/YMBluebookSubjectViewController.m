@@ -127,7 +127,7 @@
   /* deprecated code
   CGSize textSize = [course.name sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:16] constrainedToSize:CGSizeMake(280, 5000.0f)];
    */
-  CGSize textSize = [YMGlobalHelper boundText:course.name withFont:[UIFont fontWithName:@"HelveticaNeue" size:16] andConstraintSize:CGSizeMake(280, 5000.0f)];
+  CGSize textSize = [YMGlobalHelper boundText:course.name withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:16] andConstraintSize:CGSizeMake(280, 5000.0f)];
   CGRect newFrame = cell.name1.frame;
   newFrame.size.height = textSize.height;
   cell.name1.frame = newFrame;
@@ -145,7 +145,7 @@
   /*
   CGSize textSize = [course.name sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:16] constrainedToSize:CGSizeMake(280, 5000.0f)];
    */
-  CGSize textSize = [YMGlobalHelper boundText:course.name withFont:[UIFont fontWithName:@"HelveticaNeue" size:16] andConstraintSize:CGSizeMake(280, 5000.0f)];
+  CGSize textSize = [YMGlobalHelper boundText:course.name withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:16] andConstraintSize:CGSizeMake(280, 5000.0f)];
   
   return MAX(74, textSize.height + 53.0);
 }
