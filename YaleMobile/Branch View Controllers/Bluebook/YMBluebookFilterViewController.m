@@ -111,8 +111,10 @@
 	
 	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
   
+  headerView.backgroundColor = [YMTheme cellHighlightBackgroundViewColor];
+  
   headerLabel.backgroundColor = [UIColor clearColor];
-	headerLabel.textColor = [UIColor lightGrayColor];
+	headerLabel.textColor = [UIColor whiteColor];
 	headerLabel.font = [UIFont boldSystemFontOfSize:13];
 	headerLabel.frame = CGRectMake(81.0, 0.0, 300.0, 22.0);
 

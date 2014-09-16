@@ -63,7 +63,7 @@
 
 + (UIColor *)cellHighlightBackgroundViewColor
 {
-  return [[UIColor blackColor] colorWithAlphaComponent:0.1];
+  return [[UIColor blackColor] colorWithAlphaComponent:0.05];
 }
 
 /* Migrated from UIColor+YaleMobile */
