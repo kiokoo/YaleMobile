@@ -46,6 +46,10 @@
     [self presentViewController:splashScreen animated:NO completion:nil];
     [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(splash:) userInfo:nil repeats:NO];
   }
+  
+  [YMServerCommunicator getWeatherWithCompletionBlock:^(NSArray *weatherInfo) {
+    [self.mainView configureWeatherSubviews:weatherInfo];
+  }];
 }
 
 - (void)splash:(NSTimer *)timer
@@ -66,16 +70,6 @@
   self.name = (name) ? [NSString stringWithFormat:@", %@", name] : @"";
   
   [YMGlobalHelper setupSlidingViewControllerForController:self];
-  
-  [YMGlobalHelper showNotificationInViewController:self.navigationController
-                                           message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]
-                                             image:nil];
-  
-  [YMServerCommunicator getWeatherWithCompletionBlock:^(NSArray *weatherInfo) {
-    [self.mainView configureWeatherSubviews:weatherInfo];
-  }];
-  
   
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   
