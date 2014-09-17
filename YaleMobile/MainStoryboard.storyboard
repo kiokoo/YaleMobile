@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -450,8 +451,8 @@
                                             <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-RO-hmv" userLabel="Label - secondary">
-                                            <rect key="frame" x="17" y="34" width="178" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-RO-hmv" userLabel="Label - secondary">
+                                            <rect key="frame" x="17" y="33" width="178" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="178" id="3bb-LD-Bpv"/>
@@ -522,6 +523,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-yD-OJF" userLabel="Label - primary">
+                                                    <rect key="frame" x="99" y="22" width="200" height="21"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="AZj-ar-ULE"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="hHB-7t-zGQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRe-42-17x" userLabel="Label - secondary">
                                                     <rect key="frame" x="32" y="22" width="60" height="21"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -533,22 +545,11 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-yD-OJF" userLabel="Label - primary">
-                                                    <rect key="frame" x="99" y="23" width="200" height="21"/>
-                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="AZj-ar-ULE"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="hHB-7t-zGQ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                    <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bRe-42-17x" firstAttribute="leading" secondItem="pyD-5d-4eq" secondAttribute="leading" constant="32" id="1WB-fm-ugq"/>
                                                 <constraint firstItem="bRe-42-17x" firstAttribute="top" secondItem="pyD-5d-4eq" secondAttribute="top" constant="22" id="6aR-6l-FBC"/>
-                                                <constraint firstItem="xtx-yD-OJF" firstAttribute="bottom" secondItem="bRe-42-17x" secondAttribute="bottom" constant="1" id="Qtq-di-flC"/>
+                                                <constraint firstItem="xtx-yD-OJF" firstAttribute="top" secondItem="pyD-5d-4eq" secondAttribute="topMargin" constant="14" id="cw7-De-syV"/>
                                                 <constraint firstItem="xtx-yD-OJF" firstAttribute="leading" secondItem="pyD-5d-4eq" secondAttribute="leading" constant="99" id="uJu-y4-mQa"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -577,7 +578,7 @@
                                                     <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TH-yY-gqp" userLabel="Label - primary">
-                                                    <rect key="frame" x="99" y="14" width="200" height="21"/>
+                                                    <rect key="frame" x="99" y="13" width="200" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="F5d-e3-T5T"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Lmh-VR-Uqr"/>
@@ -590,7 +591,7 @@
                                             <constraints>
                                                 <constraint firstItem="0TH-yY-gqp" firstAttribute="leading" secondItem="GJ0-J6-a2o" secondAttribute="leading" constant="99" id="1IR-XI-r2W"/>
                                                 <constraint firstItem="HnG-EX-QbC" firstAttribute="top" secondItem="GJ0-J6-a2o" secondAttribute="top" constant="14" id="TZb-OE-bDc"/>
-                                                <constraint firstItem="HnG-EX-QbC" firstAttribute="top" secondItem="0TH-yY-gqp" secondAttribute="top" id="mc7-mZ-SYq"/>
+                                                <constraint firstItem="0TH-yY-gqp" firstAttribute="top" secondItem="GJ0-J6-a2o" secondAttribute="topMargin" constant="5" id="gaF-qH-GOC"/>
                                                 <constraint firstItem="HnG-EX-QbC" firstAttribute="leading" secondItem="GJ0-J6-a2o" secondAttribute="leading" constant="32" id="om7-BH-nPO"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1030,8 +1031,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK7-vx-vzB">
-                                            <rect key="frame" x="24" y="23" width="247" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK7-vx-vzB">
+                                            <rect key="frame" x="24" y="24" width="247" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="247" id="3aF-6H-XwO"/>
                                             </constraints>
@@ -1057,8 +1058,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDa-Ab-Dca">
-                                            <rect key="frame" x="24" y="13" width="247" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDa-Ab-Dca">
+                                            <rect key="frame" x="24" y="14" width="247" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="247" id="i2o-IR-RU3"/>
                                             </constraints>
