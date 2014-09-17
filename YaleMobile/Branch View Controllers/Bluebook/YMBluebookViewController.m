@@ -365,8 +365,8 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
   if([title isEqualToString:UITableViewIndexSearch]){
-    [self.tableView setContentOffset:CGPointZero animated:NO];
-    return -1;
+    [tableView setContentOffset:CGPointMake(0.0, -tableView.contentInset.top)];
+    return NSNotFound;
   } else {
     return index - 1;
   }
