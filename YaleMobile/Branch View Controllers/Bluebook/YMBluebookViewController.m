@@ -326,7 +326,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   headerLabel.backgroundColor = [UIColor clearColor];
 	headerLabel.textColor = [UIColor grayColor];
 	headerLabel.font = [UIFont boldSystemFontOfSize:14];
-	headerLabel.frame = CGRectMake(17.0, 0.0, 300.0, 23.0);
+	headerLabel.frame = CGRectMake(17.0, 1.0, 300.0, 23.0);
   
   headerLabel.text = [[[self.courses allKeys] sortedArrayUsingSelector:@selector(compare:)] objectAtIndex:section];
 	

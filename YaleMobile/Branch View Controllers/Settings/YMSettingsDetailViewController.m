@@ -32,6 +32,7 @@
   [super viewDidLoad];
   self.title = (self.isAbout) ? @"About" : @"Credits";
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
+  self.tableView.allowsSelection = NO;
   
   self.aboutHeader = @[@"App Version", @"About Yale Mobile"];
   self.aboutArray = @[@"3.0 (3A925)", @"Yale Mobile is an application designed to improve the mobile computing experience of the Yale community. Yale University does not officially endorse this application. If you have any comments or suggestions, we would be more than happy to hear them.\n\nYale Mobile does not collect user data in any way. Your privacy is my top consideration. All information presented in this application is publicly accessible. If you feel uncomfortable about any information, you can either contact Yale University (or other sources) to remove it, or contact the developer.\n\nYale Mobile started as a personal project of Danqing Liu (CC '13) in 2012, and is now maintained by Hengchu Zhang (CC '15) and other student developers. If you want to participate in making the future version of the app, please also let us know!\n\nYale Mobile is an open source application under MIT license. You can find its source code at github.com/kiokoo/yalemobile."];

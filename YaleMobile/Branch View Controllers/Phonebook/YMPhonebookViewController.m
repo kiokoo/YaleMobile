@@ -322,7 +322,7 @@
   headerLabel.backgroundColor = [UIColor clearColor];
 	headerLabel.textColor = [UIColor grayColor];
 	headerLabel.font = [UIFont boldSystemFontOfSize:14];
-	headerLabel.frame = CGRectMake(17.0, 0.0, 300.0, 23.0);
+	headerLabel.frame = CGRectMake(17.0, 1.0, 300.0, 23.0);
   
   if (self.searchDisplayController.active) {
     NSInteger count = [[[self fetchedResultsControllerForTableView:tableView].sections objectAtIndex:0] numberOfObjects];
