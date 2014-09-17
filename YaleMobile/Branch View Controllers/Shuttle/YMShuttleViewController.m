@@ -561,14 +561,14 @@
   view.etaLabel.hidden = YES;
   
   UILabel *minutes1 = [[UILabel alloc] initWithFrame:CGRectMake(33, 23, 55, 35)];
-  minutes1.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:42];
+  minutes1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:42];
   minutes1.textColor = [UIColor colorWithRed:184/255.0 green:230/255.0 blue:1 alpha:1];
   minutes1.textAlignment = NSTextAlignmentRight;
   minutes1.backgroundColor = [UIColor clearColor];
   minutes1.text = [YMGlobalHelper minutesFromString:[self.etaData objectAtIndex:1]];
   
   UILabel *minutes2 = [[UILabel alloc] initWithFrame:CGRectMake(33, -20, 55, 35)];
-  minutes2.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:42];
+  minutes2.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:42];
   minutes2.textColor = [UIColor colorWithRed:184/255.0 green:230/255.0 blue:1 alpha:1];
   minutes2.textAlignment = NSTextAlignmentRight;
   minutes2.backgroundColor = [UIColor clearColor];
