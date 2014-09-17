@@ -259,13 +259,10 @@
   
   [self fetchedResultsController:[self fetchedResultsControllerForTableView:tableView] configureCell:cell atIndexPath:indexPath];
   
-  cell.primary1.shadowColor = [UIColor whiteColor];
-  cell.primary1.shadowOffset = CGSizeMake(0, 1);
-  cell.secondary1.shadowColor = [UIColor whiteColor];
-  cell.secondary1.shadowOffset = CGSizeMake(0, 1);
-  
-  cell.primary1.textColor   = [YMTheme gray];
-  cell.secondary1.textColor = [YMTheme lightGray];
+  cell.primary1.textColor              = [YMTheme gray];
+  cell.primary1.highlightedTextColor   = cell.primary1.textColor;
+  cell.secondary1.textColor            = [YMTheme lightGray];
+  cell.secondary1.highlightedTextColor = cell.secondary1.textColor;
   
   [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
                                                 forCell:cell];
@@ -276,10 +273,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   Office *office = [[self fetchedResultsControllerForTableView:tableView] objectAtIndexPath:indexPath];
-  /* deprecated
-  CGSize textSize = [office.name sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:16] constrainedToSize:CGSizeMake(272, 1000)];
-   */
+
   CGSize textSize = [YMGlobalHelper boundText:office.name withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:16] andConstraintSize:CGSizeMake(272, 1000)];
+  
   return textSize.height + 39;
 }
 

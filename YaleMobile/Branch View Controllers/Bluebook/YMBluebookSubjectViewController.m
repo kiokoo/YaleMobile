@@ -114,19 +114,24 @@
 {
   YMBluebookSubjectCell *cell = (YMBluebookSubjectCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Subject Cell"];
 
-  cell.code1.textColor       = [YMTheme bluebookSubjectCodeTextColor];
-  cell.happens1.textColor    = [YMTheme laundryTimeAndBluebookHappensTextColor];
-  cell.instructor1.textColor = [YMTheme lightGray];
-  cell.name1.textColor       = [YMTheme gray];
+  cell.code1.textColor                  = [YMTheme bluebookSubjectCodeTextColor];
+  cell.code1.highlightedTextColor       = cell.code1.textColor;
+  
+  cell.happens1.textColor               = [YMTheme laundryTimeAndBluebookHappensTextColor];
+  cell.happens1.highlightedTextColor    = cell.happens1.textColor;
+  
+  cell.instructor1.textColor            = [YMTheme lightGray];
+  cell.instructor1.highlightedTextColor = cell.instructor1.textColor;
+  
+  cell.name1.textColor                  = [YMTheme gray];
+  cell.name1.highlightedTextColor       = cell.name1.textColor;
   
   Course *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
   cell.name1.text = course.name;
   cell.happens1.text = course.happens;
   cell.instructor1.text = course.instructor;
   cell.code1.text = course.code;
-  /* deprecated code
-  CGSize textSize = [course.name sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:16] constrainedToSize:CGSizeMake(280, 5000.0f)];
-   */
+
   CGSize textSize = [YMGlobalHelper boundText:course.name withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:16] andConstraintSize:CGSizeMake(280, 5000.0f)];
   CGRect newFrame = cell.name1.frame;
   newFrame.size.height = textSize.height;

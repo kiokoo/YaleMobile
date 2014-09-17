@@ -155,14 +155,6 @@
     }
   }
   
-  cell.name1.shadowColor = [UIColor whiteColor];
-  cell.name1.shadowOffset = CGSizeMake(0, 1);
-  cell.location1.shadowColor = [UIColor whiteColor];
-  cell.location1.shadowOffset = CGSizeMake(0, 1);
-  cell.special1.shadowColor = [UIColor whiteColor];
-  cell.special1.shadowOffset = CGSizeMake(0, 1);
-  cell.crowdLabel1.shadowColor = [UIColor whiteColor];
-  cell.crowdLabel1.shadowOffset = CGSizeMake(0, 1);
   [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor] forCell:cell];
   
   if (self.special.count) {
