@@ -51,6 +51,8 @@
   
   self.textField1.textColor = [YMTheme gray];
   self.welcomLabel.textColor = [YMTheme gray];
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)confirm:(id)sender

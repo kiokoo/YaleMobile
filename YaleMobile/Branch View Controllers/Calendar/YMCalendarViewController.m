@@ -38,6 +38,8 @@
   
   [YMGlobalHelper addMenuButtonToController:self];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -60,6 +60,8 @@
   self.locating = 0;
   self.zoomForAnnotation = NO;
   self.searchBar1.autocorrectionType = UITextAutocorrectionTypeNo;
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

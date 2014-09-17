@@ -52,6 +52,8 @@
   self.refreshControl = refreshControl;
 
   self.refreshControl.layer.zPosition += 1;
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

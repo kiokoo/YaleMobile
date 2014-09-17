@@ -39,6 +39,8 @@
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   self.tableView1.backgroundColor = [UIColor clearColor];
   [self restoreViewToDefault];
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

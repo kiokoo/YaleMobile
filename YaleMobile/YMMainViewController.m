@@ -50,6 +50,8 @@
   [YMServerCommunicator getWeatherWithCompletionBlock:^(NSArray *weatherInfo) {
     [self.mainView configureWeatherSubviews:weatherInfo];
   }];
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)splash:(NSTimer *)timer

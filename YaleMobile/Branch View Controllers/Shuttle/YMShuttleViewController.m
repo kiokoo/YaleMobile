@@ -64,6 +64,8 @@
   [self.refresh1 addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventTouchUpInside];
   
   [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Shuttle Refresh"];
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

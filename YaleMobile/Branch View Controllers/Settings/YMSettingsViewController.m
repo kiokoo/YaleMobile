@@ -36,6 +36,8 @@
   
   self.settings = @[@"My Name", @"Weather Unit"];
   self.abouts = @[@"About Yale Mobile", @"Credits", @"Contact Developer", @"Write a Review"];
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -53,6 +53,7 @@
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
   self.tableView.separatorInset = UIEdgeInsetsZero;
   self.tableView.separatorColor = [YMTheme separatorGray];
+  
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,8 +65,8 @@
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
-    
-  self.navigationController.navigationBar.translucent = YES;
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
   self.navigationController.navigationBar.alpha = 1.0;
 }
 

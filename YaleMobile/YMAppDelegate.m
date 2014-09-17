@@ -28,10 +28,8 @@
                            [UIFont fontWithName:@"HelveticaNeue-Medium" size:19.0], NSFontAttributeName, nil]];
 
   [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-  [[UINavigationBar appearance] setBarTintColor:[[YMTheme blue] colorWithAlphaComponent:0.1]];
-  [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[[YMTheme blue] colorWithAlphaComponent:0.85]]
-                                     forBarMetrics:UIBarMetricsDefault];
-  [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+  [[UINavigationBar appearance] setBarTintColor:[YMTheme blue]];
+  [[UINavigationBar appearance] setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
   
   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 

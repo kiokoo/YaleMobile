@@ -42,7 +42,10 @@
   }
   
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+  self.tableView.separatorInset = UIEdgeInsetsZero;
   self.tableView.separatorColor = [YMTheme separatorGray];
+  
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,7 +67,6 @@
       [self loadData];
     }];
   }
-
 }
 
 - (void)loadData

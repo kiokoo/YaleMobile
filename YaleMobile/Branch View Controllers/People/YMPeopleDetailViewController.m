@@ -241,6 +241,7 @@
       MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
       mailer.mailComposeDelegate = self;
       NSArray *toRecipients = [NSArray arrayWithObjects:cell.primary1.text, nil];
+      [[mailer navigationBar] setTintColor:[UIColor whiteColor]];
       [mailer setToRecipients:toRecipients];
       [self presentViewController:mailer animated:YES completion:nil];
     } else {

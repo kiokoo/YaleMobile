@@ -52,5 +52,6 @@
 + (void)hideNotificationView;
 + (void)setupHighlightBackgroundViewWithColor:(UIColor *)color
                                       forCell:(UITableViewCell *)cell;
++ (UIImageView *)findHairlineImageViewUnder:(UIView *)view;
 
 @end

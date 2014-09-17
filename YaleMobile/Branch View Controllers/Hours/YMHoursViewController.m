@@ -51,7 +51,7 @@
     self.selectedIndexPath = nil;
   }
   
-  self.navigationController.navigationBar.translucent = YES;
+  [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
   self.navigationController.navigationBar.alpha = 1.0;
 }
 
