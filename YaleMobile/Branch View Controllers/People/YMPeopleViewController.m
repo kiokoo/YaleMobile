@@ -133,10 +133,9 @@
     [alert show];
   }];
   
-  [YMGlobalHelper showNotificationInViewController:self.navigationController
+  [YMGlobalHelper showNotificationInViewController:self
                                            message:@"Searching..."
-                                         tintColor:[YMTheme notificationTintColor]
-                                             image:nil];
+                                             style:JGProgressHUDStyleLight];
   
   [operation start];
 }
@@ -266,10 +265,9 @@
     [alert show];
   }];
     
-  [YMGlobalHelper showNotificationInViewController:self.navigationController
+  [YMGlobalHelper showNotificationInViewController:self
                                            message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]
-                                             image:nil];
+                                             style:JGProgressHUDStyleLight];
   
   [operation start];
 }

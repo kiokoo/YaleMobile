@@ -150,7 +150,9 @@
     NSString *r = [Route getActiveRoutesInManagedObjectContext:self.db.managedObjectContext];
     self.routesList = r;
     if (!r) {
-      [YMGlobalHelper showNotificationInViewController:self.navigationController message:@"No active route selected" tintColor:[YMTheme notificationWarningTintColor]];
+      [YMGlobalHelper showNotificationInViewController:self
+                                               message:@"No active route selected"
+                                                 style:JGProgressHUDStyleLight];
       
       [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
       return;

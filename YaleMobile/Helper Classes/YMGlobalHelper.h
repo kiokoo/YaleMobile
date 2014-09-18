@@ -7,7 +7,7 @@
 
 #import "YMSubtitleCell.h"
 #import "YMSimpleCell.h"
-#import <CSNotificationView/CSNotificationView.h>
+#import <JGProgressHUD/JGProgressHUD.h>
 
 @interface YMGlobalHelper : NSObject
 
@@ -41,13 +41,12 @@
 
 + (void)showNotificationInViewController:(UIViewController *)vc
                                  message:(NSString *)msg
-                               tintColor:(UIColor *)color;
+                                   style:(JGProgressHUDStyle)style
+                               indicator:(JGProgressHUDIndicatorView *)indicator;
 
 + (void)showNotificationInViewController:(UIViewController *)vc
                                  message:(NSString *)msg
-                               tintColor:(UIColor *)color
-                                   image:(UIImage *)image;
-
+                                   style:(JGProgressHUDStyle)style;
 
 + (void)hideNotificationView;
 + (void)setupHighlightBackgroundViewWithColor:(UIColor *)color

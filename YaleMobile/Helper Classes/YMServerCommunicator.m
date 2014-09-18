@@ -109,9 +109,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+  [YMGlobalHelper showNotificationInViewController:controller
                                            message:@"Loading routes"
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -143,9 +143,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+  [YMGlobalHelper showNotificationInViewController:controller
                                            message:@"Loading paths..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -176,9 +176,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+  [YMGlobalHelper showNotificationInViewController:controller
                                            message:@"Loading stops..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -215,9 +215,9 @@ static BOOL cancel = NO;
     if (!controller) completionBlock(nil);
   }];
   if (controller) {
-    [YMGlobalHelper showNotificationInViewController:controller.navigationController
+    [YMGlobalHelper showNotificationInViewController:controller
                                              message:@"Loading shuttles..."
-                                           tintColor:[YMTheme notificationTintColor]];
+                                               style:JGProgressHUDStyleLight];
     
   }
   [[manager operationQueue] addOperation:operation];
@@ -250,9 +250,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+  [YMGlobalHelper showNotificationInViewController:controller
                                            message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -282,9 +282,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+  [YMGlobalHelper showNotificationInViewController:controller
                                            message:@"Loading hours..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -314,7 +314,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController message:@"Loading..." tintColor:[YMTheme notificationTintColor]];
+  [YMGlobalHelper showNotificationInViewController:controller
+                                           message:@"Loading..."
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -345,9 +347,9 @@ static BOOL cancel = NO;
     }
   }];
 
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+  [YMGlobalHelper showNotificationInViewController:controller
                                            message:@"Loading menu..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -375,9 +377,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+  [YMGlobalHelper showNotificationInViewController:controller
                                            message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -428,11 +430,10 @@ static BOOL cancel = NO;
     }
   }];
   
-  ((YMAppDelegate *)[UIApplication sharedApplication].delegate).sharedNotificationView =
-  [CSNotificationView notificationViewWithParentViewController:controller.navigationController
-                                                     tintColor:[YMTheme notificationTintColor]
-                                                         image:nil
-                                                       message:@"Loading..."];
+  [YMGlobalHelper showNotificationInViewController:controller
+                                           message:@"Loading..."
+                                             style:JGProgressHUDStyleLight];
+  
   [[manager operationQueue] addOperation:operation];
 }
 
@@ -518,9 +519,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller.navigationController
+  [YMGlobalHelper showNotificationInViewController:controller
                                            message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }

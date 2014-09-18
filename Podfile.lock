@@ -20,8 +20,8 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - CSNotificationView (0.4.2)
   - FLEX (1.1.1)
+  - JGProgressHUD (1.2.2)
   - Mantle (1.5):
     - Mantle/extobjc
   - Mantle/extobjc (1.5)
@@ -30,16 +30,16 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - CSNotificationView (= 0.4.2)
   - FLEX (~> 1.0)
+  - JGProgressHUD (~> 1.2.2)
   - Mantle (~> 1.0)
   - PureLayout
   - SWRevealViewController (~> 2.3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
-  CSNotificationView: eefeaed92a8bf0786fbb81047abab35283b05dae
   FLEX: 8e53751b915759215d77c7c72b1c7bd28665dac2
+  JGProgressHUD: a7c58f711eec0b67f257a0821c0bac9194c72398
   Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
   PureLayout: 972964b21dbcbc5cc36785aed16aba03176f057d
   SWRevealViewController: f6d80638b8e12323e87ac79562345403a799cb77

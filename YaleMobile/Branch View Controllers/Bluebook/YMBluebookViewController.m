@@ -214,9 +214,9 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   [self prepareSubjectViewController:svc];
   
-  [YMGlobalHelper showNotificationInViewController:self.navigationController
+  [YMGlobalHelper showNotificationInViewController:self
                                            message:@"Loading..."
-                                         tintColor:[YMTheme notificationTintColor]];
+                                             style:JGProgressHUDStyleLight];
 
   svc.tableView.scrollEnabled = NO;
 

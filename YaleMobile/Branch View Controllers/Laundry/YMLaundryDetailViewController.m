@@ -15,6 +15,9 @@
 
 #import "YMTheme.h"
 
+#import <JGProgressHUD/JGProgressHUDErrorIndicatorView.h>
+#import <JGProgressHUD/JGProgressHUDSuccessIndicatorView.h>
+
 @interface YMLaundryDetailViewController ()
 
 @end
@@ -218,11 +221,11 @@
     [[UIApplication sharedApplication] cancelLocalNotification:not];
     
     NSString *alertText = [NSString stringWithFormat:@"Alert cancelled for machine %@", machineID];
-
-    [YMGlobalHelper showNotificationInViewController:self.navigationController
+    
+    [YMGlobalHelper showNotificationInViewController:self
                                              message:alertText
-                                           tintColor:[[UIColor redColor] colorWithAlphaComponent:0.3]
-                                               image:[CSNotificationView imageForStyle:CSNotificationViewStyleSuccess]];
+                                               style:JGProgressHUDStyleLight
+                                           indicator:[[JGProgressHUDErrorIndicatorView alloc] init]];
     
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
     return;
@@ -244,7 +247,10 @@
   
   NSString *alertText = [NSString stringWithFormat:@"Alert set for machine %@", machineID];
   
-  [YMGlobalHelper showNotificationInViewController:self.navigationController message:alertText tintColor:[YMTheme notificationTintColor] image:[CSNotificationView imageForStyle:CSNotificationViewStyleSuccess]];
+  [YMGlobalHelper showNotificationInViewController:self
+                                           message:alertText
+                                             style:JGProgressHUDStyleLight
+                                         indicator:[[JGProgressHUDSuccessIndicatorView alloc] init]];
 
   [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
 }

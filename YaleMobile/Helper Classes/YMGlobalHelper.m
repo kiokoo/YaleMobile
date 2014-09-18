@@ -10,6 +10,7 @@
 #import "YMGlobalHelper.h"
 #import "YMMenuViewController.h"
 #import <SWRevealViewController/SWRevealViewController.h>
+#import <JGProgressHUD/JGProgressHUDSuccessIndicatorView.h>
 
 #import "YMAppDelegate.h"
 
@@ -66,7 +67,7 @@
 + (void)setupMenuButtonForController:(UIViewController *)viewController
 {
   viewController.revealViewController.rearViewRevealWidth = 280.0f;
-
+  
   [viewController.revealViewController setFrontViewPosition:FrontViewPositionRight
                                                    animated:YES];
 }
@@ -244,54 +245,37 @@
 
 + (void)showNotificationInViewController:(UIViewController *)vc
                                  message:(NSString *)msg
-                               tintColor:(UIColor *)color
+                                   style:(JGProgressHUDStyle)style
+                               indicator:(JGProgressHUDIndicatorView *)indicator
 {
-  [self showNotificationInViewController:vc message:msg tintColor:color image:nil];
+  YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+  // Hide any showing notification first.
+  [self hideNotificationView];
+  
+  JGProgressHUD *hud = [JGProgressHUD progressHUDWithStyle:style];
+  hud.position = JGProgressHUDPositionCenter;
+  hud.textLabel.text = msg;
+  if (indicator) {
+    hud.indicatorView = indicator;
+  }
+  [hud showInView:vc.view];
+  [delegate setSharedNotificationView:hud];
 }
 
 + (void)showNotificationInViewController:(UIViewController *)vc
                                  message:(NSString *)msg
-                               tintColor:(UIColor *)color
-                                   image:(UIImage *)image
+                                   style:(JGProgressHUDStyle)style
 {
-  YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
-  // Hide any showing notification first.
-  if ([delegate.sharedNotificationView isShowing]) {
-    [self hideNotificationView];
-  }
-  delegate.sharedNotificationView =
-    [CSNotificationView notificationViewWithParentViewController:vc
-                                                       tintColor:color
-                                                           image:image
-                                                         message:msg];
-  
-  [delegate.sharedNotificationView setVisible:YES animated:YES completion:nil];
-  
-  if (!image) {
-    [delegate.sharedNotificationView setShowingActivity:YES];
-  }
+  [self showNotificationInViewController:vc message:msg style:style indicator:nil];
 }
 
 + (void)hideNotificationView
 {
-  __weak YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
-  
-  if (!delegate.sharedNotificationView) return;
-  
-  [delegate.sharedNotificationView setVisible:NO animated:YES completion:nil];
-  
-  /** 
-   * This is a slightly hacky work around to ensure notificationView is dealloc'ed
-   * when we don't need it anymore. This is very important because apparently CSNotificationView
-   * decided to put a KVO on the presenting view controller... and not to bother mentioning that
-   * in any documentation at all (aka bad).
-   */
-  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    // busy wait
-    while ([delegate.sharedNotificationView isShowing]);
-    // ref count is now 0
-    delegate.sharedNotificationView = nil;
-  });
+  YMAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+  if ([delegate.sharedNotificationView isVisible]) {
+    [delegate.sharedNotificationView dismiss];
+  }
+  delegate.sharedNotificationView = nil;
 }
 
 + (void)setupHighlightBackgroundViewWithColor:(UIColor *)color
