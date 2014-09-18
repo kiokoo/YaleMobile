@@ -23,6 +23,8 @@
 
 #import "YMTheme.h"
 
+#define TABLEVIEW_GROWTH_VALUE 200
+
 @interface YMMapViewController () <SWRevealViewControllerDelegate>
 
 @end
@@ -91,10 +93,19 @@
     }];
   }
   
-    
-    self.revealViewController.delegate = self;
-    [YMGlobalHelper setupSlidingViewControllerForController:self];
+  
+  self.revealViewController.delegate = self;
+  [YMGlobalHelper setupSlidingViewControllerForController:self];
+ 
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide) name:UIKeyboardDidHideNotification object:nil];
+}
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
+  [super viewWillDisappear:animated];
 }
 
 
@@ -174,6 +185,23 @@
   region.span = span;
   
   [self.mapView1 setRegion:region animated:YES];
+}
+
+# pragma mark - Keyboard methods
+
+- (void)keyboardWillShow
+{
+  DLog(@"Keyboad will show");
+}
+
+- (void)keyboardDidHide
+{
+  DLog(@"Keyboad did hide");
+  [UIView animateWithDuration:0.5 animations:^{
+    CGRect oldFrame = self.tableView1.frame;
+    oldFrame.size.height += TABLEVIEW_GROWTH_VALUE;
+    self.tableView1.frame = oldFrame;
+  }];
 }
 
 # pragma mark - search bar methods
@@ -315,12 +343,12 @@
 {
   
   self.searchBar1.userInteractionEnabled =
-    (revealController.frontViewPosition == FrontViewPositionLeft);
+  (revealController.frontViewPosition == FrontViewPositionLeft);
   
   if (revealController.frontViewPosition == FrontViewPositionLeft) {
-      self.mapView1.userInteractionEnabled = YES;
+    self.mapView1.userInteractionEnabled = YES;
   } else if (revealController.frontViewPosition == FrontViewPositionRight) {
-      self.mapView1.userInteractionEnabled = NO;
+    self.mapView1.userInteractionEnabled = NO;
   }
 }
 
