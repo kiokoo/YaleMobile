@@ -64,11 +64,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   self.keys = [[self.courses allKeys] sortedArrayUsingSelector:@selector(compare:)];
   self.instructorName = @""; self.courseNumber = @""; self.exactPhrase = @"";
   
-  CGRect rect = self.searchBar1.frame;
-  UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1, rect.size.width, 1)];
-  lineView.backgroundColor = [UIColor lightGrayColor];
-  [self.searchBar1 addSubview:lineView];
-  
   if ([self.tableView respondsToSelector:@selector(setSectionIndexColor:)]) {
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
@@ -263,12 +258,14 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 {
   self.searchDisplayController.searchResultsTableView.hidden = YES;
   if (!self.disableViewOverlay) {
-    self.disableViewOverlay = [[UIView alloc] initWithFrame:CGRectMake(0.0f,88.0f,320.0f,416.0f)];
+    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    CGFloat screenWidth  = [[UIScreen mainScreen] bounds].size.width;
+    self.disableViewOverlay = [[UIView alloc] initWithFrame:CGRectMake(0.0f,88.0f,screenWidth,screenHeight)];
+    [self.view addSubview:self.disableViewOverlay];
     self.disableViewOverlay.backgroundColor = [UIColor blackColor];
     self.disableViewOverlay.alpha = 0.8;
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.disableViewOverlay addGestureRecognizer:gestureRecognizer];
-    [self.view addSubview:self.disableViewOverlay];
   }
 }
 
@@ -280,6 +277,11 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   else if (searchBar.selectedScopeButtonIndex == 1) self.instructorName = searchString;
   else self.exactPhrase = searchString;
   [self performSegueWithIdentifier:@"Bluebook First Segue" sender:searchBar];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+  [self removeDisplayOverlay];
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
