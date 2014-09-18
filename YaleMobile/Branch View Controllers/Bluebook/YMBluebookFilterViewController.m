@@ -32,7 +32,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   self.filters = @[@[@"Term", @"Category"], @[@"Humanities", @"Social Sciences", @"Sciences"], @[@"Language", @"Writing", @"Quantitative Reasoning"]];
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
   

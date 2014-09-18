@@ -31,9 +31,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  
-  self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"menubg_table.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
-  
+    
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_menu.png"]];
 }
 
@@ -70,7 +68,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Bluebook Filter Selection Simple"];
-  cell.name1.text = [[self.options objectAtIndex:indexPath.row] uppercaseString];
+  cell.name1.text = [self.options objectAtIndex:indexPath.row];
 
   cell.name1.textColor = [YMTheme white];
   
