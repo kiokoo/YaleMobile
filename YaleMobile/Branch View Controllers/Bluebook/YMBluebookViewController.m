@@ -230,7 +230,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   [self prepareSubjectViewController:svc];
   
-  [YMGlobalHelper showNotificationInViewController:self
+  [YMGlobalHelper showNotificationInViewController:svc
                                            message:@"Loading..."
                                              style:JGProgressHUDStyleLight];
 
