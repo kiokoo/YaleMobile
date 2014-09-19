@@ -37,7 +37,7 @@
   UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
   [cancel setBackgroundImage:[UIImage imageNamed:@"button_navbar_cancel.png"] forState:UIControlStateNormal];
   [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:cancel]];
-  [cancel addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
+  [cancel addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
 #warning TODO(hengchu): this may need to be removed.
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   self.background1.image = [[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
@@ -64,7 +64,7 @@
   [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)cancel:(id)sender
+- (void)cancel
 {
   [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
