@@ -21,6 +21,6 @@
 
 @property (nonatomic, strong) NSString *phoneNumber;
 
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar1;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 
 @end
