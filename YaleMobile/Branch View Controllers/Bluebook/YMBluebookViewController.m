@@ -79,6 +79,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   
   self.tableView.separatorColor = [YMTheme separatorGray];
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+  self.tableView.scrollsToTop = YES;
   
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
