@@ -32,7 +32,7 @@
   UIButton *confirm = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
   [confirm setBackgroundImage:[UIImage imageNamed:@"button_navbar_ok.png"] forState:UIControlStateNormal];
   [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:confirm]];
-  [confirm addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
+  [confirm addTarget:self action:@selector(confirm) forControlEvents:UIControlEventTouchUpInside];
   
   UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
   [cancel setBackgroundImage:[UIImage imageNamed:@"button_navbar_cancel.png"] forState:UIControlStateNormal];
@@ -55,7 +55,7 @@
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
-- (void)confirm:(id)sender
+- (void)confirm
 {
   if (self.textField1.text.length) {
     [[NSUserDefaults standardUserDefaults] setObject:self.textField1.text forKey:@"Name"];
@@ -79,8 +79,8 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
   [textField resignFirstResponder];
-  [self confirm:textField];
-
+  [self confirm];
+  
   return NO;
   
 }
