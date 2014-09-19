@@ -66,6 +66,16 @@
   return [[UIColor blackColor] colorWithAlphaComponent:0.05];
 }
 
++ (UIColor *)searchBarBarTintColor
+{
+  return RGB(245, 245, 245);
+}
+
++ (UIColor *)searchbarTintColor
+{
+  return RGB(92, 92, 92);
+}
+
 /* Migrated from UIColor+YaleMobile */
 + (UIColor *)YMOrange
 {

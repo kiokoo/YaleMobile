@@ -40,6 +40,18 @@
 
 + (UIColor *)cellHighlightBackgroundViewColor;
 
+/**
+ *  This is the ligher grey, the background color of
+ *  searchBar.
+ */
++ (UIColor *)searchBarBarTintColor;
+
+/**
+ *  This is the darker one, the color of the cancel
+ *  button and text. Similar to tintColor of a UIView.
+ */
++ (UIColor *)searchbarTintColor;
+
 /* Migrated from UIColor+YaleMobile */
 + (UIColor *)YMOrange;
 + (UIColor *)YMLightOrange;
