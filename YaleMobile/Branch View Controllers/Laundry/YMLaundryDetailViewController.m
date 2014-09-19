@@ -120,7 +120,7 @@
     cell.name1.textColor = [YMTheme gray];
     NSInteger currCount = [[self.washers objectAtIndex:0] integerValue];
     NSInteger totalCount = [[self.washers objectAtIndex:1] integerValue];
-    cell.name1.text = (indexPath.section == 0) ? [NSString stringWithFormat:@"Washers: %ld of %ld available", currCount, totalCount] : [NSString stringWithFormat:@"Dryers: %@ of %@ available", [self.dryers objectAtIndex:0], [self.dryers objectAtIndex:1]];
+    cell.name1.text = (indexPath.section == 0) ? [NSString stringWithFormat:@"Washers: %ld of %ld available", (long)currCount, (long)totalCount] : [NSString stringWithFormat:@"Dryers: %@ of %@ available", [self.dryers objectAtIndex:0], [self.dryers objectAtIndex:1]];
     return cell;
   }
   
