@@ -37,10 +37,6 @@
   [[FLEXManager sharedManager] showExplorer];
 #endif
   
-//  [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge |
-//                                                  UIRemoteNotificationTypeSound |
-//                                                  UIRemoteNotificationTypeAlert ];
-  
   // This is iOS8 only.
   if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
     [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound

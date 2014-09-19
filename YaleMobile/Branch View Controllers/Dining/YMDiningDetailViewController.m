@@ -121,9 +121,11 @@
   }
   for (NSArray *entry in array) {
     NSInteger i = [[entry objectAtIndex:8] integerValue] - 1;
-    if ([[all objectAtIndex:i] count] == 0)
-      [[all objectAtIndex:i] addObject:[NSString stringWithFormat:@"%@\n",[entry objectAtIndex:7]]];
-    [[all objectAtIndex:i] addObject:[NSString stringWithFormat:@"\t\t› %@\n", [entry objectAtIndex:10]]];
+    if ([[all objectAtIndex:i] count] == 0) {
+      [[all objectAtIndex:i] addObject:[NSString stringWithFormat:@"\n%@\n",[entry objectAtIndex:7]]];
+    }
+    NSString *format = @" • %@\n";
+    [[all objectAtIndex:i] addObject:[NSString stringWithFormat:format, [entry objectAtIndex:10]]];
   }
   
   NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:count];
