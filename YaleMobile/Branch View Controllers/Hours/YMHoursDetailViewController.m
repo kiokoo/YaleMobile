@@ -111,12 +111,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   if (indexPath.row == 0) {
-    NSString *text = [self.keys objectAtIndex:indexPath.section];
-    /* deprecated
-    CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:18] constrainedToSize:CGSizeMake(268, 5000)];
-     */
-    CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:18] andConstraintSize:CGSizeMake(268, 5000)];
-    return textSize.height + 14;
+      return [YMTheme groupedTableTopLabelCellHeight];
   } else {
     NSString *text = [self.data objectForKey:[self.keys objectAtIndex:indexPath.section]];
     /* deprecated

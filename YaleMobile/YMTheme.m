@@ -147,4 +147,18 @@
   return [UIColor colorWithRed:72/255.0 green:173/255.0 blue:58/255.0 alpha:1];
 }
 
+/* Spacing for grouped table views e.g. Settings, Laundry, Hours, Calendar */
+
++ (int)groupedTableTopLabelCellHeight {
+    return 32;
+}
+
++ (int)groupedTableFirstOrLastCellHeight {
+    return 54;
+}
+
++ (int)groupedTableMiddleCellHeight {
+    return 44;
+}
+
 @end

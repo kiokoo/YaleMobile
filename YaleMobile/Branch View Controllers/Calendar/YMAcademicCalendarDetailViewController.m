@@ -127,7 +127,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.row == 0) return 38;
+  if (indexPath.row == 0) return [YMTheme groupedTableTopLabelCellHeight];
   else {
     NSArray *oneTerm = [self.sorted objectAtIndex:indexPath.section];
     NSDictionary *detailDict = [oneTerm objectAtIndex:indexPath.row];
