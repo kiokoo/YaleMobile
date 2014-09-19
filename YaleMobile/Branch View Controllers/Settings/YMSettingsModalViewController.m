@@ -10,7 +10,7 @@
 #import "YMTheme.h"
 
 @interface YMSettingsModalViewController ()
-//@property (weak, nonatomic) IBOutlet UILabel *welcomLabel;
+
 
 @end
 
@@ -50,7 +50,6 @@
   if (name) self.textField1.text = name;
   
   self.textField1.textColor = [YMTheme gray];
-//  self.welcomLabel.textColor = [YMTheme gray];
   
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
@@ -77,11 +76,11 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
-    //Format header so it's not all caps
-    if([view isKindOfClass:[UITableViewHeaderFooterView class]]){
-        UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *) view;
-        tableViewHeaderFooterView.textLabel.text = [tableViewHeaderFooterView.textLabel.text capitalizedString];
-    }
+  //Format header so it's not all caps
+  if([view isKindOfClass:[UITableViewHeaderFooterView class]]){
+    UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *) view;
+    tableViewHeaderFooterView.textLabel.text = [tableViewHeaderFooterView.textLabel.text capitalizedString];
+  }
 }
 
 
