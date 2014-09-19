@@ -748,6 +748,9 @@
                                 <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JhK-zd-xcg" id="odQ-Xu-ZGy"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there! Thank you for using YaleMobile. How would you like me to call you?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="GL4-QG-MKF">
                                 <rect key="frame" x="25" y="72" width="275" height="62"/>

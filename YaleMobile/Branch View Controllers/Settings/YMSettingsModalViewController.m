@@ -32,12 +32,12 @@
   UIButton *confirm = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
   [confirm setBackgroundImage:[UIImage imageNamed:@"button_navbar_ok.png"] forState:UIControlStateNormal];
   [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:confirm]];
-  [confirm addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
+  [confirm addTarget:self action:@selector(confirm) forControlEvents:UIControlEventTouchUpInside];
   
   UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
   [cancel setBackgroundImage:[UIImage imageNamed:@"button_navbar_cancel.png"] forState:UIControlStateNormal];
   [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:cancel]];
-  [cancel addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
+  [cancel addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
 #warning TODO(hengchu): this may need to be removed.
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   self.background1.image = [[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
@@ -55,7 +55,7 @@
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
-- (void)confirm:(id)sender
+- (void)confirm
 {
   if (self.textField1.text.length) {
     [[NSUserDefaults standardUserDefaults] setObject:self.textField1.text forKey:@"Name"];
@@ -64,7 +64,7 @@
   [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)cancel:(id)sender
+- (void)cancel
 {
   [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
@@ -74,5 +74,17 @@
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
 }
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+  [textField resignFirstResponder];
+  [self confirm];
+  
+  return NO;
+  
+}
+
+
 
 @end
