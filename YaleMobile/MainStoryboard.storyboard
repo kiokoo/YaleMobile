@@ -738,7 +738,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FQO-RT-2RA">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FQO-RT-2RA">
                                 <rect key="frame" x="26" y="169" width="260" height="30"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -749,7 +749,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there! Thank you for using YaleMobile. How would you like me to call you?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="GL4-QG-MKF">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hey there! Thank you for using YaleMobile. How would you like me to call you?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="GL4-QG-MKF">
                                 <rect key="frame" x="25" y="72" width="275" height="62"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -760,8 +760,8 @@
                                 <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jzb-b3-H6p">
-                                <rect key="frame" x="3" y="155" width="313" height="58"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jzb-b3-H6p">
+                                <rect key="frame" x="4" y="155" width="313" height="58"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="IQU-L6-JIl"/>
@@ -776,7 +776,7 @@
                             <constraint firstItem="FQO-RT-2RA" firstAttribute="leading" secondItem="9Ts-0r-AbV" secondAttribute="leading" constant="26" id="WaY-Xa-W6T"/>
                             <constraint firstAttribute="trailing" secondItem="GL4-QG-MKF" secondAttribute="trailing" constant="20" symbolic="YES" id="iuE-dC-yz6"/>
                             <constraint firstAttribute="centerX" secondItem="Jzb-b3-H6p" secondAttribute="centerX" id="kfT-dg-Yka"/>
-                            <constraint firstItem="GL4-QG-MKF" firstAttribute="top" secondItem="IhG-HZ-M3e" secondAttribute="bottom" constant="20" symbolic="YES" id="yGM-qJ-rOp"/>
+                            <constraint firstItem="GL4-QG-MKF" firstAttribute="top" secondItem="IhG-HZ-M3e" secondAttribute="bottom" constant="8" symbolic="YES" id="yGM-qJ-rOp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hello!" id="IEV-oo-O5f"/>
@@ -788,7 +788,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZl-Z9-O7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="2462"/>
+            <point key="canvasLocation" x="1988" y="1855"/>
+        </scene>
+        <!--Hello!-->
+        <scene sceneID="Y42-ip-XtH">
+            <objects>
+                <tableViewController id="B7j-4B-cL1" customClass="YMSettingsModalViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qqA-EM-q0i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Hey there! Thank you for using YaleMobile. What would you like me to call you?" id="Oxx-DM-mPw">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kqE-eO-Oib">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kqE-eO-Oib" id="koh-fB-ING">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdP-OL-dM2">
+                                                    <rect key="frame" x="8" y="8" width="320" height="30"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="PV8-V8-XUS"/>
+                                                        <constraint firstAttribute="height" constant="30" id="toh-eE-kpB"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="B7j-4B-cL1" id="fSR-z6-7rg"/>
+                            <outlet property="delegate" destination="B7j-4B-cL1" id="Tdp-Dj-Q8l"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Hello!" id="OEm-bl-3uS"/>
+                    <connections>
+                        <outlet property="textField1" destination="mdP-OL-dM2" id="ZQw-fQ-e2z"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giV-KP-PKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="2462"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yiV-3t-cgg">
@@ -819,7 +866,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="JhK-zd-xcg" kind="relationship" relationship="rootViewController" id="Bc2-ng-gh7"/>
+                        <segue destination="B7j-4B-cL1" kind="relationship" relationship="rootViewController" id="vUg-Ep-iJq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rmc-qQ-kW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
