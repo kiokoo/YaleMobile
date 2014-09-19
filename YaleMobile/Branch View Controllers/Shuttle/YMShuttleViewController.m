@@ -30,7 +30,6 @@
 
 #import <PureLayout/PureLayout.h>
 #import <SWRevealViewController.h>
-
 #import <JGProgressHUD/JGProgressHUDErrorIndicatorView.h>
 
 #import "YMTheme.h"
@@ -165,25 +164,23 @@
         for (NSDictionary *dict in data) {
           [Stop stopWithData:dict forTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
         }
-        [YMServerCommunicator getSegmentInfoForController:self
-                                                andRoutes:r
-                                               usingBlock:^(NSDictionary *data) {
-                                                 for (NSString *key in [data allKeys]) {
-                                                   [Segment segmentWithID:[key integerValue]
-                                                         andEncodedString:[data objectForKey:key]
-                                                   inManagedObjectContext:self.db.managedObjectContext];
-                                                 }
-                                                 [YMServerCommunicator getShuttleInfoForController:self andRoutes:r usingBlock:^(NSArray *data) {
-                                                   for (NSDictionary *dict in data) {
-                                                     [Vehicle vehicleWithData:dict forTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
-                                                   }
-                                                   [self addSegments];
-                                                   [self addStops];
-                                                   [self addVehicles];
-                                                   [self.refresh1 setSelected:YES];
-                                                   [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(refreshVehicles) userInfo:nil repeats:NO];
-                                                 }];
-                                               }];
+        [YMServerCommunicator getSegmentInfoForController:self andRoutes:r usingBlock:^(NSDictionary *data) {
+          for (NSString *key in [data allKeys]) {
+            [Segment segmentWithID:[key integerValue]
+                  andEncodedString:[data objectForKey:key]
+            inManagedObjectContext:self.db.managedObjectContext];
+          }
+          [YMServerCommunicator getShuttleInfoForController:self andRoutes:r usingBlock:^(NSArray *data) {
+            for (NSDictionary *dict in data) {
+              [Vehicle vehicleWithData:dict forTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
+            }
+            [self addSegments];
+            [self addStops];
+            [self addVehicles];
+            [self.refresh1 setSelected:YES];
+            [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(refreshVehicles) userInfo:nil repeats:NO];
+          }];
+        }];
       }];
     }
   }];
