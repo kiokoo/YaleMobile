@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YMSettingsModalViewController : UIViewController
+@interface YMSettingsModalViewController : UITableViewController
 
 @property (nonatomic, strong) IBOutlet UITextField *textField1;
 @property (nonatomic, strong) IBOutlet UIImageView *background1;
