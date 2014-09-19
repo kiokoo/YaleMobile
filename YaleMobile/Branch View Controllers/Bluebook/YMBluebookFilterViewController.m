@@ -106,33 +106,44 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-	UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 25.0)];
-	
-	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+  UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 26.0)];
+  
+  UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
   
   headerView.backgroundColor = [YMTheme cellHighlightBackgroundViewColor];
   
   headerLabel.backgroundColor = [UIColor clearColor];
-	headerLabel.textColor = [UIColor whiteColor];
-	headerLabel.font = [UIFont boldSystemFontOfSize:13];
-	headerLabel.frame = CGRectMake(81.0, 0.0, 300.0, 22.0);
-
-	if (section == 1) {
+  headerLabel.textColor = [UIColor whiteColor];
+  headerLabel.font = [UIFont boldSystemFontOfSize:13];
+  headerLabel.frame = CGRectMake(81.0, 2.0, 300.0, 22.0);
+  
+  if (section == 1) {
     headerLabel.text = @"Area Filters";
   } else if (section == 2) {
     headerLabel.text = @"Skill Filters";
   }
-	
+  
   [headerView addSubview:headerLabel];
   
-	return headerView;
+  return headerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
   if (section == 0) return 0.0;
-  return 25;
+  return 26.0;
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+  UIView * footerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 4.0)];
+  footerView.backgroundColor = [UIColor clearColor];
+  return footerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+  return 4.0;
+}
+
 
 #pragma mark - Table view delegate
 

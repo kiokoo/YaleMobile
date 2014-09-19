@@ -9,7 +9,7 @@
 
 @property (nonatomic, strong) NSArray *keys;
 @property (nonatomic, strong) NSDictionary *courses;
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar1;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 
 @property (nonatomic, strong) NSString *exactPhrase;
 @property (nonatomic, strong) NSString *courseNumber;

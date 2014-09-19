@@ -28,7 +28,7 @@ static NSString* filterFormatString = @"&ProgramSubject=%@&InstructorName=%@&Exa
 static NSString* resultWindowUrl    = @"http://students.yale.edu/oci/resultWindow.jsp";
 static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.jsp";
 
-@interface YMBluebookViewController () <SWRevealViewControllerDelegate>
+@interface YMBluebookViewController () <SWRevealViewControllerDelegate, UISearchBarDelegate>
 
 - (void)updateTable;
 
@@ -49,6 +49,12 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 {
   [super viewDidLoad];
   self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
+
+  CGRect rect = self.searchBar.frame;
+  UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1,rect.size.width, 1)];
+  lineView.backgroundColor = [YMTheme separatorGray];
+  [self.searchBar addSubview:lineView];
+  self.searchBar.delegate = self;
   
   [self updateTable];
   [YMGlobalHelper addMenuButtonToController:self];
@@ -85,8 +91,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   [YMGlobalHelper setupSlidingViewControllerForController:self];
   YMBluebookFilterViewController *filterRoot = [self.storyboard instantiateViewControllerWithIdentifier:@"Bluebook Filter Root"];
   self.revealViewController.rightViewController = filterRoot;
-#warning TODO(hc) This if block seems to be causing a lot of \
-                  trouble, figure out what's happening
+#warning TODO(hc) This if block seems to be causing a lot of trouble, figure out what's happening
   if (self.selectedIndexPath) {
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
@@ -109,10 +114,21 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   return NO;
 }
 
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+}
+
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+
 - (void)updateTable
 {
   // first check all existing cells and apply filter.
-  
+#warning Question to HC: What's this function? Did I write it? O.O
   // then check all new cells and apply filter.
 }
 
@@ -381,7 +397,7 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 - (void)revealController:(SWRevealViewController *)revealController
        didMoveToPosition:(FrontViewPosition)position
 {
-  self.searchBar1.userInteractionEnabled = (FrontViewPositionLeft == revealController.frontViewPosition);
+  self.searchBar.userInteractionEnabled = (FrontViewPositionLeft == revealController.frontViewPosition);
 }
 
 #pragma mark - Table view delegate

@@ -44,7 +44,13 @@
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
   self.tableView.separatorInset = UIEdgeInsetsZero;
   self.tableView.separatorColor = [YMTheme separatorGray];
-  
+
+  CGRect rect = self.searchBar.frame;
+  UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1,rect.size.width, 1)];
+  lineView.backgroundColor = [YMTheme separatorGray];
+  [self.searchBar addSubview:lineView];
+  self.searchBar.delegate = self;
+
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
@@ -67,6 +73,15 @@
       [self loadData];
     }];
   }
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+}
+
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (void)loadData
