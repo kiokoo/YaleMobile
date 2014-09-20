@@ -395,7 +395,6 @@ static BOOL cancel = NO;
   [request setValue:userAgent forHTTPHeaderField:@"User-Agent"];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [YMGlobalHelper hideNotificationView];
     NSString *responseString = [[operation.responseString stringByReplacingOccurrencesOfString:@"<span class=\"user-avail\">" withString:@"<td class=\"myclass\">"] stringByReplacingOccurrencesOfString:@"</span>" withString:@"</td>"];;
     if ([responseString rangeOfString:@"DEMO LOCATION"].location != NSNotFound) {
       if (((UITableViewController *)controller).refreshControl) [((UITableViewController *)controller).refreshControl endRefreshing];
@@ -421,7 +420,6 @@ static BOOL cancel = NO;
     completionBlock(roomData);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     if (((UITableViewController *)controller).refreshControl) [((UITableViewController *)controller).refreshControl endRefreshing];
-    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach laundry status server. Please check your Internet connection and try again."
@@ -429,10 +427,6 @@ static BOOL cancel = NO;
       [alert show];
     }
   }];
-  
-  [YMGlobalHelper showNotificationInViewController:controller
-                                           message:@"Loading..."
-                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
@@ -449,7 +443,6 @@ static BOOL cancel = NO;
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    [YMGlobalHelper hideNotificationView];
     
     NSString *responseString = operation.responseString;
     if ([responseString rangeOfString:@"YALE UNIVERSITY"].location == NSNotFound) {
@@ -510,7 +503,6 @@ static BOOL cancel = NO;
     completionBlock(washers, dryers, machineStatuses);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     if (((UITableViewController *)controller).refreshControl) [((UITableViewController *)controller).refreshControl endRefreshing];
-    [YMGlobalHelper hideNotificationView];
     if (!cancel) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
                                                       message:@"YaleMobile is unable to reach laundry status server. Please check your Internet connection and try again."
@@ -518,10 +510,6 @@ static BOOL cancel = NO;
       [alert show];
     }
   }];
-  
-  [YMGlobalHelper showNotificationInViewController:controller
-                                           message:@"Loading..."
-                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
