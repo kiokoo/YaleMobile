@@ -76,6 +76,7 @@
   self.textField1.textColor       = [YMTheme lightGray];
   self.textField1.font            = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f];
   self.textField1.backgroundColor = [UIColor clearColor];
+  self.textField1.tintColor       = [YMTheme searchbarTintColor];
 }
 
 - (void)confirm:(id)sender
