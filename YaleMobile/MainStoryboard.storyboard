@@ -743,10 +743,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T1T-Lv-pbv">
-                                                    <rect key="frame" x="9" y="4" width="302" height="50"/>
+                                                    <rect key="frame" x="2" y="0.0" width="316" height="58"/>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdP-OL-dM2">
-                                                    <rect key="frame" x="23" y="14" width="274" height="30"/>
+                                                    <rect key="frame" x="18" y="14" width="284" height="30"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="toh-eE-kpB"/>
@@ -757,13 +757,13 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="width" secondItem="T1T-Lv-pbv" secondAttribute="width" constant="-28" id="9zK-fH-9GO"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="height" secondItem="T1T-Lv-pbv" secondAttribute="height" constant="-20" id="BZy-3h-hwN"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="T1T-Lv-pbv" secondAttribute="leading" constant="14" id="P2m-NP-HHR"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="width" secondItem="T1T-Lv-pbv" secondAttribute="width" constant="-32" id="9zK-fH-9GO"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="height" secondItem="T1T-Lv-pbv" secondAttribute="height" constant="-28" id="BZy-3h-hwN"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="T1T-Lv-pbv" secondAttribute="leading" constant="16" id="P2m-NP-HHR"/>
                                                 <constraint firstItem="mdP-OL-dM2" firstAttribute="top" secondItem="koh-fB-ING" secondAttribute="topMargin" constant="6" id="W4T-We-Htb"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="mdP-OL-dM2" secondAttribute="trailing" constant="15" id="dMf-aJ-KTa"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="koh-fB-ING" secondAttribute="leadingMargin" constant="15" id="dT9-EK-bYd"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="top" secondItem="T1T-Lv-pbv" secondAttribute="top" constant="10" id="qWa-47-Qga"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mdP-OL-dM2" secondAttribute="trailing" constant="10" id="dMf-aJ-KTa"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="koh-fB-ING" secondAttribute="leadingMargin" constant="10" id="dT9-EK-bYd"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="top" secondItem="T1T-Lv-pbv" secondAttribute="top" constant="14" id="qWa-47-Qga"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
