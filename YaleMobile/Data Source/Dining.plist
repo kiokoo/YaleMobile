@@ -102,8 +102,7 @@ Dinner: 5:00 - 7:00</string>
 		<array>
 			<dict>
 				<key>Weekdays</key>
-				<string>Hot Breakfast: 7:45 - 11:00
-Lunch: 11:00 - 2:30</string>
+				<string>Lunch: 11:00 - 2:30</string>
 			</dict>
 		</array>
 	</dict>
