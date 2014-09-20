@@ -123,6 +123,7 @@
 
 - (void)locate:(id)sender
 {
+  
   if (![CLLocationManager locationServicesEnabled]) {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Permission Denied" message:@"Location service is turned off for YaleMobile. If you would like to grant YaleMobile access, please go to Settings - Location Services." delegate:NULL cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];

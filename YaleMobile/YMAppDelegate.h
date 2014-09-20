@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <JGProgressHUD/JGProgressHUD.h>
+#import <MapKit/MapKit.h>
 
 @interface YMAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) JGProgressHUD *sharedNotificationView;
+@property (strong, nonatomic) UIWindow          *window;
+@property (strong, nonatomic) JGProgressHUD     *sharedNotificationView;
+@property (strong, nonatomic, readonly) CLLocationManager *sharedLocationManager;
 
 @end

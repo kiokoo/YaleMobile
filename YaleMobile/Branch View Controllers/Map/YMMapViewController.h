@@ -18,7 +18,6 @@
 @property (nonatomic, strong) IBOutlet UISearchBar *searchBar1;
 @property (nonatomic, strong) IBOutlet UITableView *tableView1;
 
-@property (nonatomic, strong) CLLocationManager *manager;
 @property (nonatomic, strong) UIView *searchOverlay;
 @property (nonatomic, strong) UIButton *locate;
 @property (nonatomic) NSInteger locating;

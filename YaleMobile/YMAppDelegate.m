@@ -17,6 +17,18 @@
 
 @implementation YMAppDelegate
 
+- (CLLocationManager *)sharedLocationManager
+{
+  static dispatch_once_t onceToken;
+  static CLLocationManager *manager = nil;
+  dispatch_once(&onceToken, ^{
+    if (!manager) {
+      manager = [CLLocationManager new];
+    }
+  });
+  return manager;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
@@ -39,9 +51,18 @@
 #endif
   
   // This is iOS8 only.
-  if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound
-                                                                                  categories:nil]];
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+    
+    [application registerUserNotificationSettings:
+                     [UIUserNotificationSettings
+                         settingsForTypes:UIUserNotificationTypeAlert |
+                                          UIUserNotificationTypeBadge |
+                                          UIUserNotificationTypeSound
+                               categories:nil]];
+    
+    if (![CLLocationManager locationServicesEnabled]) {
+      [self.sharedLocationManager requestWhenInUseAuthorization];
+    }
   }
   
   SWRevealViewController *revealVC = (SWRevealViewController *)self.window.rootViewController;
