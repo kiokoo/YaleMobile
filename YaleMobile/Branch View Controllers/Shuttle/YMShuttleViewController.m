@@ -30,6 +30,7 @@
 
 #import <PureLayout/PureLayout.h>
 #import <SWRevealViewController.h>
+#import <JGProgressHUD/JGProgressHUDErrorIndicatorView.h>
 
 #import "YMTheme.h"
 #import "YMAppDelegate.h"
@@ -141,7 +142,7 @@
     for (NSDictionary *dict in data)
       [Route routeWithData:dict forTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
     NSArray *routes = [Route getAllRoutesInManagedObjectContext:self.db.managedObjectContext];
-
+    
     YMShuttleSelectionViewController *ssvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Shuttle Selection"];
     ssvc.routes = routes;
     self.revealViewController.rightViewController = ssvc;
@@ -150,9 +151,11 @@
     NSString *r = [Route getActiveRoutesInManagedObjectContext:self.db.managedObjectContext];
     self.routesList = r;
     if (!r) {
+      
       [YMGlobalHelper showNotificationInViewController:self
                                                message:@"No active route selected"
-                                                 style:JGProgressHUDStyleLight];
+                                                 style:JGProgressHUDStyleLight
+                                             indicator:[[JGProgressHUDErrorIndicatorView alloc] init]];
       
       [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(alertViewCallback) userInfo:nil repeats:NO];
       return;
@@ -161,9 +164,7 @@
         for (NSDictionary *dict in data) {
           [Stop stopWithData:dict forTimestamp:interval inManagedObjectContext:self.db.managedObjectContext];
         }
-        [YMServerCommunicator getSegmentInfoForController:self
-                                                andRoutes:r
-                                               usingBlock:^(NSDictionary *data) {
+        [YMServerCommunicator getSegmentInfoForController:self andRoutes:r usingBlock:^(NSDictionary *data) {
           for (NSString *key in [data allKeys]) {
             [Segment segmentWithID:[key integerValue]
                   andEncodedString:[data objectForKey:key]
