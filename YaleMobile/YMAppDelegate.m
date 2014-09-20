@@ -19,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Just Launched"];
   [YMDatabaseHelper openDatabase:@"database" usingBlock:^(UIManagedDocument *document) {}];
   
