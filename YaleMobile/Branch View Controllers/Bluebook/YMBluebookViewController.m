@@ -29,9 +29,11 @@ static NSString* resultWindowUrl    = @"http://students.yale.edu/oci/resultWindo
 static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.jsp";
 
 @interface YMBluebookViewController () <SWRevealViewControllerDelegate, UISearchBarDelegate>
-
-- (void)updateTable;
-
+/**
+ *  This block holds code that must be executed in @p prepareForSubjectViewController
+ *  instead of @p prepareForSegue:sender: .
+ */
+@property (nonatomic, strong) void (^seguePreparationBlock)(void) ;
 @end
 
 @implementation YMBluebookViewController
@@ -56,7 +58,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   [self.searchBar addSubview:lineView];
   self.searchBar.delegate = self;
   
-  [self updateTable];
   [YMGlobalHelper addMenuButtonToController:self];
   
   UIButton *settings = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 23, 23)];
@@ -124,14 +125,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
-
-- (void)updateTable
-{
-  // first check all existing cells and apply filter.
-#warning Question to HC: What's this function? Did I write it? O.O
-  // then check all new cells and apply filter.
-}
-
 - (void)menu:(id)sender
 {
   [YMGlobalHelper setupMenuButtonForController:self];
@@ -168,8 +161,24 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   svc.title = ([subject isEqualToString:@"ALL"]) ? @"Search Results" : subject;
   
   NSString *filters = [YMGlobalHelper buildBluebookFilters];
-  filters = [filters stringByAppendingFormat:filterFormatString, [subject urlEncode], [self.instructorName urlEncode], [self.exactPhrase urlEncode], [self.courseNumber urlEncode]];
+  
+  if ([filters isEqualToString:@"?term=201403&GUPgroup=A&distributionGroupOperator=AND"] &&
+      [subject caseInsensitiveCompare:@"ALL"] == NSOrderedSame) {
+    [YMGlobalHelper hideNotificationView];
+    [self showAlertViewWithTitle:@"YaleMobile Bluebook"
+                      andMessage:@"Please apply at least one filter to view ALL courses."];
+    return;
+  }
+  
+  filters =
+      [filters stringByAppendingFormat:filterFormatString, [subject urlEncode],
+                                       [self.instructorName urlEncode],
+                                       [self.exactPhrase urlEncode],
+                                       [self.courseNumber urlEncode]];
+  
   self.instructorName = @""; self.courseNumber = @""; self.exactPhrase = @"";
+  
+  self.seguePreparationBlock();
   
   __block AFHTTPRequestOperationManager *client = [YMServerCommunicator getOperationManager];
   __block AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
@@ -202,6 +211,10 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
           [self showAlertViewWithTitle:@"YaleMobile Bluebook"
                             andMessage:@"No courses match your selection. Please try again."];
           return;
+        } else if ([operation.responseString rangeOfString:@"Your search criteria returned too many records."].location != NSNotFound) {
+          [self showAlertViewWithTitle:@"YaleMobile Bluebook"
+                            andMessage:@"Your search returned too many records. Please apply more filters."];
+          return;
         }
         
         [self showAlertViewWithTitle:@"Connection Error"
@@ -228,14 +241,15 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 #warning TODO(hc) add segue identifier test here
   YMBluebookSubjectViewController *svc = (YMBluebookSubjectViewController *)segue.destinationViewController;
   
+  self.seguePreparationBlock = ^{
+    [YMGlobalHelper showNotificationInViewController:svc
+                                             message:@"Loading..."
+                                               style:JGProgressHUDStyleLight];
+  };
+  
   [self prepareSubjectViewController:svc];
   
-  [YMGlobalHelper showNotificationInViewController:svc
-                                           message:@"Loading..."
-                                             style:JGProgressHUDStyleLight];
-
   svc.tableView.scrollEnabled = NO;
-
 }
 
 
