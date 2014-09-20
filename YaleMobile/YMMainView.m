@@ -79,8 +79,11 @@
   
   NSString *overlay = [YMGlobalHelper getBgNameForWeather:[current[@"code"] integerValue]];
   if (overlay.length) {
-    UIImageView *layer = [[UIImageView alloc] initWithImage:[UIImage imageNamed:overlay]];
-    layer.alpha = 0.8;
+    UIImageView *layer   = [[UIImageView alloc] initWithImage:[UIImage imageNamed:overlay]];
+    CGRect frame         = layer.frame;
+    frame.origin.y      += 64;
+    layer.frame          = frame;
+    layer.alpha          = 0.8;
     [self addSubview:layer];
   }
   
