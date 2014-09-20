@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3iU-j0-Yy1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3iU-j0-Yy1">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -735,15 +735,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Hey there! Thank you for using YaleMobile. What would you like me to call you?" id="Oxx-DM-mPw">
+                            <tableViewSection id="Oxx-DM-mPw">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="kqE-eO-Oib">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="kqE-eO-Oib">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kqE-eO-Oib" id="koh-fB-ING">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T1T-Lv-pbv">
+                                                    <rect key="frame" x="9" y="4" width="302" height="50"/>
+                                                </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdP-OL-dM2">
-                                                    <rect key="frame" x="28" y="8" width="264" height="30"/>
+                                                    <rect key="frame" x="23" y="14" width="274" height="30"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="toh-eE-kpB"/>
@@ -754,9 +757,13 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="top" secondItem="koh-fB-ING" secondAttribute="topMargin" id="W4T-We-Htb"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="mdP-OL-dM2" secondAttribute="trailing" constant="20" id="dMf-aJ-KTa"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="koh-fB-ING" secondAttribute="leadingMargin" constant="20" id="dT9-EK-bYd"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="width" secondItem="T1T-Lv-pbv" secondAttribute="width" constant="-28" id="9zK-fH-9GO"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="height" secondItem="T1T-Lv-pbv" secondAttribute="height" constant="-20" id="BZy-3h-hwN"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="T1T-Lv-pbv" secondAttribute="leading" constant="14" id="P2m-NP-HHR"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="top" secondItem="koh-fB-ING" secondAttribute="topMargin" constant="6" id="W4T-We-Htb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mdP-OL-dM2" secondAttribute="trailing" constant="15" id="dMf-aJ-KTa"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="koh-fB-ING" secondAttribute="leadingMargin" constant="15" id="dT9-EK-bYd"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="top" secondItem="T1T-Lv-pbv" secondAttribute="top" constant="10" id="qWa-47-Qga"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -770,6 +777,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Hello!" id="OEm-bl-3uS"/>
                     <connections>
+                        <outlet property="background1" destination="T1T-Lv-pbv" id="NS6-vs-qx0"/>
                         <outlet property="textField1" destination="mdP-OL-dM2" id="ZQw-fQ-e2z"/>
                     </connections>
                 </tableViewController>

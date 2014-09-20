@@ -8,10 +8,11 @@
 
 #import "YMSettingsModalViewController.h"
 #import "YMTheme.h"
+#import "YMGlobalHelper.h"
+#import <PureLayout/PureLayout.h>
 
 @interface YMSettingsModalViewController () <UITableViewDataSource>
-
-
+@property (nonatomic, strong) NSString *welcomeText;
 @end
 
 @implementation YMSettingsModalViewController
@@ -42,7 +43,6 @@
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   self.background1.image = [[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
   self.background1.alpha = 0.6;
-  
   self.textField1.autocapitalizationType = UITextAutocapitalizationTypeWords;
   
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
@@ -54,9 +54,12 @@
   
   self.tableView.dataSource = self;
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+  self.tableView.scrollEnabled = NO;
   
   self.textField1.textColor = [YMTheme gray];
   self.textField1.backgroundColor = [UIColor clearColor];
+  
+  self.welcomeText = @"Hey there! Thank you for using YaleMobile. What would you like me to call you?";
 }
 
 - (void)confirm:(id)sender
@@ -81,9 +84,8 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  cell.backgroundColor = [UIColor clearColor];
-  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"shadowbg"] resizableImageWithCapInsets:UIEdgeInsetsMake(40, 20, 20, 40)]];
-  [cell.backgroundView setAlpha:0.7];
+  cell.selectionStyle  = UITableViewCellSelectionStyleNone;
+
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
@@ -95,5 +97,30 @@
   }
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+  CGFloat width = CGRectGetWidth(self.textField1.bounds);
+  CGFloat height = [self tableView:tableView heightForHeaderInSection:section];
+  UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.bounds), height)];
+  
+  UILabel *label = [UILabel newAutoLayoutView];
+  [headerView addSubview:label];
+  [label autoAlignAxis:ALAxisHorizontal toSameAxisOfView:label.superview withOffset:10];
+  [label autoAlignAxisToSuperviewAxis:ALAxisVertical];
+  [label autoSetDimensionsToSize:CGSizeMake(width, height)];
+  
+  label.font = [UIFont systemFontOfSize:14.0];
+  label.textColor = [YMTheme gray];
+  label.text = self.welcomeText;
+  label.numberOfLines = 0;
+  label.lineBreakMode = NSLineBreakByWordWrapping;
+  return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+  CGSize size = [YMGlobalHelper boundText:self.welcomeText withFont:[UIFont systemFontOfSize:14.0] andConstraintSize:CGSizeMake(self.textField1.bounds.size.width, 99999.0)];
+  return size.height + 10;
+}
 
 @end
