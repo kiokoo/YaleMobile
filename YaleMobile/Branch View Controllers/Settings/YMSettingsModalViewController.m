@@ -9,7 +9,7 @@
 #import "YMSettingsModalViewController.h"
 #import "YMTheme.h"
 
-@interface YMSettingsModalViewController ()
+@interface YMSettingsModalViewController () <UITableViewDataSource>
 
 
 @end
@@ -45,13 +45,18 @@
   
   self.textField1.autocapitalizationType = UITextAutocapitalizationTypeWords;
   
-  
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   if (name) self.textField1.text = name;
   
-  self.textField1.textColor = [YMTheme gray];
+
   
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
+  
+  self.tableView.dataSource = self;
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+  
+  self.textField1.textColor = [YMTheme gray];
+  self.textField1.backgroundColor = [UIColor clearColor];
 }
 
 - (void)confirm:(id)sender
@@ -72,6 +77,13 @@
 {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.backgroundColor = [UIColor clearColor];
+  cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"shadowbg"] resizableImageWithCapInsets:UIEdgeInsetsMake(40, 20, 20, 40)]];
+  [cell.backgroundView setAlpha:0.7];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
