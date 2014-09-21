@@ -17,6 +17,14 @@
 
 @implementation YMAppDelegate
 
+- (void)presentHomeView
+{
+  SWRevealViewController *revealVC = (SWRevealViewController *)self.window.rootViewController;
+  UIStoryboard *storyboard         = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+  [revealVC pushFrontViewController:[storyboard instantiateViewControllerWithIdentifier:@"Home Root"]
+                           animated:NO];
+}
+
 - (CLLocationManager *)sharedLocationManager
 {
   static dispatch_once_t onceToken;
@@ -60,15 +68,10 @@
                                           UIUserNotificationTypeSound
                                categories:nil]];
     
-    if (![CLLocationManager locationServicesEnabled]) {
-      [self.sharedLocationManager requestWhenInUseAuthorization];
-    }
+    [self.sharedLocationManager requestWhenInUseAuthorization];
   }
   
-  SWRevealViewController *revealVC = (SWRevealViewController *)self.window.rootViewController;
-  UIStoryboard *storyboard;
-  storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-  [revealVC pushFrontViewController:[storyboard instantiateViewControllerWithIdentifier:@"Home Root"] animated:NO];
+  [self performSelector:@selector(presentHomeView) withObject:nil afterDelay:0];
   
   return YES;
 }
