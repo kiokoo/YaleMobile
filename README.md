@@ -38,7 +38,7 @@ Check out the podfile to see the most up-to-date list. The maintainer of the rep
 
 * Code: Hengchu Zhang, Danqing Liu.
 * Graphics: Danqing Liu.
-* Other contributors (less than 500 lines): Jenny Allen, Charly Walther.
+* Other contributors (less than 500 lines): Jenny Allen, Charly Walther, Minh Tri Pham.
 
 ### Version 2
 
