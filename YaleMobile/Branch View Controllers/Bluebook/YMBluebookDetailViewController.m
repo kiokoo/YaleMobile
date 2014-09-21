@@ -196,7 +196,7 @@
   titleView.text          = string;
   titleView.font          = font;
   titleView.numberOfLines = 0;
-  titleView.textColor     = [YMTheme YMBluebookBlue];
+  titleView.textColor     = [YMTheme bluebookSubjectCodeTextColor];
   
   UILabel *subtitleView      = [[UILabel alloc] initWithFrame:CGRectMake(20, 20 + titleView.frame.size.height, 280, 30)];
   subtitleView.numberOfLines = 0;
@@ -212,8 +212,7 @@
   subtitleView.frame      = newSubFrame;
   subtitleView.text       = subtitleString;
   subtitleView.font       = subtitleFont;
-  subtitleView.textColor  = [UIColor colorWithRed:111/255.0 green:132/255.0
-                                             blue:132/255.0 alpha:0.8];
+  subtitleView.textColor  = [YMTheme gray];
   
   UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, titleView.frame.size.height + subtitleView.frame.size.height + 75)];
   
