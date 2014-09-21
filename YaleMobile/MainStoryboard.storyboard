@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3iU-j0-Yy1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3iU-j0-Yy1">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6239"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -737,18 +737,16 @@
                         <sections>
                             <tableViewSection id="Oxx-DM-mPw">
                                 <cells>
-                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="kqE-eO-Oib">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kqE-eO-Oib">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kqE-eO-Oib" id="koh-fB-ING">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T1T-Lv-pbv">
-                                                    <rect key="frame" x="2" y="0.0" width="316" height="58"/>
-                                                </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdP-OL-dM2">
-                                                    <rect key="frame" x="18" y="14" width="284" height="30"/>
+                                                    <rect key="frame" x="30" y="7" width="260" height="30"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="92x-1S-UTU"/>
                                                         <constraint firstAttribute="height" constant="30" id="toh-eE-kpB"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.43379486029999997" green="0.51586415819999998" blue="0.51586415819999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -757,13 +755,8 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="width" secondItem="T1T-Lv-pbv" secondAttribute="width" constant="-32" id="9zK-fH-9GO"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="height" secondItem="T1T-Lv-pbv" secondAttribute="height" constant="-28" id="BZy-3h-hwN"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="T1T-Lv-pbv" secondAttribute="leading" constant="16" id="P2m-NP-HHR"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="top" secondItem="koh-fB-ING" secondAttribute="topMargin" constant="6" id="W4T-We-Htb"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="mdP-OL-dM2" secondAttribute="trailing" constant="10" id="dMf-aJ-KTa"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="koh-fB-ING" secondAttribute="leadingMargin" constant="10" id="dT9-EK-bYd"/>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="top" secondItem="T1T-Lv-pbv" secondAttribute="top" constant="14" id="qWa-47-Qga"/>
+                                                <constraint firstAttribute="centerX" secondItem="mdP-OL-dM2" secondAttribute="centerX" id="b3M-cR-4ff"/>
+                                                <constraint firstAttribute="centerY" secondItem="mdP-OL-dM2" secondAttribute="centerY" id="h0e-p2-GoJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -777,7 +770,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Hello!" id="OEm-bl-3uS"/>
                     <connections>
-                        <outlet property="background1" destination="T1T-Lv-pbv" id="NS6-vs-qx0"/>
                         <outlet property="textField1" destination="mdP-OL-dM2" id="ZQw-fQ-e2z"/>
                     </connections>
                 </tableViewController>

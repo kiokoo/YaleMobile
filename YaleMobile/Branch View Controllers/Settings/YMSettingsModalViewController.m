@@ -59,17 +59,14 @@
 #warning TODO(hengchu): this may need to be removed.
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   
-  self.background1.image = [[UIImage imageNamed:@"shadowbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-  self.background1.alpha = 0.6;
-
-  
   NSString *name       = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   self.textField1.text = (name) ? (name) : (@"");
   
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
   
   self.tableView.dataSource     = self;
-  self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+  self.tableView.separatorColor = [YMTheme lightGray];
   self.tableView.scrollEnabled  = NO;
   
   self.textField1.autocapitalizationType = UITextAutocapitalizationTypeWords;
@@ -77,6 +74,7 @@
   self.textField1.font            = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f];
   self.textField1.backgroundColor = [UIColor clearColor];
   self.textField1.tintColor       = [YMTheme searchbarTintColor];
+  self.textField1.clearButtonMode = UITextFieldViewModeWhileEditing;
 }
 
 - (void)confirm:(id)sender
@@ -97,7 +95,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
   cell.selectionStyle  = UITableViewCellSelectionStyleNone;
-  cell.backgroundColor = [UIColor clearColor];
+  cell.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -108,7 +106,7 @@
   
   UILabel *label = [UILabel newAutoLayoutView];
   [headerView addSubview:label];
-  [label autoAlignAxis:ALAxisHorizontal toSameAxisOfView:label.superview withOffset:5];
+  [label autoAlignAxis:ALAxisHorizontal toSameAxisOfView:label.superview];
   [label autoAlignAxisToSuperviewAxis:ALAxisVertical];
   [label autoSetDimensionsToSize:CGSizeMake(width, height)];
   

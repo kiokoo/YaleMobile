@@ -11,7 +11,6 @@
 @interface YMSettingsModalViewController : UITableViewController
 
 @property (nonatomic, strong) IBOutlet UITextField *textField1;
-@property (nonatomic, strong) IBOutlet UIImageView *background1;
 @property (nonatomic, strong) IBOutlet UINavigationBar *navBar;
 
 @end
