@@ -28,6 +28,9 @@ YaleMobile uses several open source libraries, including:
 * **AFNetworking**, the de facto standard networking library for iOS.
 * **SWRevealViewController**, a side menu library.
 * **Mantle**, GitHub's model library for iOS, which is easier to use than Core Data (sans persistent).
+* **FLEX**, a runtime introspection debug tool.
+* **JGProgressHUD**, a nice clean progress HUD.
+* **PureLayout**, a very helpful wrapper around NSLayoutConstraint.
 
 Check out the podfile to see the most up-to-date list. The maintainer of the repository should make sure all libraries are listed here.
 
