@@ -14,9 +14,13 @@
 #import "TFHppleElement.h"
 #import "UIImage+Emboss.h"
 #import "YMTheme.h"
+#import "YMLeftAlignedCollectionViewFlowLayout.h"
 
-@interface YMBluebookDetailViewController ()
+#import <PureLayout/PureLayout.h>
 
+@interface YMBluebookDetailViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@property (nonatomic, strong) UICollectionView *attributeCollectionView;
+@property (nonatomic, strong) NSMutableArray   *attributeArray;
 @end
 
 @implementation YMBluebookDetailViewController
@@ -214,81 +218,114 @@
   subtitleView.font       = subtitleFont;
   subtitleView.textColor  = [YMTheme gray];
   
-  UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, titleView.frame.size.height + subtitleView.frame.size.height + 75)];
-  
-  UIView* attributeView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 30 + titleView.frame.size.height + subtitleView.frame.size.height, 320.0, 45.0)];
-  
-#warning TODO(HC) Replace this with a backgroundView method.
-  attributeView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bbdetailbanner.png"]];
+  UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, titleView.frame.size.height + subtitleView.frame.size.height + 85)];
+
+  self.attributeArray = [NSMutableArray array];
   
   NSString *areas = [self.data objectForKey:@"eAreas"];
   NSString *skills = [self.data objectForKey:@"fSkills"];
-  if (areas.length == 0) areas = @"0";
-  if (skills.length == 0) skills = @"0";
   
-  if ([areas rangeOfString:@"Hu"].location != NSNotFound) {
-    UIImageView *hu = [[UIImageView alloc] initWithFrame:CGRectMake(20, 10, 25, 25)];
-    hu.image = [UIImage imageNamed:@"icon_hu.png"];
-    [attributeView addSubview:hu];
+  if (areas && [areas rangeOfString:@"Hu"].location != NSNotFound) {
+    [self.attributeArray addObject:@"Humanities"];
   }
   
-  if ([areas rangeOfString:@"So"].location != NSNotFound) {
-    UIImageView *so = [[UIImageView alloc] initWithFrame:CGRectMake(55, 10, 25, 25)];
-    so.image = [UIImage imageNamed:@"icon_so.png"];
-    [attributeView addSubview:so];
+  if (areas && [areas rangeOfString:@"So"].location != NSNotFound) {
+    [self.attributeArray addObject:@"Social Science"];
   }
   
-  if ([areas rangeOfString:@"Sc"].location != NSNotFound) {
-    UIImageView *sc = [[UIImageView alloc] initWithFrame:CGRectMake(90, 10, 25, 25)];
-    sc.image = [UIImage imageNamed:@"icon_sc.png"];
-    [attributeView addSubview:sc];
+  if (areas && [areas rangeOfString:@"Sc"].location != NSNotFound) {
+    [self.attributeArray addObject:@"Science"];
   }
   
-  if ([skills rangeOfString:@"QR"].location != NSNotFound) {
-    UIImageView *qr = [[UIImageView alloc] initWithFrame:CGRectMake(205, 10, 25, 25)];
-    qr.image = [UIImage imageNamed:@"icon_qr.png"];
-    [attributeView addSubview:qr];
+  if (skills && [skills rangeOfString:@"QR"].location != NSNotFound) {
+    [self.attributeArray addObject:@"Quantitative Reasoning"];
   }
   
-  if ([skills rangeOfString:@"WR"].location != NSNotFound) {
-    UIImageView *wr = [[UIImageView alloc] initWithFrame:CGRectMake(240, 10, 25, 25)];
-    wr.image = [UIImage imageNamed:@"icon_wr.png"];
-    [attributeView addSubview:wr];
+  if (skills && [skills rangeOfString:@"WR"].location != NSNotFound) {
+    [self.attributeArray addObject:@"Writing"];
   }
   
-  if ([skills rangeOfString:@"[WR]"].location != NSNotFound) {
-    UIImageView *wr = [[UIImageView alloc] initWithFrame:CGRectMake(240, 10, 25, 25)];
-    wr.image = [UIImage imageNamed:@"icon_xwr.png"];
-    [attributeView addSubview:wr];
+  if (skills && [skills rangeOfString:@"[WR]"].location != NSNotFound) {
+    [self.attributeArray addObject:@"[Writing]"];
   }
   
-  if ([skills rangeOfString:@"L"].location != NSNotFound) {
-    UIImageView *ln = [[UIImageView alloc] initWithFrame:CGRectMake(275, 10, 25, 25)];
+  if (skills && [skills rangeOfString:@"L"].location != NSNotFound) {
     
-    if ([skills rangeOfString:@"L1"].location != NSNotFound)
-      ln.image = [UIImage imageNamed:@"icon_l1.png"];
+    if (skills && [skills rangeOfString:@"L1"].location != NSNotFound)
+      [self.attributeArray addObject:@"Language - Level 1"];
+      
+    if (skills && [skills rangeOfString:@"L2"].location != NSNotFound)
+      [self.attributeArray addObject:@"Language - Level 2"];
     
-    if ([skills rangeOfString:@"L2"].location != NSNotFound)
-      ln.image = [UIImage imageNamed:@"icon_l2.png"];
+    if (skills && [skills rangeOfString:@"L3"].location != NSNotFound)
+      [self.attributeArray addObject:@"Language - Level 3"];
     
-    if ([skills rangeOfString:@"L3"].location != NSNotFound)
-      ln.image = [UIImage imageNamed:@"icon_l3.png"];
+    if (skills && [skills rangeOfString:@"L4"].location != NSNotFound)
+      [self.attributeArray addObject:@"Language - Level 4"];
     
-    if ([skills rangeOfString:@"L4"].location != NSNotFound)
-      ln.image = [UIImage imageNamed:@"icon_l4.png"];
+    if (skills && [skills rangeOfString:@"L5"].location != NSNotFound)
+      [self.attributeArray addObject:@"Language - Level 5"];
     
-    if ([skills rangeOfString:@"L5"].location != NSNotFound)
-      ln.image = [UIImage imageNamed:@"icon_l5.png"];
-    
-    [attributeView addSubview:ln];
   }
   
   [self.data removeObjectForKey:@"eAreas"];
   [self.data removeObjectForKey:@"fSkills"];
   
+  YMLeftAlignedCollectionViewFlowLayout *layout = [[YMLeftAlignedCollectionViewFlowLayout alloc] init];
+  
+  layout.scrollDirection         = UICollectionViewScrollDirectionVertical;
+  layout.minimumInteritemSpacing = 3.0f;
+  layout.minimumLineSpacing      = 6.0f;
+  
+  self.attributeCollectionView = [[UICollectionView alloc]
+                                  initWithFrame:CGRectMake(20, 40 + titleView.frame.size.height +
+                                                           subtitleView.frame.size.height,
+                                                           320.0, 45.0) collectionViewLayout:layout];
+  
+  self.attributeCollectionView.backgroundColor = [UIColor clearColor];
+  self.attributeCollectionView.dataSource      = self;
+  self.attributeCollectionView.delegate        = self;
+  
+  [self.attributeCollectionView registerClass:[UICollectionViewCell class]
+                   forCellWithReuseIdentifier:@"AttributeCell"];
+  
+  
   [containerView addSubview:titleView];
   [containerView addSubview:subtitleView];
-  [containerView addSubview:attributeView];
+
+  [containerView addSubview:self.attributeCollectionView];
+
+  CGRect collectionViewFrame         = self.attributeCollectionView.frame;
+  CGFloat diff                       = collectionViewFrame.size.height - layout.collectionViewContentSize.height;
+  collectionViewFrame.size.height   -= diff;
+  self.attributeCollectionView.frame = collectionViewFrame;
+  
+  CGRect containerViewFrame       = containerView.frame;
+  containerViewFrame.size.height -= diff - 10;
+  containerView.frame             = containerViewFrame;
+  
+  UIView *hairLineTop         = [UIView newAutoLayoutView];
+  [containerView addSubview:hairLineTop];
+  hairLineTop.backgroundColor = [YMTheme separatorGray];
+  [hairLineTop autoSetDimensionsToSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 0.5f)];
+  [hairLineTop autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
+  [hairLineTop autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+  [hairLineTop autoConstrainAttribute:ALEdgeTop
+                          toAttribute:ALEdgeTop
+                               ofView:self.attributeCollectionView
+                           withOffset:-10.0f];
+  
+  UIView *hairLineBot         = [UIView newAutoLayoutView];
+  [containerView addSubview:hairLineBot];
+  hairLineBot.backgroundColor = [YMTheme separatorGray];
+  [hairLineBot autoSetDimensionsToSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 0.5f)];
+  [hairLineBot autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
+  [hairLineBot autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+  [hairLineBot autoConstrainAttribute:ALEdgeBottom
+                          toAttribute:ALEdgeBottom
+                               ofView:self.attributeCollectionView
+                           withOffset:10.0f];
+  
   self.tableView.tableHeaderView = containerView;
   
   [self.tableView reloadData];
@@ -344,6 +381,107 @@
 
   CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue" size:15] andConstraintSize:CGSizeMake(280.0f, 5000.0f)];
   return textSize.height + 35;
+}
+
+- (UIColor *)colorForClassAttribute:(NSString *)attr
+{
+  if ([attr isEqualToString:@"Social Science"]) {
+    return [YMTheme socialScienceColor];
+  } else if ([attr isEqualToString:@"Science"]) {
+    return [YMTheme scienceColor];
+  } else if ([attr isEqualToString:@"Quantitative Reasoning"]) {
+    return [YMTheme quantitativeReasoningrColor];
+  } else if ([attr isEqualToString:@"Humanities"]) {
+    return [YMTheme humanitiesColor];
+  } else if ([attr isEqualToString:@"Writing"]) {
+    return [YMTheme writingColor];
+  } else if ([attr isEqualToString:@"[Writing]"]) {
+    return [YMTheme writingColor];
+  } else if ([attr hasPrefix:@"Language - Level"]) {
+    return [YMTheme languageColor];
+  } else {
+    ALog(@"Impossible!");
+    return 0;
+  }
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+  NSString *content = [self.attributeArray objectAtIndex:indexPath.row];
+  
+  CGRect size = [content boundingRectWithSize:CGSizeMake(99999.0f, 25.0f)
+                                      options:NSStringDrawingUsesLineFragmentOrigin
+                                   attributes:@{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:12.0f]}
+                                      context:nil];
+  CGSize rectSize  = size.size;
+  rectSize.width  += 6;
+  rectSize.height += 4;
+  return rectSize;
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+  return self.attributeArray.count;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+  return 1;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+       willDisplayCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+  UILabel *label;
+  
+  for (UIView *subview in [cell.contentView subviews]) {
+    if ([subview isKindOfClass:[UILabel class]]) {
+      label = (UILabel *)subview;
+    }
+    break;
+  }
+  
+  cell.backgroundColor = [self colorForClassAttribute:label.text];
+  
+  if ([label.text isEqualToString:@"[Writing]"]) {
+    label.text             = @" Writing";
+    label.textColor        = cell.backgroundColor;
+    cell.layer.borderColor = cell.backgroundColor.CGColor;
+    cell.backgroundColor   = [UIColor whiteColor];
+    cell.layer.borderWidth = 0.5f;
+  } else {
+    label.textColor      = [UIColor whiteColor];
+  }
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+  UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AttributeCell"
+                                                                         forIndexPath:indexPath];
+  UILabel *label = [UILabel new];
+  label.text     = self.attributeArray[indexPath.row];
+  label.font     = [UIFont fontWithName:@"HelveticaNeue" size:12.0f];
+  label.backgroundColor = [UIColor clearColor];
+  
+  CGRect size = [label.text boundingRectWithSize:CGSizeMake(99999.0f, 25.0f)
+                                         options:NSStringDrawingUsesLineFragmentOrigin
+                                      attributes:@{NSFontAttributeName:label.font}
+                                         context:nil];
+  
+  label.frame = CGRectMake(3, 2, CGRectGetWidth(size), ceil(CGRectGetHeight(size)));
+  [cell.contentView addSubview:label];
+  
+  cell.layer.cornerRadius = 4.0f;
+  
+  return cell;
 }
 
 @end

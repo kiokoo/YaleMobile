@@ -76,6 +76,36 @@
   return RGB(92, 92, 92);
 }
 
++ (UIColor *)socialScienceColor
+{
+  return [UIColor colorWithRed:0.27 green:0.55 blue:0.80 alpha:1.0];
+}
+
++ (UIColor *)scienceColor
+{
+  return [UIColor colorWithRed:0.27 green:0.55 blue:0.80 alpha:1.0];
+}
+
++ (UIColor *)humanitiesColor
+{
+  return [UIColor colorWithRed:0.27 green:0.55 blue:0.80 alpha:1.0];
+}
+
++ (UIColor *)writingColor
+{
+  return [UIColor colorWithRed:0.95 green:0.40 blue:0.13 alpha:1.0];
+}
+
++ (UIColor *)quantitativeReasoningrColor
+{
+  return [UIColor colorWithRed:0.95 green:0.40 blue:0.13 alpha:1.0];
+}
+
++ (UIColor *)languageColor
+{
+  return [UIColor colorWithRed:0.95 green:0.40 blue:0.13 alpha:1.0];
+}
+
 /* Migrated from UIColor+YaleMobile */
 + (UIColor *)YMOrange
 {

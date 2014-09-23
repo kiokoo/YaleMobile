@@ -40,6 +40,18 @@
 
 + (UIColor *)cellHighlightBackgroundViewColor;
 
++ (UIColor *)socialScienceColor;
+
++ (UIColor *)scienceColor;
+
++ (UIColor *)humanitiesColor;
+
++ (UIColor *)writingColor;
+
++ (UIColor *)quantitativeReasoningrColor;
+
++ (UIColor *)languageColor;
+
 /**
  *  This is the ligher grey, the background color of
  *  searchBar.
