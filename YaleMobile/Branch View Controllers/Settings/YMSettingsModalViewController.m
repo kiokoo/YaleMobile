@@ -56,7 +56,7 @@
   [cancel addTarget:self
              action:@selector(cancel:)
    forControlEvents:UIControlEventTouchUpInside];
-#warning TODO(hengchu): this may need to be removed.
+
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   
   NSString *name       = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
@@ -67,7 +67,6 @@
   self.tableView.dataSource     = self;
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
   self.tableView.separatorColor = [YMTheme lightGray];
-  self.tableView.scrollEnabled  = NO;
   
   self.textField1.autocapitalizationType = UITextAutocapitalizationTypeWords;
   self.textField1.textColor       = [YMTheme lightGray];
