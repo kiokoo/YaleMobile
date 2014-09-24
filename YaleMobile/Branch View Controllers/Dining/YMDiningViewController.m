@@ -112,8 +112,8 @@
 {
   NSMutableArray *components = [[NSMutableArray alloc] init];
   for (NSDictionary *entry in array) {
-    [components addObject:[NSString stringWithFormat:@"%@\n\t\t• ", [[entry allKeys] objectAtIndex:0]]];
-    [components addObject:[NSString stringWithFormat:@"%@\n", [[[entry allValues] objectAtIndex:0] stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t\t• "]]];
+    [components addObject:[NSString stringWithFormat:@"%@\n •  ", [[entry allKeys] objectAtIndex:0]]];
+    [components addObject:[NSString stringWithFormat:@"%@\n", [[[entry allValues] objectAtIndex:0] stringByReplacingOccurrencesOfString:@"\n" withString:@"\n •  "]]];
   }
   return [components componentsJoinedByString:@""];
 }

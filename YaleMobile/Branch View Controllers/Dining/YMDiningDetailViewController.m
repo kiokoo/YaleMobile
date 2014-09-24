@@ -124,7 +124,7 @@
     if ([[all objectAtIndex:i] count] == 0) {
       [[all objectAtIndex:i] addObject:[NSString stringWithFormat:@"\n%@\n",[entry objectAtIndex:7]]];
     }
-    NSString *format = @" • %@\n";
+    NSString *format = @" •  %@\n";
     [[all objectAtIndex:i] addObject:[NSString stringWithFormat:format, [entry objectAtIndex:10]]];
   }
   

@@ -91,7 +91,7 @@
 {
   NSMutableArray *components = [[NSMutableArray alloc] init];
   for (NSDictionary *entry in array) {
-    [components addObject:[NSString stringWithFormat:@"%@\n • ", [entry objectForKey:@"name"]]];
+    [components addObject:[NSString stringWithFormat:@"%@\n •  ", [entry objectForKey:@"name"]]];
     if ([[[entry objectForKey:@"times"] objectForKey:@"status"] isEqualToString:@"open"]) {
       NSArray *hours = [[entry objectForKey:@"times"] objectForKey:@"hours"];
       for (NSUInteger j = 0; j < hours.count; j++) {
