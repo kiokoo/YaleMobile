@@ -66,7 +66,7 @@
   
   self.tableView.dataSource     = self;
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-  self.tableView.separatorColor = [YMTheme lightGray];
+  self.tableView.separatorColor = [YMTheme separatorGray];
   
   self.textField1.autocapitalizationType = UITextAutocapitalizationTypeWords;
   self.textField1.textColor       = [YMTheme lightGray];
@@ -105,9 +105,11 @@
   
   UILabel *label = [UILabel newAutoLayoutView];
   [headerView addSubview:label];
-  [label autoAlignAxis:ALAxisHorizontal toSameAxisOfView:label.superview];
-  [label autoAlignAxisToSuperviewAxis:ALAxisVertical];
-  [label autoSetDimensionsToSize:CGSizeMake(width, height)];
+  [label autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
+  [label autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+  [label autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:20];
+  [label autoSetDimension:ALDimensionWidth toSize:width relation:NSLayoutRelationGreaterThanOrEqual];
+  [label autoSetDimension:ALDimensionHeight toSize:height-30];
   
   label.font = [UIFont fontWithName:@"HelveticaNeue" size:17.0f];
   label.textColor = [YMTheme gray];
@@ -121,8 +123,8 @@
 {
   CGSize size = [YMGlobalHelper boundText:self.welcomeText
                                  withFont:[UIFont fontWithName:@"HelveticaNeue" size:17.0f]
-                        andConstraintSize:CGSizeMake(self.textField1.bounds.size.width, 99999.0)];
-  return size.height + 15;
+                        andConstraintSize:CGSizeMake(self.view.bounds.size.width - 40, 99999.0)];
+  return size.height+30;
 }
 
 @end
