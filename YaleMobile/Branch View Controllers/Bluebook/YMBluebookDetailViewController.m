@@ -246,25 +246,26 @@
   }
   
   if (skills && [skills rangeOfString:@"[WR]"].location != NSNotFound) {
-    [self.attributeArray addObject:@"[Writing]"];
+    [self.attributeArray removeObject:@"Writing"];
+    [self.attributeArray addObject:@"Optional Writing"];
   }
   
   if (skills && [skills rangeOfString:@"L"].location != NSNotFound) {
     
     if (skills && [skills rangeOfString:@"L1"].location != NSNotFound)
-      [self.attributeArray addObject:@"Language - Level 1"];
+      [self.attributeArray addObject:@"Level 1"];
       
     if (skills && [skills rangeOfString:@"L2"].location != NSNotFound)
-      [self.attributeArray addObject:@"Language - Level 2"];
+      [self.attributeArray addObject:@"Level 2"];
     
     if (skills && [skills rangeOfString:@"L3"].location != NSNotFound)
-      [self.attributeArray addObject:@"Language - Level 3"];
+      [self.attributeArray addObject:@"Level 3"];
     
     if (skills && [skills rangeOfString:@"L4"].location != NSNotFound)
-      [self.attributeArray addObject:@"Language - Level 4"];
+      [self.attributeArray addObject:@"Level 4"];
     
     if (skills && [skills rangeOfString:@"L5"].location != NSNotFound)
-      [self.attributeArray addObject:@"Language - Level 5"];
+      [self.attributeArray addObject:@"Level 5"];
     
   }
   
@@ -395,9 +396,9 @@
     return [YMTheme humanitiesColor];
   } else if ([attr isEqualToString:@"Writing"]) {
     return [YMTheme writingColor];
-  } else if ([attr isEqualToString:@"[Writing]"]) {
+  } else if ([attr isEqualToString:@"Optional Writing"]) {
     return [YMTheme writingColor];
-  } else if ([attr hasPrefix:@"Language - Level"]) {
+  } else if ([attr hasPrefix:@"Level"]) {
     return [YMTheme languageColor];
   } else {
     ALog(@"Impossible!");
@@ -411,7 +412,9 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSString *content = [self.attributeArray objectAtIndex:indexPath.row];
+  NSString *content = (self.attributeArray.count > 0)
+                          ? [self.attributeArray objectAtIndex:indexPath.row]
+                          : @"Not a distributional credit.";
   
   CGRect size = [content boundingRectWithSize:CGSizeMake(99999.0f, 25.0f)
                                       options:NSStringDrawingUsesLineFragmentOrigin
@@ -427,7 +430,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-  return self.attributeArray.count;
+  return (self.attributeArray.count > 0) ? self.attributeArray.count : 1;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -448,10 +451,15 @@
     break;
   }
   
+  if ([label.text isEqualToString:@"Not a distributional credit."]) {
+    label.textColor = [YMTheme lightGray];
+    cell.backgroundColor = [UIColor clearColor];
+    return;
+  }
+  
   cell.backgroundColor = [self colorForClassAttribute:label.text];
   
-  if ([label.text isEqualToString:@"[Writing]"]) {
-    label.text             = @" Writing";
+  if ([label.text isEqualToString:@"Optional Writing"]) {
     label.textColor        = cell.backgroundColor;
     cell.layer.borderColor = cell.backgroundColor.CGColor;
     cell.backgroundColor   = [UIColor whiteColor];
@@ -467,7 +475,7 @@
   UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AttributeCell"
                                                                          forIndexPath:indexPath];
   UILabel *label = [UILabel new];
-  label.text     = self.attributeArray[indexPath.row];
+  label.text     = (self.attributeArray.count > 0) ? self.attributeArray[indexPath.row] : @"Not a distributional credit.";
   label.font     = [UIFont fontWithName:@"HelveticaNeue" size:12.0f];
   label.backgroundColor = [UIColor clearColor];
   
