@@ -414,14 +414,16 @@
 {
   NSString *content = (self.attributeArray.count > 0)
                           ? [self.attributeArray objectAtIndex:indexPath.row]
-                          : @"Not a distributional credit.";
+                          : @"Not a distributional credit";
   
   CGRect size = [content boundingRectWithSize:CGSizeMake(99999.0f, 25.0f)
                                       options:NSStringDrawingUsesLineFragmentOrigin
                                    attributes:@{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:12.0f]}
                                       context:nil];
   CGSize rectSize  = size.size;
-  rectSize.width  += 6;
+  if (![content isEqualToString:@"Not a distributional credit"]) {
+    rectSize.width  += 12;
+  }
   rectSize.height += 4;
   return rectSize;
 }
@@ -451,7 +453,7 @@
     break;
   }
   
-  if ([label.text isEqualToString:@"Not a distributional credit."]) {
+  if ([label.text isEqualToString:@"Not a distributional credit"]) {
     label.textColor = [YMTheme lightGray];
     cell.backgroundColor = [UIColor clearColor];
     return;
@@ -475,7 +477,7 @@
   UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AttributeCell"
                                                                          forIndexPath:indexPath];
   UILabel *label = [UILabel new];
-  label.text     = (self.attributeArray.count > 0) ? self.attributeArray[indexPath.row] : @"Not a distributional credit.";
+  label.text     = (self.attributeArray.count > 0) ? self.attributeArray[indexPath.row] : @"Not a distributional credit";
   label.font     = [UIFont fontWithName:@"HelveticaNeue" size:12.0f];
   label.backgroundColor = [UIColor clearColor];
   
@@ -484,7 +486,8 @@
                                       attributes:@{NSFontAttributeName:label.font}
                                          context:nil];
   
-  label.frame = CGRectMake(3, 2, CGRectGetWidth(size), ceil(CGRectGetHeight(size)));
+  CGFloat xOffset = ([label.text isEqualToString:@"Not a distributional credit"]) ? 0 : 6;
+  label.frame = CGRectMake(xOffset, 2, CGRectGetWidth(size), ceil(CGRectGetHeight(size)));
   [cell.contentView addSubview:label];
   
   cell.layer.cornerRadius = 4.0f;

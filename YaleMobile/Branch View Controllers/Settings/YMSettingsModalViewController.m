@@ -108,7 +108,6 @@
   [label autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
   [label autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
   [label autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:20];
-  [label autoSetDimension:ALDimensionWidth toSize:width relation:NSLayoutRelationGreaterThanOrEqual];
   [label autoSetDimension:ALDimensionHeight toSize:height-30];
   
   label.font = [UIFont fontWithName:@"HelveticaNeue" size:17.0f];
