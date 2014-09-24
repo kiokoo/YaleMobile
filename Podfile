@@ -1,5 +1,5 @@
 platform :ios, '7.1'
-pod 'AFNetworking', '~> 2.0'
+pod 'AFNetworking', '~> 2.4.1'
 pod 'Mantle', '~> 1.0'
 pod 'FLEX', '~> 1.0'
 pod 'JGProgressHUD', '~> 1.2.2'

@@ -200,6 +200,8 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
       responseString = [responseString stringByReplacingOccurrencesOfString:@"<br>" withString:@", "];
       responseString = [responseString stringByReplacingOccurrencesOfString:@"<td valign=\"TOP\" NOWRAP class=\"S\"><a alt=\"Click for Session Info\"" withString:@"<td>"];
       
+      DLog(@"%@", responseString);
+      
       svc.raw = responseString;
       [svc useDocument];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

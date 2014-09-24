@@ -29,7 +29,7 @@ PODS:
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
+  - AFNetworking (~> 2.4.1)
   - FLEX (~> 1.0)
   - JGProgressHUD (~> 1.2.2)
   - Mantle (~> 1.0)

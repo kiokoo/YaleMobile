@@ -57,6 +57,8 @@
 {
   NSString *rawData = self.course.data;
   
+  DLog(@"RAW: %@", rawData);
+  
   rawData = [rawData stringByReplacingOccurrencesOfString:@"<P>" withString:@""];
   rawData = [rawData stringByReplacingOccurrencesOfString:@"</P>" withString:@""];
   rawData = [rawData stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@""];
@@ -73,6 +75,8 @@
   rawData = [rawData stringByReplacingOccurrencesOfString:@"following" withString:@""];
   rawData = [rawData stringByReplacingOccurrencesOfString:@":" withString:@""];
   rawData = [rawData stringByReplacingOccurrencesOfString:@"<table width=\"100%\" border=\"0\" cellspacing=\"2\" cellpadding=\"0\">" withString:@"<table id=\"infoclass\">"];
+  
+  DLog(@"RAW: %@", rawData);
   
   NSData *data = [rawData dataUsingEncoding:NSUTF8StringEncoding];
   TFHpple *doc = [[TFHpple alloc] initWithHTMLData:data];
@@ -104,6 +108,8 @@
   if (parse2.count) {
     for (NSUInteger i = 0; i < parse2.count; i++) {
       NSString *text = ((TFHppleElement *)[parse2 objectAtIndex:i]).content;
+      // Make sure text is not nil.
+      text = ([text length] == 0) ? (@"") : text;
       if ([text rangeOfString:@"Areas"].location != NSNotFound) {
         text = [text stringByReplacingOccurrencesOfString:@"Areas " withString:@""];
         text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
@@ -158,7 +164,7 @@
         // MAY NOT NEED ABOVE ----------------
         
         NSMutableArray *alphabetArray = [NSMutableArray arrayWithCapacity:26];
-        for (char a = 'A'; a < 'Z'; a++) {
+        for (char a = 'A'; a <= 'Z'; a++) {
           [alphabetArray addObject:[NSString stringWithFormat:@"%c", a]];
         }
         
