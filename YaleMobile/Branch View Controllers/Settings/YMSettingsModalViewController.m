@@ -76,6 +76,13 @@
   self.textField1.clearButtonMode = UITextFieldViewModeWhileEditing;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  
+  [self.textField1 becomeFirstResponder];
+}
+
 - (void)confirm:(id)sender
 {
   if (self.textField1.text.length) {
