@@ -106,7 +106,6 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-  CGFloat width = CGRectGetWidth(self.textField1.bounds);
   CGFloat height = [self tableView:tableView heightForHeaderInSection:section];
   UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.bounds), height)];
   

@@ -33,7 +33,7 @@
     route.name = [data objectForKey:@"long_name"];
     route.color = [data objectForKey:@"color"];
     route.timestamp = [NSNumber numberWithDouble:timestamp];
-    if (route.inactive.boolValue != YES) route.inactive = NO;
+    if (route.inactive.boolValue != YES) route.inactive = @(NO);
     if ([[NSUserDefaults standardUserDefaults] boolForKey:[NSString stringWithFormat:@"%@_inactive", route.routeid]]) route.inactive = [NSNumber numberWithBool:YES];
     
     if (route.inactive.boolValue == NO) {
