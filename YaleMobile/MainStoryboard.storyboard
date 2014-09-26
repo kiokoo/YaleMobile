@@ -743,7 +743,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdP-OL-dM2">
-                                                    <rect key="frame" x="22" y="7" width="276" height="30"/>
+                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="92x-1S-UTU"/>
@@ -755,7 +755,7 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="koh-fB-ING" secondAttribute="leadingMargin" constant="14" id="FSj-pP-zcc"/>
+                                                <constraint firstItem="mdP-OL-dM2" firstAttribute="leading" secondItem="koh-fB-ING" secondAttribute="leadingMargin" constant="12" id="FSj-pP-zcc"/>
                                                 <constraint firstAttribute="centerX" secondItem="mdP-OL-dM2" secondAttribute="centerX" id="b3M-cR-4ff"/>
                                                 <constraint firstAttribute="centerY" secondItem="mdP-OL-dM2" secondAttribute="centerY" id="h0e-p2-GoJ"/>
                                             </constraints>
