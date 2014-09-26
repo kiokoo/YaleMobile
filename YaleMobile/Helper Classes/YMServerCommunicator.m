@@ -377,9 +377,9 @@ static BOOL cancel = NO;
     }
   }];
   
-  [YMGlobalHelper showNotificationInViewController:controller
-                                           message:@"Loading..."
-                                             style:JGProgressHUDStyleLight];
+//  [YMGlobalHelper showNotificationInViewController:controller
+//                                           message:@"Loading..."
+//                                             style:JGProgressHUDStyleLight];
   
   [[manager operationQueue] addOperation:operation];
 }
