@@ -11,6 +11,7 @@
 #import "YMSplashViewController.h"
 #import "YMTransluentNavigationBar.h"
 #import "UIImage+ImageWithColor.h"
+#import <PureLayout/PureLayout.h>
 
 
 #import "YMTheme.h"
@@ -33,6 +34,8 @@
     if ([v isKindOfClass:[YMMainView class]]) {
       self.mainView = v;
       [self.view addSubview:v];
+      [self.mainView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+      [self.mainView setNeedsUpdateConstraints];
     }
   }
   

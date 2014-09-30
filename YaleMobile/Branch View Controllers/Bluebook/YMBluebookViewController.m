@@ -92,7 +92,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   [YMGlobalHelper setupSlidingViewControllerForController:self];
   YMBluebookFilterViewController *filterRoot = [self.storyboard instantiateViewControllerWithIdentifier:@"Bluebook Filter Root"];
   self.revealViewController.rightViewController = filterRoot;
-#warning TODO(hc) This if block seems to be causing a lot of trouble, figure out what's happening
   if (self.selectedIndexPath) {
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
@@ -240,7 +239,6 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-#warning TODO(hc) add segue identifier test here
   YMBluebookSubjectViewController *svc = (YMBluebookSubjectViewController *)segue.destinationViewController;
   
   self.seguePreparationBlock = ^{

@@ -10,6 +10,7 @@
 #import "YMGlobalHelper.h"
 #import "YMServerCommunicator.h"
 #import "YMTheme.h"
+#import <PureLayout/PureLayout.h>
 
 @implementation YMMainView
 
@@ -80,11 +81,10 @@
   NSString *overlay = [YMGlobalHelper getBgNameForWeather:[current[@"code"] integerValue]];
   if (overlay.length) {
     UIImageView *layer   = [[UIImageView alloc] initWithImage:[UIImage imageNamed:overlay]];
-    CGRect frame         = layer.frame;
-    frame.origin.y      += 64;
-    layer.frame          = frame;
     layer.alpha          = 0.8;
     [self addSubview:layer];
+    [layer autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:64.0f];
+    [layer autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
   }
   
   DLog(@"code is %@", [current objectForKey:@"code"]);
