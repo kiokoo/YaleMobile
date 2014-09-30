@@ -16,25 +16,39 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    UIImage *bg = ([[UIScreen mainScreen] bounds].size.height == 568) ? [UIImage imageNamed:@"Default-568h2.png"] : [UIImage imageNamed:@"Default2.png"];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:bg];
+  [super viewDidLoad];
+  // Do any additional setup after loading the view.
+  
+  UIImage *bg = nil;
+
+  CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+  
+  if (screenHeight < 568) {
+    bg = [UIImage imageNamed:@"4s"];
+  } else if (screenHeight == 568) {
+    bg = [UIImage imageNamed:@"5"];
+  } else if (screenHeight == 667) {
+    bg = [UIImage imageNamed:@"6"];
+  } else {
+    bg = [UIImage imageNamed:@"6+"];
+  }
+
+  self.view.backgroundColor = [UIColor colorWithPatternImage:bg];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 @end
