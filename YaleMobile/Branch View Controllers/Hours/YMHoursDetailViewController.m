@@ -104,6 +104,7 @@
   }
   
   cell.name1.textColor = [YMTheme gray];
+  cell.name1.highlightedTextColor = cell.name1.textColor;
   
   return cell;
 }

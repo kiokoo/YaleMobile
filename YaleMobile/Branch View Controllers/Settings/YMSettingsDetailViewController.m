@@ -81,6 +81,7 @@
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Header"];
     cell.name1.text = (self.isAbout) ? [self.aboutHeader objectAtIndex:indexPath.section] : [self.creditHeader objectAtIndex:indexPath.section];
     cell.name1.textColor = [YMTheme gray];
+    cell.name1.highlightedTextColor = cell.name1.textColor;
     return cell;
   } else {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Settings Detail Cell"];
@@ -98,6 +99,7 @@
     cell.name1.frame = frame;
     cell.name1.text = text;
     cell.name1.textColor = [YMTheme gray];
+    cell.name1.highlightedTextColor = cell.name1.textColor;
     
     return cell;
   }

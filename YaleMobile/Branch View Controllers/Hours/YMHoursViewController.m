@@ -121,9 +121,7 @@
     NSString *text = @"Library hours are synced with Yale Library website but may not reflect special conditions. Dining and gym hours only refer to regular schedule. Please double check during holidays and special events.";
     cell.name1.text = text;
     cell.name1.numberOfLines = 0;
-    /* deprecated
-     CGSize textSize = [text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14] constrainedToSize:CGSizeMake(280, 5000)];
-     */
+
     CGSize textSize = [YMGlobalHelper boundText:text withFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14] andConstraintSize:CGSizeMake(280, 5000)];
     CGRect frame = cell.name1.frame;
     frame.size.height = textSize.height;
@@ -145,6 +143,7 @@
   }
   
   cell.name1.textColor = [YMTheme gray];
+  cell.name1.highlightedTextColor = cell.name1.textColor;
   cell.backgroundView.alpha = 0.6;
   
 //  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]

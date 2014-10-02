@@ -254,7 +254,9 @@
   }
   
   cell.primary1.textColor   = [YMTheme white];
+  cell.primary1.highlightedTextColor = cell.primary1.textColor;
   cell.secondary1.textColor = [YMTheme white];
+  cell.secondary1.highlightedTextColor = cell.secondary1.textColor;
   
 //  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
 //                                                forCell:cell];

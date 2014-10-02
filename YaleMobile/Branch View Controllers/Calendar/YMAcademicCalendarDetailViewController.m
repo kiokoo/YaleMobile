@@ -86,6 +86,7 @@
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Academic Calendar Header"];
     cell.name1.text = [detailDict objectForKey:@"Term"];
     cell.name1.textColor = [YMTheme gray];
+    cell.name1.highlightedTextColor = cell.name1.textColor;
     return cell;
   } else {
     YMPathishCell *cell;
@@ -103,7 +104,9 @@
     }
     
     cell.primary1.textColor   = [YMTheme gray];
+    cell.primary1.highlightedTextColor = cell.primary1.textColor;
     cell.secondary1.textColor = [YMTheme lightGray];
+    cell.secondary1.highlightedTextColor = cell.secondary1.textColor;
     
     cell.secondary1.text = [detailDict objectForKey:@"Date"];
     cell.primary1.text = [detailDict objectForKey:@"Event"];
