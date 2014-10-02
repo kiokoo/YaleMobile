@@ -80,4 +80,9 @@
 + (UIColor *)YMDiningRed;
 + (UIColor *)YMDiningGreen;
 
+/*Grouped Table Cell Heights */
++ (int)groupedTableTopLabelCellHeight;
++ (int)groupedTableFirstOrLastCellHeight;
++ (int)groupedTableMiddleCellHeight;
+
 @end

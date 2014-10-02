@@ -155,13 +155,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   if (indexPath.row == 0)
-    return 38;
+      return [YMTheme groupedTableTopLabelCellHeight];
   else if (indexPath.row == 1 || indexPath.row == self.types.count)
-    return 54;
+      return [YMTheme groupedTableFirstOrLastCellHeight];
   else if (indexPath.row == self.types.count + 1)
     return 100;
   else
-    return 44;
+    return [YMTheme groupedTableMiddleCellHeight];
 }
 
 #pragma mark - Table view delegate

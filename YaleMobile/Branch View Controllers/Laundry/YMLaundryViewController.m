@@ -187,7 +187,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.row == 0) return 38;
+    if (indexPath.row == 0) return [YMTheme groupedTableTopLabelCellHeight]; //replace with global constant
   else if (indexPath.row == 1) return 67;
   else if (indexPath.row == self.locations.count) return 65;
   else return 57;

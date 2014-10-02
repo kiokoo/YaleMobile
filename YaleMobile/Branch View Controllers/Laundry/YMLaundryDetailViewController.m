@@ -199,7 +199,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.row == 0) return 38;
+  if (indexPath.row == 0) return [YMTheme groupedTableTopLabelCellHeight];
   else if ([self getNumberOfRowsForSection:indexPath.section] == 2 && indexPath.row == 1) return 64;
   else if (indexPath.row == 1) return 56;
   else if ((indexPath.section == 0 && indexPath.row == [[self.washers objectAtIndex:1] integerValue] + [[self.washers objectAtIndex:2] integerValue]) ||
