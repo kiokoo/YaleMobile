@@ -21,9 +21,6 @@
 
 + (UIColor *)separatorGray { return RGB(240, 240, 240); }
 
-/** Used in dining view */
-+ (UIColor *)diningSpecialTextColor { return RGB(84, 146, 173); }
-
 /** Used in laundry detail view, and bluebook subject view */
 + (UIColor *)laundryTimeAndBluebookHappensTextColor { return RGB(253, 97, 77); }
 

@@ -18,8 +18,6 @@
 
 + (UIColor *)separatorGray;
 
-+ (UIColor *)diningSpecialTextColor;
-
 + (UIColor *)laundryTimeAndBluebookHappensTextColor;
 
 + (UIColor *)bluebookFilterSecondaryTextColor;

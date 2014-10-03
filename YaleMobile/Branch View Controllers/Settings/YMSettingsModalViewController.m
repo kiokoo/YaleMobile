@@ -59,9 +59,6 @@
 
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   
-  NSString *name       = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
-  self.textField1.text = (name) ? (name) : (@"");
-  
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
   
   self.tableView.dataSource     = self;
@@ -80,7 +77,21 @@
 {
   [super viewWillAppear:animated];
   
+  NSString *name       = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
+  self.textField1.text = (name) ? (name) : (@"");
+  
   [self.textField1 becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  [self dismissKeyboard];
+}
+
+- (void)dismissKeyboard
+{
+  [self.textField1 resignFirstResponder];
 }
 
 - (void)confirm:(id)sender
