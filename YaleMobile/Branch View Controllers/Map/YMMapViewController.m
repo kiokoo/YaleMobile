@@ -63,6 +63,11 @@
   self.zoomForAnnotation = NO;
   self.searchBar1.autocorrectionType = UITextAutocorrectionTypeNo;
   
+  CGRect rect = self.searchBar1.frame;
+  UIView *bottomLineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1, rect.size.width, 1)];
+  bottomLineView.backgroundColor = [YMTheme separatorGray];
+  [self.searchBar1 addSubview:bottomLineView];
+
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
 }
 
