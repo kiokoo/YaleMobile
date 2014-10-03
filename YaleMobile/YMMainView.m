@@ -37,26 +37,11 @@
     tempLabel.textColor = [YMTheme YMBluebookBlue];
   }
   
+  [self refreshName];
+  
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   
   name = (name) ? [NSString stringWithFormat:@", %@", name] : @"";
-  
-  // Display different background and greeting depending on current time
-  NSInteger hour = [YMGlobalHelper getCurrentTime];
-  
-  switch (hour) {
-    case 1:
-      self.greeting.text = [NSString stringWithFormat:@"Good morning%@! It's a brand new day :)", name];
-      break;
-    case 2:
-      self.greeting.text = [NSString stringWithFormat:@"Good afternoon%@! Hope you are enjoying your day :)", name];
-      break;
-    case 3:
-      self.greeting.text = [NSString stringWithFormat:@"Good evening%@! Hope you've had a great day :)", name];
-      break;
-    default:
-      self.greeting.text = [NSString stringWithFormat:@"Good night%@! Have some good rest :)", name];
-  }
   
   [YMServerCommunicator getGlobalSpecialInfoWithCompletionBlock:^(NSDictionary *dict) {
     NSInteger i = [[dict objectForKey:@"index"] integerValue];
@@ -101,6 +86,30 @@
     weatherImageView.image = [UIImage imageNamed:[YMGlobalHelper getIconNameForWeather:[day[@"code"] integerValue]]];
   }
 
+}
+
+- (void)refreshName
+{
+  NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
+  
+  name = (name) ? [NSString stringWithFormat:@", %@", name] : @"";
+  
+  // Display different background and greeting depending on current time
+  NSInteger hour = [YMGlobalHelper getCurrentTime];
+  
+  switch (hour) {
+    case 1:
+      self.greeting.text = [NSString stringWithFormat:@"Good morning%@! It's a brand new day :)", name];
+      break;
+    case 2:
+      self.greeting.text = [NSString stringWithFormat:@"Good afternoon%@! Hope you are enjoying your day :)", name];
+      break;
+    case 3:
+      self.greeting.text = [NSString stringWithFormat:@"Good evening%@! Hope you've had a great day :)", name];
+      break;
+    default:
+      self.greeting.text = [NSString stringWithFormat:@"Good night%@! Have some good rest :)", name];
+  }
 }
 
 - (void)awakeFromNib

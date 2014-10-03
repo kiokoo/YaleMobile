@@ -11,6 +11,7 @@
 #import "YMSplashViewController.h"
 #import "YMTransluentNavigationBar.h"
 #import "UIImage+ImageWithColor.h"
+#import "YMAppDelegate.h"
 #import <PureLayout/PureLayout.h>
 
 
@@ -71,10 +72,9 @@
 {
   [super viewWillAppear:animated];
   
-  NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
-  self.name = (name) ? [NSString stringWithFormat:@", %@", name] : @"";
-  
   [YMGlobalHelper setupSlidingViewControllerForController:self];
+ 
+  [self.mainView refreshName];
   
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   

@@ -9,6 +9,8 @@
 #import "YMSettingsModalViewController.h"
 #import "YMTheme.h"
 #import "YMGlobalHelper.h"
+#import "YMMainViewController.h"
+#import "YMAppDelegate.h"
 #import <PureLayout/PureLayout.h>
 
 @interface YMSettingsModalViewController () <UITableViewDataSource>
@@ -89,6 +91,23 @@
   [self dismissKeyboard];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+  [super viewDidDisappear:animated];
+  // This is iOS8 only.
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:
+     [UIUserNotificationSettings
+      settingsForTypes:UIUserNotificationTypeAlert |
+      UIUserNotificationTypeBadge |
+      UIUserNotificationTypeSound
+      categories:nil]];
+    
+    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedLocationManager] requestWhenInUseAuthorization];
+  }
+}
+
 - (void)dismissKeyboard
 {
   [self.textField1 resignFirstResponder];
@@ -101,6 +120,7 @@
   } else {
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Name"];
   }
+  
   [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 

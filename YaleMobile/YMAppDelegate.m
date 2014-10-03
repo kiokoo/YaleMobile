@@ -58,19 +58,6 @@
   [[FLEXManager sharedManager] showExplorer];
 #endif
   
-  // This is iOS8 only.
-  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-    
-    [application registerUserNotificationSettings:
-                     [UIUserNotificationSettings
-                         settingsForTypes:UIUserNotificationTypeAlert |
-                                          UIUserNotificationTypeBadge |
-                                          UIUserNotificationTypeSound
-                               categories:nil]];
-    
-    [self.sharedLocationManager requestWhenInUseAuthorization];
-  }
-  
   [self performSelector:@selector(presentHomeView) withObject:nil afterDelay:0];
   
   return YES;

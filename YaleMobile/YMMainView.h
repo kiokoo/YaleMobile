@@ -33,4 +33,6 @@
 
 - (void)configureWeatherSubviews:(NSArray *)weatherInfo;
 
+- (void)refreshName;
+
 @end

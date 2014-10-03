@@ -880,7 +880,7 @@
 						DevelopmentTeam = W2DNVV9M96;
 					};
 					24A8FF7918E946FC006E81C3 = {
-						DevelopmentTeam = W2DNVV9M96;
+						DevelopmentTeam = JW4X4B8SCB;
 						TestTargetID = 24A8FF5818E946FC006E81C3;
 					};
 				};
