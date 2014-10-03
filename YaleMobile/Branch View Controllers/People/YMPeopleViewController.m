@@ -33,7 +33,12 @@
   CGFloat searchHeight = self.searchBar1.bounds.size.height;
   self.searchOverlay = [[UIView alloc] initWithFrame:CGRectMake(0, navHeight+searchHeight+20, 320, 700)];
   self.searchOverlay.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"peopleoverlay.png"]];
-  
+
+  CGRect rect = self.searchBar1.frame;
+  UIView *bottomLineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1, rect.size.width, 1)];
+  bottomLineView.backgroundColor = [YMTheme separatorGray];
+  [self.searchBar1 addSubview:bottomLineView];
+
   [YMGlobalHelper addMenuButtonToController:self];
   
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];

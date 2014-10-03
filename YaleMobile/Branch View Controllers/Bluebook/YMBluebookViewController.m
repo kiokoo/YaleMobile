@@ -53,9 +53,12 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   self.tableView.sectionIndexColor = [[YMTheme blue] colorWithAlphaComponent:0.7];
 
   CGRect rect = self.searchBar.frame;
-  UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1,rect.size.width, 1)];
-  lineView.backgroundColor = [YMTheme separatorGray];
-  [self.searchBar addSubview:lineView];
+  UIView *topLineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, rect.size.width, 1)];
+  UIView *bottomLineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height - 1, rect.size.width, 1)];
+  topLineView.backgroundColor = [YMTheme separatorGray];
+  bottomLineView.backgroundColor = [YMTheme separatorGray];
+  [self.searchBar addSubview:topLineView];
+  [self.searchBar addSubview:bottomLineView];
   self.searchBar.delegate = self;
   
   [YMGlobalHelper addMenuButtonToController:self];
