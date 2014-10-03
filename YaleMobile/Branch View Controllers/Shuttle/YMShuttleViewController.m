@@ -257,8 +257,22 @@
   }
 }
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+  [self locate:nil];
+}
+
 - (void)locate:(id)sender
 {
+  
+  if (![[NSUserDefaults standardUserDefaults] objectForKey:@"HasRequestedLocation"]) {
+    YMAppDelegate *appdelegate = [UIApplication sharedApplication].delegate;
+    appdelegate.sharedLocationManager.delegate = self;
+    [appdelegate.sharedLocationManager requestWhenInUseAuthorization];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"HasRequestedLocation"];
+    return;
+  }
+  
   if (![CLLocationManager locationServicesEnabled]) {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Permission Denied" message:@"Location service is turned off for YaleMobile. If you would like to grant YaleMobile access, please go to Settings - Location Services." delegate:NULL cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];

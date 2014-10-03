@@ -91,7 +91,6 @@
     [[UIApplication sharedApplication] registerUserNotificationSettings:
      [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
     
-    [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedLocationManager] requestWhenInUseAuthorization];
   }
 }
 
@@ -132,7 +131,6 @@
   [label autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
   [label autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
   [label autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:20];
-  [label autoSetDimension:ALDimensionHeight toSize:height-30];
   
   label.font = [UIFont fontWithName:@"HelveticaNeue" size:17.0f];
   label.textColor = [YMTheme gray];
