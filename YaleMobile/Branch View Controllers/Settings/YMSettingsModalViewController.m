@@ -83,6 +83,12 @@
   [self.textField1 becomeFirstResponder];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  [self dismissKeyboard];
+}
+
 - (void)dismissKeyboard
 {
   [self.textField1 resignFirstResponder];
@@ -95,13 +101,11 @@
   } else {
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Name"];
   }
-  [self dismissKeyboard];
   [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)cancel:(id)sender
 {
-  [self dismissKeyboard];
   [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
