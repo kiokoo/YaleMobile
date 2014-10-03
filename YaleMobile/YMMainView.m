@@ -58,12 +58,12 @@
       self.greeting.text = [NSString stringWithFormat:@"Good night%@! Have some good rest :)", name];
   }
   
-  [YMServerCommunicator getGlobalSpecialInfoWithCompletionBlock:^(NSArray *array) {
-    NSInteger i = [[array objectAtIndex:0] integerValue];
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"psa"] < i || [[array objectAtIndex:1] integerValue] != 0) {
+  [YMServerCommunicator getGlobalSpecialInfoWithCompletionBlock:^(NSDictionary *dict) {
+    NSInteger i = [[dict objectForKey:@"index"] integerValue];
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"psa"] < i || [[dict objectForKey:@"sticky"] boolValue]) {
       NSString *prefix = (name) ? [NSString stringWithFormat:@"Hey %@!", name] : @"Hey there!";
-      self.greeting.text = [NSString stringWithFormat:@"%@ %@", prefix, [array objectAtIndex:2]];
-      self.greeting.textColor = [YMTheme YMDiningRed];
+      self.greeting.text = [NSString stringWithFormat:@"%@ %@", prefix, [dict objectForKey:@"msg"]];
+      self.greeting.textColor = [YMTheme laundryTimeAndBluebookHappensTextColor];
       [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"psa"];
     }
   }];

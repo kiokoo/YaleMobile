@@ -24,7 +24,7 @@ typedef void (^dict_block_t)(NSDictionary *dict);
 // YaleMobile 2.x JSON APIs - not yet 2.0
 
 + (NSArray *)getLocationFromName:(NSString *)name;
-+ (void)getGlobalSpecialInfoWithCompletionBlock:(array_block_t)completionBlock;
++ (void)getGlobalSpecialInfoWithCompletionBlock:(dict_block_t)completionBlock;
 + (void)getAllDiningStatusForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
 + (void)getDiningDetailForLocation:(NSUInteger)locationID forController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;
 + (void)getDiningSpecialInfoForController:(UIViewController *)controller usingBlock:(array_block_t)completionBlock;

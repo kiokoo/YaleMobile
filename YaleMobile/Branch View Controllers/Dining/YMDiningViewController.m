@@ -105,7 +105,13 @@
   }
   ddvc.locationID = i;
   ddvc.hour = [self parseHours:[info objectForKey:@"Hours"]];
-  ddvc.special = (self.special.count) ? [self.special objectAtIndex:self.selectedIndexPath.row * 3 + 2] : @"Information not available";
+
+  if (self.special.count) {
+    NSString *specialEvent = [[self.special objectAtIndex:self.selectedIndexPath.row] objectForKey:@"d"];
+    ddvc.special = specialEvent.length ? specialEvent : @"No upcoming special events.";
+  } else {
+    ddvc.special = @"Information not available.";
+  }
 }
 
 - (NSString *)parseHours:(NSArray *)array
@@ -159,11 +165,15 @@
   [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor] forCell:cell];
   
   if (self.special.count) {
-    cell.special1.text = [self.special objectAtIndex:indexPath.row * 3 + 1];
-    if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] == 0) {
+    NSDictionary *status = [self.special objectAtIndex:indexPath.row];
+    NSString *text = [status objectForKey:@"t"];
+    NSInteger statusCode = [[status objectForKey:@"s"] integerValue];
+    cell.special1.text = text.length ? text : @"Regular Service";
+
+    if (statusCode == 0) {
       cell.special1.textColor = [YMTheme YMDiningBlue];
       cell.special1.highlightedTextColor = [YMTheme YMDiningBlue];
-    } else if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] == 1) {
+    } else if (statusCode == 1) {
       cell.special1.textColor = [YMTheme YMDiningRed];
       cell.special1.highlightedTextColor = [YMTheme YMDiningRed];
     } else {
@@ -183,12 +193,8 @@
     cell.crowdedness1.image = [UIImage imageNamed:@"dots0.png"];
   }
   
-  if ([[self.special objectAtIndex:indexPath.row * 3] integerValue] != 0)
-    cell.crowdLabel1.text = @"Special";
-  
   cell.name1.textColor       = [YMTheme gray];
   cell.location1.textColor   = [YMTheme lightGray];
-  cell.special1.textColor    = [YMTheme diningSpecialTextColor];
   cell.crowdLabel1.textColor = [YMTheme lightGray];
   
   [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]

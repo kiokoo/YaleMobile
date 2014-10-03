@@ -64,19 +64,21 @@ static BOOL cancel = NO;
   return nil;
 }
 
-+ (void)getGlobalSpecialInfoWithCompletionBlock:(array_block_t)completionBlock
++ (void)getGlobalSpecialInfoWithCompletionBlock:(dict_block_t)completionBlock
 {
   cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://pantheon.yale.edu/~dl479/yalemobile/special.txt" parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://api-ae.danqing.me/yalemobile/notification" parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
-    NSArray *array = [responseString componentsSeparatedByString:@"|"];
-    completionBlock(array);
+    NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
+    completionBlock(dict);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     
   }];
@@ -360,26 +362,19 @@ static BOOL cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://pantheon.yale.edu/~dl479/yalemobile/dining2.txt" parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://api-ae.danqing.me/yalemobile/dining" parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [YMGlobalHelper hideNotificationView];
     NSString *responseString = operation.responseString;
-    NSArray *array = [responseString componentsSeparatedByString:@"|"];
+    NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
     completionBlock(array);
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     [YMGlobalHelper hideNotificationView];
-    if (!cancel) {
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
-                                                      message:@"YaleMobile is unable to reach Danqing's server. Please check your Internet connection and try again."
-                                                     delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-      [alert show];
-    }
   }];
-  
-//  [YMGlobalHelper showNotificationInViewController:controller
-//                                           message:@"Loading..."
-//                                             style:JGProgressHUDStyleLight];
+
   
   [[manager operationQueue] addOperation:operation];
 }
