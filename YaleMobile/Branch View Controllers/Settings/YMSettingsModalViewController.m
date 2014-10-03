@@ -35,29 +35,18 @@
 {
   [super viewDidLoad];
   
-  self.welcomeText = @"Hey there! Thank you for using YaleMobile. What would you like me to call you?";
+  self.welcomeText = @"Thank you for using YaleMobile! How should I call you?";
   
   UIButton *confirm = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
   
-  [confirm setBackgroundImage:[UIImage imageNamed:@"button_navbar_ok.png"]
-                     forState:UIControlStateNormal];
-  [self.navigationItem
-      setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:confirm]];
-  
-  [confirm addTarget:self
-              action:@selector(confirm:)
-    forControlEvents:UIControlEventTouchUpInside];
+  [confirm setBackgroundImage:[UIImage imageNamed:@"button_navbar_ok.png"] forState:UIControlStateNormal];
+  [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:confirm]];
+  [confirm addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
 
   UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
-  [cancel setBackgroundImage:[UIImage imageNamed:@"button_navbar_cancel.png"]
-                    forState:UIControlStateNormal];
-  
-  [self.navigationItem
-      setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:cancel]];
-  
-  [cancel addTarget:self
-             action:@selector(cancel:)
-   forControlEvents:UIControlEventTouchUpInside];
+  [cancel setBackgroundImage:[UIImage imageNamed:@"button_navbar_cancel.png"] forState:UIControlStateNormal];
+  [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:cancel]];
+  [cancel addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
 
   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
   
@@ -79,9 +68,11 @@
 {
   [super viewWillAppear:animated];
   
-  NSString *name       = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
-  self.textField1.text = (name) ? (name) : (@"");
-  
+  NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
+  self.textField1.text = name ? name : @"";
+}
+
+- (void)viewDidAppear:(BOOL)animated {
   [self.textField1 becomeFirstResponder];
 }
 
@@ -98,11 +89,7 @@
   if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:
-     [UIUserNotificationSettings
-      settingsForTypes:UIUserNotificationTypeAlert |
-      UIUserNotificationTypeBadge |
-      UIUserNotificationTypeSound
-      categories:nil]];
+     [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
     
     [[(YMAppDelegate *)[UIApplication sharedApplication].delegate sharedLocationManager] requestWhenInUseAuthorization];
   }
@@ -157,8 +144,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-  CGSize size = [YMGlobalHelper boundText:self.welcomeText
-                                 withFont:[UIFont fontWithName:@"HelveticaNeue" size:17.0f]
+  CGSize size = [YMGlobalHelper boundText:self.welcomeText withFont:[UIFont fontWithName:@"HelveticaNeue" size:17.0f]
                         andConstraintSize:CGSizeMake(self.view.bounds.size.width - 40, 99999.0)];
   return size.height+30;
 }
