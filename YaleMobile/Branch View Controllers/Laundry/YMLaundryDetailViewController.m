@@ -45,14 +45,16 @@
   UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
   [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
   self.refreshControl = refreshControl;
-  
   self.refreshControl.layer.zPosition += 1;
+  [self refresh];
+  [YMGlobalHelper showNotificationInViewController:self
+                                           message:@"Loading"
+                                             style:JGProgressHUDStyleLight];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
   [super viewDidAppear:animated];
-  [self refresh];
 }
 
 - (void)back:(id)sender
@@ -68,6 +70,7 @@
     self.machineStatuses = machineStatuses;
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
+    [YMGlobalHelper hideNotificationView];
   }];
 }
 
@@ -146,7 +149,7 @@
     cell.status1.textColor = [UIColor colorWithRed:229/255.0 green:73/255.0 blue:45/255.0 alpha:1];
   } else if ([status rangeOfString:@"est. time"].location != NSNotFound) {
     cell.status1.text = @"minutes left";
-    cell.status1.textColor = [UIColor grayColor];
+    cell.status1.textColor    = [YMTheme lightGray];
     NSString *time = [status stringByReplacingOccurrencesOfString:@"est. time remaining" withString:@""];
     time = [time stringByReplacingOccurrencesOfString:@"min" withString:@""];
     cell.time1.text = time;
@@ -160,10 +163,11 @@
     }
   } else if ([status rangeOfString:@"out of service"].location != NSNotFound) {
     cell.status1.text = @"Out of Service";
-    cell.status1.textColor = [UIColor grayColor];
+    cell.status1.textColor    = [YMTheme lightGray];
+
   } else {
     cell.status1.text = @"Status Unknown";
-    cell.status1.textColor = [UIColor grayColor];
+    cell.status1.textColor    = [YMTheme lightGray];
   }
   
   if (indexPath.row == 1) {
@@ -189,10 +193,6 @@
   cell.machineID1.textColor = [YMTheme gray];
   cell.time1.textColor      = [YMTheme laundryTimeAndBluebookHappensTextColor];
   cell.min1.textColor       = [YMTheme lightGray];
-  cell.status1.textColor    = [YMTheme lightGray];
-  
-//  [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-//                                                forCell:cell];
   
   return cell;
 }

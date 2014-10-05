@@ -259,17 +259,22 @@
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-  [self locate:nil];
-}
+  DLog(@"Did change to status: %d", status);
+  if (status == kCLAuthorizationStatusAuthorized ||
+      status == kCLAuthorizationStatusAuthorizedAlways ||
+      status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+    self.locating = 0;
+    [self locate:nil];
+  }}
 
 - (void)locate:(id)sender
 {
   
   if (![[NSUserDefaults standardUserDefaults] objectForKey:@"HasRequestedLocation"]) {
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"HasRequestedLocation"];
     YMAppDelegate *appdelegate = [UIApplication sharedApplication].delegate;
     appdelegate.sharedLocationManager.delegate = self;
     [appdelegate.sharedLocationManager requestWhenInUseAuthorization];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"HasRequestedLocation"];
     return;
   }
   

@@ -129,23 +129,33 @@
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-  [self locate:nil];
+  DLog(@"Did change to status: %d", status);
+  if (status == kCLAuthorizationStatusAuthorized ||
+      status == kCLAuthorizationStatusAuthorizedAlways ||
+      status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+    self.locating = 0;
+    [self locate:nil];
+  }
 }
 
 - (void)locate:(id)sender
 {
   
+  DLog(@"Authorization Status: %d", [CLLocationManager authorizationStatus]);
+  
   if (![[NSUserDefaults standardUserDefaults] objectForKey:@"HasRequestedLocation"]) {
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"HasRequestedLocation"];
     YMAppDelegate *appdelegate = [UIApplication sharedApplication].delegate;
     appdelegate.sharedLocationManager.delegate = self;
     [appdelegate.sharedLocationManager requestWhenInUseAuthorization];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"HasRequestedLocation"];
     return;
   }
   
-  if (![CLLocationManager locationServicesEnabled]) {
+  if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied ||
+      ![CLLocationManager locationServicesEnabled]) {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Permission Denied" message:@"Location service is turned off for YaleMobile. If you would like to grant YaleMobile access, please go to Settings - Location Services." delegate:NULL cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
+    [self.locate setSelected:NO];
     return;
   }
   

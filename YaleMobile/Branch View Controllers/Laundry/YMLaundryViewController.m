@@ -144,8 +144,10 @@
       cell.dryer1.text = [NSString stringWithFormat:@"Dryers: %@", dryerCount];
       cell.userInteractionEnabled = YES;
       
-      cell.washer1.textColor = [UIColor lightGrayColor];
-      cell.dryer1.textColor = [UIColor lightGrayColor];
+      cell.washer1.textColor   = [YMTheme gray];
+      cell.washer1.highlightedTextColor = cell.washer1.textColor;
+      cell.dryer1.textColor    = [YMTheme gray];
+      cell.dryer1.highlightedTextColor = cell.dryer1.textColor;
       
       if ([washerCount isEqualToString:@"0"]) {
         cell.washer1.textColor = [YMTheme YMBluebookOrange];
@@ -175,12 +177,7 @@
     
     cell.backgroundView.alpha = 0.6;
     cell.location1.textColor = [YMTheme gray];
-    cell.washer1.textColor   = [YMTheme gray];
-    cell.dryer1.textColor    = [YMTheme gray];
-    
-//    [YMGlobalHelper setupHighlightBackgroundViewWithColor:[YMTheme cellHighlightBackgroundViewColor]
-//                                                  forCell:cell];
-    
+
     return cell;
   }
 }
