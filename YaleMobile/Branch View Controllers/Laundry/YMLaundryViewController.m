@@ -74,7 +74,12 @@
 {
   [super viewDidAppear:animated];
   
-  if (self.data == nil) [self refresh];
+  if (self.data == nil) {
+    [self refresh];
+    [YMGlobalHelper showNotificationInViewController:self
+                                             message:@"Loading"
+                                               style:JGProgressHUDStyleLight];
+  }
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,6 +107,7 @@
     self.data = data;
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
+    [YMGlobalHelper hideNotificationView];
   }];
 }
 
