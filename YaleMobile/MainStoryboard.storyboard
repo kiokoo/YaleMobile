@@ -1028,7 +1028,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="247" translatesAutoresizingMaskIntoConstraints="NO" id="RK7-vx-vzB">
-                                            <rect key="frame" x="24" y="23" width="247" height="20.5"/>
+                                            <rect key="frame" x="24" y="23" width="247" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="247" id="3aF-6H-XwO"/>
                                             </constraints>
@@ -1055,7 +1055,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="247" translatesAutoresizingMaskIntoConstraints="NO" id="BDa-Ab-Dca">
-                                            <rect key="frame" x="24" y="13" width="247" height="20.5"/>
+                                            <rect key="frame" x="24" y="13" width="247" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="247" id="i2o-IR-RU3"/>
                                             </constraints>
@@ -1930,8 +1930,8 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-nM-YvZ" userLabel="Label - 20">
-                                            <rect key="frame" x="158" y="8" width="47" height="29"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-nM-YvZ" userLabel="Label - 20">
+                                            <rect key="frame" x="161" y="8" width="47" height="29"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="29" id="OZ5-Bw-6Jj"/>
@@ -1996,8 +1996,8 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert.png" translatesAutoresizingMaskIntoConstraints="NO" id="5xd-er-pyc">
                                             <rect key="frame" x="64" y="26" width="15" height="15"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="h5O-ZG-ckK" userLabel="Label - 20">
-                                            <rect key="frame" x="158" y="17" width="47" height="29"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="h5O-ZG-ckK" userLabel="Label - 20">
+                                            <rect key="frame" x="161" y="17" width="47" height="29"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="47" id="CSP-pP-hGa"/>
@@ -2285,7 +2285,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="247" translatesAutoresizingMaskIntoConstraints="NO" id="raA-ve-17s">
-                                            <rect key="frame" x="24" y="23" width="247" height="20.5"/>
+                                            <rect key="frame" x="24" y="23" width="247" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="247" id="M2m-iK-TYt"/>
@@ -2312,7 +2312,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="247" translatesAutoresizingMaskIntoConstraints="NO" id="kWB-Y8-6bD">
-                                            <rect key="frame" x="24" y="12" width="247" height="20.5"/>
+                                            <rect key="frame" x="24" y="12" width="247" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="247" id="fnB-dt-Izm"/>
@@ -2448,7 +2448,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="0jD-OH-lVx">
-                                            <rect key="frame" x="24" y="23" width="268" height="20.5"/>
+                                            <rect key="frame" x="24" y="23" width="268" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="268" id="ubY-JO-uWF"/>
                                             </constraints>
@@ -2475,7 +2475,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="65h-L6-46f">
-                                            <rect key="frame" x="24" y="13" width="268" height="20.5"/>
+                                            <rect key="frame" x="24" y="13" width="268" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="268" id="Tih-Ti-i6g"/>
                                             </constraints>
@@ -2736,7 +2736,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="247" translatesAutoresizingMaskIntoConstraints="NO" id="O6Y-N2-9vT">
-                                            <rect key="frame" x="24" y="23" width="247" height="20.5"/>
+                                            <rect key="frame" x="24" y="23" width="247" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="247" id="c4P-OU-1q2"/>
@@ -2764,7 +2764,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="247" translatesAutoresizingMaskIntoConstraints="NO" id="Mh7-jc-We9">
-                                            <rect key="frame" x="24" y="13" width="247" height="20.5"/>
+                                            <rect key="frame" x="24" y="13" width="247" height="21"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="247" id="JWy-0g-5Qx"/>
