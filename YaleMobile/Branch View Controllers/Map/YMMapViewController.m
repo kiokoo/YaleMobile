@@ -452,6 +452,9 @@
   return cell;
 }
 
+#warning TODO(HC) figure out what these numbers are and what the if statements are... \
+The right way to handle this is to set constraints properly and calculate height dynamically, this would also \
+fix the name label truncation problem.
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   if (((NSArray *)[self.searchResults objectAtIndex:0]).count + ((NSArray *)[self.searchResults objectAtIndex:1]).count == 1) {
     return 90;
