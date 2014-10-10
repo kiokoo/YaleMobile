@@ -166,7 +166,10 @@ static NSString* resultListUrl      = @"http://students.yale.edu/oci/resultList.
   NSString *filters = [YMGlobalHelper buildBluebookFilters];
   
   if ([filters isEqualToString:@"?term=201403&GUPgroup=A&distributionGroupOperator=AND"] &&
-      [subject caseInsensitiveCompare:@"ALL"] == NSOrderedSame) {
+      [subject caseInsensitiveCompare:@"ALL"] == NSOrderedSame &&
+      !self.courseNumber.length &&
+      !self.instructorName.length &&
+      !self.exactPhrase.length) {
     [YMGlobalHelper hideNotificationView];
     [self showAlertViewWithTitle:@"YaleMobile Bluebook"
                       andMessage:@"Please apply at least one filter to view ALL courses."];
