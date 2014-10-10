@@ -25,6 +25,16 @@ static UIManagedDocument *globalDatabase = nil;
   NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
   url = [url URLByAppendingPathComponent:database];
   
+  if ([[NSFileManager defaultManager] fileExistsAtPath:url.path] &&
+      ![[NSUserDefaults standardUserDefaults] objectForKey:@"hasRemovedOldDB"]) {
+    NSError *error = nil;
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"hasRemovedOldDB"];
+    [[NSFileManager defaultManager] removeItemAtPath:url.path error:&error];
+    if (error) {
+      DLog(@"Error during removal of old database: %@", error.localizedDescription);
+    }
+  }
+  
   if (!document) {
     document = [[UIManagedDocument alloc] initWithFileURL:url];
     [managedDocumentDictionary setObject:document forKey:database];
