@@ -70,7 +70,7 @@ static BOOL cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://api-ae.danqing.me/yalemobile/notification?v=2.9" parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://api-ae.danqing.me/yalemobile/notification?v=2.9.1" parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [YMGlobalHelper hideNotificationView];
@@ -362,7 +362,7 @@ static BOOL cancel = NO;
   
   AFHTTPRequestOperationManager *manager = [YMServerCommunicator getOperationManager];
   AFHTTPRequestSerializer *serializer = [YMServerCommunicator getRequestSerializer];
-  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://api-ae.danqing.me/yalemobile/dining?v=2.9" parameters:nil error:nil];
+  NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:@"http://api-ae.danqing.me/yalemobile/dining?v=2.9.1" parameters:nil error:nil];
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
     [YMGlobalHelper hideNotificationView];
