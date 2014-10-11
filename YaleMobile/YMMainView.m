@@ -41,12 +41,12 @@
   
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   
-  name = (name) ? [NSString stringWithFormat:@", %@", name] : @"";
+  name = (name) ? [NSString stringWithFormat:@" %@", name] : @"";
   
   [YMServerCommunicator getGlobalSpecialInfoWithCompletionBlock:^(NSDictionary *dict) {
     NSInteger i = [[dict objectForKey:@"index"] integerValue];
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"psa"] < i || [[dict objectForKey:@"sticky"] boolValue]) {
-      NSString *prefix = (name) ? [NSString stringWithFormat:@"Hey %@!", name] : @"Hey there!";
+      NSString *prefix = (name) ? [NSString stringWithFormat:@"Hey%@!", name] : @"Hey there!";
       self.greeting.text = [NSString stringWithFormat:@"%@ %@", prefix, [dict objectForKey:@"msg"]];
       self.greeting.textColor = [YMTheme laundryTimeAndBluebookHappensTextColor];
       [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"psa"];
@@ -90,6 +90,8 @@
 
 - (void)refreshName
 {
+  if ([self.greeting.text containsString:@"Hey"]) return;
+
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   
   name = (name) ? [NSString stringWithFormat:@", %@", name] : @"";
