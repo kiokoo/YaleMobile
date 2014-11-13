@@ -2,7 +2,7 @@ YaleMobile
 ==========
 
 Welcome to YaleMobile, the first and best iOS app for Yale University students!
-
+ 
 ## Components
 
 YaleMobile currently have the following components:
