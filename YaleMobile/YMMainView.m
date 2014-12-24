@@ -90,7 +90,7 @@
 
 - (void)refreshName
 {
-  if ([self.greeting.text containsString:@"Hey"]) return;
+  if ([self.greeting.text rangeOfString:@"Hey"].length != 0) return;
 
   NSString *name = [[NSUserDefaults standardUserDefaults] objectForKey:@"Name"];
   
