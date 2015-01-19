@@ -13,7 +13,7 @@
 #import "YMAppDelegate.h"
 #import <PureLayout/PureLayout.h>
 
-@interface YMSettingsModalViewController () <UITableViewDataSource>
+@interface YMSettingsModalViewController () <UITableViewDataSource, UITextFieldDelegate>
 /**
  *  The text displayed above the name textfield.
  */
@@ -62,6 +62,14 @@
   self.textField1.backgroundColor = [UIColor clearColor];
   self.textField1.tintColor       = [YMTheme searchbarTintColor];
   self.textField1.clearButtonMode = UITextFieldViewModeWhileEditing;
+  self.textField1.returnKeyType=UIReturnKeyDone;
+  self.textField1.delegate=self;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+  [self confirm:textField];
+  return YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated
