@@ -16,6 +16,8 @@
 
 #import "YMTheme.h"
 
+#define RECENT_LAUNDRY_URL @"Key for storing recent laundry url"
+
 @interface YMLaundryViewController ()
 
 @end
@@ -41,19 +43,30 @@
   self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"bg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)]];
   
   NSString *path = [[NSBundle mainBundle] pathForResource:@"Laundry" ofType:@"plist"];
-  self.locations = [[NSArray alloc] initWithContentsOfFile:path];
+  self.locations = [[NSArray alloc] initWithContentsOfFile:path]; //array of strings - names of locations
   NSString *path2 = [[NSBundle mainBundle] pathForResource:@"Laundry URL" ofType:@"plist"];
-  self.url = [[NSArray alloc] initWithContentsOfFile:path2];
-  
+  self.url = [[NSArray alloc] initWithContentsOfFile:path2]; // array of numbers.
   self.data = nil;
   
   UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
   [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
   self.refreshControl = refreshControl;
-
+  
   self.refreshControl.layer.zPosition += 1;
   
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
+  UIBarButtonItem *recentButton = [[UIBarButtonItem alloc] initWithTitle:@"Recent" style:UIBarButtonItemStyleBordered target:self action:@selector(displayRecent:)];
+  self.navigationItem.rightBarButtonItem = recentButton;
+}
+
+- (void)displayRecent:(UIView *)button
+{
+  id url = [[NSUserDefaults standardUserDefaults] objectForKey:RECENT_LAUNDRY_URL];
+  if (url) {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.url indexOfObject:url]+1 inSection:0];
+    self.selectedIndexPath = indexPath;
+    [self performSegueWithIdentifier:@"Laundry Segue" sender:self];
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -114,7 +127,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   YMLaundryDetailViewController *ldvc = (YMLaundryDetailViewController *)[segue destinationViewController];
-  NSIndexPath *selected = [self.tableView indexPathForSelectedRow];
+  //NSIndexPath *selected = [self.tableView indexPathForSelectedRow];
+  NSIndexPath *selected = self.selectedIndexPath;
   ldvc.roomCode = [self.url objectAtIndex:selected.row - 1];
 }
 
@@ -125,14 +139,19 @@
   return 1;
 }
 
+#define SELECT_LOCATION_INDEX (2) //previously 0
+#define RECENT_TITLE_INDEX (0)
+#define RECENT_CELL_INDEX (1)
+#define LAST_CELL_INDEX (self.locations.count+2)
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return self.locations.count + 1;
+  return self.locations.count + 1 + 2; // 1 for Select Location and 1 for Recent and 1 For the Recently selected laundroom
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.row == 0) {
+  if (indexPath.row == SELECT_LOCATION_INDEX) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Header"];
     cell.name1.textColor = [YMTheme gray];
     cell.name1.text = @"Select a location";
@@ -170,10 +189,10 @@
       cell.userInteractionEnabled = NO;
     }
     
-    if (indexPath.row == 1) {
+    if (indexPath.row == SELECT_LOCATION_INDEX+1) {
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
-    } else if (indexPath.row == self.locations.count) {
+    } else if (indexPath.row == LAST_CELL_INDEX) {
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     } else {
@@ -183,7 +202,7 @@
     
     cell.backgroundView.alpha = 0.6;
     cell.location1.textColor = [YMTheme gray];
-
+    
     return cell;
   }
 }
@@ -201,6 +220,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   self.selectedIndexPath = indexPath;
+  [[NSUserDefaults standardUserDefaults] setObject:[self.url objectAtIndex:indexPath.row - 1] forKey:RECENT_LAUNDRY_URL];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+  NSLog(@"Laundry URL stored:%@", [[NSUserDefaults standardUserDefaults] objectForKey:RECENT_LAUNDRY_URL]);
   [self performSegueWithIdentifier:@"Laundry Segue" sender:self];
 }
 
