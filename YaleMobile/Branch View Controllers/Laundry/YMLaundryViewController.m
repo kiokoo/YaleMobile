@@ -86,6 +86,7 @@
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
+  [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:RECENT_CELL_INDEX inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -168,6 +169,7 @@
       } else {
 #warning NOT_RIGHT
         index = 0; //not right
+        cell.userInteractionEnabled = NO;
       }
     }
     cell.location1.text = [self.locations objectAtIndex:index];
