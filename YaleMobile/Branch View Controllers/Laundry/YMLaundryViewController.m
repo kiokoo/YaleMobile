@@ -18,6 +18,13 @@
 
 #define RECENT_LAUNDRY_URL @"Key for storing recent laundry url"
 
+#define SELECT_LOCATION_INDEX (2) //previously 0. This is the row index of the Select Location title cell
+#define FIRST_CELL_INDEX (3) //previously 1. This is the row index of the first cell in the list of locations
+#define RECENT_TITLE_INDEX (0) // row index of Recent title cell
+#define RECENT_CELL_INDEX (1) //row index of Recent laundry room cell
+#define NUM_EXTRA_ROWS (3) // number of rows above the main list of locations. Previously was 1. Includes 1 for Select Location and 1 for Recent and 1 For the Recently selected laundroom
+#define LAST_CELL_INDEX (self.locations.count+NUM_EXTRA_ROWS-1) //index of last cell
+
 @interface YMLaundryViewController ()
 
 @end
@@ -55,15 +62,13 @@
   self.refreshControl.layer.zPosition += 1;
   
   [self.navigationController.navigationBar setBarTintColor:[YMTheme blue]];
-  UIBarButtonItem *recentButton = [[UIBarButtonItem alloc] initWithTitle:@"Recent" style:UIBarButtonItemStyleBordered target:self action:@selector(displayRecent:)];
-  self.navigationItem.rightBarButtonItem = recentButton;
 }
 
 - (void)displayRecent:(UIView *)button
 {
   id url = [[NSUserDefaults standardUserDefaults] objectForKey:RECENT_LAUNDRY_URL];
   if (url) {
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.url indexOfObject:url]+1 inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.url indexOfObject:url]+NUM_EXTRA_ROWS inSection:0];
     self.selectedIndexPath = indexPath;
     [self performSegueWithIdentifier:@"Laundry Segue" sender:self];
   }
@@ -129,7 +134,7 @@
   YMLaundryDetailViewController *ldvc = (YMLaundryDetailViewController *)[segue destinationViewController];
   //NSIndexPath *selected = [self.tableView indexPathForSelectedRow];
   NSIndexPath *selected = self.selectedIndexPath;
-  ldvc.roomCode = [self.url objectAtIndex:selected.row - 1];
+  ldvc.roomCode = [self.url objectAtIndex:selected.row - NUM_EXTRA_ROWS];
 }
 
 #pragma mark - Table view data source
@@ -139,32 +144,37 @@
   return 1;
 }
 
-#define SELECT_LOCATION_INDEX (2) //previously 0
-#define RECENT_TITLE_INDEX (0)
-#define RECENT_CELL_INDEX (1)
-#define LAST_CELL_INDEX (self.locations.count+2)
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return self.locations.count + 1 + 2; // 1 for Select Location and 1 for Recent and 1 For the Recently selected laundroom
+  return self.locations.count + NUM_EXTRA_ROWS;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.row == SELECT_LOCATION_INDEX) {
+  if (indexPath.row == SELECT_LOCATION_INDEX || indexPath.row == RECENT_TITLE_INDEX) {
     YMSimpleCell *cell = (YMSimpleCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Header"];
     cell.name1.textColor = [YMTheme gray];
-    cell.name1.text = @"Select a location";
+    cell.name1.text = indexPath.row==RECENT_TITLE_INDEX ? @"Recent room" : @"Select a location";
     return cell;
   } else {
     YMLaundryCell *cell;
-    cell = (indexPath.row == 1) ? (YMLaundryCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Cell Top"] : (YMLaundryCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Cell Middle"];
+    cell = (indexPath.row == FIRST_CELL_INDEX) ? (YMLaundryCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Cell Top"] : (YMLaundryCell *)[tableView dequeueReusableCellWithIdentifier:@"Laundry Cell Middle"];
     
-    cell.location1.text = [self.locations objectAtIndex:indexPath.row - 1];
+    NSInteger index = indexPath.row - NUM_EXTRA_ROWS;
+    if (indexPath.row==RECENT_CELL_INDEX) {
+      id url = [[NSUserDefaults standardUserDefaults] objectForKey:RECENT_LAUNDRY_URL];
+      if (url) {
+        index = [self.url indexOfObject:url];
+      } else {
+#warning NOT_RIGHT
+        index = 0; //not right
+      }
+    }
+    cell.location1.text = [self.locations objectAtIndex:index];
     
     if (self.data) {
-      NSString *washerCount = [[self.data objectAtIndex:indexPath.row - 1] objectAtIndex:0];
-      NSString *dryerCount = [[self.data objectAtIndex:indexPath.row - 1] objectAtIndex:1];
+      NSString *washerCount = [[self.data objectAtIndex:index] objectAtIndex:0];
+      NSString *dryerCount = [[self.data objectAtIndex:index] objectAtIndex:1];
       cell.washer1.text = [NSString stringWithFormat:@"Washers: %@", washerCount];
       cell.dryer1.text = [NSString stringWithFormat:@"Dryers: %@", dryerCount];
       cell.userInteractionEnabled = YES;
@@ -189,7 +199,7 @@
       cell.userInteractionEnabled = NO;
     }
     
-    if (indexPath.row == SELECT_LOCATION_INDEX+1) {
+    if (indexPath.row == FIRST_CELL_INDEX) {
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_top_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 5, 20)]];
     } else if (indexPath.row == LAST_CELL_INDEX) {
@@ -209,9 +219,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.row == 0) return 38;
-  else if (indexPath.row == 1) return 67;
-  else if (indexPath.row == self.locations.count) return 65;
+  if (indexPath.row == SELECT_LOCATION_INDEX || indexPath.row == RECENT_TITLE_INDEX) return 38;
+  else if (indexPath.row == FIRST_CELL_INDEX) return 67;
+  else if (indexPath.row == LAST_CELL_INDEX) return 65;
   else return 57;
 }
 
@@ -219,11 +229,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  self.selectedIndexPath = indexPath;
-  [[NSUserDefaults standardUserDefaults] setObject:[self.url objectAtIndex:indexPath.row - 1] forKey:RECENT_LAUNDRY_URL];
-  [[NSUserDefaults standardUserDefaults] synchronize];
-  NSLog(@"Laundry URL stored:%@", [[NSUserDefaults standardUserDefaults] objectForKey:RECENT_LAUNDRY_URL]);
-  [self performSegueWithIdentifier:@"Laundry Segue" sender:self];
+  if (indexPath.row==RECENT_CELL_INDEX) {
+    [self displayRecent:nil];
+  } else {
+    self.selectedIndexPath = indexPath;
+    [[NSUserDefaults standardUserDefaults] setObject:[self.url objectAtIndex:indexPath.row - NUM_EXTRA_ROWS] forKey:RECENT_LAUNDRY_URL];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    NSLog(@"Laundry URL stored:%@", [[NSUserDefaults standardUserDefaults] objectForKey:RECENT_LAUNDRY_URL]);
+    [self performSegueWithIdentifier:@"Laundry Segue" sender:self];
+  }
 }
 
 @end
