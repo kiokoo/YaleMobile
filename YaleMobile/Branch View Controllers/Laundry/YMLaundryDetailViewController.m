@@ -18,6 +18,8 @@
 #import <JGProgressHUD/JGProgressHUDErrorIndicatorView.h>
 #import <JGProgressHUD/JGProgressHUDSuccessIndicatorView.h>
 
+#define AUTO_LAUNDRY_REFRESH_RATE 60.0 //in seconds.
+
 @interface YMLaundryDetailViewController ()
 
 @end
@@ -54,12 +56,28 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+  // implement a loop here so the table view reloads itself every minute. This way the timers automatically update when there should be a change. This assumes that a washer is running, so its timer is counting down. Possibly could implement a check to see if a washer/dryer is actually running before setting up this loop.
+  // make sure to stop all selector loops when this ViewController goes away.
+  [self performSelector:@selector(refreshEveryMinute) withObject:nil afterDelay:AUTO_LAUNDRY_REFRESH_RATE];
   [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+  // stop the refresh loop
+  [NSObject cancelPreviousPerformRequestsWithTarget:self];
+  [super viewWillDisappear:animated];
 }
 
 - (void)back:(id)sender
 {
   [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)refreshEveryMinute
+{
+  [self refresh];
+  [self performSelector:@selector(refreshEveryMinute) withObject:nil afterDelay:AUTO_LAUNDRY_REFRESH_RATE];
 }
 
 - (void)refresh
