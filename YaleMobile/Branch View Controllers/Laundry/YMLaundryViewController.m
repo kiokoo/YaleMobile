@@ -86,6 +86,7 @@
     [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:YES];
     self.selectedIndexPath = nil;
   }
+  //When the view returns from having tapped on a location, the Recent Laundroom may have changed. Update that specific cell.
   [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:RECENT_CELL_INDEX inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
@@ -167,9 +168,14 @@
       if (url) {
         index = [self.url indexOfObject:url];
       } else {
-#warning NOT_RIGHT
-        index = 0; //not right
+        //no data will go here, so set the cell up with dummy information.
+        cell.location1.text = @"Recent Location will appear here";
         cell.userInteractionEnabled = NO;
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_topbottom.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
+        cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
+        cell.backgroundView.alpha = 0.6;
+        cell.location1.textColor = [YMTheme gray];
+        return cell;
       }
     }
     cell.location1.text = [self.locations objectAtIndex:index];
@@ -207,6 +213,9 @@
     } else if (indexPath.row == LAST_CELL_INDEX) {
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_bottom_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
+    } else if (indexPath.row==RECENT_CELL_INDEX) {
+      cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_topbottom.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
+      cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
     } else {
       cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
       cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tablebg_mid_highlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(5, 20, 10, 20)]];
