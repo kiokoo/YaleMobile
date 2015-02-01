@@ -56,9 +56,6 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-  // implement a loop here so the table view reloads itself every minute. This way the timers automatically update when there should be a change. This assumes that a washer is running, so its timer is counting down. Possibly could implement a check to see if a washer/dryer is actually running before setting up this loop.
-  // make sure to stop all selector loops when this ViewController goes away.
-  [self performSelector:@selector(refreshEveryMinute) withObject:nil afterDelay:AUTO_LAUNDRY_REFRESH_RATE];
   [super viewDidAppear:animated];
 }
 
@@ -74,12 +71,6 @@
   [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)refreshEveryMinute
-{
-  [self refresh];
-  [self performSelector:@selector(refreshEveryMinute) withObject:nil afterDelay:AUTO_LAUNDRY_REFRESH_RATE];
-}
-
 - (void)refresh
 {
   [YMServerCommunicator getLaundryStatusForLocation:self.roomCode forController:self usingBlock:^(NSArray *washers, NSArray *dryers, NSArray *machineStatuses) {
@@ -89,6 +80,10 @@
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
     [YMGlobalHelper hideNotificationView];
+    // implement a loop here so the table view reloads itself every minute. This way the timers automatically update when there should be a change. This assumes that a washer is running, so its timer is counting down. Possibly could implement a check to see if a washer/dryer is actually running before setting up this loop.
+    // To make sure this method is called automatically at most once a minute, first cancel all waiting calls to refresh
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(refresh) object:nil];
+    [self performSelector:@selector(refresh) withObject:nil afterDelay:AUTO_LAUNDRY_REFRESH_RATE];
   }];
 }
 
